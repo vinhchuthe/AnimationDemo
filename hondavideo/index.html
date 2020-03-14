@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Interactive Video Demo Cover</title>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/videojs/video-js.css">
+    <link rel="stylesheet" href="../assets/css/hondavideo/hondavideo.css">
+</head>
+
+<body>
+    <div class="vct-wrapper">
+
+        <!-- Video container -->
+        <div id="video-container">
+
+            <!-- Overlay -->
+            <div id="overlay">
+                <div class="controler-overlay">
+                    <div class="center-btn" id="play-button">
+                        <img src="../assets/img/hondavideo/play-btn.png" alt="">
+                    </div>
+
+                    <div class="cover-overlay"></div>
+                    <div id="animated-overlay"></div>
+                    <div id="bottom-button-bar" class="downbar">
+                        <div class="button hidden" id="bottom-bar-pause-button">
+
+                            <svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100"
+                                preserveAspectRatio="xMidYMid meet" style="overflow: hidden; position: relative;">
+                                <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël
+                                    2.1.4</desc>
+                                <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                                <path fill="#000000" stroke="#ffffff" d="M22.7,0.5V98.5M77.3,0.5V98.5" fill-opacity="0"
+                                    stroke-width="3" stroke-linejoin="round"
+                                    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <div class="button" id="bottom-bar-play-button">
+
+                            <svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100"
+                                preserveAspectRatio="xMidYMid meet" style="overflow: hidden; position: relative;">
+                                <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël
+                                    2.1.4</desc>
+                                <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                                <path fill="#000000" stroke="#ffffff" d="M18.7,1L18.8,1L81.2,49.5L18.8,99Z"
+                                    fill-opacity="0" stroke-width="3" stroke-linejoin="round"
+                                    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <div class="backing-gradient"></div>
+                        <div class="button" id="bottom-bar-fullscreen-button">
+
+                            <svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100"
+                                preserveAspectRatio="xMidYMid meet" style="overflow: hidden; position: relative;">
+                                <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël
+                                    2.1.4</desc>
+                                <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                                <path fill="#000000" stroke="#ffffff"
+                                    d="M1,40.7V13.700000000000003H38.2M99,40.7V13.700000000000003H61.8M61.8,86.3H99V59.3M1,59.3V86.3H38.2"
+                                    fill-opacity="0" stroke-width="3" stroke-linejoin="round"
+                                    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <div class="inner-bar">
+                            <!-- <div class="scrubber">
+                                <div class="scrubber-cover">
+                                    <div class="scrubber-hover-area"></div>
+                                </div>
+                            </div> -->
+                            <div id="scrubber-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stack Video -->
+            <div id="stacked-video-wrapper">
+
+                <video class="video-js stacked-video video" id="video1" controls data-vid="1">
+                    <source
+                        src="https://edge-vids.wirewax.com/80E87A/wirewax-videos/vidData/8117237/8117237_1080Stacked.mp4"
+                        type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../src/js/Jquery/jquery.min.js"></script>
+    <script src="../src/js/videojs/video.js"></script>
+    <script src="../assets/js/hondavideo/video-control.js"></script>
+</body>
+
+</html>

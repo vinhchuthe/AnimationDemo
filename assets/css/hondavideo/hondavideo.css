@@ -1,0 +1,156 @@
+.vct-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.vct-wrapper #video-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+}
+
+.vct-wrapper #video-container #stacked-video-wrapper {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.vct-wrapper #video-container #stacked-video-wrapper .stacked-video {
+  z-index: 1;
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  left: 0px;
+  top: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.vct-wrapper #video-container #stacked-video-wrapper .reveal-video {
+  top: -100% !important;
+}
+
+.vct-wrapper #video-container #overlay {
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay {
+  background-color: transparent;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  bottom: -28px;
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar .button {
+  width: 20px;
+  height: 18px;
+  top: 7px;
+  float: left;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+  padding: 0 10px;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar .button#bottom-bar-play-button {
+  top: 8px;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar .button#bottom-bar-fullscreen-button {
+  float: right;
+  margin: 0 5px;
+  margin-top: 1px;
+  height: 22px;
+  top: 3px;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar .button.hidden {
+  display: none;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar .backing-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(99%, rgba(0, 0, 0, 0.69)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.69) 99%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar .inner-bar #scrubber-line {
+  position: relative;
+  top: -1px;
+  bottom: 20px;
+  width: 0;
+  border-top: 2px solid #fff;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #bottom-button-bar.moveup {
+  bottom: 0px !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay .center-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay .center-btn img {
+  width: 100%;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay .center-btn.hidden {
+  display: none;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #animated-overlay {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.vct-wrapper #video-container #overlay .controler-overlay #animated-overlay.animated {
+  z-index: 3;
+}
+/*# sourceMappingURL=hondavideo.css.map */
