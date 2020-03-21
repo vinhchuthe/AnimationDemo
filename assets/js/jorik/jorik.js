@@ -97,24 +97,27 @@ $(".header__link").mouseenter(function () {
 
 
 // ------------------ change iamge src on mouse move (on working)
-$('.parallax-banner__foreground').mousemove(function (event) {
+$('.parallax-banner-inner').mousemove(function (event) {
     var listOfImages = ['http://channel.mediacdn.vn/2020/3/19/parallax-img1-1584591823738406245545.jpg', 'http://channel.mediacdn.vn/2020/3/19/parallax-img2-15845918237411390342811.jpg', 'http://channel.mediacdn.vn/2020/3/19/parallax-img3-15845918237421870661942.jpg'];
     var xPos = event.pageX;
-    var yPos = 0;
     var width = $(this).width();
-    var height = $(this).height();
+    var areaPos = 0;
+    var change1 = areaPos;
+    var change2 = areaPos + width / 3;
+    var change3 = areaPos + 2 * width / 3;
 
-    // console.log(xPos, yPos);
-
-    if (xPos >= (width / 2)) {
-        console.log("right")
-    } else if (xPos < (width / 2)) {
-        console.log("left")
-    } else if (yPos > 0) {
-        console.log("down")
-    } else if (yPos < 0) {
-        console.log("up")
-    } else { }
+    if (xPos > change1) {
+        $(".foreground__rotaion-image-wrapper img").attr("src", listOfImages[0]);
+        // console.log("change1")
+    }
+     if (xPos > change2) {
+        $(".foreground__rotaion-image-wrapper img").attr("src", listOfImages[1]);
+        // console.log("change2")
+    }
+     if (xPos > change3) {
+        $(".foreground__rotaion-image-wrapper img").attr("src", listOfImages[2]);
+        // console.log("change3")
+    }
 });
 
 // ----------------- Header change color
