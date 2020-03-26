@@ -461,8 +461,6 @@ body::-webkit-scrollbar {
       .lookbook-thumbnail {
         height: 100vh;
         position: relative;
-        // background: #0a0a0a;
-        // color: #fff;
         background: #fff;
         color: #000;
         display: flex;
@@ -478,6 +476,7 @@ body::-webkit-scrollbar {
           width: 100%;
           height: 100%;
           color: transparent;
+          transition: all 0.5s;
         }
         .lookbook-thumbnail__title {
           position: absolute;
@@ -540,6 +539,38 @@ body::-webkit-scrollbar {
               top: 0;
               left: 100%;
             }
+          }
+        }
+        .lookbook-thumbnail__images {
+          z-index: -1;
+          perspective: 100vh;
+          perspective-origin: 50% 50%;
+          transform: rotateX(16deg) scale(0.9);
+          transition: all 15s;
+
+          &:first-of-type {
+            margin-top: 6.25vw;
+            display: block;
+          }
+          .lookbook-thumbnail__image-item {
+            margin-top: 3.125vw;
+
+            .lookbook-thumbnail__image {
+              width: 30vw;
+            }
+          }
+          &:last-of-type {
+            display: block;
+            margin-left: 3.125vw;
+
+            .lookbook-thumbnail__image-item:nth-child(odd) {
+              display: none;
+            }
+          }
+
+          &.animated {
+            transition: all 15s;
+            transform: rotateX(16deg) scale(0.9) translateY(-200%) !important;
           }
         }
       }

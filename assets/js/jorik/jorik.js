@@ -110,11 +110,11 @@ $('.parallax-banner-inner').mousemove(function (event) {
         $(".foreground__rotaion-image-wrapper img").attr("src", listOfImages[0]);
         // console.log("change1")
     }
-     if (xPos > change2) {
+    if (xPos > change2) {
         $(".foreground__rotaion-image-wrapper img").attr("src", listOfImages[1]);
         // console.log("change2")
     }
-     if (xPos > change3) {
+    if (xPos > change3) {
         $(".foreground__rotaion-image-wrapper img").attr("src", listOfImages[2]);
         // console.log("change3")
     }
@@ -128,3 +128,22 @@ new ScrollMagic.Scene({
     .setClassToggle(".vct-header-inner", "header-pass")
     // .addIndicators()
     .addTo(controller);
+
+
+// --------------------- Lookbook thumbnail image
+// var tl3 = new TimelineMax();
+// TweenMax.set(".lookbook-thumbnail__images", { scale: 0.999396, rotationX: 10 });
+// new ScrollMagic.Scene({
+//     triggerElement: '.vct-lookbook-thumbnail',
+//     offset: -100
+// })
+//     .setTween(TweenMax.to(".lookbook-thumbnail__images", 20, { y: "-=100%", ease: Power0.easeNone }))
+//     .addIndicators()
+//     .addTo(controller);
+
+$(".lookbook-thumbnail").mouseenter(function () {
+    $(".lookbook-thumbnail__images").addClass("animated");
+})
+// $(".lookbook-thumbnail").mouseleave(function () {
+//     $(".lookbook-thumbnail__images").removeClass("animated");
+// })

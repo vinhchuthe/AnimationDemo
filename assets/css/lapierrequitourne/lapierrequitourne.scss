@@ -1,0 +1,1019 @@
+$black: #000;
+$white: #fff;
+
+%relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+%position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+%absolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Track, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 62.5%;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.vct-wrapper {
+  @extend %relative;
+  overflow: hidden;
+
+  //   header
+  .vct-header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-width: 1100px;
+    z-index: 1;
+
+    .header-menu {
+      margin: 30px 0 20px;
+      text-align: center;
+
+      ul {
+        .menu-item {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+
+          &:first-child {
+            width: 143px;
+            height: 101px;
+            margin: -12px 60px 0 -50px;
+            transition: all 0.5s;
+
+            .menu-item__link {
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              background: url("../../img/lapierrequitourne/header_logo_black.png") 0 0;
+              background-repeat: no-repeat;
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin: 3px 20px 0 0;
+
+            .menu-item__link {
+              padding: 20px;
+              letter-spacing: 1px;
+              color: #000;
+              box-sizing: border-box;
+            }
+          }
+          .menu-item__link {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: block;
+            color: $black;
+            text-decoration: none;
+            position: relative;
+
+            .link-text {
+              display: inline-block;
+              padding-bottom: 3px;
+              position: relative;
+              font-size: 0.7rem;
+              text-transform: uppercase;
+
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background-color: rgb(149, 66, 71);
+                transition: width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+            }
+
+            &:hover {
+              .link-text {
+                color: rgb(149, 66, 71);
+                &::after {
+                  width: 100%;
+                  transition: width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.header-fixed {
+      position: fixed;
+      background-color: rgb(241, 231, 224);
+      z-index: 3;
+
+      .header-menu {
+        margin: 18px 0 10px;
+        ul {
+          .menu-item {
+            &:first-child {
+              width: 85.8px;
+              height: 60.6px;
+              transition: all 0.5s;
+
+              .menu-item__link {
+                background-size: auto 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // banner
+  .vct-banner-wrapper {
+    height: 85vh;
+    width: 100vw;
+    position: relative;
+    background-color: #eee6de;
+    // max-height: 700px;
+
+    .vct-banner-parallax-bg {
+      position: fixed;
+      width: 100%;
+      height: 85vh;
+      background: #ab8159;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .visu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../../img/lapierrequitourne/header_bg.jpg");
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+    .banner-title {
+      @extend %position-center;
+      .banner-title__text {
+        color: $white;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        display: block;
+        font-size: 4vw;
+        letter-spacing: 0.05em;
+        line-height: 4vw;
+        text-align: center;
+        padding-top: 85px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+
+  //   Main content
+  .vct-main-content {
+    @extend %relative;
+    min-height: 300px;
+    background: #f2e8dd;
+
+    .main-content-wrapper {
+      @extend %relative;
+
+      //   Nav
+      .main-content__nav {
+        position: absolute;
+        // z-index: 800;
+        width: 100%;
+        margin-top: -60px;
+        min-width: 1100px;
+        height: 110px;
+
+        .nav-bg {
+          position: absolute;
+          width: 100%;
+          height: 60px;
+          background: #fcf1df;
+        }
+
+        .main-content__nav-list {
+          text-align: center;
+          max-width: 1900px;
+          margin: 0 auto;
+
+          .nav-list-item {
+            display: inline-block;
+            vertical-align: top;
+            width: 135px;
+            height: 110px;
+            margin-left: -35px;
+
+            .list-item__link {
+              display: block;
+              margin-left: 35px;
+              margin-top: 10px;
+
+              .link-wrapper {
+                width: 100px;
+                height: 50px;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+
+                .link-img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100px;
+                  height: 100px;
+                  opacity: 0.5;
+
+                  img {
+                    position: relative;
+                    width: auto;
+                    display: block;
+                    height: 165%;
+                    top: 0;
+                    left: 50%;
+                    transform-origin: 50% 10%;
+                    transform: translate(-50%, 10px);
+                    transition: all 0.3s;
+                  }
+                }
+
+                .link-bg {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100px;
+                  height: 100px;
+                  background-color: rgb(234, 147, 137);
+                  opacity: 0;
+                  transform-origin: 50% 50%;
+                  transform: scaleY(0);
+                  transition: all 0.3s;
+                }
+
+                &:hover {
+                  .link-bg {
+                    opacity: 1;
+                    transform: scaleY(1);
+                    transition: all 0.3s;
+                  }
+                  .link-img {
+                    img {
+                      transition: all 0.3s;
+                      transform: translate(-50%, 0) scale(0.5);
+                    }
+                  }
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(255, 228, 160);
+                  }
+                }
+              }
+            }
+            &:nth-child(3) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(156, 177, 103);
+                  }
+                }
+              }
+            }
+            &:nth-child(4) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(255, 216, 84);
+                  }
+                }
+              }
+            }
+            &:nth-child(5) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(163, 192, 196);
+                  }
+                }
+              }
+            }
+            &:nth-child(6) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(162, 141, 128);
+                  }
+                }
+              }
+            }
+            &:nth-child(7) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(195, 121, 127);
+                  }
+                }
+              }
+            }
+            &:nth-child(8) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(165, 116, 159);
+                  }
+                }
+              }
+            }
+            &:nth-child(9) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(192, 210, 204);
+                  }
+                }
+              }
+            }
+            &:nth-child(10) {
+              .list-item__link {
+                .link-wrapper {
+                  .link-bg {
+                    background-color: rgb(207, 130, 161);
+                  }
+                }
+              }
+            }
+
+            &.current {
+              position: relative;
+              z-index: 2;
+              .list-item__link {
+                .link-wrapper {
+                  height: 100px;
+
+                  .link-bg {
+                    opacity: 1;
+                    transform: scaleY(1);
+                    transition: all 0.5s;
+                  }
+                  .link-img {
+                    img {
+                      transition: all 0.5s;
+                      transform: translate(-50%, 0) scale(0.5);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.nav-fixed {
+          position: fixed;
+          top: 0;
+          margin-top: 80px;
+          z-index: 2;
+        }
+      }
+      // Gammes
+      .gammes-list {
+        position: relative;
+        margin-top: 60px;
+        min-height: 300px;
+        background-color: #ab8159;
+        z-index: 1;
+
+        .gamme {
+          width: 100%;
+          color: #fff;
+          overflow: hidden;
+          height: 85vh;
+          max-height: 700px;
+          position: relative;
+
+          .gamme_section-inner {
+            @extend %relative;
+            max-width: 1900px;
+            margin: 0 auto;
+
+            .gamme-bg {
+              @extend %absolute;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: cover;
+              max-width: 1900px;
+              margin: 0 auto;
+            }
+            .gamme-perso {
+              max-width: 1900px;
+              margin: 0 auto;
+
+              .gamme-perso-left {
+                position: absolute;
+                top: 7%;
+                left: 5%;
+                height: 780px;
+              }
+              .gamme-perso-right {
+                position: absolute;
+                top: 7%;
+                right: 5%;
+                height: 780px;
+              }
+            }
+            .gamme-title {
+              position: relative;
+              top: 19%;
+              z-index: 1;
+              text-align: center;
+              padding-bottom: 15px;
+              transform: translateY(-50%);
+
+              p {
+                position: relative;
+                color: #fff;
+                font-size: 45px;
+                letter-spacing: 0.2rem;
+                line-height: 1.2;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+                padding-bottom: 15px;
+                text-transform: uppercase;
+
+                .range {
+                  font-family: "Marck Script", Arial, sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                  font-size: 25px;
+                  letter-spacing: 0;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  width: 25%;
+                  height: 1px;
+                  background-color: #fff;
+                  bottom: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+              }
+            }
+            .biscuits {
+              top: 53%;
+              min-height: 376px;
+              text-align: center;
+
+              .biscuits-item {
+                display: inline-block;
+                vertical-align: top;
+                width: 380px;
+                height: 380px;
+                margin: -4px -60px 0 -60px;
+
+                a {
+                  position: relative;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  background-size: cover;
+
+                  .biscuits-item-title-wrapper {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .biscuits-item-title {
+                      text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                      font-size: 60px;
+                      letter-spacing: 3px;
+                      transform: scale(0.5);
+                      overflow: hidden;
+                      display: block;
+                      color: rgb(255, 221, 104);
+
+                      span {
+                        display: inline-block;
+                        vertical-align: top;
+                        box-sizing: border-box;
+                        transform: translateX(200%);
+                        transition: all 0.5s;
+
+                        &:first-child {
+                          font-size: 90px;
+                          line-height: 1;
+                        }
+                      }
+                    }
+                  }
+                  &:hover {
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        span {
+                          transform: translateX(0);
+                          transition: all 0.5s;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .desc {
+              text-align: center;
+              margin: 0;
+              position: relative;
+
+              p {
+                display: inline-block;
+                vertical-align: top;
+                font-family: "Marck Script", Arial, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 32px;
+                line-height: 37px;
+                letter-spacing: -1px;
+              }
+            }
+          }
+
+          &.gamme_section1 {
+            background-color: #cc756b;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme1-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                &:nth-child(1) {
+                  background: 0 0;
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item1.png");
+                  }
+                }
+                &:nth-child(2) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item2.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 221, 164);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(3) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item3.png");
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section2 {
+            background-color: #f5c682;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme2-bg.jpg");
+            }
+            .biscuits {
+              .biscuits-item {
+                &:nth-child(1) {
+                  background: 0 0;
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item4.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(225, 255, 223);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(2) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item5.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 133, 88);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(3) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item6.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 133, 88);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(4) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item7.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 216, 112);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section3 {
+            background-color: #7e9349;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme3-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                &:nth-child(1) {
+                  background: 0 0;
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item8.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(254, 251, 165);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(2) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item9.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 232, 36);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section4 {
+            background-color: #ecba36;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme4-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                &:nth-child(1) {
+                  background: 0 0;
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item10.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 247, 162);
+
+                        span {
+                          font-size: 72px;
+                          &:last-child {
+                            font-size: 111px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                &:nth-child(2) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item11.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 255, 255);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(3) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item12.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(254, 238, 176);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section5 {
+            background-color: #85a2a6;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme5-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                background: 0 0;
+                a {
+                  background-image: url("../../img/lapierrequitourne/biscuits-item13.png");
+
+                  .biscuits-item-title-wrapper {
+                    .biscuits-item-title {
+                      color: rgb(255, 246, 95);
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section6 {
+            background-color: #846f62;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme6-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                background: 0 0;
+                a {
+                  background-image: url("../../img/lapierrequitourne/biscuits-item14.png");
+
+                  .biscuits-item-title-wrapper {
+                    .biscuits-item-title {
+                      color: rgb(251, 176, 66);
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section7 {
+            background-color: #a55b61;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme7-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                background: 0 0;
+                a {
+                  background-image: url("../../img/lapierrequitourne/biscuits-item15.png");
+
+                  .biscuits-item-title-wrapper {
+                    .biscuits-item-title {
+                      color: rgb(255, 251, 228);
+
+                      span {
+                        font-size: 90px;
+                        &:last-child {
+                          font-size: 120px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .gamme-perso {
+              .gamme-perso-left {
+                left: -5%;
+              }
+            }
+          }
+
+          &.gamme_section8 {
+            background-color: #875681;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme8-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                &:nth-child(1) {
+                  background: 0 0;
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item16.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 247, 162);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(2) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item17.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 255, 255);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section9 {
+            background-color: #a2b4ae;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme9-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                background: 0 0;
+                a {
+                  background-image: url("../../img/lapierrequitourne/biscuits-item18.png");
+
+                  .biscuits-item-title-wrapper {
+                    .biscuits-item-title {
+                      color: rgb(252, 235, 111);
+
+                      span {
+                        font-size: 90px;
+                        &:last-child {
+                          font-size: 80px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gamme_section10 {
+            background-color: #b16483;
+
+            .gamme-bg {
+              background-image: url("../../img/lapierrequitourne/gamme10-bg.jpg");
+            }
+
+            .biscuits {
+              .biscuits-item {
+                margin: 0;
+
+                &:nth-child(1) {
+                  background: 0 0;
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item19.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 247, 162);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(2) {
+                  a {
+                    background-image: url("../../img/lapierrequitourne/biscuits-item20.png");
+
+                    .biscuits-item-title-wrapper {
+                      .biscuits-item-title {
+                        color: rgb(255, 255, 255);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .gamme-perso {
+              .gamme-perso-left {
+                left: -5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  .vct-footer {
+    @extend %relative;
+    background-color: #000;
+
+    .vct-footer-content {
+      height: 110px;
+      text-align: center;
+      width: 100%;
+
+      ul {
+        display: inline-block;
+        top: 50%;
+        transform: translateY(-50%);
+        list-style: none;
+        margin: 0;
+        position: relative;
+
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 10px 20px;
+          font-size: 14px;
+          line-height: 1.3;
+          color: #fff4ce;
+
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            background: 0 0;
+            padding-right: 0;
+          }
+
+          a {
+            padding-bottom: 3px;
+            color: #fff4ce;
+            text-decoration: none;
+          }
+          .footer-logo {
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            margin-right: 6px;
+          }
+          .fb-like {
+            display: inline-block;
+            position: relative;
+
+            span {
+              display: inline-block;
+              position: relative;
+              text-align: justify;
+              vertical-align: bottom;
+              width: 138px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

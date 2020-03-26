@@ -476,6 +476,8 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
   color: transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__title {
@@ -555,6 +557,47 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 0;
   left: 100%;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images {
+  z-index: -1;
+  -webkit-perspective: 100vh;
+          perspective: 100vh;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-transform: rotateX(16deg) scale(0.9);
+          transform: rotateX(16deg) scale(0.9);
+  -webkit-transition: all 15s;
+  transition: all 15s;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images:first-of-type {
+  margin-top: 6.25vw;
+  display: block;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images .lookbook-thumbnail__image-item {
+  margin-top: 3.125vw;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images .lookbook-thumbnail__image-item .lookbook-thumbnail__image {
+  width: 30vw;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images:last-of-type {
+  display: block;
+  margin-left: 3.125vw;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images:last-of-type .lookbook-thumbnail__image-item:nth-child(odd) {
+  display: none;
+}
+
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images.animated {
+  -webkit-transition: all 15s;
+  transition: all 15s;
+  -webkit-transform: rotateX(16deg) scale(0.9) translateY(-200%) !important;
+          transform: rotateX(16deg) scale(0.9) translateY(-200%) !important;
 }
 
 .vct-wrapper .vct-footer .vct-footer-wrapper {

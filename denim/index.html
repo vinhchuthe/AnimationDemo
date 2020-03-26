@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denim-Report Demo Cover</title>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/denim/denim.css">
+</head>
+
+<body>
+    <div class="vct-wrapper">
+
+        <!-- fixed header -->
+        <div class="vct-header">
+            <div class="header-item header-logo">
+                <a href="#" target="_blank">
+                    <img class="header-logo-img" src="../assets/img/denim/header-logo.png" alt="">
+                </a>
+            </div>
+            <div class="header-item header-menu">
+                <div class="menu-animation-container">
+                    <div class="menu-text-shape">
+                        <img class="menu-text-img" src="../assets/img/denim/menu-text.png" alt="">
+                    </div>
+                </div>
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner -->
+        <div class="vct-banner">
+
+            <!-- banner bg video -->
+            <div class="banner-bg__video-wrapper">
+                <div class="video-container">
+                    <img id="video-thumb" src="../assets/img/denim/video-bg-thumb.jpg" alt="">
+                    <iframe
+                        src="https://player.vimeo.com/video/343822771?wmode=opaque&amp;api=1&amp;loop=1&amp;muted=1&amp;player_id=video_video_1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=3ab9ff&amp;autoplay=1&amp;loop=1"
+                        id="video_bg" width="640" height="320" frameborder="0" webkitallowfullscreen=""
+                        mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen; encrypted-media"
+                        class="fade-out">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- overlay items -->
+            <div class="overlay-items">
+
+                <!-- banner animted overlay text -->
+                <div class="banner__overlay-text">
+                    <div class="overlay-text text1" id="overlay-text1">
+                        <div class="text-content text-stroke">
+                            <img src="../assets/img/denim/text1-stroke.png" alt="">
+                        </div>
+                        <div class="text-content text-fill">
+                            <img src="../assets/img/denim/text1-fill.png" alt="">
+                        </div>
+                    </div>
+                    <div class="overlay-text text2" id="overlay-text2">
+                        <div class="text-content text-stroke">
+                            <img src="../assets/img/denim/text2-stroke.png" alt="">
+                        </div>
+                        <div class="text-content text-fill">
+                            <img src="../assets/img/denim/text2-fill.png" alt="">
+                        </div>
+                    </div>
+                    <div class="overlay-text text3" id="overlay-text3">
+                        <div class="text-content text-stroke">
+                            <img src="../assets/img/denim/text3-stroke.png" alt="">
+                        </div>
+                        <div class="text-content text-fill">
+                            <img src="../assets/img/denim/text3-fill.png" alt="">
+                        </div>
+                    </div>
+                    <div class="overlay-text text4" id="overlay-text4">
+                        <div class="text-content text-stroke">
+                            <img src="../assets/img/denim/text4-stroke.png" alt="">
+                        </div>
+                        <div class="text-content text-fill">
+                            <img src="../assets/img/denim/text4-fill.png" alt="">
+                        </div>
+                    </div>
+                    <div class="overlay-text text5" id="overlay-text5">
+                        <div class="text-content text-stroke">
+                            <img src="../assets/img/denim/text5-stroke.png" alt="">
+                        </div>
+                        <div class="text-content text-fill">
+                            <img src="../assets/img/denim/text5-fill.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overlay_widget">
+
+                    <!-- text fade -->
+                    <div class="overlay_text-fade">
+                        <p>
+                            A Data Deep Dive
+                        </p>
+                    </div>
+
+                    <!-- scroll desc -->
+                    <div class="overlay_scroll-desc">
+                        <p>
+                            Scroll to Begin
+                        </p>
+                    </div>
+
+                    <!-- Social media -->
+                    <div class="overlay_social-widget">
+                        <p>Share:</p>
+                        <a href="#" class="widget-link">
+                            <img src="../assets/img/denim/widget-link1.png" alt="">
+                        </a>
+                        <a href="#" class="widget-link">
+                            <img src="../assets/img/denim/widget-link2.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../src/js/Jquery/jquery.min.js"></script>
+    <script src="../src/js/Gsap/Tweenmax.js"></script>
+    <script src="../src/js/Scrollmagic/ScrollMagic.js"></script>
+    <script src="../src/js/Scrollmagic/animation.gsap.js"></script>
+    <script src="../src/js/Scrollmagic/debug.addIndicators.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+
+            var tl = new TimelineMax({ delay: 3 });
+            tl.to($("#video-thumb"), 0.5, { opacity: 0 })
+                .to($("#video_bg"), 0.5, { opacity: 1 }, "-=0.5");
+        })
+
+    </script> -->
+    <script>
+        TweenMax.set($("#overlay-text1 .text-fill"), { y: "-=8vw", x: "-=6vw", rotation: -15 })
+        TweenMax.set($("#overlay-text1 .text-stroke"), { y: "-=7vw", x: "-=5vw", rotation: -15 })
+        TweenMax.set($("#overlay-text2 .text-fill"), { y: "+=7vw", x: "-=5vw", rotation: 10 })
+        TweenMax.set($("#overlay-text2 .text-stroke"), { y: "+=8vw", x: "-=4vw", rotation: 10 })
+        TweenMax.set($("#overlay-text3 .text-fill"), { y: "+=4vw", x: "+=3vw", rotation: -10 })
+        TweenMax.set($("#overlay-text3 .text-stroke"), { y: "+=5vw", x: "+=4vw", rotation: -10 })
+        TweenMax.set($("#overlay-text4 .text-fill"), { y: "-=15vw", x: "+=5vw", rotation: 10 })
+        TweenMax.set($("#overlay-text4 .text-stroke"), { y: "-=14vw", x: "+=6vw", rotation: 10 })
+        TweenMax.set($("#overlay-text5 .text-fill"), { y: "+=12vw", x: "+=7vw", rotation: 10 })
+        TweenMax.set($("#overlay-text5 .text-stroke"), { y: "+=13vw", x: "+=8vw", rotation: 10 })
+    </script>
+</body>
+
+</html>
