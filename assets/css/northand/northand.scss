@@ -1,6 +1,15 @@
 $main-green: #2e352e;
 $main-yellow: #ffe527;
 
+@font-face {
+  font-family: moret;
+  src: url("./moret.ttf");
+}
+
+%moret {
+  font-family: moret;
+}
+
 %fixed {
   position: fixed;
   top: 0;
@@ -166,6 +175,7 @@ body::-webkit-scrollbar {
             margin-bottom: 40px;
 
             h3 {
+              @extend %moret;
               color: $main-green;
               font-size: 48px;
               line-height: 1em;
@@ -236,9 +246,10 @@ body::-webkit-scrollbar {
             }
 
             p {
+              @extend %moret;
               color: $main-green;
-              font-size: 1.75vw;
-              line-height: 1.15em;
+              font-size: 2.25vw;
+              line-height: 1.2;
               font-weight: 800;
             }
           }
@@ -288,9 +299,10 @@ body::-webkit-scrollbar {
               width: 45%;
 
               p {
+                @extend %moret;
                 color: $main-yellow;
                 font-size: 3vw;
-                line-height: 1.25em;
+                line-height: 1.25;
                 font-weight: 700;
               }
             }
@@ -359,9 +371,10 @@ body::-webkit-scrollbar {
               height: 26vw;
             }
             p {
+              @extend %moret;
               color: $main-green;
-              font-size: 1.75vw;
-              line-height: 1.15em;
+              font-size: 2.25vw;
+              line-height: 1.25;
               font-weight: 800;
             }
           }
@@ -392,8 +405,8 @@ body::-webkit-scrollbar {
 
               p {
                 color: #fff;
-                font-size: 2vw;
-                line-height: 1em;
+                font-size: 2.25vw;
+                line-height: 1;
                 font-weight: 200;
                 letter-spacing: 0.5px;
               }

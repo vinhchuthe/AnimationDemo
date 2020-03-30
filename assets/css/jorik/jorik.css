@@ -1,3 +1,8 @@
+@font-face {
+  font-family: VCR OSD Mono;
+  src: url("./VCR_OSD_MONO.ttf");
+}
+
 .vct-wrapper, .vct-wrapper .parallax-banner, .vct-wrapper .parallax-banner .parallax-banner-inner, .vct-wrapper .vct-product-list .product-list-inner {
   position: relative;
   width: 100%;
@@ -260,6 +265,7 @@ body::-webkit-scrollbar {
 }
 
 .vct-wrapper .vct-product-list .product-list-inner .product-list-header .product-list--title {
+  text-transform: uppercase;
   font-size: 2.78vw;
   font-family: VCR OSD Mono, monospace;
 }
@@ -295,6 +301,8 @@ body::-webkit-scrollbar {
   line-height: 1;
   -webkit-animation: slide 2s linear 0s infinite;
           animation: slide 2s linear 0s infinite;
+  text-transform: uppercase;
+  font-family: VCR OSD Mono, monospace;
 }
 
 .vct-wrapper .vct-product-list .product-list-inner .product-list-footer .product-list-button .product-list-button--text:last-child {
@@ -348,6 +356,7 @@ body::-webkit-scrollbar {
   height: 100%;
   left: 0;
   top: 0;
+  text-transform: uppercase;
   font-family: VCR OSD Mono, monospace;
   letter-spacing: 0.1rem;
   overflow: hidden;
@@ -421,6 +430,7 @@ body::-webkit-scrollbar {
 }
 
 .vct-wrapper .vct-product-list .product-list-inner .product-list-collection .product-thumbnail__message-container .product__message {
+  text-transform: uppercase;
   color: #fff;
   font-size: 1.74vw;
   position: absolute;
@@ -528,6 +538,7 @@ body::-webkit-scrollbar {
 }
 
 .vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__title .lookbook-thumbnail__main-title {
+  text-transform: uppercase;
   font-size: 7.5vw;
   font-family: VCR OSD Mono, monospace;
   line-height: 1;
@@ -540,6 +551,7 @@ body::-webkit-scrollbar {
 }
 
 .vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__button .lookbook-thumbnail__button-text {
+  text-transform: uppercase;
   -webkit-animation: slide 2s linear 0s infinite;
           animation: slide 2s linear 0s infinite;
   font-family: VCR OSD Mono, monospace;

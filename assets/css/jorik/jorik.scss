@@ -1,3 +1,8 @@
+@font-face {
+  font-family: VCR OSD Mono;
+  src: url("./VCR_OSD_MONO.ttf");
+}
+
 %relative {
   position: relative;
   width: 100%;
@@ -274,6 +279,7 @@ body::-webkit-scrollbar {
         padding: 6.25vw;
 
         .product-list--title {
+          text-transform: uppercase;
           font-size: 2.78vw;
           font-family: VCR OSD Mono, monospace;
         }
@@ -303,6 +309,8 @@ body::-webkit-scrollbar {
             white-space: nowrap;
             line-height: 1;
             animation: slide 2s linear 0s infinite;
+            text-transform: uppercase;
+            font-family: VCR OSD Mono, monospace;
 
             &:last-child {
               position: absolute;
@@ -348,6 +356,7 @@ body::-webkit-scrollbar {
                 height: 100%;
                 left: 0;
                 top: 0;
+                text-transform: uppercase;
                 font-family: VCR OSD Mono, monospace;
                 letter-spacing: 0.1rem;
                 overflow: hidden;
@@ -424,6 +433,7 @@ body::-webkit-scrollbar {
           position: relative;
 
           .product__message {
+            text-transform: uppercase;
             color: #fff;
             font-size: 1.74vw;
             position: absolute;
@@ -511,6 +521,7 @@ body::-webkit-scrollbar {
             color: #000;
           }
           .lookbook-thumbnail__main-title {
+            text-transform: uppercase;
             font-size: 7.5vw;
             font-family: VCR OSD Mono, monospace;
             line-height: 1;
@@ -523,6 +534,7 @@ body::-webkit-scrollbar {
           @extend %position-center;
 
           .lookbook-thumbnail__button-text {
+            text-transform: uppercase;
             animation: slide 2s linear 0s infinite;
             font-family: VCR OSD Mono, monospace;
             padding: 0.69vw;

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: MagazineGrotesque;
+  src: url("./MagazineGrotesque.ttf");
+}
+
+%MagazineGrotesque {
+  font-family: MagazineGrotesque;
+}
+
 %relative {
   position: relative;
   width: 100%;
@@ -14,8 +23,9 @@
 
 .vct-wrapper {
   @extend %relative;
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
+  overflow: hidden;
 
   //   Fixed header
   .vct-header {
@@ -23,15 +33,15 @@
     width: 100%;
     height: auto;
     top: 21px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     z-index: 1;
 
     .header-item {
       margin: 0 30px;
 
       &.header-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
         a {
           display: inline-block;
 
@@ -41,7 +51,9 @@
         }
       }
       &.header-menu {
-        @extend %relative;
+        position: absolute;
+        top: 0;
+        right: 0;
         width: 85px;
         height: 85px;
         margin: 0 30px;
@@ -78,6 +90,9 @@
           }
         }
       }
+      &.hidden {
+        display: none;
+      }
     }
   }
 
@@ -85,8 +100,8 @@
   .vct-banner {
     @extend %relative;
     width: 100vw;
-    height: 100vh;
-    // overflow: hidden;
+    height: 150vh;
+    overflow: hidden;
 
     // banner-video-bg
     .banner-bg__video-wrapper {
@@ -96,6 +111,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+      overflow: hidden;
 
       .video-container {
         position: absolute;
@@ -105,7 +121,7 @@
         height: 100%;
 
         img {
-          position: absolute;
+          position: fixed;
           top: -5vw;
           left: -10vw;
           width: 110vw;
@@ -113,7 +129,7 @@
         }
 
         iframe {
-          position: absolute;
+          position: fixed;
           top: -5vw;
           left: -10vw;
           width: 110vw;
@@ -129,7 +145,7 @@
 
       // banner overlay text
       .banner__overlay-text {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         top: 0;
@@ -150,7 +166,6 @@
             position: absolute;
           }
           &.text1 {
-
           }
 
           &.text2 {
@@ -167,8 +182,200 @@
           }
         }
       }
-      .text-fade {
-        @extend %position-center;
+
+      // banner-overlay widget
+      .overlay_widget {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+
+        .overlay_scroll-desc {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+
+          p {
+            @extend %MagazineGrotesque;
+            font-size: 30px;
+            font-weight: 700;
+            margin-right: 5px;
+            color: #fff;
+          }
+        }
+        .overlay_social-widget {
+          position: absolute;
+          bottom: 10px;
+          right: 3%;
+          // width: 200px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+
+          p {
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 5px;
+          }
+          .widget-link {
+            margin: 0 5px;
+
+            &:last-child {
+              width: 34px;
+              height: 37px;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .overlay_text-fade {
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          p {
+            @extend %MagazineGrotesque;
+            color: #000000;
+            font-size: 59px;
+            line-height: 74px;
+          }
+        }
+      }
+    }
+
+    .banner_after-bg {
+      position: absolute;
+      background-color: rgb(38, 84, 237);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  // Section
+  .section {
+    @extend %relative;
+    background-color: #fff;
+
+    &.section1 {
+      height: 120vh;
+      background-color: rgb(38, 84, 237);
+      margin-top: calc(-2vh + 10px);
+
+      .section-content {
+        .content-center {
+          position: relative;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 55vw;
+          max-width: 650px;
+          p {
+            @extend %MagazineGrotesque;
+            font-size: 55px;
+            line-height: 64px;
+            color: #000000;
+          }
+        }
+      }
+      .content-column {
+        position: relative;
+        left: 43%;
+        display: flex;
+        margin-top: 100px;
+
+        p {
+          max-width: 240px;
+          color: #fff;
+          font-size: 20px;
+          line-height: 28px;
+          margin: 0 20px;
+        }
+      }
+    }
+
+    &.section2 {
+      height: 100vh;
+      background-color: rgb(219, 226, 230);
+
+      .section-inner {
+        .section-overlay {
+          position: absolute;
+          width: 100%;
+          height: 100vh;
+
+          .section-overlay-item {
+            position: absolute;
+
+            &.index {
+              top: 30px;
+              left: 70px;
+              p {
+                @extend %MagazineGrotesque;
+                color: #000000;
+                line-height: 30px;
+                font-size: 24px;
+
+                span {
+                  color: #f7d600;
+                }
+              }
+            }
+            &.name {
+              top: 105px;
+              left: -26px;
+              transform: rotate(-90deg);
+
+              p {
+                text-transform: uppercase;
+                color: rgb(255, 255, 255);
+                letter-spacing: 0px;
+                font-weight: 600;
+                line-height: 30px;
+                font-size: 24px;
+                white-space: pre-wrap;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              }
+            }
+            &.shape {
+              position: absolute;
+              top: 60%;
+              left: 70%;
+              animation-name: animation_7;
+              animation-duration: 2.201s;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+              animation-fill-mode: both;
+              animation-play-state: running;
+            }
+          }
+        }
+        .section-content {
+          @extend %relative;
+          width: 100%;
+          height: 100vh;
+
+          .section-content-animated {
+            position: absolute;
+
+            &.content-animated1 {
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+              p {
+                font-size: 10vw;
+                clip-path: url(#video_bg);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -182,6 +389,23 @@
   }
   100% {
     transform: translate3d(0px, 0px, 0) rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animation_7 {
+  0% {
+    transform: translate3d(0px, 0px, 0) rotate(0deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  99.95456610631531% {
+    transform: translate3d(0px, 0px, 0) rotate(10deg) scale(1);
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0) rotate(10deg) scale(1);
     opacity: 1;
   }
 }
