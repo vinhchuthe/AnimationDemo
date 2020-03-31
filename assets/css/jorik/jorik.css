@@ -49,6 +49,10 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 
+body {
+  overflow: hidden;
+}
+
 .vct-wrapper .preload {
   width: 100vw;
   height: 100vh;
@@ -548,6 +552,7 @@ body::-webkit-scrollbar {
 .vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__button {
   background: #000;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__button .lookbook-thumbnail__button-text {
@@ -577,10 +582,10 @@ body::-webkit-scrollbar {
           perspective: 100vh;
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%;
-  -webkit-transform: rotateX(16deg) scale(0.9);
-          transform: rotateX(16deg) scale(0.9);
   -webkit-transition: all 15s;
   transition: all 15s;
+  -webkit-transform: rotateX(16deg);
+          transform: rotateX(16deg);
 }
 
 .vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images:first-of-type {
@@ -605,11 +610,15 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images.animated {
-  -webkit-transition: all 15s;
-  transition: all 15s;
-  -webkit-transform: rotateX(16deg) scale(0.9) translateY(-200%) !important;
-          transform: rotateX(16deg) scale(0.9) translateY(-200%) !important;
+.vct-wrapper .vct-lookbook-thumbnail .lookbook-thumbnail__container .lookbook-thumbnail .lookbook-thumbnail__images.thumb-up {
+  -webkit-animation-name: animation1;
+          animation-name: animation1;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .vct-wrapper .vct-footer .vct-footer-wrapper {
@@ -786,6 +795,20 @@ body::-webkit-scrollbar {
   100% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes animation1 {
+  100% {
+    -webkit-transform: translateY(-300%) scale(0.9);
+            transform: translateY(-300%) scale(0.9);
+  }
+}
+
+@keyframes animation1 {
+  100% {
+    -webkit-transform: translateY(-300%) scale(0.9);
+            transform: translateY(-300%) scale(0.9);
   }
 }
 /*# sourceMappingURL=jorik.css.map */

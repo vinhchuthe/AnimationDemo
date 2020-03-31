@@ -42,6 +42,9 @@ body::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
+body {
+  overflow: hidden;
+}
 
 .vct-wrapper {
   @extend %relative;
@@ -531,6 +534,7 @@ body::-webkit-scrollbar {
         .lookbook-thumbnail__button {
           background: #000;
           overflow: hidden;
+          text-decoration: none;
           @extend %position-center;
 
           .lookbook-thumbnail__button-text {
@@ -557,8 +561,8 @@ body::-webkit-scrollbar {
           z-index: -1;
           perspective: 100vh;
           perspective-origin: 50% 50%;
-          transform: rotateX(16deg) scale(0.9);
           transition: all 15s;
+          transform: rotateX(16deg);
 
           &:first-of-type {
             margin-top: 6.25vw;
@@ -580,9 +584,11 @@ body::-webkit-scrollbar {
             }
           }
 
-          &.animated {
-            transition: all 15s;
-            transform: rotateX(16deg) scale(0.9) translateY(-200%) !important;
+          &.thumb-up {
+            animation-name: animation1;
+            animation-duration: 45s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
           }
         }
       }
@@ -734,5 +740,11 @@ body::-webkit-scrollbar {
 @keyframes slide {
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes animation1 {
+  100% {
+    transform: translateY(-300%) scale(0.9);
+
   }
 }

@@ -63,6 +63,10 @@ tl.add("start", 2)
     .to(".cover__logo", 1, { opacity: 0, ease: Power2.easeInOut }, "-=1.2")
     .to(".preload-mess", 1, { opacity: 0, ease: Power2.easeInOut }, "-=1.2");
 
+function preload() {
+    $("body").css("overflow", "auto");
+}
+setTimeout(preload, 2500);
 
 
 // ------------------ Random text effect
@@ -131,19 +135,11 @@ new ScrollMagic.Scene({
 
 
 // --------------------- Lookbook thumbnail image
-// var tl3 = new TimelineMax();
-// TweenMax.set(".lookbook-thumbnail__images", { scale: 0.999396, rotationX: 10 });
-// new ScrollMagic.Scene({
-//     triggerElement: '.vct-lookbook-thumbnail',
-//     offset: -100
-// })
-//     .setTween(TweenMax.to(".lookbook-thumbnail__images", 20, { y: "-=100%", ease: Power0.easeNone }))
-//     .addIndicators()
-//     .addTo(controller);
-
-$(".lookbook-thumbnail").mouseenter(function () {
-    $(".lookbook-thumbnail__images").addClass("animated");
+new ScrollMagic.Scene({
+    triggerElement: '.vct-lookbook-thumbnail',
+    offset: -300
 })
-// $(".lookbook-thumbnail").mouseleave(function () {
-//     $(".lookbook-thumbnail__images").removeClass("animated");
-// })
+
+    .setClassToggle(".lookbook-thumbnail__images", "thumb-up")
+    // .addIndicators()
+    .addTo(controller);
