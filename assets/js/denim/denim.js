@@ -38,9 +38,6 @@ $(document).ready(function () {
         .from($(".overlay_text-fade"), 1, { opacity: 0, autoAlpha: 0, y: "+=30px", ease: Power2.easeInOut }, "-=0.5")
         .from($(".banner_after-bg"), 2, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut });
 
-    var parenth = $(".vct-banner").outerHeight(),
-        duration = parenth;
-
 
     new ScrollMagic.Scene({
         duration: 420
@@ -59,5 +56,30 @@ $(document).ready(function () {
         .addIndicators()
         .addTo(controller);
 
+    var tl2 = new TimelineMax();
+    TweenMax.set($(".content-slide img"), { y: "-=100vh" });
+    TweenMax.set($(".content-slide .content-slide__text"), { y: "+=100vh" });
+    TweenMax.set($("#mask text"), { x: "+=25%" });
+
+    tl2.to($(".content-slide img"), 1, { y: 0, ease: Linear.easeNone }, "-=0.5")
+        .to($(".content-slide .content-slide__text"), 1, { y: 0, ease: Linear.easeNone }, "-=0.5");
+
+    new ScrollMagic.Scene({
+        triggerElement: '.section2',
+        offset: 100,
+        duration: 280
+    })
+        .setTween(TweenMax.to($("#mask text"), 1, { x: "-50%", ease: Linear.easeNone }))
+        .addIndicators()
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.section2',
+        offset: 100,
+        duration: 280
+    })
+        .setTween(tl2)
+        .addIndicators()
+        .addTo(controller);
 })
 

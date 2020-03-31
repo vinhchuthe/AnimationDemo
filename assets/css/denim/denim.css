@@ -3,7 +3,7 @@
   src: url("./MagazineGrotesque.ttf");
 }
 
-.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-overlay .section-overlay-item.index p {
+.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p {
   font-family: MagazineGrotesque;
 }
 
@@ -321,6 +321,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
+  z-index: 1;
 }
 
 .vct-wrapper .section.section2 .section-inner .section-overlay .section-overlay-item {
@@ -363,8 +364,8 @@
 
 .vct-wrapper .section.section2 .section-inner .section-overlay .section-overlay-item.shape {
   position: absolute;
-  top: 60%;
-  left: 70%;
+  top: 65%;
+  left: 75%;
   -webkit-animation-name: animation_7;
           animation-name: animation_7;
   -webkit-animation-duration: 2.201s;
@@ -386,19 +387,87 @@
 
 .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 {
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 #bg-video {
+  width: 140%;
+  height: 100%;
+  display: block;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 30vw;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg rect {
+  fill: #fff;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg > rect {
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 {
+  width: auto;
+  height: auto;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
-.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 p {
-  font-size: 10vw;
-  -webkit-clip-path: url(#video_bg);
-          clip-path: url(#video_bg);
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text {
+  margin-left: -50px;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p {
+  color: #dbe2e6;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.45vw;
+  letter-spacing: 0px;
+  line-height: 1.1;
+  text-align: start;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  -webkit-text-fill-color: #dbe2e6;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide img {
+  margin-top: -70px;
 }
 
 @-webkit-keyframes animation_1 {
