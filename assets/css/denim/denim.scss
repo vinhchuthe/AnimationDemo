@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
 }
+
 %position-center {
   position: absolute;
   top: 50%;
@@ -40,6 +41,7 @@
         position: absolute;
         top: 0;
         left: 0;
+
         a {
           display: inline-block;
 
@@ -48,6 +50,7 @@
           }
         }
       }
+
       &.header-menu {
         position: absolute;
         top: 0;
@@ -71,6 +74,7 @@
             }
           }
         }
+
         .menu-btn {
           @extend %position-center;
           cursor: pointer;
@@ -88,6 +92,7 @@
           }
         }
       }
+
       &.hidden {
         display: none;
       }
@@ -163,18 +168,21 @@
           .text-content {
             position: absolute;
           }
-          &.text1 {
-          }
+
+          &.text1 {}
 
           &.text2 {
             width: 150px;
           }
+
           &.text3 {
             width: 178px;
           }
+
           &.text4 {
             width: 38px;
           }
+
           &.text5 {
             margin-right: 0;
           }
@@ -202,6 +210,7 @@
             color: #fff;
           }
         }
+
         .overlay_social-widget {
           position: absolute;
           bottom: 10px;
@@ -216,6 +225,7 @@
             font-weight: 700;
             margin-right: 5px;
           }
+
           .widget-link {
             margin: 0 5px;
 
@@ -229,6 +239,7 @@
             }
           }
         }
+
         .overlay_text-fade {
           position: absolute;
           top: 30%;
@@ -260,6 +271,59 @@
     @extend %relative;
     background-color: #fff;
 
+    .section-inner {
+      .section-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+
+        .section-overlay-item {
+          position: absolute;
+
+          &.index {
+            top: 30px;
+            left: 70px;
+
+            p {
+              @extend %MagazineGrotesque;
+              color: #000000;
+              line-height: 30px;
+              font-size: 24px;
+
+              span {
+                color: #f7d600;
+              }
+            }
+          }
+
+          &.name {
+            top: 105px;
+            left: -26px;
+            transform: rotate(-90deg);
+
+            p {
+              text-transform: uppercase;
+              color: rgb(255, 255, 255);
+              letter-spacing: 0px;
+              font-weight: 600;
+              line-height: 30px;
+              font-size: 24px;
+              white-space: pre-wrap;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+            }
+          }
+        }
+      }
+
+      .section-content {
+        @extend %relative;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
     &.section1 {
       height: 120vh;
       background-color: rgb(38, 84, 237);
@@ -273,6 +337,7 @@
           transform: translateX(-50%);
           width: 55vw;
           max-width: 650px;
+
           p {
             @extend %MagazineGrotesque;
             font-size: 55px;
@@ -281,6 +346,7 @@
           }
         }
       }
+
       .content-column {
         position: relative;
         left: 43%;
@@ -303,45 +369,9 @@
 
       .section-inner {
         .section-overlay {
-          position: absolute;
-          width: 100%;
-          height: 100vh;
-          z-index: 1;
 
           .section-overlay-item {
-            position: absolute;
 
-            &.index {
-              top: 30px;
-              left: 70px;
-              p {
-                @extend %MagazineGrotesque;
-                color: #000000;
-                line-height: 30px;
-                font-size: 24px;
-
-                span {
-                  color: #f7d600;
-                }
-              }
-            }
-            &.name {
-              top: 105px;
-              left: -26px;
-              transform: rotate(-90deg);
-
-              p {
-                text-transform: uppercase;
-                color: rgb(255, 255, 255);
-                letter-spacing: 0px;
-                font-weight: 600;
-                line-height: 30px;
-                font-size: 24px;
-                white-space: pre-wrap;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: black;
-              }
-            }
             &.shape {
               position: absolute;
               top: 65%;
@@ -355,10 +385,8 @@
             }
           }
         }
+
         .section-content {
-          @extend %relative;
-          width: 100%;
-          height: 100vh;
 
           .section-content-animated {
             position: absolute;
@@ -371,6 +399,7 @@
                 height: 100%;
                 display: block;
               }
+
               svg {
                 width: 100%;
                 position: absolute;
@@ -384,15 +413,18 @@
                   text-transform: uppercase;
                   font-size: 30vw;
                 }
+
                 rect {
                   fill: #fff;
                 }
               }
-              svg > rect {
+
+              svg>rect {
                 -webkit-mask: url(#mask);
                 mask: url(#mask);
               }
             }
+
             &.content-animated2 {
               width: auto;
               height: auto;
@@ -430,6 +462,7 @@
                     -webkit-text-stroke-color: black;
                   }
                 }
+
                 img {
                   margin-top: -70px;
                 }
@@ -438,29 +471,227 @@
           }
         }
       }
-      // &.section-fixed {
-      //   .section-inner {
-      //     .section-overlay {
-      //       position: fixed;
-      //       top: 0;
-      //     }
-      //     .section-content {
-      //       .section-content-animated {
-      //         position: fixed;
-
-      //         &.content-animated1 {
-      //           svg {
-      //             position: fixed;
-      //           }
-      //           #bg-video {
-      //             position: fixed;
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
     }
+
+    &.section3 {
+      height: 100vh;
+      background-color: rgb(219, 226, 230);
+
+      .section-inner {
+        .section-overlay {}
+
+        .section-content {
+          .s3-content {
+            width: 60vw;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            top: 55%;
+            transform: translateY(-50%);
+
+            .s3-content-left {
+              max-width: 245px;
+
+              p {
+                font-size: 22px;
+                margin-bottom: 30px;
+                color: #000;
+                line-height: 1.3;
+              }
+            }
+
+            .s3-content-right {
+              .s3-img {
+                width: initial;
+                margin-top: 4vw;
+              }
+
+              .bg-circle {
+                position: absolute;
+                z-index: -1;
+                top: -10%;
+                right: -20%;
+
+              }
+            }
+          }
+        }
+      }
+
+      &.fixed {
+        .section-inner {
+          .section-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    &.section4 {
+      height: 100vh;
+      background-color: rgb(219, 226, 230);
+      // overflow: hidden;
+
+      .section-inner {
+        .section-overlay {
+          height: auto;
+
+          .section-overlay-item {
+            &.shape {
+              transform: rotateZ(-40deg);
+              top: -10px;
+              left: 15%;
+              z-index: -1;
+            }
+          }
+        }
+
+        .section-content {
+          .section-title {
+            padding-top: 20vh;
+            text-align: center;
+            margin-bottom: 70px;
+
+            h3 {
+              @extend %MagazineGrotesque;
+              font-size: 3.5vw;
+              line-height: 1.2;
+              font-weight: 400;
+              color: #000;
+            }
+          }
+
+          .section-content__hover {
+            width: 60vw;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+
+            .reveal-hover-item {
+              margin: 15px 15px 0;
+              min-width: 400px;
+
+              .item {
+                display: none;
+
+                .item-img {
+                  max-width: 400px;
+                  margin-bottom: 30px;
+
+                  img {
+                    width: 100%;
+                  }
+                }
+
+                .item-content {
+                  p {
+                    line-height: 25px;
+                    font-size: 20px;
+                    white-space: inherit;
+                    padding-right: 16px;
+                    color: #000000;
+                    font-weight: 400;
+                    max-width: 350px;
+                    margin-bottom: 0;
+
+
+                    &.item-percent {
+                      padding-left: 0 !important;
+                      max-width: 400px;
+                      line-height: 71px;
+                      font-size: 57px;
+                      color: #2654ed;
+                      font-weight: 700;
+                      @extend %MagazineGrotesque;
+                    }
+
+
+                  }
+                }
+
+                &.active {
+                  display: block;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(7),
+                &:nth-child(8) {
+                  .item-content {
+                    width: 400px;
+
+                    p {
+                      &.item-percent {
+                        font-size: 35px;
+                        line-height: 1.2;
+                        margin-bottom: 30px;
+                      }
+
+                      span {
+                        font-weight: bold;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .hover-item__list {
+              margin: 0 15px;
+
+              ul {
+                li {
+                  font-size: 38px;
+                  line-height: 1.1;
+                  color: #fff;
+                  @extend %MagazineGrotesque;
+                  margin-bottom: 10px;
+
+                  p {
+                    position: relative;
+                    display: inline-block;
+                    margin-bottom: 0;
+                    padding-bottom: 10px;
+                  }
+
+                  &:hover {
+                    cursor: context-menu;
+                  }
+
+                  &.hover {
+                    p {
+                      &::after {
+                        content: "";
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 5px;
+                        background-color: #2654ed;
+                      }
+                    }
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.section5 {
+      background-color: rgb(219, 226, 230);
+      height: 100vh;
+    }
+
   }
 }
 
@@ -470,6 +701,7 @@
     opacity: 1;
     animation-timing-function: linear;
   }
+
   100% {
     transform: translate3d(0px, 0px, 0) rotate(360deg) scale(1);
     opacity: 1;
@@ -482,11 +714,13 @@
     opacity: 1;
     animation-timing-function: ease-in-out;
   }
+
   99.95456610631531% {
     transform: translate3d(0px, 0px, 0) rotate(10deg) scale(1);
     opacity: 1;
     animation-timing-function: linear;
   }
+
   100% {
     transform: translate3d(0px, 0px, 0) rotate(10deg) scale(1);
     opacity: 1;
