@@ -290,6 +290,7 @@
               color: #000000;
               line-height: 30px;
               font-size: 24px;
+              text-transform: uppercase;
 
               span {
                 color: #f7d600;
@@ -688,8 +689,494 @@
     }
 
     &.section5 {
+      height: 100vh;
+      background-color: #fff;
+      overflow: hidden;
+
+      .section-inner {
+        .section-overlay {
+          height: auto;
+
+          .section-overlay-item {
+            &.name {
+              top: 142px;
+              left: -70px;
+            }
+
+            &.index {
+              span {
+                color: #2654ed;
+              }
+            }
+          }
+        }
+
+        .section-content {
+          .panel {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+
+            &.panel-bg {
+              img {
+                width: 100%;
+              }
+
+              p {
+                color: #fff;
+                font-size: 124px;
+                line-height: 1.1;
+                @extend %MagazineGrotesque;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+
+            &.panel-text {
+              width: 120%;
+              background-color: rgb(247, 214, 0);
+
+              p {
+                text-transform: uppercase;
+                @extend %MagazineGrotesque;
+                font-size: 65px;
+                line-height: 1.3;
+                width: 50vw;
+                max-width: 850px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-text-fill-color: rgb(247, 214, 0);
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.section6 {
+      // height: 100vh;
+      background-color: #fff;
+      overflow: hidden;
+      height: auto;
+
+      .section-inner {
+        .section-overlay {
+          height: auto;
+
+          .section-overlay-item {
+            &.name {
+              top: 142px;
+              left: -70px;
+            }
+
+            &.index {
+              span {
+                color: #2654ed;
+              }
+            }
+          }
+        }
+
+        .section-content {
+          height: auto;
+
+          .section-title {
+            padding-top: 10vh;
+            text-align: left;
+            // width: 60vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+
+            h3 {
+              @extend %MagazineGrotesque;
+              font-size: 2.5vw;
+              line-height: 1.2;
+              font-weight: 400;
+              color: #ff553d;
+              display: inline-block;
+            }
+          }
+
+          .group {
+            width: 50vw;
+            max-width: 1000px;
+            margin: 100px auto 0;
+            position: relative;
+            // margin-top: 70px;
+
+            &.group1 {
+              .group-right {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                img {
+                  width: initial;
+                }
+              }
+
+              .group-left {
+                position: absolute;
+                top: 20px;
+                left: 0;
+
+                .s6-group-name {
+                  font-size: 55px;
+                  line-height: 65px;
+                  color: #fff;
+                  @extend %MagazineGrotesque;
+                  -webkit-text-fill-color: #fff;
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: black;
+                  max-width: 500px;
+                  text-transform: uppercase;
+                }
+
+                .s6-group-text {
+                  line-height: 25px;
+                  font-size: 20px;
+                  color: #000;
+                  max-width: 300px;
+                  margin-top: 70px;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            &.group2 {
+              transform: translateX(15%);
+              display: flex;
+              justify-content: space-evenly;
+
+              .group-left {
+                width: 45%;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              .group-right {
+                width: 45%;
+
+                .s6-group-name {
+                  font-size: 50px;
+                  line-height: 55px;
+                  color: #fff;
+                  @extend %MagazineGrotesque;
+                  -webkit-text-fill-color: #fff;
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: black;
+                  max-width: 500px;
+                  text-transform: uppercase;
+                }
+
+                .s6-group-text {
+                  line-height: 25px;
+                  font-size: 20px;
+                  color: #000;
+                  max-width: 300px;
+                  margin-top: 30px;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            &.group3 {
+              display: flex;
+              justify-content: space-evenly;
+              margin-bottom: 70px;
+
+              .group-left {
+                width: 45%;
+
+                .s6-group-name {
+                  font-size: 50px;
+                  line-height: 55px;
+                  color: #fff;
+                  @extend %MagazineGrotesque;
+                  -webkit-text-fill-color: #fff;
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: black;
+                  max-width: 500px;
+                  text-transform: uppercase;
+                }
+
+                .s6-group-text {
+                  line-height: 25px;
+                  font-size: 20px;
+                  color: #000;
+                  max-width: 300px;
+                  margin-top: 30px;
+                  font-weight: 700;
+                }
+              }
+
+              .group-right {
+                width: 45%;
+
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.fixed {
+        .section-inner {
+          .section-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    &.section7 {
+      height: 100vh;
+      background-color: #fff;
+      overflow: hidden;
+
+      .section-inner {
+        .section-content {
+          .panel {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+
+            &.panel-bg {
+              img {
+                width: 100%;
+                height: 100%;
+              }
+
+              .opacity {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: rgb(255, 85, 61);
+                opacity: 0.5;
+                top: 0;
+                left: 0;
+              }
+
+              p {
+                color: #fff;
+                font-size: 70px;
+                line-height: 1.1;
+                @extend %MagazineGrotesque;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+
+            &.panel-text {
+              width: 120%;
+              background-color: rgb(255, 85, 61);
+
+              p {
+                text-transform: uppercase;
+                @extend %MagazineGrotesque;
+                font-size: 82px;
+                line-height: 1.3;
+                width: 50vw;
+                max-width: 850px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-text-fill-color: rgb(255, 85, 61);
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.section8 {
+      height: 100vh;
+      background-color: #fff;
+      overflow: hidden;
+
+      .section-inner {
+        .section-overlay {
+          .section-overlay-item {
+            &.name {
+              -webkit-text-fill-color: rgb(255, 85, 61);
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+            }
+
+            &.index {
+              p {
+                span {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
+        .section-content {
+          .section-content-animated {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &.content-animated3 {
+
+              .clip-path-wrapper {
+                #bg-video1 {
+                  width: 140%;
+                  height: 100%;
+                  display: block;
+                }
+
+                .clip-path-img {
+                  position: absolute;
+                  top: 50%;
+                  left: 100%;
+                  transform: translate(-50%, -50%);
+                  height: 50vh;
+
+                  &::after {
+                    content: "";
+                    width: 30vw;
+                    height: 100vh;
+                    position: absolute;
+                    top: 0;
+                    left: -20%;
+                    background-color: rgb(255, 85, 61);
+                  }
+
+                  img {
+                    height: 100%;
+                  }
+                }
+
+                .clip-path-border {
+                  position: absolute;
+
+                  &.border1 {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 26vh;
+                    background-color: rgb(255, 85, 61);
+                  }
+
+                  &.border3 {
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 26vh;
+                    background-color: rgb(255, 85, 61);
+                  }
+
+                  &.border2 {
+                    top: 0;
+                    left: 0;
+                    height: 100vh;
+                    width: 5vw;
+                    background-color: rgb(255, 85, 61);
+                  }
+                }
+              }
+            }
+
+            &.content-animated4 {
+              p {
+                position: absolute;
+                top: 30px;
+                left: 20%;
+                font-size: 130px;
+              }
+            }
+            
+          }
+        }
+      }
+    }
+
+    &.last-section {
       background-color: rgb(219, 226, 230);
       height: 100vh;
+      overflow: hidden;
+
+      .section-inner {
+        .section-last-bg {
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .section-last-search {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 40vw;
+          max-width: 730px;
+
+          .last-search-title {
+            @extend %MagazineGrotesque;
+            font-size: 59px;
+            line-height: 1.1;
+            color: #fff;
+            margin-bottom: 30px;
+          }
+
+          .search-bar {
+            background-color: #fff;
+            display: flex;
+            padding: 12px;
+            transition: all .25s cubic-bezier(.23, 1, .32, 1);
+
+            input {
+              background-color: #ffffff;
+              border: 0;
+              color: #000;
+              flex-grow: 1;
+              font-family: 'Brown-Regular', Arial;
+              font-size: 1.1250rem;
+              margin-left: 12px;
+              margin-right: 12px;
+              outline: none;
+              padding: 0;
+            }
+
+            button {
+              align-items: center;
+              background-color: #FF553D;
+              border: 0;
+              cursor: pointer;
+              display: flex;
+              height: 60px;
+              justify-content: center;
+              width: 60px;
+            }
+          }
+        }
+      }
     }
 
   }

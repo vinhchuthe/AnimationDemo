@@ -142,7 +142,7 @@ $(document).ready(function () {
         .addTo(controller);
 
 
-    // hidden logo
+    //------------------- hidden logo
     new ScrollMagic.Scene({
             triggerElement: '.section2',
             offset: -300
@@ -193,25 +193,7 @@ $(document).ready(function () {
         .addTo(controller);
 
 
-    var s3 = $(".section3").offset().top;
-    var s4 = $(".section4").offset().top;
-    var s5 = $(".section5").offset().top;
-
-    $(window).scroll(function (e) {
-        var y = $(this).scrollTop();
-
-        if (y >= s3) {
-            $(".section3").addClass('fixed');
-        } else {
-            $(".section3").removeClass('fixed');
-        }
-        if (y > (s4 + 300)) {
-            $(".section3").removeClass('fixed');
-        }
-    });
-
-
-    //Hover reveal item
+    // ------------------- Hover reveal item
     $("#hover-list li").mouseenter(function () {
         var index = $(this).attr("data-id");
         // console.log(index);
@@ -227,4 +209,98 @@ $(document).ready(function () {
         $("#hover-list li").first().addClass("hover");
     })
 
+
+    // --------------------- Section5
+    var wipeAnimation = new TimelineMax()
+        .fromTo("#wipe1 .panel.panel-text", 1, {
+            x: "-10%"
+        }, {
+            x: "120%",
+            ease: Linear.easeNone
+        })
+
+    new ScrollMagic.Scene({
+            triggerElement: '.section5',
+            triggerHook: "onLeave",
+            duration: "200%"
+        })
+        .setPin(".section5")
+        .setTween(wipeAnimation)
+        .addIndicators()
+        .addTo(controller);
+
+
+    // -------------- Section7
+    var wipeAnimation2 = new TimelineMax()
+        .fromTo("#wipe2 .panel.panel-text", 1, {
+            x: "-10%"
+        }, {
+            x: "120%",
+            ease: Linear.easeNone
+        })
+
+    new ScrollMagic.Scene({
+            triggerElement: '.section7',
+            triggerHook: "onLeave",
+            duration: "200%"
+        })
+        .setPin(".section7")
+        .setTween(wipeAnimation2)
+        .addIndicators()
+        .addTo(controller);
+
+    //----------------- Meme Jeans
+    var wipeAnimation3 = new TimelineMax()
+        .to($(".clip-path-border.border2"), 1, {
+            scaleX: 0,
+            transformOrigin: "left",
+            ease: Linear.easeNone
+        })
+        .staggerTo($("#s8-featured p"), 1, {
+            x: "+=40vw",
+            y: "+=50vw"
+        }, "0.5", "-=1")
+        .to($(".clip-path-img"), 2, {
+            x: "-=100%",
+            ease: Linear.easeNone
+        }, "-=2")
+
+
+    new ScrollMagic.Scene({
+            triggerElement: '.section8',
+            triggerHook: "onLeave",
+            duration: "200%"
+        })
+        .setPin(".section8")
+        .setTween(wipeAnimation3)
+        .addIndicators()
+        .addTo(controller);
+
+
+    // ----------------------- Scroll to fixed
+    var s3 = $(".section3").offset().top;
+    var s4 = $(".section4").offset().top;
+    var s6 = $(".section6").offset().top;
+    var s7 = $(".section7").offset().top;
+
+    $(window).scroll(function (e) {
+        var y = $(this).scrollTop();
+
+        if (y >= s3) {
+            $(".section3").addClass('fixed');
+        } else {
+            $(".section3").removeClass('fixed');
+        }
+        if (y > (s4 + 300)) {
+            $(".section3").removeClass('fixed');
+        }
+        if (y >= s6) {
+            $(".section6").addClass("fixed")
+        } else {
+            $(".section6").removeClass('fixed');
+        }
+        if (y > (s7 - 500)) {
+            $(".section6").removeClass('fixed');
+        }
+    });
 });
