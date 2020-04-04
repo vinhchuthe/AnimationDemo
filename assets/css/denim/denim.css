@@ -3,7 +3,7 @@
   src: url("./MagazineGrotesque.ttf");
 }
 
-.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
+.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
   font-family: MagazineGrotesque;
 }
 
@@ -1042,6 +1042,58 @@
   top: 30px;
   left: 20%;
   font-size: 130px;
+}
+
+.vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated5 p {
+  position: absolute;
+}
+
+.vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated5 p:last-child {
+  top: 50%;
+  left: 30%;
+  line-height: 226px;
+  font-size: 181px;
+}
+
+.vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated5 p:first-child {
+  top: 10%;
+  right: 15%;
+  line-height: 130px;
+  font-size: 104px;
+}
+
+.vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50vw;
+  max-width: 600px;
+}
+
+.vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name {
+  -webkit-text-fill-color: #ff553d;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 68px;
+  margin-bottom: 0;
+}
+
+.vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .text-column {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  margin-bottom: 0;
+  margin-top: 70px;
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  width: 500px;
 }
 
 .vct-wrapper .section.last-section {

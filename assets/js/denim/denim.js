@@ -263,7 +263,17 @@ $(document).ready(function () {
         .to($(".clip-path-img"), 2, {
             x: "-=100%",
             ease: Linear.easeNone
-        }, "-=2")
+        }, "-=1")
+        .fromTo($("#s8-icon p"), 1, {
+            scale: 0
+        }, {
+            scale: 1
+        }, "-=1")
+        .fromTo($(".s8-text-wrapper"), 1, {
+            y: "+=100vh"
+        }, {
+            y: "-30vh"
+        }, "-=1")
 
 
     new ScrollMagic.Scene({
