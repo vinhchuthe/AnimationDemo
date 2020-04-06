@@ -3,7 +3,7 @@
   src: url("./MagazineGrotesque.ttf");
 }
 
-.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
+.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .preyear p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-content-title h3, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li p, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
   font-family: MagazineGrotesque;
 }
 
@@ -1094,6 +1094,163 @@
   line-height: 25px;
   color: #fff;
   width: 500px;
+}
+
+.vct-wrapper .section.section9 {
+  height: 100vh;
+  background-color: #dbe2e6;
+  overflow: hidden;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-overlay {
+  height: auto;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-overlay .section-overlay-item.name {
+  top: 142px;
+  left: -70px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-overlay .section-overlay-item.index span {
+  color: #2654ed;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content {
+  width: 50vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: auto;
+  padding-bottom: 55vh;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .preyear {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: -70px;
+  margin-left: 30px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .preyear p {
+  line-height: 113px;
+  font-size: 90px;
+  color: #000;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+  display: inline-block;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart {
+  position: absolute;
+  width: 200px;
+  height: 45px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart .s9-chart-text p {
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart1 {
+  margin-left: -5px;
+  margin-top: -30.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart2 {
+  margin-left: 168px;
+  margin-top: -118.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart3 {
+  margin-left: 258px;
+  margin-top: -182.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart4 {
+  margin-left: 338px;
+  margin-top: -96.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart5 {
+  margin-left: 211px;
+  margin-top: 19.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart6 {
+  margin-left: 42px;
+  margin-top: 146.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart7 {
+  margin-left: 208px;
+  margin-top: 147.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart.chart8 {
+  margin-left: 330px;
+  margin-top: 126.5px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move {
+  padding-top: 10vh;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-content-title h3 {
+  line-height: 80px;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-content-title p {
+  text-transform: uppercase;
+  line-height: 23px;
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list {
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li {
+  padding-left: 100px;
+  margin-bottom: 100px;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li p {
+  line-height: 113px;
+  font-size: 90px;
+  color: #000;
+  -webkit-text-fill-color: #dbe2e6;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+  display: inline-block;
 }
 
 .vct-wrapper .section.last-section {

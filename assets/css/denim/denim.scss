@@ -1169,6 +1169,201 @@
       }
     }
 
+    &.section9 {
+      height: 100vh;
+      background-color: rgb(219, 226, 230);
+      overflow: hidden;
+
+      .section-inner {
+        .section-overlay {
+          height: auto;
+
+          .section-overlay-item {
+            &.name {
+              top: 142px;
+              left: -70px;
+            }
+
+            &.index {
+              span {
+                color: #2654ed;
+              }
+            }
+          }
+        }
+
+        .section-content {
+          width: 50vw;
+          max-width: 1100px;
+          margin: 0 auto;
+          height: auto;
+          padding-bottom: 55vh;
+
+          .s9-content-fixed {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+
+            .preyear {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              margin-top: -70px;
+              margin-left: 30px;
+
+              p {
+                line-height: 113px;
+                font-size: 90px;
+                color: #000;
+                transform: scaleX(1.5);
+                @extend %MagazineGrotesque;
+                display: inline-block;
+              }
+            }
+
+            .s9-content-chart {
+              position: absolute;
+              top: 50%;
+              right: 40%;
+              transform: translate(-50%, -50%);
+
+              .s9-chart {
+                position: absolute;
+                width: 200px;
+                height: 45px;
+
+
+                .s9-chart-text {
+                  p {
+                    line-height: 30px;
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #000;
+                    text-align: center;
+                  }
+                }
+
+                &.chart1 {
+                  margin-left: -5px;
+                  margin-top: -30.5px;
+                }
+
+                &.chart2 {
+                  margin-left: 168px;
+                  margin-top: -118.5px;
+                }
+
+                &.chart3 {
+                  margin-left: 258px;
+                  margin-top: -182.5px;
+                }
+
+                &.chart4 {
+                  margin-left: 338px;
+                  margin-top: -96.5px;
+                }
+
+                &.chart5 {
+                  margin-left: 211px;
+                  margin-top: 19.5px;
+                }
+
+                &.chart6 {
+                  margin-left: 42px;
+                  margin-top: 146.5px;
+                }
+
+                &.chart7 {
+                  margin-left: 208px;
+                  margin-top: 147.5px;
+                }
+
+                &.chart8 {
+                  margin-left: 330px;
+                  margin-top: 126.5px;
+                }
+              }
+            }
+          }
+
+          .s9-content-move {
+            padding-top: 10vh;
+
+            .s9-content-title {
+
+              h3 {
+                line-height: 80px;
+                font-size: 64px;
+                @extend %MagazineGrotesque;
+                margin-bottom: 20px;
+              }
+
+              p {
+                text-transform: uppercase;
+                line-height: 23px;
+                font-size: 18px;
+                max-width: 400px;
+              }
+            }
+
+            .s9-year-list {
+              margin-top: 80px;
+              margin-left: 100px;
+
+              ul {
+                li {
+                  padding-left: 100px;
+                  margin-bottom: 100px;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  p {
+                    line-height: 113px;
+                    font-size: 90px;
+                    color: #000;
+                    -webkit-text-fill-color: rgb(219, 226, 230);
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: black;
+                    @extend %MagazineGrotesque;
+                    transform: scaleX(1.5);
+                    display: inline-block;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+      // &.fixed {
+      //   .section-inner {
+      //     // .section-overlay {
+      //     //   position: fixed;
+      //     //   top: 0;
+      //     //   left: 0;
+      //     //   height: auto;
+      //     // }
+
+      //     .section-content {
+      //       .s9-content-fixed {
+
+      //         // .preyear {
+      //         //   position: fixed;
+      //         // }
+      //         .s9-content-chart {
+      //           position: fixed;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+
+    }
+
     &.last-section {
       background-color: rgb(219, 226, 230);
       height: 100vh;

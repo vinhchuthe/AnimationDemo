@@ -287,11 +287,32 @@ $(document).ready(function () {
         .addTo(controller);
 
 
+
+
+    var wipeAnimation4 = new TimelineMax()
+        .fromTo($(".s9-content-move"), 1, {
+            y: 0
+        }, {
+            y: "-=82.5%"
+        })
+
+    new ScrollMagic.Scene({
+            triggerElement: '.section9',
+            triggerHook: "onLeave",
+            duration: "200%"
+        })
+        .setPin(".section9")
+        .setTween(wipeAnimation4)
+        .addIndicators()
+        .addTo(controller);
+
+
     // ----------------------- Scroll to fixed
     var s3 = $(".section3").offset().top;
     var s4 = $(".section4").offset().top;
     var s6 = $(".section6").offset().top;
     var s7 = $(".section7").offset().top;
+    var s9 = $(".section9").offset().top;
 
     $(window).scroll(function (e) {
         var y = $(this).scrollTop();
@@ -311,6 +332,11 @@ $(document).ready(function () {
         }
         if (y > (s7 - 500)) {
             $(".section6").removeClass('fixed');
+        }
+        if (y >= s9) {
+            $(".section9").addClass('fixed');
+        } else {
+            $(".section9").removeClass('fixed');
         }
     });
 });
