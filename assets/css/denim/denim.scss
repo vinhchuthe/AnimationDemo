@@ -1235,12 +1235,23 @@
 
 
                 .s9-chart-text {
+                  position: relative;
+
                   p {
                     line-height: 30px;
                     font-size: 24px;
                     font-weight: 700;
                     color: #000;
                     text-align: center;
+                    @extend %MagazineGrotesque;
+                  }
+
+                  .svg-dot {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
                   }
                 }
 
@@ -1252,36 +1263,43 @@
                 &.chart2 {
                   margin-left: 168px;
                   margin-top: -118.5px;
+
                 }
 
                 &.chart3 {
                   margin-left: 258px;
                   margin-top: -182.5px;
+
                 }
 
                 &.chart4 {
                   margin-left: 338px;
                   margin-top: -96.5px;
+
                 }
 
                 &.chart5 {
                   margin-left: 211px;
                   margin-top: 19.5px;
+
                 }
 
                 &.chart6 {
                   margin-left: 42px;
                   margin-top: 146.5px;
+
                 }
 
                 &.chart7 {
                   margin-left: 208px;
                   margin-top: 147.5px;
+
                 }
 
                 &.chart8 {
                   margin-left: 330px;
                   margin-top: 126.5px;
+
                 }
               }
             }
@@ -1338,30 +1356,267 @@
           }
         }
       }
+    }
 
-      // &.fixed {
-      //   .section-inner {
-      //     // .section-overlay {
-      //     //   position: fixed;
-      //     //   top: 0;
-      //     //   left: 0;
-      //     //   height: auto;
-      //     // }
+    &.section10 {
+      // height: 100vh;
+      background-color: rgb(219, 226, 230);
+      overflow: hidden;
 
-      //     .section-content {
-      //       .s9-content-fixed {
+      .section-inner {
+        .section-overlay {
+          height: auto;
 
-      //         // .preyear {
-      //         //   position: fixed;
-      //         // }
-      //         .s9-content-chart {
-      //           position: fixed;
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
+          .section-overlay-item {
+            &.name {
+              top: 185px;
+              left: -106px;
+            }
 
+            &.index {
+              span {
+                color: #ff553d;
+              }
+            }
+          }
+        }
+
+        .section-content {
+          height: auto;
+
+          .s10-title {
+            width: 50vw;
+            margin: 0 auto;
+            padding-top: 80px;
+
+            h3 {
+              line-height: 113px;
+              font-size: 90px;
+              color: #000;
+              @extend %MagazineGrotesque;
+              font-weight: 700;
+            }
+          }
+
+          .s10-trend-list {
+            height: 100vh;
+            width: 300%;
+            margin-left: 25vw;
+            display: flex;
+            align-items: center;
+
+
+            .s10-trend-item {
+              margin-right: 150px;
+              min-width: 550px;
+              position: relative;
+
+              .trend-item-name {
+                h3 {
+                  color: #dbe2e6;
+                  font-size: 50px;
+                  letter-spacing: 0px;
+                  line-height: 68px;
+                  text-transform: uppercase;
+                  padding: 0;
+                  @extend %MagazineGrotesque;
+                  -webkit-text-fill-color: #dbe2e6;
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: black;
+                }
+              }
+
+              .trend-item-img {
+                img {
+                  width: 100%;
+                }
+              }
+
+              .trend-item-info {
+                p {
+                  line-height: 36px;
+                  font-size: 36px;
+                  color: #000;
+                  @extend %MagazineGrotesque;
+
+                  span {
+                    display: block;
+                    color: #fff;
+                  }
+                }
+              }
+
+              &.s10-item1,
+              &.s10-item4,
+              &.s10-item7,
+              &.s10-item10 {
+                .trend-item-img {
+                  max-width: 450px;
+                  margin-bottom: 10px;
+                }
+
+                .trend-item-info {
+                  display: flex;
+                  justify-content: space-evenly;
+
+                  p {
+                    margin: 0 20px;
+                  }
+                }
+              }
+
+              &.s10-item2,
+              &.s10-item5,
+              &.s10-item8 {
+                margin-top: 80px;
+
+                .trend-item-img {
+                  float: left;
+                  padding-right: 20px;
+
+                  img {
+                    width: initial;
+                  }
+                }
+
+                .trend-item-info {
+                  p {
+                    margin-bottom: 10px;
+                  }
+                }
+              }
+
+              &.s10-item3,
+              &.s10-item6,
+              &.s10-item9 {
+                .trend-item-img {
+                  float: right;
+                  margin-top: -130px;
+
+                  img {
+                    width: initial;
+                  }
+                }
+              }
+
+              &.s10-item6 {
+                .trend-item-img {
+                  max-width: 300px;
+
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+
+              &.s10-item7 {
+                margin-top: 50px;
+              }
+
+              &.s10-item8 {
+                margin-top: -100px;
+              }
+
+              &.s10-item9 {
+                margin-right: 350px;
+              }
+
+              &.s10-item10 {
+                .trend-item-note {
+                  line-height: 15px;
+                  font-size: 12px;
+                  margin-top: 30px;
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.fixed {
+        .section-inner {
+          .section-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    &.section11 {
+      height: 100vh;
+      background-color: rgb(219, 226, 230);
+      overflow: hidden;
+
+      .section-inner {
+        .section-overlay {
+          height: auto;
+
+          .section-overlay-item {
+            &.name {
+              top: 175px;
+              left: -100px;
+
+              p {
+                color: #2654ed;
+              }
+            }
+
+            &.index {
+              span {
+                color: #2654ed;
+              }
+            }
+          }
+        }
+
+        .section-content {
+          .s11-background-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #2654ed;
+
+            .picture-bg {
+              background-repeat: no-repeat;
+              position: absolute;
+              background-size: cover;
+              background-position: 50% 50%;
+              top: -2px;
+              left: -2px;
+              right: -2px;
+              bottom: -2px;
+              opacity: 0.46;
+              background-image: url("../../img/denim/s11-bg.jpg");
+            }
+          }
+
+          .s11-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            p {
+              color: #fff;
+              @extend %MagazineGrotesque;
+
+              &:first-of-type {
+                line-height: 1;
+                font-size: 8vw;
+                margin-bottom: 15px;
+              }
+
+              &:last-child {
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
     }
 
     &.last-section {
@@ -1459,5 +1714,137 @@
   100% {
     transform: translate3d(0px, 0px, 0) rotate(10deg) scale(1);
     opacity: 1;
+  }
+}
+
+
+
+// --------------Responsive
+@media (min-width: 1300px) and (max-width: 1500px) {
+  .vct-wrapper {
+    .section {
+      &.section10 {
+        .section-inner {
+          .section-content {
+            .s10-trend-list {
+              width: 300%;
+            }
+          }
+        }
+      }
+
+      &.section9 {
+        .section-inner {
+          .s9-content-fixed {
+            .preyear {
+              margin-top: 5px !important;
+            }
+          }
+        }
+      }
+
+      &.section8 {
+        .section-inner {
+          .section-content {
+            .content-animated3 {
+              .clip-path-wrapper {
+                .clip-path-img {
+                  &::after {
+                    // width: 50vw !important;
+                    left: -15% !important;
+                  }
+                }
+              }
+            }
+
+            .content-animated6 {
+              .s8-text-wrapper {
+                .stroke-name {
+                  font-size: 45px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.section7 {
+        .section-inner {
+          .section-content {
+            .panel-text {
+              p {
+                font-size: 65px !important;
+              }
+            }
+          }
+        }
+      }
+
+      &.section6 {
+        .section-inner {
+          .section-content {
+            .group {
+              &.group1 {
+                .group-left {
+                  .s6-group-name {
+                    font-size: 52px;
+                  }
+
+                  .s6-group-text {
+                    max-width: 250px;
+                  }
+                }
+              }
+
+              &.group2 {
+                .group-right {
+                  .s6-group-name {
+                    font-size: 45px;
+                  }
+                }
+              }
+
+              &.group3 {
+                .group-left {
+                  .s6-group-name {
+                    font-size: 45px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.section4 {
+        height: auto;
+
+        .section-inner {
+          .section-content {
+            padding-bottom: 20vh;
+          }
+        }
+      }
+
+      &.section3 {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .vct-wrapper {
+    .section {
+      &.section10 {
+        .section-inner {
+          .section-content {
+            .s10-trend-list {
+              width: 220%;
+            }
+          }
+        }
+      }
+    }
   }
 }

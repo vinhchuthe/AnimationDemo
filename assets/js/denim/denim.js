@@ -295,6 +295,46 @@ $(document).ready(function () {
         }, {
             y: "-=82.5%"
         })
+        .fromTo($("#chart-dot1"), 1, {
+            scale: 1
+        }, {
+            scale: 0.8
+        }, "-=1")
+        .fromTo($("#chart-dot2"), 1, {
+            scale: 1
+        }, {
+            scale: 1.6
+        }, "-=1")
+        .fromTo($("#chart-dot3"), 1, {
+            scale: 1
+        }, {
+            scale: 1.2
+        }, "-=1")
+        .fromTo($("#chart-dot4"), 1, {
+            scale: 1
+        }, {
+            scale: 3
+        }, "-=1")
+        .fromTo($("#chart-dot5"), 1, {
+            scale: 1
+        }, {
+            scale: 2.5
+        }, "-=1")
+        .fromTo($("#chart-dot6"), 1, {
+            scale: 1
+        }, {
+            scale: 1.6
+        }, "-=1")
+        .fromTo($("#chart-dot7"), 1, {
+            scale: 1
+        }, {
+            scale: 2
+        }, "-=1")
+        .fromTo($("#chart-dot8"), 1, {
+            scale: 1
+        }, {
+            scale: 2.3
+        }, "-=1")
 
     new ScrollMagic.Scene({
             triggerElement: '.section9',
@@ -307,12 +347,32 @@ $(document).ready(function () {
         .addTo(controller);
 
 
+    // ------------------- Section10
+    var wipeAnimation5 = new TimelineMax()
+        .fromTo($(".s10-trend-list"), 1, {
+            x: 0
+        }, {
+            x: "-150%"
+        })
+
+    new ScrollMagic.Scene({
+            triggerElement: '.s10-trend-list',
+            triggerHook: "onLeave",
+            duration: "200%"
+        })
+        .setPin(".s10-trend-list")
+        .setTween(wipeAnimation5)
+        .addIndicators()
+        .addTo(controller);
+
+
     // ----------------------- Scroll to fixed
     var s3 = $(".section3").offset().top;
     var s4 = $(".section4").offset().top;
     var s6 = $(".section6").offset().top;
     var s7 = $(".section7").offset().top;
-    var s9 = $(".section9").offset().top;
+    var s11 = $(".section11").offset().top;
+    var s10 = $(".section10").offset().top;
 
     $(window).scroll(function (e) {
         var y = $(this).scrollTop();
@@ -333,10 +393,13 @@ $(document).ready(function () {
         if (y > (s7 - 500)) {
             $(".section6").removeClass('fixed');
         }
-        if (y >= s9) {
-            $(".section9").addClass('fixed');
+        if (y > s10) {
+            $(".section10").addClass('fixed');
         } else {
-            $(".section9").removeClass('fixed');
+            $(".section10").removeClass('fixed');
+        }
+        if (y > (s11 - 500)) {
+            $(".section10").removeClass('fixed');
         }
     });
 });
