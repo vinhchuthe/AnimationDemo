@@ -1,3 +1,21 @@
+@font-face {
+  font-family: track;
+  src: url("./Track.ttf");
+}
+
+@font-face {
+  font-family: MarckScript;
+  src: url("./MarckScript.ttf");
+}
+
+%MarckScript {
+  font-family: MarckScript;
+}
+
+%track {
+  font-family: track;
+}
+
 $black: #000;
 $white: #fff;
 
@@ -6,12 +24,14 @@ $white: #fff;
   width: 100%;
   height: 100%;
 }
+
 %position-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 %absolute {
   position: absolute;
   width: 100%;
@@ -77,6 +97,7 @@ body {
               }
             }
           }
+
           &:not(:first-child) {
             margin: 3px 20px 0 0;
 
@@ -87,6 +108,7 @@ body {
               box-sizing: border-box;
             }
           }
+
           .menu-item__link {
             width: 100%;
             height: 100%;
@@ -118,6 +140,7 @@ body {
             &:hover {
               .link-text {
                 color: rgb(149, 66, 71);
+
                 &::after {
                   width: 100%;
                   transition: width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -128,6 +151,7 @@ body {
         }
       }
     }
+
     &.header-fixed {
       position: fixed;
       background-color: rgb(241, 231, 224);
@@ -135,6 +159,7 @@ body {
 
       .header-menu {
         margin: 18px 0 10px;
+
         ul {
           .menu-item {
             &:first-child {
@@ -181,9 +206,12 @@ body {
         background-size: cover;
       }
     }
+
     .banner-title {
       @extend %position-center;
+
       .banner-title__text {
+        @extend %track;
         color: $white;
         text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         display: block;
@@ -193,7 +221,7 @@ body {
         text-align: center;
         padding-top: 85px;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 400;
       }
     }
   }
@@ -287,6 +315,7 @@ body {
                     transform: scaleY(1);
                     transition: all 0.3s;
                   }
+
                   .link-img {
                     img {
                       transition: all 0.3s;
@@ -306,6 +335,7 @@ body {
                 }
               }
             }
+
             &:nth-child(3) {
               .list-item__link {
                 .link-wrapper {
@@ -315,6 +345,7 @@ body {
                 }
               }
             }
+
             &:nth-child(4) {
               .list-item__link {
                 .link-wrapper {
@@ -324,6 +355,7 @@ body {
                 }
               }
             }
+
             &:nth-child(5) {
               .list-item__link {
                 .link-wrapper {
@@ -333,6 +365,7 @@ body {
                 }
               }
             }
+
             &:nth-child(6) {
               .list-item__link {
                 .link-wrapper {
@@ -342,6 +375,7 @@ body {
                 }
               }
             }
+
             &:nth-child(7) {
               .list-item__link {
                 .link-wrapper {
@@ -351,6 +385,7 @@ body {
                 }
               }
             }
+
             &:nth-child(8) {
               .list-item__link {
                 .link-wrapper {
@@ -360,6 +395,7 @@ body {
                 }
               }
             }
+
             &:nth-child(9) {
               .list-item__link {
                 .link-wrapper {
@@ -369,6 +405,7 @@ body {
                 }
               }
             }
+
             &:nth-child(10) {
               .list-item__link {
                 .link-wrapper {
@@ -382,6 +419,7 @@ body {
             &.current {
               position: relative;
               z-index: 2;
+
               .list-item__link {
                 .link-wrapper {
                   height: 100px;
@@ -391,6 +429,7 @@ body {
                     transform: scaleY(1);
                     transition: all 0.5s;
                   }
+
                   .link-img {
                     img {
                       transition: all 0.5s;
@@ -410,6 +449,7 @@ body {
           z-index: 2;
         }
       }
+
       // Gammes
       .gammes-list {
         position: relative;
@@ -439,6 +479,7 @@ body {
               max-width: 1900px;
               margin: 0 auto;
             }
+
             .gamme-perso {
               max-width: 1900px;
               margin: 0 auto;
@@ -449,6 +490,7 @@ body {
                 left: 5%;
                 height: 780px;
               }
+
               .gamme-perso-right {
                 position: absolute;
                 top: 7%;
@@ -456,6 +498,7 @@ body {
                 height: 780px;
               }
             }
+
             .gamme-title {
               position: relative;
               top: 19%;
@@ -496,6 +539,7 @@ body {
                 }
               }
             }
+
             .biscuits {
               top: 53%;
               min-height: 376px;
@@ -546,6 +590,7 @@ body {
                       }
                     }
                   }
+
                   &:hover {
                     .biscuits-item-title-wrapper {
                       .biscuits-item-title {
@@ -559,6 +604,7 @@ body {
                 }
               }
             }
+
             .desc {
               text-align: center;
               margin: 0;
@@ -567,7 +613,7 @@ body {
               p {
                 display: inline-block;
                 vertical-align: top;
-                font-family: "Marck Script", Arial, sans-serif;
+                @extend %MarckScript;
                 font-weight: 400;
                 font-style: normal;
                 font-size: 32px;
@@ -588,10 +634,12 @@ body {
               .biscuits-item {
                 &:nth-child(1) {
                   background: 0 0;
+
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item1.png");
                   }
                 }
+
                 &:nth-child(2) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item2.png");
@@ -603,6 +651,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(3) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item3.png");
@@ -618,10 +667,12 @@ body {
             .gamme-bg {
               background-image: url("../../img/lapierrequitourne/gamme2-bg.jpg");
             }
+
             .biscuits {
               .biscuits-item {
                 &:nth-child(1) {
                   background: 0 0;
+
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item4.png");
 
@@ -632,6 +683,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(2) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item5.png");
@@ -643,6 +695,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(3) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item6.png");
@@ -654,6 +707,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(4) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item7.png");
@@ -680,6 +734,7 @@ body {
               .biscuits-item {
                 &:nth-child(1) {
                   background: 0 0;
+
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item8.png");
 
@@ -690,6 +745,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(2) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item9.png");
@@ -716,6 +772,7 @@ body {
               .biscuits-item {
                 &:nth-child(1) {
                   background: 0 0;
+
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item10.png");
 
@@ -725,6 +782,7 @@ body {
 
                         span {
                           font-size: 72px;
+
                           &:last-child {
                             font-size: 111px;
                           }
@@ -733,6 +791,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(2) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item11.png");
@@ -744,6 +803,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(3) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item12.png");
@@ -769,6 +829,7 @@ body {
             .biscuits {
               .biscuits-item {
                 background: 0 0;
+
                 a {
                   background-image: url("../../img/lapierrequitourne/biscuits-item13.png");
 
@@ -792,6 +853,7 @@ body {
             .biscuits {
               .biscuits-item {
                 background: 0 0;
+
                 a {
                   background-image: url("../../img/lapierrequitourne/biscuits-item14.png");
 
@@ -815,6 +877,7 @@ body {
             .biscuits {
               .biscuits-item {
                 background: 0 0;
+
                 a {
                   background-image: url("../../img/lapierrequitourne/biscuits-item15.png");
 
@@ -824,6 +887,7 @@ body {
 
                       span {
                         font-size: 90px;
+
                         &:last-child {
                           font-size: 120px;
                         }
@@ -833,6 +897,7 @@ body {
                 }
               }
             }
+
             .gamme-perso {
               .gamme-perso-left {
                 left: -5%;
@@ -851,6 +916,7 @@ body {
               .biscuits-item {
                 &:nth-child(1) {
                   background: 0 0;
+
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item16.png");
 
@@ -861,6 +927,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(2) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item17.png");
@@ -886,6 +953,7 @@ body {
             .biscuits {
               .biscuits-item {
                 background: 0 0;
+
                 a {
                   background-image: url("../../img/lapierrequitourne/biscuits-item18.png");
 
@@ -895,6 +963,7 @@ body {
 
                       span {
                         font-size: 90px;
+
                         &:last-child {
                           font-size: 80px;
                         }
@@ -919,6 +988,7 @@ body {
 
                 &:nth-child(1) {
                   background: 0 0;
+
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item19.png");
 
@@ -929,6 +999,7 @@ body {
                     }
                   }
                 }
+
                 &:nth-child(2) {
                   a {
                     background-image: url("../../img/lapierrequitourne/biscuits-item20.png");
@@ -983,6 +1054,7 @@ body {
           &:first-child {
             padding-left: 0;
           }
+
           &:last-child {
             background: 0 0;
             padding-right: 0;
@@ -993,12 +1065,14 @@ body {
             color: #fff4ce;
             text-decoration: none;
           }
+
           .footer-logo {
             display: inline-block;
             vertical-align: middle;
             height: 100%;
             margin-right: 6px;
           }
+
           .fb-like {
             display: inline-block;
             position: relative;

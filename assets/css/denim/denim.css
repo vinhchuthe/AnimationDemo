@@ -1488,6 +1488,25 @@
   text-transform: uppercase;
 }
 
+.vct-wrapper .section.section13 {
+  height: 100vh;
+  background-color: white;
+  overflow: hidden;
+}
+
+.vct-wrapper .section.section13 .section-inner .section-overlay {
+  height: auto;
+}
+
+.vct-wrapper .section.section13 .section-inner .section-overlay .section-overlay-item.name {
+  top: 125px;
+  left: -50px;
+}
+
+.vct-wrapper .section.section13 .section-inner .section-overlay .section-overlay-item.index span {
+  color: #2654ed;
+}
+
 .vct-wrapper .section.last-section {
   background-color: #dbe2e6;
   height: 100vh;

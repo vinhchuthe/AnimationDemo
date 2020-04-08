@@ -1,3 +1,21 @@
+@font-face {
+  font-family: track;
+  src: url("./Track.ttf");
+}
+
+@font-face {
+  font-family: MarckScript;
+  src: url("./MarckScript.ttf");
+}
+
+.vct-wrapper .vct-main-content .main-content-wrapper .gammes-list .gamme .gamme_section-inner .desc p {
+  font-family: MarckScript;
+}
+
+.vct-wrapper .vct-banner-wrapper .banner-title .banner-title__text {
+  font-family: track;
+}
+
 .vct-wrapper, .vct-wrapper .vct-main-content, .vct-wrapper .vct-main-content .main-content-wrapper, .vct-wrapper .vct-main-content .main-content-wrapper .gammes-list .gamme .gamme_section-inner, .vct-wrapper .vct-footer {
   position: relative;
   width: 100%;
@@ -193,7 +211,7 @@ body::-webkit-scrollbar {
   text-align: center;
   padding-top: 85px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .vct-wrapper .vct-main-content {
@@ -533,7 +551,6 @@ body::-webkit-scrollbar {
 .vct-wrapper .vct-main-content .main-content-wrapper .gammes-list .gamme .gamme_section-inner .desc p {
   display: inline-block;
   vertical-align: top;
-  font-family: "Marck Script", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 32px;
