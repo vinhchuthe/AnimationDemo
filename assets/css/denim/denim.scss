@@ -1400,7 +1400,7 @@
 
           .s10-trend-list {
             height: 100vh;
-            width: 300%;
+            width: 220%;
             margin-left: 25vw;
             display: flex;
             align-items: center;
@@ -1619,7 +1619,7 @@
       }
     }
 
-    &.section13 {
+    &.section12 {
       height: 100vh;
       background-color: rgb(255, 255, 255);
       overflow: hidden;
@@ -1641,8 +1641,146 @@
             }
           }
         }
+
         .section-content {
-          
+          .section-insight-wrapper {
+            max-width: 1900px;
+            margin: 0 auto;
+            height: 100vh;
+            background-color: #fff;
+            @extend %relative;
+
+            .insight-glob {
+              max-width: 300px;
+              position: absolute;
+
+              img {
+                width: 100%;
+              }
+
+              &.glob1 {
+                top: 15%;
+                left: 5%;
+              }
+
+              &.glob2 {
+                bottom: 10%;
+                right: 0;
+              }
+            }
+
+            .insight-glob-group {
+              max-width: 1000px;
+              height: 100vh;
+              margin: 0 auto;
+              @extend %relative;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              .insight-glob-name {
+                h3 {
+                  line-height: 33px;
+                  font-size: 26px;
+                  color: #000;
+                }
+              }
+
+              .insight-glob-animated {
+                position: relative;
+                z-index: 1;
+
+                .glob-group {
+                  max-width: 684px;
+                  max-height: 684px;
+                  position: relative;
+
+                  img {
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                  }
+
+                  .glob-bg {
+                    position: absolute;
+                    left: 55%;
+                    top: 52%;
+                    transform: translate(-50%, -50%);
+
+                    .glob-bg-inner {
+                      animation-name: animation_41;
+                      animation-duration: 7.4s;
+                      animation-iteration-count: infinite;
+                      animation-direction: alternate;
+                      animation-fill-mode: both;
+                      animation-play-state: running;
+                    }
+                  }
+
+                  .insight-list {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+
+                    a {
+                      position: absolute;
+                      line-height: 57px;
+                      font-size: 57px;
+                      color: #000;
+                      top: 50%;
+                      text-decoration: none;
+                      transform: scale(0);
+                      cursor: pointer;
+
+                      &:first-child {
+                        left: 75px;
+                        margin-top: -100px;
+                      }
+
+                      &:nth-child(2) {
+                        left: 75px;
+                      }
+
+                      &:nth-child(3) {
+                        left: 75px;
+                        margin-top: 100px;
+                      }
+
+                      &:nth-child(4) {
+                        left: 75px;
+                        margin-top: -50px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .insight-glob-bg__text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+
+                p {
+                  font-size: 81px;
+                  line-height: 1;
+                  white-space: pre-wrap;
+                  text-align: center;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  color: rgb(255, 255, 255);
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: black;
+                  @extend %MagazineGrotesque;
+                  transform: scaleX(1.5);
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -1741,6 +1879,19 @@
 
   100% {
     transform: translate3d(0px, 0px, 0) rotate(10deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animation_41 {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1;
+    animation-timing-function: ease-in-out
+  }
+
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -41, -23, 0, 1);
     opacity: 1;
   }
 }
@@ -1861,14 +2012,49 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1600px) and (max-width: 1900px) {
   .vct-wrapper {
     .section {
       &.section10 {
         .section-inner {
           .section-content {
             .s10-trend-list {
-              width: 220%;
+              width: 260%;
+            }
+          }
+        }
+      }
+
+      &.section8 {
+        .section-inner {
+          .section-content {
+            .content-animated3 {
+              .clip-path-wrapper {
+                .clip-path-img {
+                  &::after {
+                    // width: 50vw !important;
+                    left: -15% !important;
+                  }
+                }
+              }
+            }
+
+            // .content-animated6 {
+            //   .s8-text-wrapper {
+            //     .stroke-name {
+            //       font-size: 45px !important;
+            //     }
+            //   }
+            // }
+          }
+        }
+      }
+
+      &.section9 {
+        .section-inner {
+          .s9-content-fixed {
+            .preyear {
+              margin-top: -55px !important;
             }
           }
         }

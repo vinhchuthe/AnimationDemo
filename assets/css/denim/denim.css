@@ -3,11 +3,11 @@
   src: url("./MagazineGrotesque.ttf");
 }
 
-.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .preyear p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart .s9-chart-text p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-content-title h3, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li p, .vct-wrapper .section.section10 .section-inner .section-content .s10-title h3, .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list .s10-trend-item .trend-item-name h3, .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list .s10-trend-item .trend-item-info p, .vct-wrapper .section.section11 .section-inner .section-content .s11-title p, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
+.vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .preyear p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart .s9-chart-text p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-content-title h3, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li p, .vct-wrapper .section.section10 .section-inner .section-content .s10-title h3, .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list .s10-trend-item .trend-item-name h3, .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list .s10-trend-item .trend-item-info p, .vct-wrapper .section.section11 .section-inner .section-content .s11-title p, .vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-bg__text p, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
   font-family: MagazineGrotesque;
 }
 
-.vct-wrapper, .vct-wrapper .vct-header .header-item.header-menu .menu-animation-container, .vct-wrapper .vct-banner, .vct-wrapper .vct-banner .overlay-items, .vct-wrapper .section, .vct-wrapper .section .section-inner .section-content {
+.vct-wrapper, .vct-wrapper .vct-header .header-item.header-menu .menu-animation-container, .vct-wrapper .vct-banner, .vct-wrapper .vct-banner .overlay-items, .vct-wrapper .section, .vct-wrapper .section .section-inner .section-content, .vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper, .vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1303,7 +1303,7 @@
 
 .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list {
   height: 100vh;
-  width: 300%;
+  width: 220%;
   margin-left: 25vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1488,23 +1488,176 @@
   text-transform: uppercase;
 }
 
-.vct-wrapper .section.section13 {
+.vct-wrapper .section.section12 {
   height: 100vh;
   background-color: white;
   overflow: hidden;
 }
 
-.vct-wrapper .section.section13 .section-inner .section-overlay {
+.vct-wrapper .section.section12 .section-inner .section-overlay {
   height: auto;
 }
 
-.vct-wrapper .section.section13 .section-inner .section-overlay .section-overlay-item.name {
+.vct-wrapper .section.section12 .section-inner .section-overlay .section-overlay-item.name {
   top: 125px;
   left: -50px;
 }
 
-.vct-wrapper .section.section13 .section-inner .section-overlay .section-overlay-item.index span {
+.vct-wrapper .section.section12 .section-inner .section-overlay .section-overlay-item.index span {
   color: #2654ed;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper {
+  max-width: 1900px;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob {
+  max-width: 300px;
+  position: absolute;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob img {
+  width: 100%;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob.glob1 {
+  top: 15%;
+  left: 5%;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob.glob2 {
+  bottom: 10%;
+  right: 0;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group {
+  max-width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-name h3 {
+  line-height: 33px;
+  font-size: 26px;
+  color: #000;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated {
+  position: relative;
+  z-index: 1;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group {
+  max-width: 684px;
+  max-height: 684px;
+  position: relative;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .glob-bg {
+  position: absolute;
+  left: 55%;
+  top: 52%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .glob-bg .glob-bg-inner {
+  -webkit-animation-name: animation_41;
+          animation-name: animation_41;
+  -webkit-animation-duration: 7.4s;
+          animation-duration: 7.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .insight-list {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .insight-list a {
+  position: absolute;
+  line-height: 57px;
+  font-size: 57px;
+  color: #000;
+  top: 50%;
+  text-decoration: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  cursor: pointer;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .insight-list a:first-child {
+  left: 75px;
+  margin-top: -100px;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .insight-list a:nth-child(2) {
+  left: 75px;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .insight-list a:nth-child(3) {
+  left: 75px;
+  margin-top: 100px;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-animated .glob-group .insight-list a:nth-child(4) {
+  left: 75px;
+  margin-top: -50px;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-bg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-bg__text p {
+  font-size: 81px;
+  line-height: 1;
+  white-space: pre-wrap;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
 }
 
 .vct-wrapper .section.last-section {
@@ -1651,6 +1804,36 @@
   }
 }
 
+@-webkit-keyframes animation_41 {
+  0% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -41, -23, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -41, -23, 0, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes animation_41 {
+  0% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -41, -23, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -41, -23, 0, 1);
+    opacity: 1;
+  }
+}
+
 @media (min-width: 1300px) and (max-width: 1500px) {
   .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list {
     width: 300%;
@@ -1690,9 +1873,15 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1600px) and (max-width: 1900px) {
   .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list {
-    width: 220%;
+    width: 260%;
+  }
+  .vct-wrapper .section.section8 .section-inner .section-content .content-animated3 .clip-path-wrapper .clip-path-img::after {
+    left: -15% !important;
+  }
+  .vct-wrapper .section.section9 .section-inner .s9-content-fixed .preyear {
+    margin-top: -55px !important;
   }
 }
 /*# sourceMappingURL=denim.css.map */

@@ -18,7 +18,7 @@
 
 .vct-wrapper {
   width: 100vw;
-  height: 100%;
+  height: 110vh;
   overflow: hidden;
   background-color: #000;
 
@@ -27,7 +27,8 @@
     overflow: hidden;
     background-color: #000;
     width: 80%;
-    height: 800px;
+    height: 80vh;
+    max-height: 700px;
     margin: 0 auto;
 
     // Video Content

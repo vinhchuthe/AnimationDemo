@@ -365,6 +365,67 @@ $(document).ready(function () {
         .addIndicators()
         .addTo(controller);
 
+    // Section12
+    var wipeAnimation6 = new TimelineMax({
+            repeat: -1,
+            yoyo: true,
+            repeatDelay: 1
+        })
+        .fromTo($("#view1"), 1.5, {
+            y: 0
+        }, {
+            y: "+=162"
+        })
+        .fromTo($("#view2"), 1.5, {
+            y: 0
+        }, {
+            y: "+=81"
+        }, "-=1.5")
+        .fromTo($("#view3"), 1.5, {
+            y: 0
+        }, {
+            y: "-=81"
+        }, "-=1.5")
+        .fromTo($("#view4"), 1.5, {
+            y: 0
+        }, {
+            y: "-=162"
+        }, "-=1.5")
+
+    TweenMax.set($(".insight-list a"), {
+        opacity: 0
+    })
+    var wipeAnimation7 = new TimelineMax({
+            repeat: -1,
+        })
+        .staggerTo($(".insight-list a"), 1.5, {
+            opacity: 1,
+            scaleX: 0.5,
+            scaleY: 0.5
+        }, "0.5")
+        .staggerTo($(".insight-list a"), 1.5, {
+            opacity: 1,
+            x: "+=200",
+            scaleX: 1,
+            scaleY: 1
+        }, "0.5","-=1")
+        .staggerTo($(".insight-list a"), 1.5, {
+            opacity: 1,
+            x: "+=250",
+            scaleX: 0.5,
+            scaleY: 0.5
+        }, "0.5","-=1")
+        .staggerTo($(".insight-list a"), 1.5, {
+            opacity: 0,
+            scaleX: 0,
+            scaleY: 0
+        }, "0.3","-=1")
+
+    $(".insight-list a").click(function() {
+        var index = $(this).attr("list-id");
+        console.log(index);
+    });
+
 
     // ----------------------- Scroll to fixed
     var s3 = $(".section3").offset().top;
