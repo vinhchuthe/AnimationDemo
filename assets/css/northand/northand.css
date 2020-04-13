@@ -3,6 +3,21 @@
   src: url("./moret.ttf");
 }
 
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url("./SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url("./SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-SemiBold;
+  src: url("./SourceSansPro-SemiBold.ttf");
+}
+
 .vct-wrapper .vct-body-content .vct-section.vct-section2 .vct-section2-inner .vct-section-heading h3, .vct-wrapper .vct-body-content .vct-section.vct-section3 .vct-section3-inner .vct-section3-content p, .vct-wrapper .vct-body-content .vct-section.vct-section5 .vct-section5-inner .vct-section5-content.s5-block p, .vct-wrapper .vct-body-content .vct-section.vct-section8 .vct-section8-inner .vct-section8-content p {
   font-family: moret;
 }
@@ -90,6 +105,32 @@ body::-webkit-scrollbar {
 .vct-wrapper {
   position: relative;
   overflow: hidden;
+}
+
+.vct-wrapper .vct-info-tag {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  color: #fff;
+  z-index: 3;
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 800px;
+  height: 160px;
+}
+
+.vct-wrapper .vct-info-tag img {
+  width: 100%;
+}
+
+.vct-wrapper .vct-info-tag:hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .vct-wrapper .vct-bg-video .video {

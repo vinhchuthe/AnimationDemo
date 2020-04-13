@@ -12,6 +12,11 @@
 <body>
     <div class="vct-wrapper">
 
+        <!-- info-tag -->
+        <div class="vct-info-tag">
+            <img src="../assets/img/lapierrequitourne/Group-95.png" alt="">
+        </div>
+
         <!-- Header -->
         <div class="vct-header-wrapper">
             <div class="header-menu">
@@ -714,7 +719,6 @@
     <script src="../src/js/Jquery/jquery.min.js"></script>
     <script src="../src/js/Nicescroll/jquery.nicescroll.js"></script>
     <script>
-
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
@@ -750,7 +754,8 @@
                 // Look in the groupDataArray to find which group is in viewport
                 groupDataArray.forEach(function (obj, index) {
 
-                    if (obj.groupTop < scrollPosition + scrollTrigger && obj.groupBottom > scrollPosition + scrollTrigger) {
+                    if (obj.groupTop < scrollPosition + scrollTrigger && obj.groupBottom >
+                        scrollPosition + scrollTrigger) {
                         console.log(obj.groupID);
                         updateProgressDots(obj.groupID)
                     }
@@ -767,13 +772,13 @@
                     $(".main-content__nav").removeClass("nav-fixed");
                 }
 
-            });  // END scroll
+            }); // END scroll
 
             // This function removes the `is-active` class from all `dot__border` elements, takes the groups `data-id` and adds a `is-active` class to that element in the series i.e. If the user is on the first group, then the first dot / dot border should have the `is-active` class.
             function updateProgressDots(groupID) {
                 var nav = $(".nav-list-item");
                 nav.removeClass("current");
-                nav.eq(groupID - 1).addClass("current");  // eq() is zero-based !
+                nav.eq(groupID - 1).addClass("current"); // eq() is zero-based !
             }
         }); // End ready
     </script>

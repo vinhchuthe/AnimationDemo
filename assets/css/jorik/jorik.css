@@ -86,6 +86,32 @@ body {
           animation: blink 0.8s infinite;
 }
 
+.vct-wrapper .vct-info-tag {
+  position: fixed;
+  top: 100px;
+  width: 800px;
+  height: 160px;
+  left: 0;
+  color: #fff;
+  z-index: 3;
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.vct-wrapper .vct-info-tag img {
+  width: 100%;
+}
+
+.vct-wrapper .vct-info-tag:hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .vct-wrapper .vct-header-container {
   width: 100%;
   height: 100%;

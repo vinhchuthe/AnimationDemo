@@ -17,6 +17,32 @@ body::-webkit-scrollbar {
   height: 100vh;
 }
 
+.vct-wrapper .vct-info-tag {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 800px;
+  height: 160px;
+  color: #fff;
+  z-index: 4;
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.vct-wrapper .vct-info-tag img {
+  width: 100%;
+}
+
+.vct-wrapper .vct-info-tag:hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .vct-wrapper .vct-fixed {
   position: fixed;
   top: 0;

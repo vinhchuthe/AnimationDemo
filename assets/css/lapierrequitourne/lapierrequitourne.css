@@ -57,6 +57,32 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
+.vct-wrapper .vct-info-tag {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  color: #fff;
+  z-index: 5;
+  width: 800px;
+  height: 160px;
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.vct-wrapper .vct-info-tag img {
+  width: 100%;
+}
+
+.vct-wrapper .vct-info-tag:hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .vct-wrapper .vct-header-wrapper {
   position: absolute;
   top: 0;

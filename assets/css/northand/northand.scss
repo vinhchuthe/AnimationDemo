@@ -6,6 +6,21 @@ $main-yellow: #ffe527;
   src: url("./moret.ttf");
 }
 
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url("./SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url("./SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-SemiBold;
+  src: url("./SourceSansPro-SemiBold.ttf");
+}
+
 %moret {
   font-family: moret;
 }
@@ -17,6 +32,7 @@ $main-yellow: #ffe527;
   right: 0;
   bottom: 0;
 }
+
 %yellow-dot {
   position: absolute;
   left: auto;
@@ -34,6 +50,7 @@ $main-yellow: #ffe527;
   background-color: $main-yellow;
   text-align: center;
 }
+
 %block-div {
   display: flex;
   height: 100%;
@@ -70,6 +87,29 @@ body::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
 
+  // info tag
+  .vct-info-tag {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    color: #fff;
+    z-index: 3;
+    transform: translateX(-75%);
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 800px;
+    height: 160px;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: translateX(0);
+      transition: all 0.5s;
+    }
+  }
+
   // bg-video
   .vct-bg-video {
     .video {
@@ -91,6 +131,7 @@ body::-webkit-scrollbar {
         object-fit: cover;
         z-index: -100;
       }
+
       .video-overlay {
         background-color: $main-green;
         opacity: 0.7;
@@ -102,6 +143,7 @@ body::-webkit-scrollbar {
         height: 100%;
       }
     }
+
     .vct-pattern-wrap {
       @extend %fixed;
       background-image: url("../../img/northland/bg-pattern-overlay.svg");
@@ -182,8 +224,10 @@ body::-webkit-scrollbar {
               letter-spacing: 0.6px;
             }
           }
+
           .vct-section-info {
             margin-bottom: 40px;
+
             .info-row {
               display: flex;
               margin-bottom: 8px;
@@ -207,6 +251,7 @@ body::-webkit-scrollbar {
               }
             }
           }
+
           .vct-section-des {
             margin: 0px 5vw -60px -40px;
             padding: 40px;
@@ -232,10 +277,12 @@ body::-webkit-scrollbar {
               width: 66%;
             }
           }
+
           .vct-section3-content {
             &.yellow-dot {
               @extend %yellow-dot;
             }
+
             &.s3-dot {
               left: 7vw;
               top: 10%;
@@ -286,10 +333,12 @@ body::-webkit-scrollbar {
               width: 33%;
             }
           }
+
           .vct-section5-content {
             &.block-div {
               @extend %block-div;
             }
+
             &.s5-block {
               position: absolute;
               top: 50%;
@@ -358,10 +407,12 @@ body::-webkit-scrollbar {
               width: 66%;
             }
           }
+
           .vct-section8-content {
             &.yellow-dot {
               @extend %yellow-dot;
             }
+
             &.s8-dot {
               right: 7vw;
               top: 6%;
@@ -370,6 +421,7 @@ body::-webkit-scrollbar {
               width: 26vw;
               height: 26vw;
             }
+
             p {
               @extend %moret;
               color: $main-green;
@@ -397,6 +449,7 @@ body::-webkit-scrollbar {
               height: 29vw;
               transform: scale3d(0.8, 0.8, 1);
             }
+
             .next-text {
               position: absolute;
               top: 50%;
@@ -412,6 +465,7 @@ body::-webkit-scrollbar {
               }
             }
           }
+
           .vct-text-wrap {
             position: absolute;
             top: 50%;
@@ -465,6 +519,7 @@ body::-webkit-scrollbar {
               object-fit: cover;
               z-index: -100;
             }
+
             .reel-dot {
               position: absolute;
               left: 0%;
@@ -480,6 +535,7 @@ body::-webkit-scrollbar {
               border-radius: 50%;
               background-color: $main-yellow;
             }
+
             .reel-loop-div {
               position: absolute;
               left: -8vw;
@@ -501,6 +557,7 @@ body::-webkit-scrollbar {
               }
             }
           }
+
           .vct-footer-container {
             display: flex;
             padding-top: 80px;

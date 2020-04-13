@@ -17,6 +17,29 @@ body::-webkit-scrollbar {
   position: relative;
   height: 100vh;
 
+  // info tag
+  .vct-info-tag {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 800px;
+    height: 160px;
+    color: #fff;
+    z-index: 4;
+    transform: translateX(-75%);
+    transition: all 0.5s;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: translateX(0);
+      transition: all 0.5s;
+    }
+  }
+
   // Header
   .vct-fixed {
     position: fixed;
@@ -75,6 +98,7 @@ body::-webkit-scrollbar {
             &::after {
               transform: scaleX(1);
             }
+
             svg {
               path {
                 fill: #ffffff;
@@ -87,6 +111,7 @@ body::-webkit-scrollbar {
           }
         }
       }
+
       .vct-menu {
         background-color: #101010;
         position: absolute;
@@ -152,6 +177,7 @@ body::-webkit-scrollbar {
                 }
               }
             }
+
             &:hover {
               .menu-item-link {
                 &::after {
@@ -204,6 +230,7 @@ body::-webkit-scrollbar {
                 z-index: 80;
                 text-transform: none;
               }
+
               .s1-content-text {
                 font-size: 14px;
                 font-weight: 700;
@@ -212,8 +239,10 @@ body::-webkit-scrollbar {
                 position: relative;
                 text-transform: uppercase;
               }
+
               .s1-content-date {
                 margin-bottom: 25px;
+
                 .date-start {
                   font-size: 14px;
                   font-weight: 700;
@@ -232,6 +261,7 @@ body::-webkit-scrollbar {
                     height: 2px;
                   }
                 }
+
                 .date-end {
                   font-size: 14px;
                   font-weight: 700;
@@ -241,6 +271,7 @@ body::-webkit-scrollbar {
                   text-transform: uppercase;
                 }
               }
+
               .s1-content-artist {
                 font-size: 16px;
                 font-weight: 900;
@@ -318,6 +349,7 @@ body::-webkit-scrollbar {
               .s2-content-left,
               .s2-content-right {
                 padding: 3vw;
+
                 p {
                   font-size: 16px;
                   line-height: 1.8em;
@@ -327,6 +359,7 @@ body::-webkit-scrollbar {
                 }
               }
             }
+
             .vct-s2-img {
               width: 25vw;
               padding-left: 2vw;
@@ -363,6 +396,7 @@ body::-webkit-scrollbar {
                 &.item1 {
                   width: 40vw;
                 }
+
                 // &.item2 {
                 //   padding: 3vw 1.5vw 3vw 4vw;
                 // }
@@ -370,6 +404,7 @@ body::-webkit-scrollbar {
                 //   padding: 3vw 4vw 3vw 1.5vw;
                 // }
               }
+
               .stack-img-list {
                 width: 30vw;
                 padding: 1.5vw;
@@ -393,6 +428,7 @@ body::-webkit-scrollbar {
               .s4-content-left,
               .s4-content-right {
                 padding: 3vw;
+
                 p {
                   font-size: 16px;
                   line-height: 1.8em;
@@ -402,6 +438,7 @@ body::-webkit-scrollbar {
                 }
               }
             }
+
             .vct-s4-img {
               width: 25vw;
               padding-left: 2vw;
@@ -431,6 +468,7 @@ body::-webkit-scrollbar {
                 }
               }
             }
+
             .vct-footer {
               position: absolute;
               top: 0;
@@ -508,6 +546,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {
   .vct-wrapper {
     .vct-horizontal-wrapper {
@@ -539,6 +578,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 @media only screen and (min-width: 2000px) {
   .vct-wrapper {
     .vct-horizontal-wrapper {

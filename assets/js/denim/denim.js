@@ -1,11 +1,17 @@
 // init controller
 var controller = new ScrollMagic.Controller();
 
-// nicescroll
-$("body").niceScroll();
+
 
 
 $(document).ready(function () {
+
+    $(".vct-info-tag").mouseenter(function () {
+        $(this).addClass("reveal");
+    })
+    $(".vct-info-tag").mouseleave(function () {
+        $(this).removeClass("reveal");
+    })
 
     // video bg
     var tl = new TimelineMax({
@@ -408,20 +414,20 @@ $(document).ready(function () {
             x: "+=200",
             scaleX: 1,
             scaleY: 1
-        }, "0.5","-=1")
+        }, "0.5", "-=1")
         .staggerTo($(".insight-list a"), 1.5, {
             opacity: 1,
             x: "+=250",
             scaleX: 0.5,
             scaleY: 0.5
-        }, "0.5","-=1")
+        }, "0.5", "-=1")
         .staggerTo($(".insight-list a"), 1.5, {
             opacity: 0,
             scaleX: 0,
             scaleY: 0
-        }, "0.3","-=1")
+        }, "0.3", "-=1")
 
-    $(".insight-list a").click(function() {
+    $(".insight-list a").click(function () {
         var index = $(this).attr("list-id");
         console.log(index);
     });
@@ -437,6 +443,12 @@ $(document).ready(function () {
 
     $(window).scroll(function (e) {
         var y = $(this).scrollTop();
+
+        if (y > 0) {
+            $(".vct-info-tag").addClass("hide");
+        } else {
+            $(".vct-info-tag").removeClass("hide");
+        }
 
         if (y >= s3) {
             $(".section3").addClass('fixed');
@@ -464,3 +476,6 @@ $(document).ready(function () {
         }
     });
 });
+
+// nicescroll
+$("body").niceScroll();

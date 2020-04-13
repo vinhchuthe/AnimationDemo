@@ -8,18 +8,21 @@
   width: 100%;
   height: 100%;
 }
+
 %position-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 %title {
   color: #fff;
   font-size: 10vw;
   white-space: nowrap;
   font-family: VCR OSD Mono, monospace;
 }
+
 %product-thumb-text {
   font-size: 0.97vw;
   background: transparent;
@@ -27,6 +30,7 @@
   font-family: VCR OSD Mono, monospace;
   letter-spacing: 0.1rem;
 }
+
 %input {
   border: none;
   outline: none;
@@ -42,6 +46,7 @@ body::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
+
 body {
   overflow: hidden;
 }
@@ -69,6 +74,7 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
     }
+
     .preload-mess {
       color: #fff;
       position: absolute;
@@ -78,6 +84,29 @@ body {
       bottom: 19vh;
       font-family: VCR OSD Mono, monospace;
       animation: blink 0.8s infinite;
+    }
+  }
+
+  // info tag
+  .vct-info-tag {
+    position: fixed;
+    top: 100px;
+    width: 800px;
+    height: 160px;
+    left: 0;
+    color: #fff;
+    z-index: 3;
+    transform: translateX(-75%);
+    transition: all 0.5s;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: translateX(0);
+      transition: all 0.5s;
     }
   }
 
@@ -108,6 +137,7 @@ body {
         letter-spacing: 0.1vw;
         font-weight: 600;
       }
+
       &.header-pass {
         .header__navigation {
           .header__menu {
@@ -116,6 +146,7 @@ body {
             }
           }
         }
+
         a {
           .header__logo {
             fill: #000 !important;
@@ -148,6 +179,7 @@ body {
           margin-left: auto;
         }
       }
+
       a {
         color: #fff;
         text-decoration: none;
@@ -223,6 +255,7 @@ body {
             object-fit: cover;
           }
         }
+
         .foreground__rotation {
           width: 100%;
           height: 100%;
@@ -245,13 +278,16 @@ body {
               }
             }
           }
+
           .foreground__rotaion-title {
             @extend %position-center;
+
             h1 {
               @extend %title;
             }
           }
         }
+
         .foreground-btn {
           position: absolute;
           display: -ms-flexbox;
@@ -353,6 +389,7 @@ body {
                 top: 0;
                 transform: translateZ(-20vh);
               }
+
               .product-thumbnail__link {
                 position: absolute;
                 width: 100%;
@@ -374,12 +411,14 @@ body {
                   opacity: 0;
 
                   .product-thumbnail__content {
+
                     .product-thumbnail__title,
                     .product-thumbnail__price {
                       @extend %product-thumb-text;
                     }
                   }
                 }
+
                 .product-thumbnail__button {
                   @extend %position-center;
                   opacity: 0;
@@ -410,12 +449,14 @@ body {
                     transition: all 0.5s;
 
                     .product-thumbnail__content {
+
                       .product-thumbnail__title,
                       .product-thumbnail__price {
                         color: #000;
                       }
                     }
                   }
+
                   .product-thumbnail__button {
                     opacity: 1;
                     transition: all 0.5s;
@@ -429,6 +470,7 @@ body {
             }
           }
         }
+
         .product-thumbnail__message-container {
           grid-row: 2/3;
           grid-column: 2/3;
@@ -450,6 +492,7 @@ body {
               margin: 0;
             }
           }
+
           .product__message-blink {
             background: #fff;
             position: absolute;
@@ -491,6 +534,7 @@ body {
           color: transparent;
           transition: all 0.5s;
         }
+
         .lookbook-thumbnail__title {
           position: absolute;
           left: 50%;
@@ -509,6 +553,7 @@ body {
             transform-origin: bottom left;
             flex-direction: column;
           }
+
           &.lookbook-thumbnail__title--second {
             bottom: auto;
             right: 6.25vw;
@@ -523,6 +568,7 @@ body {
             letter-spacing: 0.15em;
             color: #000;
           }
+
           .lookbook-thumbnail__main-title {
             text-transform: uppercase;
             font-size: 7.5vw;
@@ -531,6 +577,7 @@ body {
             color: #000;
           }
         }
+
         .lookbook-thumbnail__button {
           background: #000;
           overflow: hidden;
@@ -557,6 +604,7 @@ body {
             }
           }
         }
+
         .lookbook-thumbnail__images {
           z-index: -1;
           perspective: 100vh;
@@ -568,6 +616,7 @@ body {
             margin-top: 6.25vw;
             display: block;
           }
+
           .lookbook-thumbnail__image-item {
             margin-top: 3.125vw;
 
@@ -575,6 +624,7 @@ body {
               width: 30vw;
             }
           }
+
           &:last-of-type {
             display: block;
             margin-left: 3.125vw;
@@ -635,11 +685,13 @@ body {
               &:first-child {
                 margin-top: 0;
               }
+
               &:last-child {
                 margin-bottom: 0;
               }
             }
           }
+
           .newsletter-form__field {
             margin-top: 1.5625vw;
             display: flex;
@@ -654,6 +706,7 @@ body {
               background: transparent;
               color: #fff;
             }
+
             .newsletter-form__button {
               font-family: VCR OSD Mono, monospace;
               flex: 0;
@@ -667,6 +720,7 @@ body {
             }
           }
         }
+
         .footer__navigation {
           .footer__menu {
             .footer__menu-item {
@@ -699,6 +753,7 @@ body {
             }
           }
         }
+
         .footer__credit {
           margin-left: 0;
           font-size: inherit;
@@ -712,12 +767,14 @@ body {
             background-color: transparent;
           }
         }
+
         .footer__social-media {
           display: flex;
           position: static;
           transform: none;
           bottom: 0;
           left: 0;
+
           .footer__social-medium {
             .footer__social-medium-link {
               svg {
@@ -737,11 +794,13 @@ body {
     opacity: 0;
   }
 }
+
 @keyframes slide {
   100% {
     transform: translateX(-100%);
   }
 }
+
 @keyframes animation1 {
   100% {
     transform: translateY(-300%) scale(0.9);

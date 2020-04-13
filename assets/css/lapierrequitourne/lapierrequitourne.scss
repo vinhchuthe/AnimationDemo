@@ -59,6 +59,29 @@ body {
   @extend %relative;
   overflow: hidden;
 
+  // Tag
+  .vct-info-tag {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    color: #fff;
+    z-index: 5;
+    width: 800px;
+    height: 160px;
+    transform: translateX(-75%);
+    transition: all 0.5s;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: translateX(0);
+      transition: all 0.5s;
+    }
+  }
+
   //   header
   .vct-header-wrapper {
     position: absolute;
