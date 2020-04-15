@@ -8,26 +8,5 @@
     @extend %relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 
-    .vct.content-wrapper {
-        @extend %relative;
-
-        .section {
-            @extend %relative;
-
-            &.section1 {
-                .section-inner {
-                    .section-bg {
-                        @extend %relative;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
