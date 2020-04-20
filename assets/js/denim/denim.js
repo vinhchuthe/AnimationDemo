@@ -144,7 +144,7 @@ $(document).ready(function () {
             duration: 420
         })
         .setTween(tl1)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
@@ -154,7 +154,7 @@ $(document).ready(function () {
             offset: -300
         })
         .setClassToggle(".header-logo", "hidden")
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     var tl2 = new TimelineMax();
@@ -186,7 +186,7 @@ $(document).ready(function () {
             x: "-50%",
             ease: Linear.easeNone
         }))
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -195,7 +195,7 @@ $(document).ready(function () {
             duration: 280
         })
         .setTween(tl2)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
@@ -232,7 +232,7 @@ $(document).ready(function () {
         })
         .setPin(".section5")
         .setTween(wipeAnimation)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
@@ -252,7 +252,7 @@ $(document).ready(function () {
         })
         .setPin(".section7")
         .setTween(wipeAnimation2)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     //----------------- Meme Jeans
@@ -289,7 +289,7 @@ $(document).ready(function () {
         })
         .setPin(".section8")
         .setTween(wipeAnimation3)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
@@ -349,7 +349,7 @@ $(document).ready(function () {
         })
         .setPin(".section9")
         .setTween(wipeAnimation4)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
 
@@ -368,7 +368,7 @@ $(document).ready(function () {
         })
         .setPin(".s10-trend-list")
         .setTween(wipeAnimation5)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
 
     // Section12

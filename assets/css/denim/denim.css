@@ -3,6 +3,16 @@
   src: url("./MagazineGrotesque.ttf");
 }
 
+@font-face {
+  font-family: SFProDisplay-Bold;
+  src: url(".../../../../../src/css/font/SFProDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: SFProDisplay-Regular;
+  src: url(".../../../../../src/css/font/SFProDisplay-Regular.ttf");
+}
+
 .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_scroll-desc p, .vct-wrapper .vct-banner .overlay-items .overlay_widget .overlay_text-fade p, .vct-wrapper .section .section-inner .section-overlay .section-overlay-item.index p, .vct-wrapper .section.section1 .section-content .content-center p, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated1 svg text, .vct-wrapper .section.section2 .section-inner .section-content .section-content-animated.content-animated2 .content-slide .content-slide__text p, .vct-wrapper .section.section4 .section-inner .section-content .section-title h3, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .reveal-hover-item .item .item-content p.item-percent, .vct-wrapper .section.section4 .section-inner .section-content .section-content__hover .hover-item__list ul li, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section5 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section6 .section-inner .section-content .section-title h3, .vct-wrapper .section.section6 .section-inner .section-content .group.group1 .group-left .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group2 .group-right .s6-group-name, .vct-wrapper .section.section6 .section-inner .section-content .group.group3 .group-left .s6-group-name, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-bg p, .vct-wrapper .section.section7 .section-inner .section-content .panel.panel-text p, .vct-wrapper .section.section8 .section-inner .section-content .section-content-animated.content-animated6 .s8-text-wrapper .stroke-name, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .preyear p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-fixed .s9-content-chart .s9-chart .s9-chart-text p, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-content-title h3, .vct-wrapper .section.section9 .section-inner .section-content .s9-content-move .s9-year-list ul li p, .vct-wrapper .section.section10 .section-inner .section-content .s10-title h3, .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list .s10-trend-item .trend-item-name h3, .vct-wrapper .section.section10 .section-inner .section-content .s10-trend-list .s10-trend-item .trend-item-info p, .vct-wrapper .section.section11 .section-inner .section-content .s11-title p, .vct-wrapper .section.section12 .section-inner .section-content .section-insight-wrapper .insight-glob-group .insight-glob-bg__text p, .vct-wrapper .section.last-section .section-inner .section-last-search .last-search-title {
   font-family: MagazineGrotesque;
 }
@@ -28,28 +38,136 @@
 }
 
 .vct-wrapper .vct-info-tag {
+  position: relative;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-tag-logo {
   position: fixed;
-  top: 100px;
-  left: 0;
+  top: 30%;
+  right: 0;
   color: #fff;
-  z-index: 10;
+  z-index: 3;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  width: 800px;
-  height: 160px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffe527;
+  background-image: url(../../../src/img/modal-icon.svg);
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.vct-wrapper .vct-info-tag img {
-  width: 100%;
-  height: 100%;
+.vct-wrapper .vct-info-tag .vct-info-tag-logo:hover {
+  background-color: #D1A300;
 }
 
-.vct-wrapper .vct-info-tag.hide {
-  -webkit-transform: translateX(-600px);
-          transform: translateX(-600px);
+.vct-wrapper .vct-info-tag .vct-info-content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  visibility: hidden;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-close svg {
+  fill: #fff;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title {
+  padding: 40px 20px 30px;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3 {
+  text-align: center;
+  color: #FED440;
+  font-size: 28px;
+  font-family: SFProDisplay-Bold;
+  line-height: 1;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1px;
+  width: 70%;
+  background-color: #FED440;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot {
+  position: relative;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p {
+  font-size: 20px;
+  color: #fff;
+  font-family: SFProDisplay-Regular;
+  font-weight: 300;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p span {
+  font-size: 20px;
+  color: #fff;
+  font-family: SFProDisplay-Regular;
+  font-weight: 300;
+  margin-left: 5px;
+  text-align: left;
+  line-height: 1.1;
 }
 
 .vct-wrapper .vct-header {
@@ -1753,6 +1871,15 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 60px;
+}
+
+.vct-wrapper.modal-open .vct-info-tag .vct-info-content {
+  visibility: visible;
+}
+
+.vct-wrapper.modal-open .vct-info-tag .vct-info-content .info-content-modal {
+  opacity: 1;
+  visibility: visible;
 }
 
 @-webkit-keyframes animation_1 {

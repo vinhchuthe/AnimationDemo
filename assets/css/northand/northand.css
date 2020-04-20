@@ -4,18 +4,13 @@
 }
 
 @font-face {
-  font-family: SourceSansPro-Bold;
-  src: url("./SourceSansPro-Bold.ttf");
+  font-family: SFProDisplay-Bold;
+  src: url(".../../../../../src/css/font/SFProDisplay-Bold.ttf");
 }
 
 @font-face {
-  font-family: SourceSansPro-Regular;
-  src: url("./SourceSansPro-Regular.ttf");
-}
-
-@font-face {
-  font-family: SourceSansPro-SemiBold;
-  src: url("./SourceSansPro-SemiBold.ttf");
+  font-family: SFProDisplay-Regular;
+  src: url(".../../../../../src/css/font/SFProDisplay-Regular.ttf");
 }
 
 .vct-wrapper .vct-body-content .vct-section.vct-section2 .vct-section2-inner .vct-section-heading h3, .vct-wrapper .vct-body-content .vct-section.vct-section3 .vct-section3-inner .vct-section3-content p, .vct-wrapper .vct-body-content .vct-section.vct-section5 .vct-section5-inner .vct-section5-content.s5-block p, .vct-wrapper .vct-body-content .vct-section.vct-section8 .vct-section8-inner .vct-section8-content p {
@@ -108,29 +103,136 @@ body::-webkit-scrollbar {
 }
 
 .vct-wrapper .vct-info-tag {
+  position: relative;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-tag-logo {
   position: fixed;
-  top: 50px;
-  left: 0;
+  top: 30%;
+  right: 0;
   color: #fff;
   z-index: 3;
-  -webkit-transform: translateX(-75%);
-          transform: translateX(-75%);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  width: 800px;
-  height: 160px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffe527;
+  background-image: url(../../../src/img/modal-icon.svg);
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.vct-wrapper .vct-info-tag img {
-  width: 100%;
+.vct-wrapper .vct-info-tag .vct-info-tag-logo:hover {
+  background-color: #D1A300;
 }
 
-.vct-wrapper .vct-info-tag:hover {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.vct-wrapper .vct-info-tag .vct-info-content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  visibility: hidden;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-close svg {
+  fill: #fff;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title {
+  padding: 40px 20px 30px;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3 {
+  text-align: center;
+  color: #FED440;
+  font-size: 28px;
+  font-family: SFProDisplay-Bold;
+  line-height: 1;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1px;
+  width: 70%;
+  background-color: #FED440;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot {
+  position: relative;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p {
+  font-size: 20px;
+  color: #fff;
+  font-family: SFProDisplay-Regular;
+  font-weight: 300;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p span {
+  font-size: 20px;
+  color: #fff;
+  font-family: SFProDisplay-Regular;
+  font-weight: 300;
+  margin-left: 5px;
+  text-align: left;
+  line-height: 1.1;
 }
 
 .vct-wrapper .vct-bg-video .video {
@@ -616,5 +718,14 @@ body::-webkit-scrollbar {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-text-stroke: 1px #ffe527;
+}
+
+.vct-wrapper.modal-open .vct-info-tag .vct-info-content {
+  visibility: visible;
+}
+
+.vct-wrapper.modal-open .vct-info-tag .vct-info-content .info-content-modal {
+  opacity: 1;
+  visibility: visible;
 }
 /*# sourceMappingURL=northand.css.map */
