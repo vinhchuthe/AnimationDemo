@@ -107,7 +107,7 @@ body {
         left: 50%;
         width: 700px;
         height: 330px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 1);
         transform: translate(-50%, -50%);
         z-index: 3;
         opacity: 0;
@@ -145,6 +145,14 @@ body {
               margin-bottom: 0;
               position: relative;
 
+              span {
+                display: block;
+                font-size: 18px;
+                margin-top: 15px;
+                line-height: 1;
+                font-family: SFProDisplay-Regular;
+              }
+
               &::after {
                 content: "";
                 position: absolute;
@@ -171,7 +179,7 @@ body {
               color: #fff;
               font-family: SFProDisplay-Regular;
               font-weight: 300;
-              margin-bottom: 30px;
+              margin-bottom: 20px;
               display: flex;
               justify-content: center;
 

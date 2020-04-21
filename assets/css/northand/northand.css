@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
   left: 50%;
   width: 700px;
   height: 330px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 3;
@@ -186,6 +186,14 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
+.vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3 span {
+  display: block;
+  font-size: 18px;
+  margin-top: 15px;
+  line-height: 1;
+  font-family: SFProDisplay-Regular;
+}
+
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3::after {
   content: "";
   position: absolute;
@@ -212,7 +220,7 @@ body::-webkit-scrollbar {
   color: #fff;
   font-family: SFProDisplay-Regular;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
