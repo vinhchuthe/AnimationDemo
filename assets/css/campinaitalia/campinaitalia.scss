@@ -13,6 +13,15 @@
     src: url("./Canoodle.otf");
 }
 
+%box-link {
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+}
+
 .vct-wrapper {
     position: relative;
     width: 100%;
@@ -155,6 +164,8 @@
 
     // overlay
     .vct-overlay {
+
+        // header
         .header {
             padding: 10px 5px 10px 0;
             height: 145px;
@@ -168,8 +179,6 @@
             .header-inner {
                 display: flex;
                 width: 100%;
-                padding-left: 15px;
-                padding-right: 15px;
                 margin-right: auto;
                 margin-left: auto;
                 align-items: center;
@@ -188,8 +197,8 @@
                 }
 
                 .slogan {
-                    flex: 0 0 50%;
-                    padding: 0 15px;
+                    flex: 0 0 48%;
+                    text-align: center;
 
                     p {
                         font-size: 26px;
@@ -202,7 +211,71 @@
 
                 .menu {
                     flex: 0 0 25%;
-                    padding: 0 15px;
+
+                    .menu-inner {
+                        position: relative;
+                        float: right;
+                        cursor: pointer;
+
+                        .label {
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            font-size: 25px;
+                            color: #1a893a;
+                            text-transform: uppercase;
+                            transition: all 0.5s;
+                            font-family: Canoodle;
+                        }
+
+                        .hamburger {
+                            width: 115px;
+                            height: 64px;
+                            display: block;
+                            position: relative;
+                            cursor: pointer;
+                            pointer-events: auto;
+
+                            .hamburger-inner-wrap {
+                                position: absolute;
+                                top: 5px;
+                                right: -5px;
+                                width: 50px;
+                                height: 50px;
+
+                                .hamburger-menu {
+                                    position: relative;
+                                    transform: translateY(25px);
+                                    background: #1a893a;
+                                    transition: all 0ms 300ms;
+                                    width: 27px;
+                                    height: 2px;
+
+                                    &::before {
+                                        width: 27px;
+                                        height: 2px;
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 5px;
+                                        background: #1a893a;
+                                        transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                                    }
+
+                                    &::after {
+                                        width: 27px;
+                                        height: 2px;
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        top: 5px;
+                                        background: #1a893a;
+                                        transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -210,21 +283,311 @@
 
     // Content
     .vct-content {
+        position: relative;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        padding-top: 80px;
+
         #fullpage {
+            display: block;
+
             .section {
+                position: relative;
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
                 background-color: #fff;
 
                 .box {
-                    display: flex;
-                    // height: 100%;
-                    align-items: center;
-                    justify-content: center;
                     position: relative;
                     background-color: #fff;
-                    // align-items: center !important;
+
+                    .grid-item {
+                        display: flex;
+                        cursor: pointer;
+
+                        .box-img-wrap {
+                            position: relative;
+                            transform: rotate(15deg) !important;
+
+                            .box-img {
+                                display: block;
+                                flex: none;
+                                margin: 0 1rem 0 auto;
+                                max-width: 100%;
+                                pointer-events: none;
+                                height: 450px;
+                            }
+                        }
+
+                        .box-pos {
+                            position: absolute;
+                        }
+
+                        .box-pos-top {
+                            top: 30px;
+                            right: -75px;
+                        }
+
+                        .box-pos-left {
+                            top: 50px;
+                            left: 0;
+                        }
+
+                        .box-pos-bottom {
+                            left: -35px;
+                            bottom: 0;
+                        }
+
+                        .box-pos-vbottom {
+                            right: 0;
+                            bottom: 50px;
+                        }
+
+                    }
+
+                    .content-center {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        right: -18rem;
+                        width: 260px;
+
+                        .content-text-wrap {
+                            .box-title {
+                                color: #ed8e2d;
+                                margin: 0 0 10px;
+                                line-height: 1;
+                                font-size: 88px;
+                                line-height: 65px;
+                                font-family: Canoodle;
+
+                                span {
+                                    display: block;
+                                    position: relative;
+                                    font-weight: normal;
+                                    text-transform: uppercase;
+                                    font-size: 33px;
+                                    line-height: 38px;
+                                    margin-top: 5px;
+                                    color: #000;
+                                }
+                            }
+                        }
+
+                        .threed-button {
+                            display: inline-block;
+                            position: relative;
+                            cursor: pointer;
+                            @extend %box-link;
+
+                            .section-btn {
+                                .box-link {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    @extend %box-link;
+                                }
+                            }
+
+                            .button {
+                                .box-link-inner {
+                                    background-image: url("../../img/campinaitalia/btn-bg-sm.png");
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    display: block;
+                                    padding: 5px 20px 12px;
+                                    font-size: 31px;
+                                    line-height: 24px;
+                                    font-weight: 400;
+                                    z-index: 9999;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    color: #fff;
+                                    font-family: Canoodle;
+                                }
+
+                                .button_side_sm {
+                                    background: url("../../img/campinaitalia/btn-bg-sm-shadow.png") no-repeat;
+                                    background-size: contain;
+                                    height: 39px;
+                                    width: 99px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 3;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#section2 {
+                    .box {
+                        .grid-item {
+                            .box-img-wrap {
+                                transform: rotate(26deg) !important;
+                            }
+
+                            .box-pos-bottom {
+                                left: -100px;
+                            }
+                        }
+
+                        .content-center {
+                            .content-text-wrap {
+                                .box-title {
+                                    color: #3192d9;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#section3 {
+                    .box {
+                        .grid-item {
+                            .box-img-wrap {
+                                transform: rotate(20deg) !important;
+                            }
+
+                            // .box-pos-bottom {
+                            //     left: -100px;
+                            // }
+                        }
+
+                        .content-center {
+                            .content-text-wrap {
+                                .box-title {
+                                    color: #b8b739;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#section4 {
+                    .box {
+                        .grid-item {
+                            .box-img-wrap {
+                                transform: rotate(27deg) !important;
+                                margin-right: 30px;
+                            }
+
+                            .box-pos-bottom {
+                                left: -7rem;
+                            }
+                        }
+
+                        .content-center {
+                            .content-text-wrap {
+                                .box-title {
+                                    color: #a90b29;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#section5 {
+                    .box {
+                        .grid-item {
+                            .box-img-wrap {
+                                transform: rotate(52deg) !important;
+                                margin-right: 30px;
+                            }
+
+                            .box-pos-top {
+                                top: 20px;
+                                right: -100px;
+                            }
+
+                            .box-pos-bottom {
+                                left: -75px;
+                            }
+                        }
+
+                        .content-center {
+                            .content-text-wrap {
+                                .box-title {
+                                    color: #da0016;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#section6 {
+                    flex-direction: column;
+
+                    .footer-inner-wrap {
+                        height: calc(100% - 150px);
+                        width: 100%;
+                        background-position: bottom;
+                        background-repeat: repeat-x;
+                        background-size: 700px;
+                        background-image: url("../../img/campinaitalia/grass.png");
+
+                        .footer-container {
+                            height: 100% !important;
+                            width: 100%;
+                            margin: 0 auto;
+
+                            .footer-container-inner {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                height: 100%;
+
+                                .footer-box {
+                                    flex: 0 0 66%;
+                                    position: relative;
+
+                                    .footer-inner {
+                                        padding: 0 50px;
+                                        text-align: center;
+
+                                        .box-title {
+                                            font-size: 50px;
+                                            line-height: 55px;
+                                            color: #43a040;
+                                            margin-bottom: 15px;
+                                            font-family: Canoodle;
+                                            margin: 0 0 10px;
+                                            font-weight: 500;
+                                        }
+
+                                        p {
+                                            color: #000;
+                                            font-size: 29px;
+                                            line-height: 32px;
+                                            margin: 0;
+                                            font-family: Canoodle;
+                                        }
+                                    }
+
+                                    .box-pos {
+                                        position: absolute;
+                                    }
+
+                                    .box-pos-top {
+                                        left: -5rem;
+                                        top: 2rem;
+                                        bottom: auto;
+                                        right: auto;
+                                    }
+
+                                    .box-pos-vbottom {
+                                        bottom: 0;
+                                        right: -4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -241,6 +604,61 @@
                     visibility: visible;
                 }
             }
+        }
+    }
+}
+
+
+// Responsive
+
+@media screen and (min-width: 1450px) {
+    .vct-wrapper {
+        .vct-content {
+            #fullpage {
+                .section {
+                    .box {
+                        .grid-item {
+                            .box-img-wrap {
+                                .box-img {
+                                    height: 600px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    #section6 {
+        .footer-container {
+            max-width: 1140px;
+        }
+    }
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+    #section6 {
+        .footer-container {
+            max-width: 960px;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    #section6 {
+        .footer-container {
+            max-width: 720px;
+        }
+    }
+}
+
+@media (min-width:576px) and (max-width: 767px) {
+    #section6 {
+        .footer-container {
+            max-width: 540px;
         }
     }
 }

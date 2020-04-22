@@ -28,9 +28,13 @@
         easingcss3: 'cubic-bezier(1.000, -0.440, 0.265, 1.385)',
         scrollingSpeed: 1600,
         // paddingTop: '140px',
-        anchors: ['formaggio-di-capra', 'cracker-cut', 'toastie', 'bio', 'emmental-olandese', '100-naturale'],
+        anchors: ['gouda', 'formaggio-di-capra', 'bio', 'emmental-olandese',
+            'edam', '100-naturale'
+        ],
         // sectionSelector: 'section',
-        navigationTooltips: ['formaggio di capra', 'cracker cut', 'toastie', 'bio', 'emmental olandese', '100% Naturale'],
+        navigationTooltips: ['gouda', 'formaggio di capra', 'bio', 'emmental olandese',
+            'edam', '100% Naturale'
+        ],
 
     });
 })(jQuery);
