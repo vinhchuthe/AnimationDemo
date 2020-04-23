@@ -220,7 +220,7 @@
   top: 50%;
   left: 50%;
   width: 700px;
-  height: 330px;
+  height: auto;
   background-color: black;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -309,7 +309,7 @@
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p span {

@@ -53,7 +53,7 @@
 }
 
 .vct-wrapper .vct-info-tag .vct-info-tag-logo:hover {
-  background-color: #D1A300;
+  background-color: #d1a300;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content {
@@ -69,7 +69,7 @@
   top: 50%;
   left: 50%;
   width: 700px;
-  height: 330px;
+  height: auto;
   background-color: black;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -106,7 +106,7 @@
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3 {
   text-align: center;
-  color: #FED440;
+  color: #fed440;
   font-size: 28px;
   font-family: SFProDisplay-Bold;
   line-height: 1;
@@ -131,7 +131,7 @@
           transform: translateX(-50%);
   height: 1px;
   width: 70%;
-  background-color: #FED440;
+  background-color: #fed440;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot {
@@ -158,7 +158,7 @@
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot .modal-text p span {
@@ -313,7 +313,6 @@
           flex-direction: column;
   height: auto;
   min-height: 0;
-  padding-top: 80px;
 }
 
 .vct-wrapper .vct-content #fullpage {
@@ -519,7 +518,7 @@
 }
 
 .vct-wrapper .vct-content #fullpage .section#section6 .footer-inner-wrap {
-  height: calc(100% - 150px);
+  height: calc(100% - 70px);
   width: 100%;
   background-position: bottom;
   background-repeat: repeat-x;
@@ -594,6 +593,40 @@
   right: -4rem;
 }
 
+.vct-wrapper .vct-content #fullpage .section#section6 .copyrights {
+  padding: 10px 20px;
+  color: #000;
+  position: relative;
+  width: 95%;
+}
+
+.vct-wrapper .vct-content #fullpage .section#section6 .copyrights .footer-logo {
+  display: inline-block !important;
+}
+
+.vct-wrapper .vct-content #fullpage .section#section6 .copyrights .footer-logo img {
+  width: 150px;
+}
+
+.vct-wrapper .vct-content #fullpage .section#section6 .copyrights p {
+  display: inline-block !important;
+  font-family: Canoodle;
+  font-size: 21px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  line-height: 32px;
+  margin: 0;
+  color: #000;
+}
+
+.vct-wrapper .vct-content #fullpage .section#section6 .copyrights p a {
+  text-decoration: none;
+  color: #000;
+}
+
 .vct-wrapper.modal-open .vct-info-tag .vct-info-content {
   visibility: visible;
 }
@@ -601,6 +634,66 @@
 .vct-wrapper.modal-open .vct-info-tag .vct-info-content .info-content-modal {
   opacity: 1;
   visibility: visible;
+}
+
+#fp-nav {
+  right: 0 !important;
+  padding-right: 20px !important;
+  -webkit-transition: all 0.75s cubic-bezier(0.77, 0.06, 0.28, 0.85) !important;
+  transition: all 0.75s cubic-bezier(0.77, 0.06, 0.28, 0.85) !important;
+  margin: 0 !important;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
+#fp-nav ul li {
+  display: block;
+  height: 15px;
+  width: 15px;
+  margin: 0 0 7px;
+  position: relative;
+}
+
+#fp-nav ul li a {
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 15px;
+  width: 15px;
+  border: 0;
+  background: #cde1bc;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#fp-nav ul li a.active {
+  background-color: #71a83e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#fp-nav ul li a span {
+  position: static !important;
+}
+
+#fp-nav ul li:last-child a {
+  background-image: url("../../img/campinaitalia/simley.png");
+  background-color: transparent;
+  width: 21px;
+  height: 20px;
+  left: 35%;
+}
+
+#fp-nav ul li .fp-tooltip {
+  top: 0 !important;
+  right: 15px !important;
+  font-family: Canoodle !important;
+  color: #9ebc48 !important;
+  font-size: 18px !important;
+  white-space: nowrap !important;
 }
 
 @media screen and (min-width: 1450px) {

@@ -73,7 +73,7 @@
         top: 50%;
         left: 50%;
         width: 700px;
-        height: 330px;
+        height: auto;
         background-color: rgba(0, 0, 0, 1);
         transform: translate(-50%, -50%);
         z-index: 3;
@@ -151,7 +151,7 @@
               justify-content: center;
 
               &:last-child {
-                margin-bottom: 0;
+                margin-bottom: 30px;
               }
 
               span {
