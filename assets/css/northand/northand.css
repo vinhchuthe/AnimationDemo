@@ -118,10 +118,30 @@ body::-webkit-scrollbar {
   width: 50px;
   height: 50px;
   background-color: #ffe527;
-  background-image: url(../../../src/img/modal-icon.svg);
-  background-size: 25px 25px;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-tag-logo img {
+  width: 25px;
+  height: 25px;
+  -webkit-animation-name: ring;
+          animation-name: ring;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-tag-logo:hover {
@@ -735,5 +755,55 @@ body::-webkit-scrollbar {
 .vct-wrapper.modal-open .vct-info-tag .vct-info-content .info-content-modal {
   opacity: 1;
   visibility: visible;
+  -webkit-animation: modal-slide-right .5s ease;
+          animation: modal-slide-right .5s ease;
+}
+
+@-webkit-keyframes modal-slide-right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes modal-slide-right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes ring {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes ring {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
 }
 /*# sourceMappingURL=northand.css.map */

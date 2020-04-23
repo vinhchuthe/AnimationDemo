@@ -16,7 +16,9 @@
 
         <!-- Info tag -->
         <div class="vct-info-tag">
-            <div class="vct-info-tag-logo"></div>
+            <div class="vct-info-tag-logo">
+                <img src="../src/img/modal-icon.svg" alt="">
+            </div>
             <div class="vct-info-content">
                 <div class="info-content-modal">
                     <div class="modal-top">
@@ -321,9 +323,9 @@
         }, "-=0.5");
 
         new ScrollMagic.Scene({
-            triggerElement: '.vct-section9',
-            offset: -100,
-        })
+                triggerElement: '.vct-section9',
+                offset: -100,
+            })
             .setTween(q1)
             .addTo(controller);
 
@@ -337,10 +339,10 @@
 
         var q3 = new TimelineMax();
         q3.from(".reel-dot", 1, {
-            y: "+=10vw",
-            opacity: 0,
-            autoAlpha: 0
-        })
+                y: "+=10vw",
+                opacity: 0,
+                autoAlpha: 0
+            })
             .from(".reel-loop-div", 0.5, {
                 scale: 0,
                 transformOrigin: "50% 50%"
@@ -352,8 +354,8 @@
             }, "-=1");
 
         new ScrollMagic.Scene({
-            triggerElement: '.vct-section10',
-        })
+                triggerElement: '.vct-section10',
+            })
             .setTween(q3)
             .addTo(controller);
     </script>

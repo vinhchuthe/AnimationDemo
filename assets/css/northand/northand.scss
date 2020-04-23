@@ -98,10 +98,20 @@ body::-webkit-scrollbar {
       width: 50px;
       height: 50px;
       background-color: $main-yellow;
-      background-image: url(../../../src/img/modal-icon.svg);
-      background-size: 25px 25px;
-      background-position: center;
-      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      img {
+        width: 25px;
+        height: 25px;
+        animation-name: ring;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+      }
 
       &:hover {
         background-color: #D1A300;
@@ -715,8 +725,33 @@ body::-webkit-scrollbar {
         .info-content-modal {
           opacity: 1;
           visibility: visible;
+          animation: modal-slide-right .5s ease;
         }
       }
     }
+  }
+}
+
+@keyframes modal-slide-right {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0);
   }
 }
