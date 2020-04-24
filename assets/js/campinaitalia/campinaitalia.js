@@ -40,31 +40,50 @@
 })(jQuery);
 
 
-// document.getElementById("section-btn-13").onmouseover = function () {
-//     var hit01rollover = new TimelineMax();
-//     hit01rollover.to(".button-13 .box-link-inner", 0.8, {
-//         x: 1,
-//         y: 1,
-//         ease: Elastic.easeOut
-//     }, 0.00);
-//     hit01rollover.to(".button-13 .button13_side", 0.8, {
-//         x: 3,
-//         y: 3,
-//         ease: Elastic.easeOut
-//     }, 0.00);
-// }; //bounce rollout
+// ------------------------
+var totalElements = 0;
+var elementAnimationDelay = 0;
+var elementCountUp = 0;
 
+function elementFloat(elementItem) {
+    TweenMax.to(elementItem, 8, {
+        delay: elementAnimationDelay,
+        y: "-=20px",
+        yoyo: true,
+        repeat: -1,
+        ease: Power2.easeInOut
+    });
+}
 
-// document.getElementById("section-btn-13").onmouseout = function () {
-//     var hit01rollover = new TimelineMax();
-//     hit01rollover.to(".button-13 .box-link-inner", 0.15, {
-//         x: 0,
-//         y: 0,
-//         ease: Power4.easeOut
-//     }, 0.00);
-//     hit01rollover.to(".button-13 .button13_side", 0.15, {
-//         x: 0,
-//         y: 0,
-//         ease: Power4.easeOut
-//     }, 0.00);
-// };
+function initPhoneHovering() {
+    $(".box div[id]").each(function () {
+        totalElements++;
+        elementAnimationDelay += 0.9;
+        var targetElement = $("#float-" + totalElements); //init animation
+
+        elementFloat(targetElement);
+    });
+}
+
+initPhoneHovering();
+
+// ------------------------
+$(".overlay-close").click(function () {
+    $(".overlay-item").removeClass("detail-open");
+    $.fn.fullpage.setAllowScrolling(true);
+    $.fn.fullpage.setKeyboardScrolling(true);
+});
+
+$(".button-9").click(function () {
+    var id = $(this).attr("data-id");
+    $("#" + id).addClass("detail-open");
+    $.fn.fullpage.setAllowScrolling(false);
+    $.fn.fullpage.setKeyboardScrolling(false);
+});
+
+$(".button-11").click(function () {
+    var id = $(this).attr("data-id");
+    $("#" + id).addClass("detail-open");
+    $.fn.fullpage.setAllowScrolling(false);
+    $.fn.fullpage.setKeyboardScrolling(false);
+});

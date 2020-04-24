@@ -168,7 +168,7 @@
         .header {
             padding: 10px 5px 10px 0;
             height: 145px;
-            z-index: 3;
+            z-index: 999;
             transition: all 0.5s;
             position: fixed;
             top: 0;
@@ -278,6 +278,226 @@
                         }
                     }
                 }
+            }
+        }
+
+        // overlay-item
+        .overlay-item {
+            height: 100vh;
+            display: none;
+            background-color: #fff;
+            margin-top: -2px;
+            width: 100%;
+            position: absolute;
+            z-index: 101;
+
+            .overlay-container {
+                transition: height 0.15s ease-out;
+                height: 100vh;
+                margin: 0 auto;
+
+                .overlay-content-inner {
+                    max-height: 100%;
+                    background-color: #fff;
+                    margin: 0;
+                    position: relative;
+                    height: 100% !important;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    top: 60%;
+                    transform: translateY(-50%);
+
+                    .flex-box {
+                        position: relative;
+                        width: 100%;
+
+                        .detail-img {
+                            position: relative;
+                            z-index: 99;
+                            width: 315px;
+
+                            img {
+                                display: block;
+                                flex: none;
+                                margin: 0 1rem 0 auto;
+                                max-width: 100%;
+                                pointer-events: none;
+                                height: 450px;
+                                margin: inherit;
+                                z-index: 9999;
+                            }
+                        }
+                        .detail-content-wrap {
+                            position: absolute;
+                            top: -15px;
+                            left: 0;
+                            padding-left: 315px;
+                            z-index: 9;
+
+                            &.overlay-content {
+                                font-size: 2.25rem;
+                                margin-top: 0;
+                            }
+
+                            .top-content {
+                                text-transform: uppercase;
+                                .content-text {
+                                    display: inline-block;
+                                    h3 {
+                                        font-size: 116px;
+                                        line-height: 1;
+                                        font-family: Canoodle;
+                                        color: #00803b;
+                                    }
+                                    p {
+                                        font-family: Canoodle;
+                                        font-size: 16px;
+                                        line-height: 18px;
+                                        margin: 0;
+                                    }
+                                    img {
+                                        max-width: 80px;
+                                        vertical-align: initial;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                            .detail-content {
+                                position: relative;
+                                width: 570px;
+
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    background: url("../../img/campinaitalia/border-bg.png") no-repeat;
+                                    height: 215px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: -50px;
+                                    width: 100%;
+                                    background-position: right;
+                                    background-size: cover;
+                                }
+
+                                .detail-content-inner {
+                                    position: relative;
+                                    padding: 40px 0 30px;
+                                    width: 470px;
+
+                                    .border-text {
+                                        font-size: 24px;
+                                        line-height: 28px;
+                                        position: absolute;
+                                        font-family: Canoodle;
+                                        top: 0;
+                                        left: 0;
+                                        color: #fff;
+                                        margin: 0;
+                                    }
+                                    h4 {
+                                        font-family: Canoodle;
+                                        font-size: 32px;
+                                        line-height: 28px;
+                                        margin: 0 20px 20px 0;
+                                    }
+                                    .ingredient {
+                                        font-family: Canoodle;
+                                        font-size: 36px;
+                                        line-height: 28px;
+                                        color: #43a040;
+                                        margin: 0;
+                                    }
+                                    .ingredient-list {
+                                        padding: 0;
+                                        margin: 0;
+                                        font-size: 25px;
+                                        color: #89b700;
+                                        margin: 0;
+
+                                        li {
+                                            font-family: Canoodle;
+                                            margin-right: 5px;
+                                            display: inline-block;
+                                        }
+                                    }
+                                }
+                            }
+                            .bottom-content {
+                                width: 525px;
+                                margin: 18px 0 0 10px;
+                                padding-top: 15px;
+                                display: flex;
+                                // flex-wrap: wrap;
+                                position: relative;
+
+                                .column {
+                                    position: relative;
+
+                                    .icon {
+                                        position: absolute;
+                                        left: -15px;
+                                        top: 0;
+                                        display: inline-block;
+                                        width: 85px;
+
+                                        img {
+                                            max-width: 100%;
+                                            height: auto;
+                                        }
+                                    }
+                                    .column-text {
+                                        padding-left: 80px;
+                                        font-size: 16px;
+                                        line-height: 18px;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        text-align: justify;
+                                        font-family: Canoodle;
+                                    }
+
+                                    &.column-1 {
+                                        flex: 0 0 58%;
+                                    }
+                                    &.column-2 {
+                                        flex: 0 0 41%;
+                                        padding-right: 3rem !important;
+                                        margin-left: 2rem !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .overlay-close {
+                position: absolute;
+                top: 200px;
+                right: 50px;
+                cursor: pointer;
+                display: block;
+                z-index: 999;
+
+                .close-inner {
+                    background-image: url("../../img/campinaitalia/btn-bg-sm.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    display: block;
+                    padding: 5px 20px 12px;
+                    font-size: 31px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    z-index: 9999;
+                    position: relative;
+                    // top: 0;
+                    // left: 0;
+                    color: #fff;
+                    font-family: Canoodle;
+                }
+            }
+
+            &.detail-open {
+                display: block;
             }
         }
     }
@@ -393,6 +613,9 @@
                             }
 
                             .button {
+                                position: relative;
+                                display: block;
+
                                 .box-link-inner {
                                     background-image: url("../../img/campinaitalia/btn-bg-sm.png");
                                     background-repeat: no-repeat;
@@ -403,14 +626,15 @@
                                     line-height: 24px;
                                     font-weight: 400;
                                     z-index: 9999;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
+                                    position: relative;
+                                    // top: 0;
+                                    // left: 0;
                                     color: #fff;
                                     font-family: Canoodle;
                                 }
 
-                                .button_side_sm {
+                                &::after {
+                                    content: "";
                                     background: url("../../img/campinaitalia/btn-bg-sm-shadow.png") no-repeat;
                                     background-size: contain;
                                     height: 39px;
@@ -420,6 +644,17 @@
                                     left: 0;
                                     z-index: 3;
                                 }
+
+                                // .button_side_sm {
+                                //     background: url("../../img/campinaitalia/btn-bg-sm-shadow.png") no-repeat;
+                                //     background-size: contain;
+                                //     height: 39px;
+                                //     width: 99px;
+                                //     position: absolute;
+                                //     top: 0;
+                                //     left: 0;
+                                //     z-index: 3;
+                                // }
                             }
                         }
                     }
@@ -647,7 +882,6 @@
     margin: 0 !important;
     transform: translateY(-50%) !important;
 
-
     ul {
         li {
             display: block;
@@ -721,12 +955,92 @@
                 }
             }
         }
+        .vct-overlay {
+            .overlay-item {
+                .overlay-container {
+                    .overlay-content-inner {
+                        .flex-box {
+                            .detail-img {
+                                width: 450px;
+                                z-index: 999;
+
+                                img {
+                                    height: 600px;
+                                }
+                            }
+                            .detail-content-wrap {
+                                padding-left: 430px;
+                                z-index: 99;
+                                .top-content {
+                                    .content-text {
+                                        h3 {
+                                            font-size: 150px;
+                                            line-height: 1;
+                                        }
+                                        p {
+                                            font-size: 20px;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
+                                .detail-content {
+                                    width: 725px;
+
+                                    &::before {
+                                        height: 280px;
+                                    }
+                                    .detail-content-inner {
+                                        padding: 60px 0 40px;
+                                        width: 570px;
+                                        .border-text {
+                                            font-size: 30px;
+                                            line-height: 40px;
+                                        }
+                                        h4 {
+                                            font-size: 44px;
+                                            line-height: 45px;
+                                            margin-bottom: 20px;
+                                        }
+                                        .ingredient {
+                                            font-size: 40px;
+                                            line-height: 35px;
+                                        }
+                                        .ingredient-list {
+                                            font-size: 28px;
+
+                                            li {
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .bottom-content {
+                                    width: 600px;
+                                    padding-top: 20px;
+
+                                    .column {
+                                        .column-text {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 1200px) {
     #section6 {
         .footer-container {
+            max-width: 1140px;
+        }
+    }
+    .overlay-item {
+        .container {
             max-width: 1140px;
         }
     }
@@ -738,6 +1052,11 @@
             max-width: 960px;
         }
     }
+    .overlay-item {
+        .container {
+            max-width: 960px;
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -746,11 +1065,21 @@
             max-width: 720px;
         }
     }
+    .overlay-item {
+        .container {
+            max-width: 720px;
+        }
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
     #section6 {
         .footer-container {
+            max-width: 540px;
+        }
+    }
+    .overlay-item {
+        .container {
             max-width: 540px;
         }
     }
