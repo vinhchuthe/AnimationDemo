@@ -1,0 +1,318 @@
+@font-face {
+    font-family: SaolDisplay-Regular;
+    src: url("../../css/dpotferstudio/SaolDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: NeueHaasUnicaW1G-Thin;
+    src: url("../../css/dpotferstudio/NeueHaasUnicaW1G-Thin.ttf");
+}
+@font-face {
+    font-family: NeueHaasUnicaW1G-Med;
+    src: url("../../css/dpotferstudio/NeueHaasUnicaW1G-Thin.ttf");
+}
+
+%relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body {
+    font-size: 9.2px;
+}
+
+.vct-wrapper {
+    @extend %relative;
+
+    .vct-overlay {
+        .menu__logo {
+            position: fixed;
+            left: 4%;
+            top: 17rem;
+            z-index: 90;
+            width: 10rem;
+            height: 2.1rem;
+
+            .router-link {
+                color: #000;
+                text-decoration: none;
+
+                svg {
+                    width: 10rem;
+                    height: 2.1rem;
+                }
+            }
+        }
+        .menu__list {
+            left: 14%;
+
+            &.rotated {
+                z-index: 10;
+                position: fixed;
+                bottom: 10rem;
+                font-family: NeueHaasUnicaW1G-Thin, sans-serif;
+                font-size: 15px;
+                letter-spacing: 1px;
+                line-height: 4rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                -webkit-transform-origin: bottom left;
+                transform-origin: bottom left;
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                -webkit-transition: opacity 0.6s ease;
+                transition: opacity 0.6s ease;
+            }
+
+            .reset {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    .button {
+                        position: relative;
+                        line-height: 26px;
+                        height: 26px;
+                        color: #000;
+                        text-decoration: none;
+                        font-family: NeueHaasUnicaW1G-Med;
+                        font-weight: 700;
+
+                        div {
+                            width: 100%;
+                            height: 1px;
+                            background-color: #212121;
+                            position: absolute;
+                            bottom: 0;
+                            left: -1px;
+                            -webkit-transform: scaleX(0);
+                            transform: scaleX(0);
+                            -webkit-transform-origin: left center;
+                            transform-origin: left center;
+                            -webkit-transition: -webkit-transform 0.3s ease;
+                            transition: -webkit-transform 0.3s ease;
+                            transition: transform 0.3s ease;
+                            transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .vct-content {
+        #fullpage {
+            display: block;
+
+            .section {
+                @extend %relative;
+
+                .box {
+                    position: relative;
+
+                    // overlay
+                    .work__overlay {
+                        position: absolute;
+                        width: 100vw;
+                        height: 100vh;
+                        z-index: 2;
+                        background-color: transparent;
+
+                        .work__title {
+                            position: absolute;
+                            top: 50%;
+                            left: 21%;
+                            transform: translateY(-55%);
+                            font-size: 16rem;
+                            line-height: 0.9;
+                            text-transform: uppercase;
+                            opacity: 0.99;
+                            color: #000;
+                            z-index: 20;
+
+                            &.work__title-left {
+                                text-align: left;
+                            }
+
+                            .line {
+                                white-space: nowrap;
+                                display: inline-block;
+                                position: relative;
+                                font-family: SaolDisplay-Regular;
+
+                                .space {
+                                    width: 4rem;
+                                    position: relative;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        .work__desc {
+                            position: absolute;
+                            bottom: 3rem;
+
+                            .desc-text {
+                                font-size: 16px;
+                                line-height: 23px;
+                                margin: 0;
+                                font-family: NeueHaasUnicaW1G-Thin;
+                            }
+                            .work__discover {
+                                font-family: NeueHaasUnicaW1G-Thin;
+                                line-height: 1.4;
+                                white-space: nowrap;
+
+                                .discover__border {
+                                    position: absolute;
+                                    width: 80px;
+                                    height: 1px;
+                                    background-color: #000;
+                                    opacity: 0.5;
+                                    left: -100px;
+                                    top: 17px;
+                                    pointer-events: none;
+                                    // -webkit-transform-origin: left center;
+                                    transform-origin: left center;
+                                }
+                                span {
+                                    display: inline-block;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .work__number {
+                            font-size: 3rem;
+                            position: absolute;
+                            top: 17rem;
+                            left: 86%;
+                            white-space: nowrap;
+                            z-index: 2;
+                            font-family: SaolDisplay-Regular;
+                        }
+                        .work__scroll {
+                            position: absolute;
+                            bottom: 10rem;
+                            right: 6.5%;
+                            font-family: NeueHaasUnicaW1G-Thin;
+                            font-size: 16px;
+                            line-height: 23px;
+                            margin: 0;
+
+                            span {
+                                top: -11px;
+                                left: 0;
+                                position: absolute;
+                                display: inline-block;
+                                width: 60px;
+                                // -webkit-transform: rotate(-90deg);
+                                transform: rotate(-90deg);
+                                // -webkit-transform-origin: left center;
+                                transform-origin: left center;
+                            }
+                        }
+                    }
+
+                    // content
+                    .swiper-container {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                width: 35vw;
+                                max-width: 840px;
+                                position: relative;
+                                height: 100%;
+                                border-left: 1px solid rgba(0, 0, 0, 0.2);
+
+                                .work__image {
+                                    position: relative;
+                                    height: 100vh;
+
+                                    .imagewrapper {
+                                        width: 75%;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.custom-position {
+                                transform: translate3d(-20%, 0, 0) !important;
+                            }
+                        }
+                    }
+                }
+
+                &#section1 {
+                    background-color: rgb(212, 226, 228);
+
+                    .box {
+                        .swiper-container {
+                            .swiper-wrapper {
+                                .swiper-slide {
+                                    .work__image {
+                                        .imagewrapper {
+                                            top: -25%;
+                                        }
+
+                                        &.work__image--down {
+                                            .imagewrapper {
+                                                top: 80%;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.custom-position {
+                                    .swiper-slide {
+                                        &:first-child {
+                                            .work__image {
+                                                .imagewrapper {
+                                                    left: 28%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section2 {
+                    background-color: rgb(201, 205, 202);
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media only screen and (min-width: 769px) {
+    .vct-content {
+        #fullpage {
+            .section {
+                .box {
+                    .work__overlay {
+                        .work__desc {
+                            left: 21%;
+                            bottom: 10rem !important;
+
+                            .work__discover {
+                                position: absolute;
+                                font-size: 20px;
+                                bottom: 0;
+                                left: 100%;
+                                margin-left: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

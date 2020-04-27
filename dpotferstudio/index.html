@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/fullpage/fullpage.css">
+    <link rel="stylesheet" href="../src/css/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/dpotferstudio/dpotferstudio.css">
+</head>
+
+<body>
+    <div class="vct-wrapper">
+
+        <!-- App-overlay -->
+        <div class="vct-overlay">
+            <div class="menu__logo">
+                <a href="/" class="router-link">
+                    <svg enable-background="new 0 0 100 21" viewBox="0 0 100 21" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m17.1 10.7c0 3.1-.9 5.6-2.6 7.4s-3.9 2.7-6.6 2.7h-2.1c-.3 0-.8 0-1.4 0s-1.1 0-1.5 0c-.3 0-.7 0-1.2 0s-.8 0-1.1 0h-.6v-.2c.6 0 1-.1 1.3-.3.2-.2.3-.7.3-1.3v-16.6c0-.7-.1-1.1-.3-1.3s-.6-.3-1.3-.3v-.3h.7 1.1 1.2 1.5 1.4 2.1c2.7 0 4.9.9 6.6 2.7s2.5 4.3 2.5 7.5zm-2.9 0c0-3.6-.5-6.2-1.5-7.6-1-1.5-2.8-2.2-5.3-2.2h-3.2v19.6h3.2c2.6 0 4.3-.7 5.3-2.2s1.5-4 1.5-7.6z">
+                        </path>
+                        <path
+                            d="m22.1 20.5c-.3.3-.8.5-1.2.5s-.9-.2-1.2-.5-.5-.7-.5-1.2.2-.9.5-1.2c.4-.3.8-.5 1.2-.5.5 0 .9.2 1.2.5s.5.7.5 1.2-.2.9-.5 1.2z">
+                        </path>
+                        <path
+                            d="m32.4 20.8h-1.1c-.3 0-.7 0-1.3 0s-1.1 0-1.5 0c-.3 0-.8 0-1.3 0s-.9 0-1.1 0h-.7v-.2c.6 0 1-.1 1.3-.3.2-.2.3-.7.3-1.3v-16.6c0-.7-.1-1.1-.3-1.3s-.6-.3-1.3-.3v-.3h.7 1.1 1.2 1.5 1.4 2.9c2 0 3.7.5 5 1.4 1.3 1 1.9 2.3 1.9 4 0 1.8-.6 3.1-1.9 4.1s-2.9 1.4-5 1.4h-4.6v7.4c0 .7.1 1.1.4 1.3s.8.4 1.5.4h.9zm1.7-9.6c1.6 0 2.7-.4 3.3-1.2s.9-2.1.9-4c0-1.8-.3-3.1-.9-3.9s-1.7-1.2-3.3-1.2h-4.5v10.3z">
+                        </path>
+                        <path
+                            d="m53.7 18.8c-1.3 1.5-2.9 2.2-4.7 2.2s-3.4-.7-4.7-2.2c-1.3-1.4-1.9-3.2-1.9-5.4 0-2.1.6-3.9 1.9-5.4 1.3-1.3 2.9-2 4.7-2s3.4.7 4.7 2.2c1.3 1.4 1.9 3.2 1.9 5.4 0 2-.6 3.8-1.9 5.2zm-7.6.4c.6 1 1.6 1.5 2.9 1.5s2.2-.5 2.9-1.5c.6-1 1-2.9 1-5.7s-.3-4.7-1-5.7c-.6-1-1.6-1.5-2.9-1.5s-2.2.5-2.9 1.5c-.6 1-1 2.9-1 5.7.1 2.8.4 4.7 1 5.7z">
+                        </path>
+                        <path
+                            d="m63.8 20.3c-.5.4-1.2.7-1.9.7s-1.3-.2-1.8-.6-.7-1.1-.7-2.1v-11.8h-2v-.3h2v-2.3c.7 0 1.3-.2 1.7-.5.4-.4.6-.8.6-1.4h.2v4.3h3v.3h-3v12.1c0 1.1.4 1.6 1.1 1.6.3 0 .7-.1 1-.4.4-.3.6-.6.8-1.1l.2.1c-.3.5-.7 1-1.2 1.4z">
+                        </path>
+                        <path
+                            d="m75.6 1.8c-.2 0-.6-.1-1.1-.2-.6-.1-1-.2-1.4-.2-1 0-1.7.3-2 .8-.4.6-.6 1.6-.6 3v1h4.5v.3h-4.5v12.4c0 .6.1 1 .4 1.3.3.2.8.4 1.5.4h.5v.2h-.9c-.3 0-.7 0-1.3 0s-1 0-1.4 0c-.3 0-.8 0-1.2 0-.5 0-.8 0-1.1 0h-.6v-.2h.1c.7 0 1.1-.1 1.3-.3s.3-.7.3-1.3v-10.3c0-.9.1-1.7.2-2.3h-2.2v-.2h2.3c.3-1.2.8-2.2 1.4-3 .8-1 1.7-1.8 2.8-2.4s2.1-.9 3-.9c.8 0 1.1.3 1.1.9 0 .7-.4 1-1.1 1z">
+                        </path>
+                        <path
+                            d="m82.1 21c-1.7 0-3.2-.7-4.5-2s-1.9-3.1-1.9-5.3c0-2.4.7-4.2 2-5.6s2.9-2.1 4.6-2.1c1.5 0 2.8.5 3.9 1.5s1.6 2.3 1.6 4h-9.3v1.2c0 2.2.4 3.9 1.3 5.3s2 2.1 3.4 2.1c2.1 0 3.6-1.2 4.4-3.7l.2.1c-1 3-2.9 4.5-5.7 4.5zm3.3-9.9c-.1-3.3-1.1-4.9-3.2-4.9-1 0-1.9.4-2.5 1.3s-1 2.1-1.2 3.6z">
+                        </path>
+                        <path
+                            d="m96.7 20.8h-.9c-.3 0-.7 0-1.3 0s-1 0-1.4 0c-.3 0-.7 0-1.2 0s-.8 0-1.1 0h-.6v-.2h.1c.7 0 1.1-.1 1.3-.3s.3-.7.3-1.3v-10c0-.6-.1-1.1-.3-1.3s-.6-.3-1.3-.3h-.1v-.2h.4c.7 0 1.5-.1 2.2-.4.8-.2 1.2-.5 1.4-.9h.2v3.5c.7-1.1 1.4-1.9 2.1-2.6.6-.5 1.3-.8 2.2-.8.4 0 .7.1 1 .3.2.2.4.4.4.7 0 .7-.4 1-1.3 1-.2 0-.6-.1-1-.2s-.8-.2-1-.2c-.6 0-1.4.8-2.4 2.3v9.1c0 .6.2 1 .5 1.3.3.2.8.4 1.5.4h.5v.1z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="menu__list rotated">
+                <ul class="reset">
+                    <li>
+                        <a href="#" class="button">
+                            About
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button">
+                            Services
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button">
+                            Contact
+                            <div></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide -->
+        <div class="vct-content">
+            <div id="fullpage">
+                <div class="section" id="section1">
+                    <div class="box">
+                        <!-- overlay -->
+                        <div class="work__overlay">
+                            <div class="work__title work__title-left">
+                                <div class="line">ART</div>
+                                <br>
+                                <div class="line">
+                                    <div class="space"></div>
+                                    <div class="space"></div>
+                                    DE VIVRE
+                                </div>
+                                <br>
+                                <div class="line">
+                                    <div class="space"></div>
+                                    COMMUNICATION
+                                </div>
+                            </div>
+                            <div class="work__desc">
+                                <p class="desc-text">
+                                    Finding solutions for
+                                    <br>
+                                    different scale clients
+                                    <br>
+                                    on inspiring missions
+                                </p>
+                                <div class="work__discover">
+                                    <div class="discover__border"></div>
+                                    <span>click to discover</span>
+                                </div>
+                            </div>
+                            <div class="work__number">
+                                Work Nr. 1
+                            </div>
+                            <p class="work__scroll">
+                                <span>Scroll</span>
+                            </p>
+                        </div>
+
+                        <!-- content -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper custom-position">
+                                <div class="swiper-slide">
+                                    <div class="work__image work__image--down">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img1.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img2.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image work__image--down">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img3.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img4.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image work__image--down">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img5.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img6.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image work__image--down">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide1-img7.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="section" id="section2">
+
+                    <div class="box">
+                        <!-- overlay -->
+                        <div class="work__overlay">
+
+                        </div>
+
+                        <!-- content -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper custom-position">
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide2-img1.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide2-img2.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide2-img3.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide2-img4.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide2-img5.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="work__image">
+                                        <div class="imagewrapper">
+                                            <img src="../assets/img/dpotferstudio/slide2-img6.jpg" alt="">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../src/js/Jquery/jquery.min.js"></script>
+    <script src="../src/js/fullpage/fullpage.js"></script>
+    <script src="../src/js/fullpage/fullpage.extensions.min.js"></script>
+    <script src="../src/js/swiper/swiper.min.js"></script>
+    <script src="../src/js/Gsap/Tweenmax.js"></script>
+    <script src="../assets/js/dpotferstudio/dpotferstudio.js"></script>
+    <script>
+        var swiper1 = new Swiper('#section1 .swiper-container', {
+            slidesPerView: 'auto',
+            speed: 1000,
+            // spaceBetween: 30,
+            // centeredSlides: true,
+            grabCursor: true,
+            // mousewheel: true,
+            freeMode: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        var swiper2 = new Swiper('#section2 .swiper-container', {
+            slidesPerView: 'auto',
+            speed: 1000,
+            // spaceBetween: 30,
+            // centeredSlides: true,
+            grabCursor: true,
+            // mousewheel: true,
+            freeMode: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
