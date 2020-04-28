@@ -62,10 +62,10 @@
 html,
 body {
     font-size: 9.2px;
-}
 
-.hidden {
-    display: none;
+    .hidden {
+        display: none;
+    }
 }
 
 .vct-wrapper {
@@ -199,6 +199,8 @@ body {
                         .work__desc {
                             position: absolute;
                             bottom: 3rem;
+                            left: 21%;
+                            bottom: 10rem !important;
 
                             .desc-text {
                                 font-size: 16px;
@@ -210,6 +212,11 @@ body {
                                 font-family: NeueHaasUnicaW1G-Thin;
                                 line-height: 1.4;
                                 white-space: nowrap;
+                                position: absolute;
+                                font-size: 20px;
+                                bottom: 0;
+                                left: 100%;
+                                margin-left: 120px;
 
                                 .discover__border {
                                     position: absolute;
@@ -412,26 +419,26 @@ body {
 
 // Responsive
 @media only screen and (min-width: 769px) {
-    .vct-content {
-        #fullpage {
-            .section {
-                .box {
-                    .work__overlay {
-                        .work__desc {
-                            left: 21%;
-                            bottom: 10rem !important;
+    // .vct-content {
+    //     #fullpage {
+    //         .section {
+    //             .box {
+    //                 .work__overlay {
+    //                     .work__desc {
+    //                         left: 21%;
+    //                         bottom: 10rem !important;
 
-                            .work__discover {
-                                position: absolute;
-                                font-size: 20px;
-                                bottom: 0;
-                                left: 100%;
-                                margin-left: 120px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    //                         .work__discover {
+    //                             position: absolute;
+    //                             font-size: 20px;
+    //                             bottom: 0;
+    //                             left: 100%;
+    //                             margin-left: 120px;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }

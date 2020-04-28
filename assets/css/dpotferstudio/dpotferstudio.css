@@ -69,7 +69,8 @@ body {
   font-size: 9.2px;
 }
 
-.hidden {
+html .hidden,
+body .hidden {
   display: none;
 }
 
@@ -185,6 +186,8 @@ body {
 .vct-wrapper .vct-content #fullpage .section .box .work__overlay .work__desc {
   position: absolute;
   bottom: 3rem;
+  left: 21%;
+  bottom: 10rem !important;
 }
 
 .vct-wrapper .vct-content #fullpage .section .box .work__overlay .work__desc .desc-text {
@@ -198,6 +201,11 @@ body {
   font-family: NeueHaasUnicaW1G-Thin;
   line-height: 1.4;
   white-space: nowrap;
+  position: absolute;
+  font-size: 20px;
+  bottom: 0;
+  left: 100%;
+  margin-left: 120px;
 }
 
 .vct-wrapper .vct-content #fullpage .section .box .work__overlay .work__desc .work__discover .discover__border {
@@ -364,19 +372,5 @@ body {
 
 .vct-wrapper .vct-content #fullpage .section.reveal .box .work__overlay {
   display: none;
-}
-
-@media only screen and (min-width: 769px) {
-  .vct-content #fullpage .section .box .work__overlay .work__desc {
-    left: 21%;
-    bottom: 10rem !important;
-  }
-  .vct-content #fullpage .section .box .work__overlay .work__desc .work__discover {
-    position: absolute;
-    font-size: 20px;
-    bottom: 0;
-    left: 100%;
-    margin-left: 120px;
-  }
 }
 /*# sourceMappingURL=dpotferstudio.css.map */

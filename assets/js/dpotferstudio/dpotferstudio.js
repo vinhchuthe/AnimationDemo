@@ -15,12 +15,10 @@ var swiper1 = new Swiper(' .swiper-container', {
     slidesPerView: 'auto',
     speed: 1000,
     loop: false,
-    // spaceBetween: 30,
-    // centeredSlides: true,
     grabCursor: true,
     mousewheel: true,
     freeMode: true,
-    freeModeMomentumRatio: 1.5,
+    freeModeMomentumRatio: 2,
     freeModeMinimumVelocity: 0.02,
     // freeModeMomentum: false,
 });
@@ -67,7 +65,8 @@ $(".menu__back").click(function () {
     animation1.reverse();
     swiper1[0].slideTo(0, 1000, false);
     swiper1[1].slideTo(0, 1000, false);
-    setTimeout(AddPosition, 1000);
+    // setTimeout(AddPosition, 1000);
+    AddPosition();
     $.fn.fullpage.setAllowScrolling(true);
 })
 
