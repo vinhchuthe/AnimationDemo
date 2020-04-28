@@ -68,6 +68,10 @@
                     </li>
                 </ul>
             </div>
+            <div class="menu__back rotated button hidden">
+                Back
+                <div></div>
+            </div>
         </div>
 
         <!-- Slide -->
@@ -116,7 +120,7 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper custom-position">
                                 <div class="swiper-slide">
-                                    <div class="work__image work__image--down">
+                                    <div class="work__image work__image--down first-slide">
                                         <div class="imagewrapper">
                                             <img src="../assets/img/dpotferstudio/slide1-img1.jpg" alt="">
                                         </div>
@@ -181,7 +185,45 @@
                     <div class="box">
                         <!-- overlay -->
                         <div class="work__overlay">
+                            <div class="work__title work__title-right">
+                                <div class="line">
+                                    Cultural,
+                                    <div class="space"></div>
+                                    <div class="space"></div>
+                                    <div class="space"></div>
+                                    <!-- <div class="space"></div> -->
+                                </div>
+                                <br>
+                                <div class="line">
+                                    art and
+                                    <div class="space"></div>
+                                    <!-- <div class="space"></div> -->
 
+                                </div>
+                                <br>
+                                <div class="line">
+                                    commitments
+                                </div>
+                            </div>
+                            <div class="work__desc">
+                                <p class="desc-text">
+                                    Capturing the essence
+                                    <br>
+                                    of clients stories to drive
+                                    <br>
+                                    communication in a meaningful way
+                                </p>
+                                <div class="work__discover">
+                                    <div class="discover__border"></div>
+                                    <span>click to discover</span>
+                                </div>
+                            </div>
+                            <div class="work__number">
+                                Work Nr. 2
+                            </div>
+                            <p class="work__scroll">
+                                <span>Scroll</span>
+                            </p>
                         </div>
 
                         <!-- content -->
@@ -196,7 +238,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="work__image">
+                                    <div class="work__image work__image--down">
                                         <div class="imagewrapper">
                                             <img src="../assets/img/dpotferstudio/slide2-img2.jpg" alt="">
                                         </div>
@@ -212,7 +254,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="work__image">
+                                    <div class="work__image work__image--down">
                                         <div class="imagewrapper">
                                             <img src="../assets/img/dpotferstudio/slide2-img4.jpg" alt="">
                                         </div>
@@ -228,7 +270,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="work__image">
+                                    <div class="work__image work__image--down">
                                         <div class="imagewrapper">
                                             <img src="../assets/img/dpotferstudio/slide2-img6.jpg" alt="">
                                         </div>
@@ -252,35 +294,7 @@
     <script src="../src/js/swiper/swiper.min.js"></script>
     <script src="../src/js/Gsap/Tweenmax.js"></script>
     <script src="../assets/js/dpotferstudio/dpotferstudio.js"></script>
-    <script>
-        var swiper1 = new Swiper('#section1 .swiper-container', {
-            slidesPerView: 'auto',
-            speed: 1000,
-            // spaceBetween: 30,
-            // centeredSlides: true,
-            grabCursor: true,
-            // mousewheel: true,
-            freeMode: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
 
-        var swiper2 = new Swiper('#section2 .swiper-container', {
-            slidesPerView: 'auto',
-            speed: 1000,
-            // spaceBetween: 30,
-            // centeredSlides: true,
-            grabCursor: true,
-            // mousewheel: true,
-            freeMode: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
 </body>
 
 </html>
