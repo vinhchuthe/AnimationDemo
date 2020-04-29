@@ -1,36 +1,86 @@
-// Fullpage
+// ------------------------ Preload
+
+$(document).ready(function () {
+    $.fn.fullpage.setAllowScrolling(false);
+
+    setTimeout(function () {
+        $(".loader__scroll").removeClass("hidden");
+    }, 2500);
+
+    $('#section1').bind('mousewheel', function (e) {
+        if (e.originalEvent.wheelDelta / 120 > 0) {
+            // alert('up');
+        } else {
+            // alert('down');
+            var hidtext = new TimelineMax();
+            hidtext.staggerTo($(".line .word"), 1, { y: "+=20px", opacity: 0 }, "0.09")
+                .to($(".loader__scroll"), 1, { opacity: 0 }, "-=1");
+            $.fn.fullpage.setAllowScrolling(true);
+        }
+    });
+
+    var line1 = TweenMax.staggerFrom($(".line1 .word"), 1, { x: "-=40px", autoAlpha: 0 }, "0.3");
+    var line2 = TweenMax.staggerFrom($(".line2 .word"), 1, { x: "-=40px", autoAlpha: 0 }, "0.3");
+    var line3 = TweenMax.staggerFrom($(".line3 .word"), 1, { x: "-=40px", autoAlpha: 0 }, "0.35");
+    var line4 = TweenMax.staggerFrom($(".line4 .word"), 1, { x: "-=40px", autoAlpha: 0 }, "0.3");
+    var line5 = TweenMax.staggerFrom($(".line5 .word"), 1, { x: "-=40px", autoAlpha: 0 }, "0.35");
+    var line6 = TweenMax.staggerFrom($(".line6 .word"), 1, { x: "-=40px", autoAlpha: 0 }, "0.3");
+    var preload = new TimelineMax();
+    preload.add([line1, line2, line3, line4, line5, line6], "+=0.5", "sequence", -1);
+});
+
+// ------------------------ Fullpage
+
 (function ($) {
     $("#fullpage").fullpage({
-        anchors: ['firstSlide', 'secondSlide'],
+        anchors: ['firstSlide', 'secondSlide', 'thirdSlide'],
         verticalCentered: false,
         v2compatible: true,
         css3: true,
+        lockAnchors: true,
         recordHistory: true,
-        fadingEffect: true,
         scrollingSpeed: 1000,
 
         onLeave: function (origin, destination, direction) {
             var leave = new TimelineMax();
+
+            if (origin == 1 && direction == "down") {
+                var delayInMilliseconds = 2000;
+
+                setTimeout(function () {
+                    $(".vct-overlay").removeClass("hidden");
+                }, delayInMilliseconds);
+
+            }
+
             leave.staggerTo($(".work__title .line"), 0.75, { y: "-=20px", opacity: 0, ease: Power2.easeInOut }, "0.15")
                 .fromTo($(".odd"), 1, { css: { top: "80%" } }, { css: { top: "150%" } }, "-=0.5")
                 .fromTo($(".even"), 1, { css: { top: "-25%" } }, { css: { top: "-100%" } }, "-=1")
                 .to($("box"), 1, { opacity: 0 }, "-=0.5")
-            // console.log(direction);
+
+            console.log(origin);
         },
 
         afterLoad: function (origin, destination, direction) {
+
+            if (origin == "secondSlide") {
+                $.fn.fullpage.setAllowScrolling(false, 'up');
+            } else {
+                $.fn.fullpage.setAllowScrolling(true, 'up');
+            }
 
             var load = new TimelineMax({ delay: 0.5 });
             load.to($(".box"), 1, { opacity: 1 })
                 .to($(".odd"), 1, { css: { top: "80%" }, ease: Power2.easeInOut }, "-=0.5")
                 .to($(".even"), 1, { css: { top: "-25%" }, ease: Power2.easeInOut }, "-=1")
-                .staggerTo($(".work__title .line"), 0.75, { y: "0", opacity: 1, ease: Power2.easeInOut }, "0.15","-=1");
+                .staggerTo($(".work__title .line"), 0.75, { y: "0", opacity: 1, ease: Power2.easeInOut }, "0.15", "-=1");
 
             console.log(origin);
         }
 
     });
 })(jQuery);
+
 
 
 // ---------------------------- Slide

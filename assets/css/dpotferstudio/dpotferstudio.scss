@@ -62,16 +62,17 @@
 html,
 body {
     font-size: 9.2px;
-
-    .hidden {
-        display: none;
-    }
+}
+.hidden {
+    display: none;
 }
 
 .vct-wrapper {
     @extend %relative;
 
     .vct-overlay {
+        transition: all 0.5s;
+
         .menu__logo {
             position: fixed;
             left: 4%;
@@ -153,6 +154,7 @@ body {
 
             .section {
                 @extend %relative;
+                overflow: hidden;
 
                 .box {
                     position: relative;
@@ -325,7 +327,75 @@ body {
                     }
                 }
 
-                &#section1 {
+                .preload-wrapper {
+                    @extend %relative;
+                    .v-center {
+                        display: table;
+                        height: 100%;
+
+                        &.margcenter {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+                        .loader__scroll {
+                            position: absolute;
+                            font-size: 2.4rem;
+                            line-height: 1;
+                            top: 0;
+                            left: 100%;
+                            margin-left: 3rem;
+                            font-family: NeueHaasUnicaW1G-Thin;
+                            color: #000;
+                        }
+                        .loader__text {
+                            font-size: 13rem;
+                            line-height: 0.9;
+                            display: inline-block;
+                            text-align: left;
+
+                            &.vcenter__wrapper {
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+
+                            .line {
+                                white-space: nowrap;
+                                display: inline-block;
+                                position: relative;
+
+                                & > div {
+                                    display: inline-block;
+                                    position: relative;
+                                }
+
+                                .space {
+                                    width: 3rem;
+
+                                    &.space--2 {
+                                        width: 6rem;
+                                    }
+
+                                    &.space--3 {
+                                        width: 8rem;
+                                    }
+                                }
+
+                                .word {
+                                    font-weight: 300;
+                                    font-family: SaolDisplay-Regular;
+                                    color: #212121;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.section1 {
+                    background-color: #f2f1e9;
+                }
+
+                &#section2 {
                     background-color: rgb(212, 226, 228);
 
                     .box {
@@ -355,7 +425,7 @@ body {
                     }
                 }
 
-                &#section2 {
+                &#section3 {
                     background-color: rgb(201, 205, 202);
 
                     .box {
@@ -429,6 +499,13 @@ body {
                         .work__overlay {
                             .work__title {
                                 font-size: 12.5rem;
+                            }
+                        }
+                    }
+                    .preload-wrapper {
+                        .v-center {
+                            .loader__text {
+                                font-size: 12rem;
                             }
                         }
                     }
