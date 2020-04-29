@@ -1,10 +1,34 @@
+// Fullpage
 (function ($) {
     $("#fullpage").fullpage({
+        anchors: ['firstSlide', 'secondSlide'],
         verticalCentered: false,
         v2compatible: true,
         css3: true,
         recordHistory: true,
-        scrollingSpeed: 1600,
+        fadingEffect: true,
+        scrollingSpeed: 1000,
+
+        onLeave: function (origin, destination, direction) {
+            var leave = new TimelineMax();
+            leave.staggerTo($(".work__title .line"), 0.75, { y: "-=20px", opacity: 0, ease: Power2.easeInOut }, "0.15")
+                .fromTo($(".odd"), 1, { css: { top: "80%" } }, { css: { top: "150%" } }, "-=0.5")
+                .fromTo($(".even"), 1, { css: { top: "-25%" } }, { css: { top: "-100%" } }, "-=1")
+                .to($("box"), 1, { opacity: 0 }, "-=0.5")
+            // console.log(direction);
+        },
+
+        afterLoad: function (origin, destination, direction) {
+
+            var load = new TimelineMax({ delay: 0.5 });
+            load.to($(".box"), 1, { opacity: 1 })
+                .to($(".odd"), 1, { css: { top: "80%" }, ease: Power2.easeInOut }, "-=0.5")
+                .to($(".even"), 1, { css: { top: "-25%" }, ease: Power2.easeInOut }, "-=1")
+                .staggerTo($(".work__title .line"), 0.75, { y: "0", opacity: 1, ease: Power2.easeInOut }, "0.15","-=1");
+
+            console.log(origin);
+        }
+
     });
 })(jQuery);
 
@@ -65,7 +89,7 @@ $(".menu__back").click(function () {
     animation1.reverse();
     swiper1[0].slideTo(0, 1000, false);
     swiper1[1].slideTo(0, 1000, false);
-    // setTimeout(AddPosition, 1000);
+    setTimeout(AddPosition, 1000);
     AddPosition();
     $.fn.fullpage.setAllowScrolling(true);
 })

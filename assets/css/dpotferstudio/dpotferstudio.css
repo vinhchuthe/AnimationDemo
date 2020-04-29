@@ -134,6 +134,8 @@ body .hidden {
 
 .vct-wrapper .vct-content #fullpage {
   display: block;
+  -webkit-transition-delay: 1.5s !important;
+          transition-delay: 1.5s !important;
 }
 
 .vct-wrapper .vct-content #fullpage .section .box {
@@ -372,5 +374,11 @@ body .hidden {
 
 .vct-wrapper .vct-content #fullpage .section.reveal .box .work__overlay {
   display: none;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .vct-wrapper .vct-content #fullpage .section .box .work__overlay .work__title {
+    font-size: 12.5rem;
+  }
 }
 /*# sourceMappingURL=dpotferstudio.css.map */

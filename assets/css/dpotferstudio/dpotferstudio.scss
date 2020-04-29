@@ -149,6 +149,7 @@ body {
     .vct-content {
         #fullpage {
             display: block;
+            transition-delay: 1.5s !important;
 
             .section {
                 @extend %relative;
@@ -418,27 +419,21 @@ body {
 }
 
 // Responsive
-@media only screen and (min-width: 769px) {
-    // .vct-content {
-    //     #fullpage {
-    //         .section {
-    //             .box {
-    //                 .work__overlay {
-    //                     .work__desc {
-    //                         left: 21%;
-    //                         bottom: 10rem !important;
 
-    //                         .work__discover {
-    //                             position: absolute;
-    //                             font-size: 20px;
-    //                             bottom: 0;
-    //                             left: 100%;
-    //                             margin-left: 120px;
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .vct-wrapper {
+        .vct-content {
+            #fullpage {
+                .section {
+                    .box {
+                        .work__overlay {
+                            .work__title {
+                                font-size: 12.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
