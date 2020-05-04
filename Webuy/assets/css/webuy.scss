@@ -1,0 +1,481 @@
+@font-face {
+    font-family: MARKPRO-BOLD;
+    src: url("../css/fonts/MARKPRO-BOLD.OTF");
+}
+@font-face {
+    font-family: CIRCULARSTD-BOLD;
+    src: url("../css/fonts/CIRCULARSTD-BOLD.OTF");
+}
+@font-face {
+    font-family: CIRCULARSTD-BOOK;
+    src: url("../css/fonts/CIRCULARSTD-BOOK.OTF");
+}
+
+%relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hide {
+    display: none;
+    transition: all 0.5s;
+}
+
+.vct-wrapper {
+    @extend %relative;
+
+    // web-overlay
+    .vct-overlay {
+        transition: all 0.5s;
+
+        .menu__logo {
+            position: fixed;
+            left: 4%;
+            top: 7%;
+            z-index: 10;
+            width: 10vw;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+        .menu__button {
+            position: fixed;
+            right: 5%;
+            top: 7%;
+            z-index: 10;
+            cursor: pointer;
+
+            span {
+                width: 30px;
+                height: 2px;
+                background-color: #fff;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        .menu__baogia {
+            position: fixed;
+            left: 4%;
+            bottom: 7%;
+            z-index: 10;
+
+            .menu__link {
+                text-decoration: none;
+                color: #333333;
+                font-family: CIRCULARSTD-BOLD;
+                font-size: 16px;
+            }
+        }
+    }
+
+    // web-content
+    .vct-content {
+        #fullpage {
+            display: block;
+            transition-delay: 1.5s !important;
+
+            .section {
+                @extend %relative;
+                overflow: hidden;
+
+                .box {
+                    position: relative;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: #fff;
+
+                    // Slide-overlay
+                    .slide__overlay {
+                        position: absolute;
+                        width: 100vw;
+                        height: 100vh;
+                        z-index: 2;
+
+                        .overlay-bg {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #fff;
+                            opacity: 0.7;
+                            z-index: 2;
+                        }
+                        .slide__overlay-inner {
+                            width: 50vw;
+                            height: 50vh;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            z-index: 3;
+
+                            .overlay-top {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+
+                                p {
+                                    font-family: MARKPRO-BOLD;
+                                    color: #e34340;
+                                    font-size: 1.5vw;
+                                }
+                            }
+                            .overlay-bot {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                cursor: pointer;
+                                margin-left: 160px;
+                                white-space: nowrap;
+
+                                span {
+                                    font-family: CIRCULARSTD-BOLD;
+                                    font-size: 14px;
+                                    color: #202020;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    position: relative;
+                                    transition: all 0.5s;
+                                }
+
+                                .bot__border {
+                                    position: absolute;
+                                    width: 120px;
+                                    height: 2px;
+                                    background-color: #e34340;
+                                    opacity: 0.5;
+                                    left: -140px;
+                                    top: 7px;
+                                    pointer-events: none;
+                                    // -webkit-transform-origin: left center;
+                                    transform-origin: left center;
+                                    transition: all 0.5s;
+                                }
+
+                                &:hover {
+                                    .bot__border {
+                                        width: 100%;
+                                        left: 0;
+                                        transition: all 0.5s;
+                                    }
+                                    span {
+                                        transform: translateY(-15px);
+                                        transition: all 0.5s;
+                                    }
+                                }
+                            }
+                            .overlay-content {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                display: flex;
+                                width: 70%;
+
+                                .overlay-logo {
+                                    margin-right: 50px;
+                                    img {
+                                        width: 4vw;
+                                    }
+                                }
+                                .overlay-text {
+                                    h3 {
+                                        color: #e34340;
+                                        font-family: MARKPRO-BOLD;
+                                        font-size: 3vw;
+                                        margin-bottom: 30px;
+                                    }
+                                    p {
+                                        font-family: CIRCULARSTD-BOOK;
+                                        font-size: 1vw;
+                                        line-height: 1.2;
+                                        color: #373737;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // End Slide-overlay
+
+                    // -------------- Section1
+                    .work__bg {
+                        position: absolute;
+                        width: 40%;
+                        height: 100%;
+                        top: 0;
+                        right: 0;
+                        background-image: url("../image/section1-bgleft.png");
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        z-index: 2;
+                    }
+                    .work__overlay {
+                        position: absolute;
+                        width: 100vw;
+                        height: 100vh;
+                        background-color: #fff;
+                        z-index: 1;
+
+                        .work__title {
+                            position: absolute;
+                            top: 50%;
+                            left: 10%;
+                            transform: translateY(-55%);
+                            color: #e34340;
+
+                            h3 {
+                                font-size: 6vw;
+                                line-height: 0.9;
+                                text-transform: uppercase;
+                                font-family: MARKPRO-BOLD;
+                                margin-bottom: 30px;
+                            }
+                            p {
+                                font-family: MARKPRO-BOLD;
+                                font-size: 1.65vw;
+                                line-height: 1;
+                                margin-bottom: 0;
+                            }
+                            .work__cta {
+                                display: flex;
+                                width: 190px;
+                                margin-top: 40px;
+                                padding: 20px 40px;
+                                border: 1px solid #e34340;
+                                border-radius: 30px;
+                                cursor: pointer;
+                                align-items: center;
+                                justify-content: center;
+
+                                span {
+                                    font-family: CIRCULARSTD-BOLD;
+                                    font-size: 16px;
+                                    line-height: 1;
+                                    display: block;
+
+                                    &.cta-icon {
+                                        margin-left: 10px;
+                                        img {
+                                            width: 16px;
+                                            height: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .work__content {
+                        position: relative;
+                        width: 100vw;
+                        height: 100vh;
+
+                        .content--inner {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 100vh;
+                            width: 70%;
+                            align-items: center;
+                            padding-top: 3vw;
+
+                            .content {
+                                width: 65%;
+
+                                .text-grid {
+                                    ul {
+                                        list-style: disc;
+                                        padding-left: 25px;
+                                        li {
+                                            font-size: 16px;
+                                            line-height: 1.5;
+                                            font-family: CIRCULARSTD-BOOK;
+                                            color: #373737;
+                                            margin-bottom: 15px;
+
+                                            &:last-child {
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                .brand-grid {
+                                    p {
+                                        font-size: 16px;
+                                        font-family: CIRCULARSTD-BOOK;
+                                        color: #373737;
+                                        margin-bottom: 30px;
+                                    }
+                                    .grid-top {
+                                        display: flex;
+                                        width: 100%;
+                                        margin-bottom: 20px;
+
+                                        .brand-item {
+                                            flex: 0 0 32%;
+                                            padding: 0 10px;
+                                            text-align: center;
+
+                                            .brand-logo {
+                                                min-height: 54px;
+                                                margin-bottom: 15px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                            .brand-desc {
+                                                p {
+                                                    margin-bottom: 0;
+                                                    font-family: CIRCULARSTD-BOLD;
+                                                    font-size: 16px;
+                                                    line-height: 1.3;
+                                                    color: #5d5d5d;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .grid-bot {
+                                        display: flex;
+                                        width: 100%;
+                                        margin-bottom: 20px;
+
+                                        .brand-item {
+                                            flex: 0 0 32%;
+                                            padding: 0 10px;
+                                            text-align: center;
+
+                                            .brand-logo {
+                                                min-height: 54px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                // margin-bottom: 15px;
+                                            }
+                                            .brand-desc {
+                                                p {
+                                                    margin-bottom: 0;
+                                                    font-family: CIRCULARSTD-BOLD;
+                                                    font-size: 16px;
+                                                    line-height: 1.3;
+                                                    color: #5d5d5d;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .scrolldown-btn {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 200px;
+                                    margin: 0 auto;
+                                    padding: 10px 25px;
+                                    border: 1px solid #e34340;
+                                    border-radius: 30px;
+                                    cursor: pointer;
+
+                                    span {
+                                        img {
+                                            height: 30px;
+                                            padding-right: 20px;
+                                        }
+                                        color: #e34340;
+                                        font-size: 16px;
+                                        line-height: 1;
+                                        font-family: CIRCULARSTD-BOLD;
+                                    }
+                                }
+                            }
+                            .line {
+                                width: 100%;
+                                height: 1px;
+                                background-color: #afafaf;
+                                margin: 20px 0;
+                            }
+                        }
+                    }
+
+                    // ----------------- End Section1
+
+                    // Slide content
+                    .swiper-container {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                width: 35vw;
+                                max-width: 840px;
+                                position: relative;
+                                height: 100%;
+                                border-left: 1px solid rgba(0, 0, 0, 0.2);
+
+                                .work__image {
+                                    position: relative;
+                                    height: 100vh;
+
+                                    .imagewrapper {
+                                        width: 70%;
+                                        position: relative;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                }
+
+                                &:first-child {
+                                    .work__image {
+                                        .imagewrapper {
+                                            top: 60%;
+
+                                            img {
+                                                width: initial;
+                                                margin: 0 auto;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    .work__image {
+                                        .imagewrapper {
+                                            top: 90%;
+                                        }
+                                    }
+                                }
+                                &:nth-child(3) {
+                                    .work__image {
+                                        .imagewrapper {
+                                            top: 20%;
+                                        }
+                                    }
+                                }
+                                &:nth-child(4) {
+                                    .work__image {
+                                        .imagewrapper {
+                                            top: 35%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.custom-position {
+                                transform: translate3d(-20%, 0, 0) !important;
+                                transition: transform 0.5s !important;
+                            }
+                            &.slide-open {
+                                transform: translate3d(0, 0, 0) !important;
+                                transition: all 1s;
+                            }
+                        }
+                    }
+                    // End Slide content
+                }
+            }
+        }
+    }
+}
