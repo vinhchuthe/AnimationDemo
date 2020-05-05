@@ -17,6 +17,18 @@
     height: 100%;
 }
 
+%cta {
+    display: flex;
+    width: 190px;
+    margin-top: 40px;
+    padding: 20px 40px;
+    border: 1px solid #e34340;
+    border-radius: 30px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
 .hide {
     display: none;
     transition: all 0.5s;
@@ -55,6 +67,12 @@
                 display: block;
                 margin-bottom: 5px;
             }
+
+            &.gray {
+                span {
+                    background-color: #949494;
+                }
+            }
         }
 
         .menu__baogia {
@@ -69,6 +87,16 @@
                 font-family: CIRCULARSTD-BOLD;
                 font-size: 16px;
             }
+        }
+        .menu__back {
+            position: fixed;
+            left: 4%;
+            bottom: 7%;
+            z-index: 10;
+            color: #949494;
+            font-family: CIRCULARSTD-BOLD;
+            font-size: 16px;
+            cursor: pointer;
         }
     }
 
@@ -86,7 +114,7 @@
                     position: relative;
                     width: 100vw;
                     height: 100vh;
-                    background-color: #fff;
+                    background-color: #f7f7f7;
 
                     // Slide-overlay
                     .slide__overlay {
@@ -241,15 +269,7 @@
                                 margin-bottom: 0;
                             }
                             .work__cta {
-                                display: flex;
-                                width: 190px;
-                                margin-top: 40px;
-                                padding: 20px 40px;
-                                border: 1px solid #e34340;
-                                border-radius: 30px;
-                                cursor: pointer;
-                                align-items: center;
-                                justify-content: center;
+                                @extend %cta;
 
                                 span {
                                     font-family: CIRCULARSTD-BOLD;
@@ -259,13 +279,18 @@
 
                                     &.cta-icon {
                                         margin-left: 10px;
-                                        img {
-                                            width: 16px;
-                                            height: 16px;
+                                        width: 14px;
+                                        height: 16px;
+
+                                        svg {
+                                            fill: #e34340;
                                         }
                                     }
                                 }
                             }
+                        }
+                        &.fade {
+                            animation: fadeinout 0.5s linear forwards;
                         }
                     }
                     .work__content {
@@ -424,6 +449,100 @@
                                         img {
                                             width: 100%;
                                             display: block;
+                                            margin-bottom: 30px;
+                                        }
+
+                                        .image--text {
+                                            .image--text__biglogo {
+                                                width: 4vw;
+                                                height: auto;
+                                                margin-bottom: 20px;
+                                            }
+                                            .image--text__smalllogo {
+                                                width: 30px;
+                                                height: auto;
+                                                margin-bottom: 20px;
+                                            }
+                                            h3 {
+                                                font-family: MARKPRO-BOLD;
+                                                color: #e34340;
+                                                font-size: 2.5vw;
+                                                line-height: 1.2;
+                                                margin-bottom: 20px;
+                                            }
+                                            p {
+                                                color: #373737;
+                                                margin-bottom: 30px;
+                                                font-size: 16px;
+                                                line-height: 1.2;
+                                                font-family: CIRCULARSTD-BOOK;
+                                            }
+                                            ul {
+                                                margin: 30px 0;
+                                                list-style: disc;
+
+                                                li {
+                                                    font-family: CIRCULARSTD-BOOK;
+                                                    font-size: 16px;
+                                                    color: #373737;
+                                                    margin-bottom: 15px;
+                                                    line-height: 1.2;
+                                                }
+                                            }
+                                            a {
+                                                text-decoration: none;
+                                                transition: all 0.5s;
+
+                                                .image--cta {
+                                                    @extend %cta;
+                                                    display: inline-flex;
+                                                    width: 130px;
+                                                    margin-top: 0;
+                                                    margin-bottom: 30px;
+                                                    padding: 15px 20px;
+
+                                                    span {
+                                                        font-family: CIRCULARSTD-BOLD;
+                                                        font-size: 12px;
+                                                        line-height: 1;
+                                                        display: block;
+                                                        color: #e34340;
+
+                                                        &.image--cta-icon {
+                                                            margin-left: 10px;
+                                                            width: 14px;
+                                                            height: 16px;
+
+                                                            svg {
+                                                                fill: #e34340;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                &:hover {
+                                                    transition: all 0.5s;
+                                                    .image--cta {
+                                                        border: 1px solid transparent;
+                                                        background: linear-gradient(
+                                                            90deg,
+                                                            rgba(247, 149, 76, 1) 0%,
+                                                            rgba(247, 141, 76, 1) 33%,
+                                                            rgba(247, 127, 76, 1) 66%
+                                                        );
+
+                                                        span {
+                                                            color: #fff;
+
+                                                            &.image--cta-icon {
+                                                                svg {
+                                                                    fill: #fff;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -443,14 +562,14 @@
                                 &:nth-child(2) {
                                     .work__image {
                                         .imagewrapper {
-                                            top: 90%;
+                                            top: 75%;
                                         }
                                     }
                                 }
                                 &:nth-child(3) {
                                     .work__image {
                                         .imagewrapper {
-                                            top: 20%;
+                                            top: 27%;
                                         }
                                     }
                                 }
@@ -462,6 +581,7 @@
                                     }
                                 }
                             }
+                            transition: transform 0.5s !important;
 
                             &.custom-position {
                                 transform: translate3d(-20%, 0, 0) !important;
@@ -475,7 +595,41 @@
                     }
                     // End Slide content
                 }
+
+                &#section4 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 2.7vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.reveal {
+                    .box {
+                        .slide__overlay {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
+    }
+}
+
+// Animation css
+@keyframes fadeinout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
