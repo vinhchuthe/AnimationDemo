@@ -74,19 +74,23 @@
                 }
             }
         }
-
         .menu__baogia {
             position: fixed;
             left: 4%;
             bottom: 7%;
             z-index: 10;
+            text-decoration: none;
+            color: #333333;
+            font-family: CIRCULARSTD-BOLD;
+            font-size: 16px;
+            cursor: pointer;
 
-            .menu__link {
-                text-decoration: none;
-                color: #333333;
-                font-family: CIRCULARSTD-BOLD;
-                font-size: 16px;
-            }
+            // .menu__link {
+            //     text-decoration: none;
+            //     color: #333333;
+            //     font-family: CIRCULARSTD-BOLD;
+            //     font-size: 16px;
+            // }
         }
         .menu__back {
             position: fixed;
@@ -98,13 +102,123 @@
             font-size: 16px;
             cursor: pointer;
         }
+
+        // Contact
+        .baogia__overlay-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+
+            .baogia__overlay--inner {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                z-index: 6;
+
+                .baogia__content-wrapper {
+                    width: 100vw;
+
+                    .baogia__content-top {
+                        width: 85%;
+                        margin-left: auto;
+
+                        p {
+                            font-family: CIRCULARSTD-BOOK;
+                            font-size: 1vw;
+                            color: #373737;
+                            line-height: 1.2;
+                        }
+                    }
+                    .line {
+                        width: 100vw;
+                        height: 1px;
+                        background-color: #373737;
+                        margin: 30px 0;
+                    }
+                    .baogia__content-bot {
+                        width: 85%;
+                        margin-left: auto;
+
+                        h3 {
+                            color: #e34340;
+                            font-family: MARKPRO-BOLD;
+                            font-size: 3vw;
+                            line-height: 1.2;
+                            margin-bottom: 50px;
+                        }
+                        p {
+                            font-family: CIRCULARSTD-BOOK;
+                            font-size: 1vw;
+                            color: #373737;
+                            line-height: 1.2;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            .baogia__overlay--bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #f7f7f7;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 40vw;
+                    height: auto;
+                }
+            }
+            .baogia__back {
+                position: absolute;
+                left: 4%;
+                bottom: 7%;
+                z-index: 10;
+                color: #949494;
+                font-family: CIRCULARSTD-BOLD;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+        // End Contact
+
+        // Detail-menu
+        .detail-menu__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+
+            .detail-menu__overlay--inner {
+                background-color: #2d2d2d;
+                width: 100vw;
+                height: 100vh;
+
+                .detail-menu-icon__wrapper {
+                    width: 100%;
+                    height: 140px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        // End Detail-menu
     }
 
     // web-content
     .vct-content {
         #fullpage {
             display: block;
-            transition-delay: 1.5s !important;
+            // transition-delay: 1.5s !important;
 
             .section {
                 @extend %relative;
@@ -594,6 +708,92 @@
                         }
                     }
                     // End Slide content
+
+                    // Product
+                    .product__wrapper {
+                        width: 100vw;
+
+                        .product__list-wrapper {
+                            .product-title {
+                                h4 {
+                                    font-family: CIRCULARSTD-BOLD;
+                                    color: #e34340;
+                                    font-size: 1.15vw;
+                                    line-height: 1.2;
+                                }
+                                margin-bottom: 40px;
+                            }
+                            .product-list-content {
+                                display: flex;
+                                align-items: center;
+
+                                .product-list-grid {
+                                    display: flex;
+
+                                    ul {
+                                        li {
+                                            color: #373737;
+                                            font-family: CIRCULARSTD-BOOK;
+                                            font-size: 1.5vw;
+                                            line-height: 1.2;
+                                            margin-bottom: 30px;
+                                            position: relative;
+
+                                            &::before {
+                                                content: "";
+                                                position: absolute;
+                                                top: 50%;
+                                                left: -3vw;
+                                                transform: translate(-50%, -50%);
+                                                width: 3vw;
+                                                height: 1px;
+                                                background-color: #373737;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.product__list-top {
+                                width: 85%;
+                                margin-left: auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                margin-bottom: 60px;
+
+                                .product-title {
+                                    align-self: flex-start;
+                                }
+                                .product-list-content {
+                                    .product-list-grid {
+                                        ul {
+                                            li {
+                                                margin-right: 9vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.product__list-bot {
+                                width: 90%;
+                                margin-right: auto;
+                                display: flex;
+                                flex-direction: column;
+
+                                .product-list-content {
+                                    .product-list-grid {
+                                        ul {
+                                            li {
+                                                margin-left: 9vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // End Product
                 }
 
                 &#section4 {
@@ -609,6 +809,13 @@
                                 }
                             }
                         }
+                    }
+                }
+
+                &#section15 {
+                    .box {
+                        display: flex;
+                        align-items: center;
                     }
                 }
 

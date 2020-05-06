@@ -7,9 +7,10 @@ window.onbeforeunload = function () {
 
 (function ($) {
     $("#fullpage").fullpage({
-        anchors: ['1stSlide', '2ndSlide', '3rdSlide', '4thSlide', '5thSlide', '6thSlide', '7thSlide', '8thSlide', '9thSlide', '10thSlide', '11thSlide', '12thSlide', '13thSlide', '14thSlide'],
+        anchors: ['1stSlide', '2ndSlide', '3rdSlide', '4thSlide', '5thSlide', '6thSlide', '7thSlide', '8thSlide', '9thSlide', '10thSlide', '11thSlide', '12thSlide', '13thSlide', '14thSlide', '15thSlide'],
         verticalCentered: false,
         v2compatible: true,
+        menu: '#detail-menu',
         css3: true,
         lockAnchors: true,
         recordHistory: true,
@@ -131,11 +132,50 @@ $(".menu__back").click(function () {
     animation1.reverse();
     swiper1[0].slideTo(0, 1000, false);
     swiper1[1].slideTo(0, 1000, false);
-    swiper1[2].slideTo(0, 1000, false);
+    swiper1[3].slideTo(0, 1000, false);
+    swiper1[4].slideTo(0, 1000, false);
+    swiper1[5].slideTo(0, 1000, false);
+    swiper1[6].slideTo(0, 1000, false);
+    swiper1[7].slideTo(0, 1000, false);
+    swiper1[8].slideTo(0, 1000, false);
+    swiper1[9].slideTo(0, 1000, false);
+    swiper1[10].slideTo(0, 1000, false);
+    swiper1[11].slideTo(0, 1000, false);
+    swiper1[12].slideTo(0, 1000, false);
     // setTimeout(AddPosition, 1000);
     AddPosition();
     $.fn.fullpage.setAllowScrolling(true);
-})
+});
+
+
+// ---------------------- Baogia-overlay
+var baogia = new TimelineMax({ paused: true });
+baogia.from($(".baogia__overlay--bg"), 0.5, { scaleY: 0, transformOrigin: "50% 0%", ease: Power2.easeInOut })
+    .from($(".baogia__overlay--inner"), 0.75, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut })
+    .from($(".baogia__back"), 0.75, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut }, "-=0.75");
+
+$(".menu__baogia").click(function () {
+    $(".baogia__overlay-wrapper").removeClass("hide");
+    baogia.play();
+    $(".menu__button").addClass("hide");
+    $(".menu__baogia").addClass("hide");
+    $.fn.fullpage.setAllowScrolling(false);
+});
+
+$(".baogia__back").click(function () {
+    baogia.reverse();
+    setTimeout(function () {
+        $(".baogia__overlay-wrapper").addClass("hide");
+        $(".menu__button").removeClass("hide");
+        $(".menu__baogia").removeClass("hide");
+        $.fn.fullpage.setAllowScrolling(true);
+    }, 1500);
+});
+
+
+// ---------------------- Menu-list
+
+
 
 
 // ---------------------- function
