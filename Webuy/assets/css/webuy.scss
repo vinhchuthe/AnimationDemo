@@ -47,6 +47,7 @@
             top: 7%;
             z-index: 10;
             width: 10vw;
+            cursor: pointer;
 
             img {
                 width: 100%;
@@ -340,7 +341,7 @@
     .vct-content {
         #fullpage {
             display: block;
-            transition-delay: 0.75s !important;
+            transition-delay: 0.825s !important;
 
             .section {
                 @extend %relative;
@@ -940,13 +941,6 @@
                     }
                 }
 
-                // &#section15 {
-                //     .box {
-                //         display: flex;
-                //         align-items: center;
-                //     }
-                // }
-
                 &#section15 {
                     .box {
                         display: flex;
@@ -959,7 +953,7 @@
 
                                     .product-list-content {
                                         width: 100%;
-                                        
+
                                         .product-list-grid {
                                             flex: 0 0 50%;
                                         }
@@ -1039,27 +1033,28 @@
         .vct-content {
             #fullpage {
                 .section {
-                    // .box {
-                    //     .slide__overlay {
-                    //         .slide__overlay-inner {
-                    //             width: 55vw;
-                    //             height: 45vh;
-
-                    //             .overlay-content {
-                    //                 width: 85%;
-
-                    //                 .overlay-logo {
-                    //                     margin-right: 40px;
-                    //                 }
-                    //                 .overlay-text {
-                    //                     h3 {
-                    //                         font-size: 4vw;
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    width: 85%;
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 65px;
+                                        }
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                    .overlay-logo {
+                                        img {
+                                            width: 65px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
 
                     &#section1 {
                         .box {
@@ -1089,157 +1084,79 @@
                             }
                         }
                     }
-                    // &#section4 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     .overlay-text {
-                    //                         h3 {
-                    //                             font-size: 4vw;
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section6 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     .overlay-text {
-                    //                         h3 {
-                    //                             font-size: 3.5vw;
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section8 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     width: 70%;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section9 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     width: 70%;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section10 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     width: 70%;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section11 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     .overlay-text {
-                    //                         h3 {
-                    //                             font-size: 3.5vw;
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section12 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     width: 70%;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section13 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     width: 70%;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section14 {
-                    //     .box {
-                    //         .slide__overlay {
-                    //             .slide__overlay-inner {
-                    //                 .overlay-content {
-                    //                     width: 70%;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                    // &#section15 {
-                    //     .box {
-                    //         .product__wrapper {
-                    //             .product__list-wrapper {
-                    //                 &.product__list-top {
-                    //                     width: 90%;
+                    &#section3 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 95%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section4,
+                    &#section6 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    width: 60vw;
 
-                    //                     .product-list-content {
-                    //                         .product-list-grid {
-                    //                             flex: 0 0 50%;
-                    //                         }
-                    //                         .product-list-bg {
-                    //                             flex: 0 0 50%;
+                                    .overlay-content {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section5 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    width: 60vw;
 
-                    //                             img {
-                    //                                 display: block;
-                    //                                 width: 100%;
-                    //                             }
-                    //                         }
-                    //                     }
-                    //                 }
-                    //                 &.product__list-bot {
-                    //                     .product-list-content {
-                    //                         .product-list-grid {
-                    //                             flex: 0 0 60%;
-                    //                         }
-                    //                         .product-list-bg {
-                    //                             flex: 0 0 40%;
+                                    .overlay-content {
+                                        width: 95%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section7 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 90%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section8 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 90%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section11 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    width: 60vw;
 
-                    //                             img {
-                    //                                 display: block;
-                    //                                 width: 100%;
-                    //                             }
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-                    // }
+                                    .overlay-content {
+                                        width: 95%;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1268,6 +1185,52 @@
                                         h3 {
                                             font-size: 4vw;
                                         }
+                                        p {
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#section1 {
+                        .box {
+                            .work__content {
+                                .content--inner {
+                                    .content {
+                                        .text-grid {
+                                            ul {
+                                                li {
+                                                    margin-bottom: 10px;
+                                                    line-height: 1.2;
+                                                    font-size: 15px;
+
+                                                    &:last-child {
+                                                        margin-bottom: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .brand-grid {
+                                            p {
+                                                font-size: 15px;
+                                                line-height: 1;
+                                            }
+                                            .brand-grid-inner {
+                                                .grid-top,
+                                                .grid-bot {
+                                                    .brand-item {
+                                                        .brand-desc {
+                                                            p {
+                                                                font-size: 15px;
+                                                                line-height: 1.2;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -1284,17 +1247,6 @@
                                                 font-size: 4vw;
                                             }
                                         }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    &#section8 {
-                        .box {
-                            .slide__overlay {
-                                .slide__overlay-inner {
-                                    .overlay-content {
-                                        width: 70%;
                                     }
                                 }
                             }
@@ -1376,6 +1328,7 @@
                                 .product__list-wrapper {
                                     &.product__list-top {
                                         width: 90%;
+                                        margin-bottom: 40px;
 
                                         .product-list-content {
                                             .product-list-grid {

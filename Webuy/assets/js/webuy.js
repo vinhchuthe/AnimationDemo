@@ -3,6 +3,12 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
+// ----------------- logo
+$(".menu__logo").click(function () {
+    window.location.reload(true);
+});
+
+
 // ------------------------ Fullpage
 
 (function ($) {
@@ -20,12 +26,11 @@ window.onbeforeunload = function () {
             var leave = new TimelineMax();
 
             leave.fromTo($(".image1 .imagewrapper"), 1, { css: { top: "60%" } }, { css: { top: "150%" } })
-                .fromTo($(".image2 .imagewrapper"), 1, { css: { top: "75%" } }, { css: { top: "-35%" } }, "-=1")
+                .fromTo($(".image2 .imagewrapper"), 1, { css: { top: "75%" } }, { css: { top: "-45%" } }, "-=1")
                 .fromTo($(".image3 .imagewrapper"), 1, { css: { top: "27%" } }, { css: { top: "150%" } }, "-=1")
-                .fromTo($(".image4 .imagewrapper"), 1, { css: { top: "35%" } }, { css: { top: "-35%" } }, "-=1")
+                .fromTo($(".image4 .imagewrapper"), 1, { css: { top: "35%" } }, { css: { top: "-45%" } }, "-=1")
                 .to($(".slide__overlay"), 0.5, { opacity: 0 }, "-=0.5");
 
-            // console.log(origin);
         },
 
         afterLoad: function (origin, destination, direction) {
@@ -40,7 +45,7 @@ window.onbeforeunload = function () {
                 $.fn.fullpage.setAllowScrolling(true, 'up');
             }
 
-            var load = new TimelineMax({ delay: 0.5 });
+            var load = new TimelineMax({ delay: 0.7 });
 
             load.to($(".slide__overlay"), 0.5, { opacity: 1 })
                 .to($(".image1 .imagewrapper"), 1, { css: { top: "60%" }, ease: Power2.easeInOut }, "-=0.5")
@@ -48,7 +53,6 @@ window.onbeforeunload = function () {
                 .to($(".image3 .imagewrapper"), 1, { css: { top: "27%" }, ease: Power2.easeInOut }, "-=1")
                 .to($(".image4 .imagewrapper"), 1, { css: { top: "35%" }, ease: Power2.easeInOut }, "-=1");
 
-            // console.log(origin);
         }
 
     });
@@ -60,6 +64,7 @@ window.onbeforeunload = function () {
 // ------------------------ Preload
 
 $(document).ready(function () {
+    $(this).scrollTop(0);
     $.fn.fullpage.setAllowScrolling(false);
 
     $(".work__cta").click(function () {
@@ -70,12 +75,31 @@ $(document).ready(function () {
         $(".work__overlay").addClass("fade");
     });
 
+
+    // --------------- Work on Chrome
+
     $('.work__content').bind('mousewheel', function (e) {
         if (e.originalEvent.wheelDelta / 120 > 0) {
             // alert('up');
         } else {
             // alert('down');
             $.fn.fullpage.setAllowScrolling(true);
+        }
+    });
+
+
+    // ------------------- Work on FireFox
+
+    $(".work__content").on("wheel", function (event) {
+        // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
+        if (event.originalEvent.deltaY < 0) {
+            // wheeled up
+            console.log("Works Up");
+        }
+        else {
+            // wheeled down
+            $.fn.fullpage.setAllowScrolling(true);
+            console.log("Works Down");
         }
     });
 
