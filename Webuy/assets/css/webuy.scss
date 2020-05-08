@@ -340,7 +340,7 @@
     .vct-content {
         #fullpage {
             display: block;
-            transition-delay: 1.5s !important;
+            transition-delay: 0.75s !important;
 
             .section {
                 @extend %relative;
@@ -369,7 +369,7 @@
                             z-index: 2;
                         }
                         .slide__overlay-inner {
-                            width: 50vw;
+                            width: 55vw;
                             height: 50vh;
                             position: absolute;
                             top: 50%;
@@ -438,10 +438,10 @@
                                 left: 50%;
                                 transform: translate(-50%, -50%);
                                 display: flex;
-                                width: 70%;
+                                width: 85%;
 
                                 .overlay-logo {
-                                    margin-right: 50px;
+                                    margin-right: 40px;
                                     img {
                                         width: 4vw;
                                     }
@@ -450,7 +450,7 @@
                                     h3 {
                                         color: #e34340;
                                         font-family: MARKPRO-BOLD;
-                                        font-size: 3vw;
+                                        font-size: 4vw;
                                         margin-bottom: 30px;
                                     }
                                     p {
@@ -707,6 +707,12 @@
                                                 line-height: 1.2;
                                                 margin-bottom: 20px;
                                             }
+                                            h4 {
+                                                margin-bottom: 20px;
+                                                font-family: CIRCULARSTD-BOLD;
+                                                color: #373737;
+                                                font-size: 1.8vw;
+                                            }
                                             p {
                                                 color: #373737;
                                                 margin-bottom: 30px;
@@ -919,14 +925,66 @@
                     // End Product
                 }
 
-                &#section4 {
+                &#section2,
+                &#section9,
+                &#section10,
+                &#section13 {
                     .box {
                         .slide__overlay {
                             .slide__overlay-inner {
                                 .overlay-content {
-                                    .overlay-text {
-                                        h3 {
-                                            font-size: 2.7vw;
+                                    width: 70%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // &#section15 {
+                //     .box {
+                //         display: flex;
+                //         align-items: center;
+                //     }
+                // }
+
+                &#section15 {
+                    .box {
+                        display: flex;
+                        align-items: center;
+
+                        .product__wrapper {
+                            .product__list-wrapper {
+                                &.product__list-top {
+                                    width: 90%;
+
+                                    .product-list-content {
+                                        width: 100%;
+                                        
+                                        .product-list-grid {
+                                            flex: 0 0 50%;
+                                        }
+                                        .product-list-bg {
+                                            flex: 0 0 50%;
+
+                                            img {
+                                                display: block;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.product__list-bot {
+                                    .product-list-content {
+                                        .product-list-grid {
+                                            flex: 0 0 60%;
+                                        }
+                                        .product-list-bg {
+                                            flex: 0 0 40%;
+
+                                            img {
+                                                display: block;
+                                                width: 100%;
+                                            }
                                         }
                                     }
                                 }
@@ -935,10 +993,20 @@
                     }
                 }
 
-                &#section15 {
+                &#section5,
+                &#section8 {
                     .box {
-                        display: flex;
-                        align-items: center;
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    .overlay-text {
+                                        p {
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -961,5 +1029,479 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+// Responsive
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .vct-wrapper {
+        // Web content
+        .vct-content {
+            #fullpage {
+                .section {
+                    // .box {
+                    //     .slide__overlay {
+                    //         .slide__overlay-inner {
+                    //             width: 55vw;
+                    //             height: 45vh;
+
+                    //             .overlay-content {
+                    //                 width: 85%;
+
+                    //                 .overlay-logo {
+                    //                     margin-right: 40px;
+                    //                 }
+                    //                 .overlay-text {
+                    //                     h3 {
+                    //                         font-size: 4vw;
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+
+                    &#section1 {
+                        .box {
+                            .work__bg {
+                                width: 42%;
+                                background-size: cover;
+                                background-position: top left;
+                            }
+                            .work__content {
+                                .content--inner {
+                                    .content {
+                                        .brand-grid {
+                                            .brand-grid-inner {
+                                                .grid-top {
+                                                    .brand-item {
+                                                        .brand-desc {
+                                                            p {
+                                                                font-size: 15px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // &#section4 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     .overlay-text {
+                    //                         h3 {
+                    //                             font-size: 4vw;
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section6 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     .overlay-text {
+                    //                         h3 {
+                    //                             font-size: 3.5vw;
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section8 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     width: 70%;
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section9 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     width: 70%;
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section10 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     width: 70%;
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section11 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     .overlay-text {
+                    //                         h3 {
+                    //                             font-size: 3.5vw;
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section12 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     width: 70%;
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section13 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     width: 70%;
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section14 {
+                    //     .box {
+                    //         .slide__overlay {
+                    //             .slide__overlay-inner {
+                    //                 .overlay-content {
+                    //                     width: 70%;
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    // &#section15 {
+                    //     .box {
+                    //         .product__wrapper {
+                    //             .product__list-wrapper {
+                    //                 &.product__list-top {
+                    //                     width: 90%;
+
+                    //                     .product-list-content {
+                    //                         .product-list-grid {
+                    //                             flex: 0 0 50%;
+                    //                         }
+                    //                         .product-list-bg {
+                    //                             flex: 0 0 50%;
+
+                    //                             img {
+                    //                                 display: block;
+                    //                                 width: 100%;
+                    //                             }
+                    //                         }
+                    //                     }
+                    //                 }
+                    //                 &.product__list-bot {
+                    //                     .product-list-content {
+                    //                         .product-list-grid {
+                    //                             flex: 0 0 60%;
+                    //                         }
+                    //                         .product-list-bg {
+                    //                             flex: 0 0 40%;
+
+                    //                             img {
+                    //                                 display: block;
+                    //                                 width: 100%;
+                    //                             }
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1500px) {
+    .vct-wrapper {
+        // Web content
+        .vct-content {
+            #fullpage {
+                .section {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                width: 55vw;
+                                height: 45vh;
+
+                                .overlay-content {
+                                    width: 85%;
+
+                                    .overlay-logo {
+                                        margin-right: 40px;
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 4vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#section4 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        .overlay-text {
+                                            h3 {
+                                                font-size: 4vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section8 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section9 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section10 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section11 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        .overlay-text {
+                                            h3 {
+                                                font-size: 3.5vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section12 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section13 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section14 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section15 {
+                        .box {
+                            .product__wrapper {
+                                .product__list-wrapper {
+                                    &.product__list-top {
+                                        width: 90%;
+
+                                        .product-list-content {
+                                            .product-list-grid {
+                                                flex: 0 0 50%;
+                                            }
+                                            .product-list-bg {
+                                                flex: 0 0 50%;
+
+                                                img {
+                                                    display: block;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.product__list-bot {
+                                        .product-list-content {
+                                            .product-list-grid {
+                                                flex: 0 0 60%;
+                                            }
+                                            .product-list-bg {
+                                                flex: 0 0 40%;
+
+                                                img {
+                                                    display: block;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1501px) and (max-width: 1600px) {
+    .vct-wrapper {
+        // Web content
+
+        .vct-content {
+            #fullpage {
+                .section {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                width: 55vw;
+                                // height: 45vh;
+
+                                .overlay-content {
+                                    width: 85%;
+
+                                    .overlay-logo {
+                                        margin-right: 40px;
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 4vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#section2 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section4 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        .overlay-text {
+                                            h3 {
+                                                font-size: 4vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section5,
+                    &#section8 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        .overlay-text {
+                                            p {
+                                                width: 70%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section9,
+                    &#section10,
+                    &#section13 {
+                        .box {
+                            .slide__overlay {
+                                .slide__overlay-inner {
+                                    .overlay-content {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -23,9 +23,9 @@ window.onbeforeunload = function () {
                 .fromTo($(".image2 .imagewrapper"), 1, { css: { top: "75%" } }, { css: { top: "-35%" } }, "-=1")
                 .fromTo($(".image3 .imagewrapper"), 1, { css: { top: "27%" } }, { css: { top: "150%" } }, "-=1")
                 .fromTo($(".image4 .imagewrapper"), 1, { css: { top: "35%" } }, { css: { top: "-35%" } }, "-=1")
-                .to($(".slide__overlay"), 1, { opacity: 0 }, "-=0.5");
+                .to($(".slide__overlay"), 0.5, { opacity: 0 }, "-=0.5");
 
-            console.log(origin);
+            // console.log(origin);
         },
 
         afterLoad: function (origin, destination, direction) {
@@ -33,21 +33,22 @@ window.onbeforeunload = function () {
             if (origin == "2ndSlide") {
                 $.fn.fullpage.setAllowScrolling(false, 'up');
                 $.fn.fullpage.setAllowScrolling(true, 'down');
-                $(".menu__button").addClass("gray");
+                setTimeout(function () {
+                    $(".menu__button").addClass("gray");
+                }, 500);
             } else {
                 $.fn.fullpage.setAllowScrolling(true, 'up');
             }
 
-            // var load = new TimelineMax({ delay: 0.5 });
-            var load = new TimelineMax({ delay: 0.75 });
+            var load = new TimelineMax({ delay: 0.5 });
 
-            load.to($(".slide__overlay"), 1, { opacity: 1 })
+            load.to($(".slide__overlay"), 0.5, { opacity: 1 })
                 .to($(".image1 .imagewrapper"), 1, { css: { top: "60%" }, ease: Power2.easeInOut }, "-=0.5")
                 .to($(".image2 .imagewrapper"), 1, { css: { top: "75%" }, ease: Power2.easeInOut }, "-=1")
                 .to($(".image3 .imagewrapper"), 1, { css: { top: "27%" }, ease: Power2.easeInOut }, "-=1")
                 .to($(".image4 .imagewrapper"), 1, { css: { top: "35%" }, ease: Power2.easeInOut }, "-=1");
 
-            console.log(origin);
+            // console.log(origin);
         }
 
     });
@@ -62,7 +63,7 @@ $(document).ready(function () {
     $.fn.fullpage.setAllowScrolling(false);
 
     $(".work__cta").click(function () {
-        // alert("qwe");
+
         setTimeout(function () {
             $(".work__overlay").addClass("hide");
         }, 1500);
@@ -134,7 +135,7 @@ $(".menu__back").click(function () {
     swiper1[10].slideTo(0, 1000, false);
     swiper1[11].slideTo(0, 1000, false);
     swiper1[12].slideTo(0, 1000, false);
-    // setTimeout(AddPosition, 1000);
+
     AddPosition();
     $.fn.fullpage.setAllowScrolling(true);
 });
@@ -151,7 +152,7 @@ $(".menu__baogia").click(function () {
     baogia.play();
     $(".menu__button").addClass("hide");
     $(".menu__baogia").addClass("hide");
-    // $.fn.fullpage.setAllowScrolling(false);
+
 });
 
 $(".baogia__back").click(function () {
@@ -160,7 +161,7 @@ $(".baogia__back").click(function () {
         $(".baogia__overlay-wrapper").addClass("hide");
         $(".menu__button").removeClass("hide");
         $(".menu__baogia").removeClass("hide");
-        // $.fn.fullpage.setAllowScrolling(true);
+
     }, 1500);
 });
 
