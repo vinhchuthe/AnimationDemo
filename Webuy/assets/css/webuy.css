@@ -139,7 +139,7 @@
 
 .vct-wrapper .vct-overlay .baogia__overlay-wrapper .baogia__overlay--inner .baogia__content-wrapper .baogia__content-top p {
   font-family: CIRCULARSTD-BOOK;
-  font-size: 1vw;
+  font-size: 2vw;
   color: #373737;
   line-height: 1.2;
 }
@@ -159,14 +159,14 @@
 .vct-wrapper .vct-overlay .baogia__overlay-wrapper .baogia__overlay--inner .baogia__content-wrapper .baogia__content-bot h3 {
   color: #e34340;
   font-family: MARKPRO-BOLD;
-  font-size: 3vw;
+  font-size: 4vw;
   line-height: 1.2;
   margin-bottom: 50px;
 }
 
 .vct-wrapper .vct-overlay .baogia__overlay-wrapper .baogia__overlay--inner .baogia__content-wrapper .baogia__content-bot p {
   font-family: CIRCULARSTD-BOOK;
-  font-size: 1vw;
+  font-size: 2vw;
   color: #373737;
   line-height: 1.2;
   margin-bottom: 20px;

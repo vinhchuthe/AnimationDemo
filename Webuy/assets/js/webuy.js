@@ -3,10 +3,10 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
-// ----------------- logo
-$(".menu__logo").click(function () {
-    window.location.reload(true);
-});
+// // ----------------- logo
+// $(".menu__logo").click(function () {
+//     window.location.reload(true);
+// });
 
 
 // ------------------------ Fullpage
