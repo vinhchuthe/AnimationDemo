@@ -1,62 +1,69 @@
 // Back to top when page refreshed
 window.onbeforeunload = function () {
+    history.replaceState(null, null, ' ');
     window.scrollTo(0, 0);
 };
 
+// $(document).on("load", function () {
+//     window.location.href.substr(0, window.location.href.indexOf('#'))
+// })
+
 // // ----------------- logo
-// $(".menu__logo").click(function () {
-//     window.location.reload(true);
-// });
+$(".menu__logo").click(function () {
+    history.replaceState(null, null, ' ');
+    window.scrollTo(0, 0);
+    window.location.reload(true);
+});
 
 
 // ------------------------ Fullpage
 
-(function ($) {
-    $("#fullpage").fullpage({
-        anchors: ['1stSlide', '2ndSlide', '3rdSlide', '4thSlide', '5thSlide', '6thSlide', '7thSlide', '8thSlide', '9thSlide', '10thSlide', '11thSlide', '12thSlide', '13thSlide', '14thSlide', '15thSlide'],
-        verticalCentered: false,
-        v2compatible: true,
-        menu: '#detail-menu',
-        css3: true,
-        lockAnchors: true,
-        recordHistory: true,
-        scrollingSpeed: 1000,
 
-        onLeave: function (origin, destination, direction) {
-            var leave = new TimelineMax();
+$("#fullpage").fullpage({
+    anchors: ['1stSlide', '2ndSlide', '3rdSlide', '4thSlide', '5thSlide', '6thSlide', '7thSlide', '8thSlide', '9thSlide', '10thSlide', '11thSlide', '12thSlide', '13thSlide', '14thSlide', '15thSlide'],
+    // verticalCentered: false,
+    v2compatible: true,
+    menu: '#detail-menu',
+    css3: true,
+    lockAnchors: true,
+    recordHistory: true,
+    scrollingSpeed: 1000,
 
-            leave.fromTo($(".image1 .imagewrapper"), 1, { css: { top: "60%" } }, { css: { top: "150%" } })
-                .fromTo($(".image2 .imagewrapper"), 1, { css: { top: "75%" } }, { css: { top: "-45%" } }, "-=1")
-                .fromTo($(".image3 .imagewrapper"), 1, { css: { top: "27%" } }, { css: { top: "150%" } }, "-=1")
-                .fromTo($(".image4 .imagewrapper"), 1, { css: { top: "35%" } }, { css: { top: "-45%" } }, "-=1")
-                .to($(".slide__overlay"), 0.5, { opacity: 0 }, "-=0.5");
+    onLeave: function (origin, destination, direction) {
+        var leave = new TimelineMax();
 
-        },
+        leave.fromTo($(".image1 .imagewrapper"), 1, { css: { top: "60%" } }, { css: { top: "150%" } })
+            .fromTo($(".image2 .imagewrapper"), 1, { css: { top: "75%" } }, { css: { top: "-45%" } }, "-=1")
+            .fromTo($(".image3 .imagewrapper"), 1, { css: { top: "27%" } }, { css: { top: "150%" } }, "-=1")
+            .fromTo($(".image4 .imagewrapper"), 1, { css: { top: "35%" } }, { css: { top: "-45%" } }, "-=1")
+            .to($(".slide__overlay"), 0.5, { opacity: 0 }, "-=0.5");
 
-        afterLoad: function (origin, destination, direction) {
+    },
 
-            if (origin == "2ndSlide") {
-                $.fn.fullpage.setAllowScrolling(false, 'up');
-                $.fn.fullpage.setAllowScrolling(true, 'down');
-                setTimeout(function () {
-                    $(".menu__button").addClass("gray");
-                }, 500);
-            } else {
-                $.fn.fullpage.setAllowScrolling(true, 'up');
-            }
+    afterLoad: function (origin, destination, direction) {
 
-            var load = new TimelineMax({ delay: 0.7 });
-
-            load.to($(".slide__overlay"), 0.5, { opacity: 1 })
-                .to($(".image1 .imagewrapper"), 1, { css: { top: "60%" }, ease: Power2.easeInOut }, "-=0.5")
-                .to($(".image2 .imagewrapper"), 1, { css: { top: "75%" }, ease: Power2.easeInOut }, "-=1")
-                .to($(".image3 .imagewrapper"), 1, { css: { top: "27%" }, ease: Power2.easeInOut }, "-=1")
-                .to($(".image4 .imagewrapper"), 1, { css: { top: "35%" }, ease: Power2.easeInOut }, "-=1");
-
+        if (origin == "2ndSlide") {
+            $.fn.fullpage.setAllowScrolling(false, 'up');
+            $.fn.fullpage.setAllowScrolling(true, 'down');
+            setTimeout(function () {
+                $(".menu__button").addClass("gray");
+            }, 500);
+        } else {
+            $.fn.fullpage.setAllowScrolling(true, 'up');
         }
 
-    });
-})(jQuery);
+        var load = new TimelineMax({ delay: 0.7 });
+
+        load.to($(".slide__overlay"), 0.5, { opacity: 1 })
+            .to($(".image1 .imagewrapper"), 1, { css: { top: "60%" }, ease: Power2.easeInOut }, "-=0.5")
+            .to($(".image2 .imagewrapper"), 1, { css: { top: "75%" }, ease: Power2.easeInOut }, "-=1")
+            .to($(".image3 .imagewrapper"), 1, { css: { top: "27%" }, ease: Power2.easeInOut }, "-=1")
+            .to($(".image4 .imagewrapper"), 1, { css: { top: "35%" }, ease: Power2.easeInOut }, "-=1");
+
+    }
+
+});
+
 
 
 
@@ -64,7 +71,6 @@ window.onbeforeunload = function () {
 // ------------------------ Preload
 
 $(document).ready(function () {
-    $(this).scrollTop(0);
     $.fn.fullpage.setAllowScrolling(false);
 
     $(".work__cta").click(function () {
@@ -159,13 +165,13 @@ $(".menu__back").click(function () {
     swiper1[10].slideTo(0, 1000, false);
     swiper1[11].slideTo(0, 1000, false);
     swiper1[12].slideTo(0, 1000, false);
-
     AddPosition();
     $.fn.fullpage.setAllowScrolling(true);
 });
 
 
 // ---------------------- Baogia-overlay
+
 var baogia = new TimelineMax({ paused: true });
 baogia.from($(".baogia__overlay--bg"), 0.5, { scaleY: 0, transformOrigin: "50% 0%", ease: Power2.easeInOut })
     .from($(".baogia__overlay--inner"), 0.75, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut })
@@ -191,9 +197,11 @@ $(".baogia__back").click(function () {
 
 
 // ---------------------- Menu-list
+
 $("#menu__grid").niceScroll({
     oneaxismousemode: true
 });
+
 var menu = new TimelineMax({ paused: true });
 menu.from($(".detail-menu__overlay--inner"), 0.5, { scaleY: 0, transformOrigin: "50% 0%", ease: Power2.easeInOut })
     .from($(".detail-menu__grid"), 0.75, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut })
