@@ -109,6 +109,21 @@ $(document).ready(function () {
         }
     });
 
+    // -------------------- Work on mobile
+    var ts;
+    $(".work__content").bind('touchstart', function (e) {
+        ts = e.originalEvent.touches[0].clientY;
+    });
+
+    $(".work__content").bind('touchend', function (e) {
+        var te = e.originalEvent.changedTouches[0].clientY;
+        if (ts > te + 5) {
+            $.fn.fullpage.setAllowScrolling(true);
+        } else if (ts < te - 5) {
+            // slide_up();
+        }
+    });
+
     // ------------------- Resize Windows
     var $window = $(window);
 

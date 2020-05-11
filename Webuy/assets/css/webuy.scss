@@ -1499,9 +1499,12 @@
                 }
                 .detail-menu__grid {
                     .detail-menu__list {
+                        width: 100%;
+
                         li {
                             .detail-menu--link {
                                 color: #fff;
+                                padding: 0 25px;
 
                                 .menu-item-wrapper {
                                     display: block;
@@ -1525,6 +1528,10 @@
                                         padding-left: 25px;
                                     }
                                 }
+                            }
+                            &::before {
+                                width: 100vw;
+                                left: 0;
                             }
                         }
                     }
