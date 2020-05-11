@@ -1480,7 +1480,10 @@
             }
         }
         .detail-menu__overlay {
+            height: calc(100vh - 44px);
+
             .detail-menu__overlay--inner {
+                height: 100%;
                 .detail-menu-icon__wrapper {
                     .detail-menu__logo {
                         width: 25vw;
@@ -1504,7 +1507,6 @@
                         li {
                             .detail-menu--link {
                                 color: #fff;
-                                padding: 0 25px;
 
                                 .menu-item-wrapper {
                                     display: block;
@@ -1539,7 +1541,10 @@
             }
         }
         .baogia__overlay-wrapper {
+            height: calc(100vh - 44px);
+
             .baogia__overlay--inner {
+                height: 100%;
                 .baogia__content-wrapper {
                     .baogia__content-top {
                         width: 90%;

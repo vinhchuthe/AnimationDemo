@@ -1269,6 +1269,14 @@
   background-color: #949494;
 }
 
+.mobile .vct-overlay .detail-menu__overlay {
+  height: calc(100vh - 44px);
+}
+
+.mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner {
+  height: 100%;
+}
+
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu-icon__wrapper .detail-menu__logo {
   width: 25vw;
 }
@@ -1291,7 +1299,6 @@
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list li .detail-menu--link {
   color: #fff;
-  padding: 0 25px;
 }
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list li .detail-menu--link .menu-item-wrapper {
@@ -1322,6 +1329,14 @@
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list li::before {
   width: 100vw;
   left: 0;
+}
+
+.mobile .vct-overlay .baogia__overlay-wrapper {
+  height: calc(100vh - 44px);
+}
+
+.mobile .vct-overlay .baogia__overlay-wrapper .baogia__overlay--inner {
+  height: 100%;
 }
 
 .mobile .vct-overlay .baogia__overlay-wrapper .baogia__overlay--inner .baogia__content-wrapper .baogia__content-top {
