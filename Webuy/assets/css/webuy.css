@@ -1293,12 +1293,17 @@
   display: none;
 }
 
+.mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid {
+  height: calc(85vh - 44px);
+}
+
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list {
   width: 100%;
 }
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list li .detail-menu--link {
   color: #fff;
+  padding: 0 25px;
 }
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list li .detail-menu--link .menu-item-wrapper {
@@ -1371,7 +1376,8 @@
   background-image: url("../image/section1-mbbg.png");
   background-color: unset;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   z-index: 2;
 }
 

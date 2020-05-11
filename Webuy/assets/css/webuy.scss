@@ -1501,12 +1501,15 @@
                     display: none;
                 }
                 .detail-menu__grid {
+                    height: calc(85vh - 44px);
+                    
                     .detail-menu__list {
                         width: 100%;
 
                         li {
                             .detail-menu--link {
                                 color: #fff;
+                                padding: 0 25px;
 
                                 .menu-item-wrapper {
                                     display: block;
@@ -1582,7 +1585,9 @@
                             background-image: url("../image/section1-mbbg.png");
                             background-color: unset;
                             background-repeat: no-repeat;
-                            background-size: 100% 100%;
+                            // background-size: 100% 100%;
+                            background-size: cover;
+                            background-position: center;
                             z-index: 2;
 
                             .work__title {
