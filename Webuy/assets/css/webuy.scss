@@ -1027,6 +1027,7 @@
 }
 
 // Responsive
+
 @media (min-width: 1200px) and (max-width: 1300px) {
     .vct-wrapper {
         // Web content
@@ -1449,6 +1450,400 @@
                                     .overlay-content {
                                         width: 70%;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------- Mobile
+.mobile {
+    // Web-overlay
+    .vct-overlay {
+        .menu__logo {
+            top: 6%;
+            width: 25vw;
+        }
+        .menu__baogia {
+            font-size: 14px;
+        }
+        .menu__back {
+            font-size: 14px;
+        }
+        .menu__button {
+            span {
+                background-color: #949494;
+            }
+        }
+        .detail-menu__overlay {
+            .detail-menu__overlay--inner {
+                .detail-menu-icon__wrapper {
+                    .detail-menu__logo {
+                        width: 25vw;
+                    }
+                    .detail-menu__text {
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                    .detail-menu-hamburger {
+                        width: 15px;
+                    }
+                }
+                .grid-bgicon {
+                    display: none;
+                }
+                .detail-menu__grid {
+                    .detail-menu__list {
+                        li {
+                            .detail-menu--link {
+                                color: #fff;
+
+                                .menu-item-wrapper {
+                                    display: block;
+                                    position: relative;
+
+                                    .menu-item--index {
+                                        position: absolute;
+                                        top: 30px;
+                                        left: 0;
+                                        font-size: 11px;
+                                    }
+                                    .menu-item--title {
+                                        font-size: 20px;
+                                        padding-left: 25px;
+                                    }
+                                    .menu-item--desc {
+                                        display: block;
+                                        font-size: 13px;
+                                        line-height: 1.3;
+                                        margin-top: 10px;
+                                        padding-left: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .baogia__overlay-wrapper {
+            .baogia__overlay--inner {
+                .baogia__content-wrapper {
+                    .baogia__content-top {
+                        width: 90%;
+                        p {
+                            font-size: 3.25vw;
+                        }
+                    }
+                    .baogia__content-bot {
+                        width: 90%;
+                        h3 {
+                            font-size: 7vw;
+                        }
+                        p {
+                            font-size: 3.25vw;
+                        }
+                    }
+                }
+            }
+            .baogia__back {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Web-content
+    .vct-content {
+        #fullpage {
+            .section {
+                &#section1 {
+                    .box {
+                        .work__bg {
+                            display: none;
+                        }
+                        .work__overlay {
+                            background-image: url("../image/section1-mbbg.png");
+                            background-color: unset;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            z-index: 2;
+
+                            .work__title {
+                                text-align: center;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                margin-bottom: 20px;
+
+                                h3 {
+                                    font-size: 45px;
+                                    margin-bottom: 20px;
+                                }
+                                p {
+                                    font-size: 16px;
+                                }
+                                .work__cta {
+                                    margin-top: 20px;
+                                    padding: 15px 35px;
+                                    span {
+                                        font-size: 15px;
+                                        &.cta-icon {
+                                            height: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .work__content {
+                            background-image: url("../image/section1-content.png");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: center;
+
+                            .content--inner {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .box {
+                    .slide__overlay {
+                        .slide__overlay-inner {
+                            width: 100vw;
+
+                            .overlay-top {
+                                left: 15px;
+
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+                            .overlay-bot {
+                                right: 15px;
+
+                                .bot__border {
+                                    display: none;
+                                }
+                            }
+                            .overlay-content {
+                                width: 90% !important;
+
+                                .overlay-logo {
+                                    margin-right: 25px;
+
+                                    img {
+                                        width: 35px;
+                                    }
+                                }
+                                .overlay-text {
+                                    h3 {
+                                        // font-size: 35px;
+                                        font-size: 8vw;
+                                    }
+                                    p {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // Slide content
+                    .swiper-container {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                width: 90vw;
+
+                                .work__image {
+                                    .imagewrapper {
+                                        width: 75%;
+                                    }
+                                }
+
+                                &:first-child {
+                                    .work__image {
+                                        .imagewrapper {
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // End Slide content
+                }
+
+                &#section4 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    width: 95% !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section5 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    width: 95% !important;
+
+                                    .overlay-logo {
+                                        img {
+                                            width: 30px;
+                                        }
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 30px;
+                                        }
+                                        p {
+                                            width: 90%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section5 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    width: 95% !important;
+
+                                    .overlay-logo {
+                                        img {
+                                            width: 30px;
+                                        }
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section6 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    width: 95% !important;
+
+                                    .overlay-logo {
+                                        img {
+                                            width: 30px;
+                                        }
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section7 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    .overlay-text {
+                                        p {
+                                            width: 90%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section8 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    .overlay-text {
+                                        p {
+                                            width: 90%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section11 {
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                .overlay-content {
+                                    width: 95% !important;
+
+                                    .overlay-logo {
+                                        img {
+                                            width: 30px;
+                                        }
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section15 {
+                    .box {
+                        .product__wrapper {
+                            .product__list-wrapper {
+                                &.product__list-top {
+                                    display: block;
+                                    width: 100%;
+                                    margin-bottom: 0;
+                                    height: 100vh;
+                                    background-image: url("../image/section15-content.png");
+                                    background-repeat: no-repeat;
+                                    background-size: 100% 100%;
+                                    background-position: top center;
+
+                                    .product-list-content {
+                                        display: none;
+                                    }
+                                    .product-title {
+                                        align-self: auto;
+                                        margin-bottom: 0;
+                                        position: absolute;
+                                        top: 6%;
+                                        left: 35%;
+
+                                        h4 {
+                                            font-size: 12px;
+                                            width: 55%;
+                                        }
+                                    }
+                                }
+                                &.product__list-bot {
+                                    display: none;
                                 }
                             }
                         }

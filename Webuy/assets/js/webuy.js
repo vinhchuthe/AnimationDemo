@@ -109,6 +109,22 @@ $(document).ready(function () {
         }
     });
 
+    // ------------------- Resize Windows
+    var $window = $(window);
+
+    function checkWidth() {
+        var WindowSize = $window.width();
+        if (WindowSize < 767) {
+            $(".vct-wrapper").addClass("mobile");
+        } else {
+            $(".vct-wrapper").removeClass("mobile");
+        }
+    };
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+
 });
 
 
@@ -118,14 +134,14 @@ var swiper1 = new Swiper(' .swiper-container', {
     slidesPerView: 'auto',
     speed: 1000,
     loop: false,
+    updateOnWindowResize: true,
     grabCursor: true,
     mousewheel: true,
     freeMode: true,
-    freeModeMomentumRatio: 2,
-    freeModeMinimumVelocity: 0.02,
+    // freeModeMomentumRatio: 2,
+    // freeModeMinimumVelocity: 0.02,
     // freeModeMomentum: false,
 });
-
 
 // ----------------------- Slide animation
 
@@ -155,6 +171,7 @@ $(".menu__back").click(function () {
     animation1.reverse();
     swiper1[0].slideTo(0, 1000, false);
     swiper1[1].slideTo(0, 1000, false);
+    swiper1[2].slideTo(0, 1000, false);
     swiper1[3].slideTo(0, 1000, false);
     swiper1[4].slideTo(0, 1000, false);
     swiper1[5].slideTo(0, 1000, false);
