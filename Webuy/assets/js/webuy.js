@@ -113,9 +113,9 @@ $(document).ready(function () {
 
     $(".work__content").bind('touchend', function (e) {
         var te = e.originalEvent.changedTouches[0].clientY;
-        if (ts > te + 1) {
+        if (ts >= te + 1) {
             $.fn.fullpage.setAllowScrolling(true);
-        } else if (ts < te - 1) {
+        } else if (ts <= te - 1) {
             // slide_up();
         }
     });
