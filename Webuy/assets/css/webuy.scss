@@ -1880,7 +1880,7 @@
                                     display: block;
                                     width: 100%;
                                     margin-bottom: 0;
-                                    height: 100vh;
+                                    height: calc(100vh - 54px);
                                     background-image: url("../image/section15-content.png");
                                     background-repeat: no-repeat;
                                     background-size: 100% 100%;

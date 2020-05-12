@@ -157,7 +157,9 @@ var swiper1 = new Swiper(' .swiper-container', {
     // freeModeMomentum: false,
     breakpoints: {
         767: {
-            slidesPerView: '1.25'
+            slidesPerView: '1.15',
+            grabCursor: false,
+            mousewheel: false,
         }
     }
 });
