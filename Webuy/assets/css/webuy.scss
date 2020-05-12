@@ -1480,7 +1480,7 @@
             }
         }
         .detail-menu__overlay {
-            height: calc(100vh - 44px);
+            height: calc(100vh - 54px);
 
             .detail-menu__overlay--inner {
                 height: 100%;
@@ -1501,7 +1501,7 @@
                     display: none;
                 }
                 .detail-menu__grid {
-                    height: calc(85vh - 44px);
+                    height: calc(85vh - 54px);
 
                     .detail-menu__list {
                         width: 100%;
@@ -1702,6 +1702,24 @@
                                             }
                                             p {
                                                 font-size: 14px;
+                                            }
+                                            a {
+                                                &:hover {
+                                                    .image--cta {
+                                                        border: 1px solid #e34340;
+                                                        background: transparent;
+
+                                                        span {
+                                                            color: #e34340;
+
+                                                            &.image--cta-icon {
+                                                                svg {
+                                                                    fill: #e34340;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }

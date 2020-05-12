@@ -1270,7 +1270,7 @@
 }
 
 .mobile .vct-overlay .detail-menu__overlay {
-  height: calc(100vh - 44px);
+  height: calc(100vh - 54px);
 }
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner {
@@ -1294,7 +1294,7 @@
 }
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid {
-  height: calc(85vh - 44px);
+  height: calc(85vh - 54px);
 }
 
 .mobile .vct-overlay .detail-menu__overlay .detail-menu__overlay--inner .detail-menu__grid .detail-menu__list {
@@ -1494,6 +1494,19 @@
 
 .mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text p {
   font-size: 14px;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text a:hover .image--cta {
+  border: 1px solid #e34340;
+  background: transparent;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text a:hover .image--cta span {
+  color: #e34340;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text a:hover .image--cta span.image--cta-icon svg {
+  fill: #e34340;
 }
 
 .mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide:first-child .work__image .imagewrapper img {
