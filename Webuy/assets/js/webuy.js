@@ -149,13 +149,17 @@ var swiper1 = new Swiper(' .swiper-container', {
     slidesPerView: 'auto',
     speed: 1000,
     loop: false,
-    updateOnWindowResize: true,
     grabCursor: true,
     mousewheel: true,
     freeMode: true,
     // freeModeMomentumRatio: 2,
     // freeModeMinimumVelocity: 0.02,
     // freeModeMomentum: false,
+    breakpoints: {
+        767: {
+            slidesPerView: '1'
+        }
+    }
 });
 
 // ----------------------- Slide animation

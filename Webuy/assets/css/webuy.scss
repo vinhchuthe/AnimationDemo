@@ -1502,7 +1502,7 @@
                 }
                 .detail-menu__grid {
                     height: calc(85vh - 44px);
-                    
+
                     .detail-menu__list {
                         width: 100%;
 
@@ -1578,6 +1578,7 @@
             .section {
                 &#section1 {
                     .box {
+                        height: 100%;
                         .work__bg {
                             display: none;
                         }
@@ -1585,9 +1586,9 @@
                             background-image: url("../image/section1-mbbg.png");
                             background-color: unset;
                             background-repeat: no-repeat;
-                            // background-size: 100% 100%;
-                            background-size: cover;
-                            background-position: center;
+                            background-size: 100% 100%;
+                            // background-size: cover;
+                            // background-position: center;
                             z-index: 2;
 
                             .work__title {
@@ -1616,10 +1617,11 @@
                             }
                         }
                         .work__content {
+                            height: 100%;
                             background-image: url("../image/section1-content.png");
                             background-repeat: no-repeat;
-                            background-size: contain;
-                            background-position: center;
+                            background-size: 100% 100%;
+                            // background-position: center;
 
                             .content--inner {
                                 display: none;
