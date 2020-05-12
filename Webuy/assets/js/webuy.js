@@ -117,9 +117,9 @@ $(document).ready(function () {
 
     $(".work__content").bind('touchend', function (e) {
         var te = e.originalEvent.changedTouches[0].clientY;
-        if (ts > te + 5) {
+        if (ts > te + 3) {
             $.fn.fullpage.setAllowScrolling(true);
-        } else if (ts < te - 5) {
+        } else if (ts < te - 3) {
             // slide_up();
         }
     });
@@ -157,7 +157,7 @@ var swiper1 = new Swiper(' .swiper-container', {
     // freeModeMomentum: false,
     breakpoints: {
         767: {
-            slidesPerView: '1'
+            slidesPerView: '1.25'
         }
     }
 });

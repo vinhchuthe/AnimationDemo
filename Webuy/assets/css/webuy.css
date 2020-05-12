@@ -1418,7 +1418,8 @@
   height: 100%;
   background-image: url("../image/section1-content.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
+  background-position-x: center;
 }
 
 .mobile .vct-content #fullpage .section#section1 .box .work__content .content--inner {
@@ -1471,6 +1472,28 @@
 
 .mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper {
   width: 75%;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text .image--text__biglogo {
+  width: 30px;
+  margin-bottom: 15px;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text .image--text__biglogo img {
+  margin-bottom: 15px;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text ul li {
+  font-size: 14px;
+}
+
+.mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text p {
+  font-size: 14px;
 }
 
 .mobile .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide:first-child .work__image .imagewrapper img {
