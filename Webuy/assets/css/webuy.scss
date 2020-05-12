@@ -33,6 +33,9 @@
     display: none;
     transition: all 0.5s;
 }
+.mb-hide {
+    display: none;
+}
 
 .vct-wrapper {
     @extend %relative;
@@ -131,7 +134,7 @@
 
                         p {
                             font-family: CIRCULARSTD-BOOK;
-                            font-size: 2vw;
+                            font-size: 1.7vw;
                             color: #373737;
                             line-height: 1.2;
                         }
@@ -155,7 +158,7 @@
                         }
                         p {
                             font-family: CIRCULARSTD-BOOK;
-                            font-size: 2vw;
+                            font-size: 1.7vw;
                             color: #373737;
                             line-height: 1.2;
                             margin-bottom: 20px;
@@ -1480,7 +1483,8 @@
             }
         }
         .detail-menu__overlay {
-            height: calc(100vh - 54px);
+            // height: calc(100vh - 54px);
+            height: 100%;
 
             .detail-menu__overlay--inner {
                 height: 100%;
@@ -1501,7 +1505,8 @@
                     display: none;
                 }
                 .detail-menu__grid {
-                    height: calc(85vh - 54px);
+                    // height: calc(85vh - 54px);
+                    height: 85vh;
 
                     .detail-menu__list {
                         width: 100%;
@@ -1544,7 +1549,8 @@
             }
         }
         .baogia__overlay-wrapper {
-            height: calc(100vh - 54px);
+            // height: calc(100vh - 54px);
+            height: 100%;
 
             .baogia__overlay--inner {
                 height: 100%;
@@ -1587,8 +1593,7 @@
                             background-color: unset;
                             background-repeat: no-repeat;
                             background-size: 100% 100%;
-                            // background-size: cover;
-                            // background-position: center;
+                            height: 100%;
                             z-index: 2;
 
                             .work__title {
@@ -1618,13 +1623,105 @@
                         }
                         .work__content {
                             height: 100%;
-                            background-image: url("../image/section1-content.png");
-                            background-repeat: no-repeat;
-                            background-size: contain;
-                            background-position-x: center;
+                            // background-image: url("../image/section1-content.png");
+                            // background-repeat: no-repeat;
+                            // background-size: contain;
+                            // background-position-x: center;
 
                             .content--inner {
-                                display: none;
+                                // display: none;
+                                width: unset;
+                                padding-top: 6vh;
+
+                                .content {
+                                    width: unset;
+                                    padding: 0 15px;
+                                    transform: scale(0.8);
+
+                                    .text-grid {
+                                        ul {
+                                            li {
+                                                font-size: 12px;
+                                                margin-bottom: 10px;
+                                            }
+                                        }
+                                    }
+                                    .brand-grid {
+                                        p {
+                                            font-size: 12px;
+                                            line-height: 1.3;
+                                            margin-bottom: 10px;
+                                        }
+                                        .brand-grid-inner {
+                                            display: flex;
+
+                                            .grid-top {
+                                                flex-direction: column;
+                                                flex: 0 0 50%;
+
+                                                .brand-item {
+                                                    min-height: 96px;
+                                                    margin-bottom: 10px;
+
+                                                    .brand-logo {
+                                                        height: 35px;
+                                                        min-height: unset;
+
+                                                        img {
+                                                            height: 100%;
+                                                        }
+                                                    }
+                                                    .brand-desc {
+                                                        p {
+                                                            font-size: 12px;
+                                                            margin-bottom: 10px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .grid-bot {
+                                                flex-direction: column;
+                                                flex: 0 0 50%;
+
+                                                .brand-item {
+                                                    min-height: 96px;
+                                                    margin-bottom: 10px;
+
+                                                    .brand-logo {
+                                                        height: 35px;
+                                                        min-height: unset;
+                                                        margin-bottom: 15px;
+
+                                                        // img {
+                                                        //     height: 100%;
+                                                        // }
+                                                    }
+                                                    .brand-desc {
+                                                        p {
+                                                            font-size: 12px;
+                                                            margin-bottom: 10px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .scrolldown-btn {
+                                            padding: 10px 15px;
+                                            width: 160px;
+
+                                            span {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+
+                                    &.m-20 {
+                                        margin-top: -20px;
+                                    }
+                                }
+                                .line {
+                                    margin: 0;
+                                }
                             }
                         }
                     }
@@ -1684,7 +1781,7 @@
 
                                         .image--text {
                                             .image--text__biglogo {
-                                                width: 30px;
+                                                width: 35px;
                                                 margin-bottom: 15px;
 
                                                 img {
@@ -1702,6 +1799,7 @@
                                             }
                                             p {
                                                 font-size: 14px;
+                                                margin-bottom: 20px;
                                             }
                                             a {
                                                 &:hover {
