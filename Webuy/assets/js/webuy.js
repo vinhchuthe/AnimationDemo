@@ -23,6 +23,7 @@ $("#fullpage").fullpage({
     css3: true,
     lockAnchors: true,
     recordHistory: true,
+    touchSensitivity: 15,
     scrollingSpeed: 1000,
 
     onLeave: function (origin, destination, direction) {

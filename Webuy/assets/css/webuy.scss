@@ -1030,6 +1030,90 @@
 }
 
 // Responsive
+@media (min-width: 768px) and (max-width: 1024px) {
+    .vct-wrapper {
+        // Web-overlay
+        .vct-overlay {
+            .menu__logo {
+                width: 150px;
+            }
+            .menu__button {
+                span {
+                    width: 40px;
+                }
+            }
+            .baogia__overlay-wrapper {
+                .baogia__overlay--inner {
+                    .baogia__content-wrapper {
+                        .baogia__content-top {
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                        .baogia__content-bot {
+                            p {
+                                font-size: 16px;
+                            }
+                            h3 {
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+            .detail-menu__overlay {
+                .detail-menu__overlay--inner {
+                    .detail-menu-icon__wrapper {
+                        .detail-menu__logo {
+                            width: 150px;
+                        }
+                        .detail-menu__text {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                        .detail-menu-hamburger {
+                            width: 2.5vw;
+                        }
+                    }
+                    .grid-bgicon {
+                        display: none;
+                    }
+                    .detail-menu__grid {
+                        .detail-menu__list {
+                            width: unset;
+                            li {
+                                padding: 0 4vw;
+                                &::before {
+                                    width: 100vw;
+                                    left: 0;
+                                }
+
+                                .detail-menu--link {
+                                    .menu-item-wrapper {
+                                        .menu-item--index {
+                                            font-size: 12px;
+                                        }
+                                        .menu-item--title {
+                                            font-size: 26px;
+                                        }
+                                        .menu-item--desc {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // End Web-overlay
+
+        // Web-content
+        // End Web-content
+    }
+}
 
 @media (min-width: 1200px) and (max-width: 1300px) {
     .vct-wrapper {
@@ -1558,16 +1642,16 @@
                     .baogia__content-top {
                         width: 90%;
                         p {
-                            font-size: 3.25vw;
+                            font-size: 14px;
                         }
                     }
                     .baogia__content-bot {
                         width: 90%;
                         h3 {
-                            font-size: 7vw;
+                            font-size: 28px;
                         }
                         p {
-                            font-size: 3.25vw;
+                            font-size: 14px;
                         }
                     }
                 }
