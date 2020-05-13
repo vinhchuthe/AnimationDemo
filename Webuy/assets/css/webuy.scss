@@ -1090,6 +1090,8 @@
                                 }
 
                                 .detail-menu--link {
+                                    color: #fff;
+
                                     .menu-item-wrapper {
                                         .menu-item--index {
                                             font-size: 12px;
@@ -1111,6 +1113,224 @@
         // End Web-overlay
 
         // Web-content
+        .vct-content {
+            #fullpage {
+                .section {
+                    &#section1 {
+                        .box {
+                            .work__bg {
+                                width: 45%;
+                                background-size: cover;
+                                background-position: left;
+                            }
+                            .work__overlay {
+                                .work__title {
+                                    h3 {
+                                        font-size: 60px;
+                                    }
+                                    p {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                            .work__content {
+                                .content--inner {
+                                    .content {
+                                        .text-grid {
+                                            ul {
+                                                li {
+                                                    font-size: 12px;
+                                                }
+                                            }
+                                        }
+                                        .brand-grid {
+                                            p {
+                                                font-size: 12px;
+                                                line-height: 1.2;
+                                            }
+                                            .brand-grid-inner {
+                                                .grid-top {
+                                                    .brand-item {
+                                                        .brand-desc {
+                                                            p {
+                                                                font-size: 12px;
+                                                            }
+                                                        }
+                                                        .brand-logo {
+                                                            min-height: unset;
+                                                            height: 37px;
+
+                                                            img {
+                                                                height: 100%;
+                                                            }
+                                                        }
+                                                        &:nth-child(2) {
+                                                            .brand-desc {
+                                                                p {
+                                                                    font-size: 11px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .grid-bot {
+                                                    .brand-item {
+                                                        .brand-desc {
+                                                            p {
+                                                                font-size: 12px;
+                                                            }
+                                                        }
+                                                        .brand-logo {
+                                                            min-height: unset;
+                                                            height: 37px;
+                                                            min-width: 111px;
+
+                                                            img {
+                                                                height: auto;
+                                                                width: 100%;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        &:last-of-type {
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .box {
+                        .slide__overlay {
+                            .slide__overlay-inner {
+                                width: 70vw;
+                                height: 40vh;
+
+                                .overlay-top {
+                                    p {
+                                        font-size: 20px;
+                                    }
+                                }
+                                .overlay-content {
+                                    width: 95% !important;
+
+                                    .overlay-logo {
+                                        margin-right: 30px;
+
+                                        img {
+                                            width: 45px;
+                                        }
+                                    }
+                                    .overlay-text {
+                                        h3 {
+                                            font-size: 45px;
+                                        }
+                                        p {
+                                            font-size: 14px;
+                                            line-height: 1.3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .swiper-container {
+                            .swiper-wrapper {
+                                .swiper-slide {
+                                    .work__image {
+                                        .imagewrapper {
+                                            .image--text {
+                                                .image--text__biglogo {
+                                                    width: 40px;
+                                                }
+                                                h3 {
+                                                    font-size: 40px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#section5,
+                    &#section6 {
+                        .box {
+                            .swiper-container {
+                                .swiper-wrapper {
+                                    .swiper-slide {
+                                        .work__image {
+                                            .imagewrapper {
+                                                .image--text {
+                                                    .image--text__biglogo {
+                                                        width: 40px;
+                                                    }
+                                                    h3 {
+                                                        font-size: 37px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#section15 {
+                        .box {
+                            .product__wrapper {
+                                .product__list-wrapper {
+                                    .product-title {
+                                        h4 {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    .product-list-content {
+                                        .product-list-grid {
+                                            ul {
+                                                li {
+                                                    font-size: 14px;
+
+                                                    &:last-child {
+                                                        margin-bottom: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.product__list-top {
+                                        .product-list-content {
+                                            .product-list-grid {
+                                                flex: 0 0 60%;
+                                            }
+                                            .product-list-bg {
+                                                flex: 0 0 40%;
+                                            }
+                                        }
+                                    }
+                                    &.product__list-bot {
+                                        width: 95%;
+
+                                        .product-list-content {
+                                            .product-list-grid {
+                                                flex: 0 0 65%;
+                                            }
+                                            .product-list-bg {
+                                                flex: 0 0 35%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         // End Web-content
     }
 }

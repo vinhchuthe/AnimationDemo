@@ -108,11 +108,11 @@ $(document).ready(function () {
 
     // -------------------- Work on mobile
     var ts;
-    $(".work__content").bind('touchstart', function (e) {
+    $("#section1").bind('touchstart', function (e) {
         ts = e.originalEvent.touches[0].clientY;
     });
 
-    $(".work__content").bind('touchend', function (e) {
+    $("#section1").bind('touchend', function (e) {
         var te = e.originalEvent.changedTouches[0].clientY;
         if (ts >= te + 1) {
             $.fn.fullpage.setAllowScrolling(true);
@@ -162,6 +162,12 @@ var swiper1 = new Swiper(' .swiper-container', {
     breakpoints: {
         767: {
             slidesPerView: '1.15',
+            grabCursor: false,
+            mousewheel: false,
+            freeModeSticky: true
+        },
+        1024: {
+            slidesPerView: '1.5',
             grabCursor: false,
             mousewheel: false,
             freeModeSticky: true
