@@ -641,7 +641,7 @@
                                     padding: 10px 25px;
                                     border: 1px solid #e34340;
                                     border-radius: 30px;
-                                    cursor: pointer;
+                                    cursor: context-menu;
 
                                     span {
                                         img {
@@ -1248,6 +1248,9 @@
                                                 h3 {
                                                     font-size: 40px;
                                                 }
+                                            }
+                                            img {
+                                                width: 100% !important;
                                             }
                                         }
                                     }

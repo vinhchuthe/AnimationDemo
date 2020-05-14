@@ -35,6 +35,7 @@ $("#fullpage").fullpage({
             .fromTo($(".image4 .imagewrapper"), 1, { css: { top: "35%" } }, { css: { top: "-45%" } }, "-=1")
             .to($(".slide__overlay"), 0.5, { opacity: 0 }, "-=0.5");
 
+
     },
 
     afterLoad: function (origin, destination, direction) {
@@ -56,7 +57,6 @@ $("#fullpage").fullpage({
             .to($(".image2 .imagewrapper"), 1, { css: { top: "75%" }, ease: Power2.easeInOut }, "-=1")
             .to($(".image3 .imagewrapper"), 1, { css: { top: "27%" }, ease: Power2.easeInOut }, "-=1")
             .to($(".image4 .imagewrapper"), 1, { css: { top: "35%" }, ease: Power2.easeInOut }, "-=1");
-
     }
 
 });
@@ -75,51 +75,9 @@ $(document).ready(function () {
         $(".work__overlay").addClass("fade");
         $(".menu__baogia").removeClass("mb-hide");
         $(".menu__logo").removeClass("mb-hide");
-
+        $.fn.fullpage.setAllowScrolling(true);
     });
 
-
-    // --------------- Work on Chrome
-
-    $('.work__content').bind('mousewheel', function (e) {
-        if (e.originalEvent.wheelDelta / 120 > 0) {
-            // alert('up');
-        } else {
-            // alert('down');
-            $.fn.fullpage.setAllowScrolling(true);
-        }
-    });
-
-
-    // ------------------- Work on FireFox
-
-    $(".work__content").on("wheel", function (event) {
-        // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
-        if (event.originalEvent.deltaY < 0) {
-            // wheeled up
-            console.log("Works Up");
-        }
-        else {
-            // wheeled down
-            $.fn.fullpage.setAllowScrolling(true);
-            console.log("Works Down");
-        }
-    });
-
-    // -------------------- Work on mobile
-    var ts;
-    $("#section1").bind('touchstart', function (e) {
-        ts = e.originalEvent.touches[0].clientY;
-    });
-
-    $("#section1").bind('touchend', function (e) {
-        var te = e.originalEvent.changedTouches[0].clientY;
-        if (ts >= te + 1) {
-            $.fn.fullpage.setAllowScrolling(true);
-        } else if (ts <= te - 1) {
-            // slide_up();
-        }
-    });
 
     // ------------------- Resize Windows
     var $window = $(window);
@@ -159,6 +117,7 @@ var swiper1 = new Swiper(' .swiper-container', {
     grabCursor: true,
     mousewheel: true,
     freeMode: true,
+
     breakpoints: {
         767: {
             slidesPerView: '1.15',
@@ -175,32 +134,38 @@ var swiper1 = new Swiper(' .swiper-container', {
     }
 });
 
-// ----------------------- Slide animation
-
-var animation1 = new TimelineMax({ paused: true });
-animation1.to($(".slide__overlay-inner"), 0.75, { opacity: 0, ease: Power2.easeInOut })
-    .to($(".odd .imagewrapper"), 1, { css: { top: "50%" }, ease: Power2.easeInOut }, "-=0.15")
-    .to($(".even .imagewrapper"), 1, { css: { top: "50%" }, ease: Power2.easeInOut }, "-=1")
-    .from($(".image--text"), 1, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut }, "-=1")
-    .to($(".image1 .imagewrapper"), 1, { css: { left: "50%" }, ease: Power2.easeInOut }, "-=1");
-
+// ----------------------- Tween set
+TweenMax.set($(".image--text"), { opacity: 0, autoAlpha: 0 });
 
 // ------------------------ Open slide
-
+var animation1 = new TimelineMax();
 $(".overlay-bot").click(function () {
 
     $.fn.fullpage.setAllowScrolling(false);
-    if ($(".section").hasClass("active")) {
-        animation1.play();
-        setTimeout(removePosition, 1000);
-    }
+
+    animation1.to($(".slide__overlay-inner"), 0.75, { opacity: 0, ease: Power2.easeInOut })
+        .to($(".odd .imagewrapper"), 0.75, { css: { top: "50%" }, ease: Power2.easeInOut }, "-=0.15")
+        .to($(".even .imagewrapper"), 0.75, { css: { top: "50%" }, ease: Power2.easeInOut }, "-=0.75")
+        .fromTo($(".image--text"), 0.75, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut }, { opacity: 1, autoAlpha: 1, ease: Power2.easeInOut }, "-=0.75")
+        .to($(".image1 .imagewrapper"), 0.75, { css: { left: "50%" }, ease: Power2.easeInOut }, "-=0.75");
+
+    setTimeout(removePosition, 1000);
 });
 
 
 // ------------------------ Back button
+var animation2 = new TimelineMax();
 
 $(".menu__back").click(function () {
-    animation1.reverse();
+    
+    animation2.to($(".slide__overlay"), 0.5, { opacity: 1 })
+        .to($(".image1 .imagewrapper"), 0.75, { css: { top: "60%" }, ease: Power2.easeInOut }, "-=0.5")
+        .to($(".image2 .imagewrapper"), 0.75, { css: { top: "75%" }, ease: Power2.easeInOut }, "-=0.75")
+        .to($(".image3 .imagewrapper"), 0.75, { css: { top: "27%" }, ease: Power2.easeInOut }, "-=0.75")
+        .to($(".image4 .imagewrapper"), 0.75, { css: { top: "35%" }, ease: Power2.easeInOut }, "-=0.75")
+        .fromTo($(".image--text"), 0.75, { opacity: 1, autoAlpha: 1, ease: Power2.easeInOut }, { opacity: 0, autoAlpha: 0, ease: Power2.easeInOut }, "-=0.75")
+        .to($(".slide__overlay-inner"), 0.75, { opacity: 1, ease: Power2.easeInOut }, "-=0.25");
+
     swiper1[0].slideTo(0, 1000, false);
     swiper1[1].slideTo(0, 1000, false);
     swiper1[2].slideTo(0, 1000, false);

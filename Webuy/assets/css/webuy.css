@@ -722,7 +722,7 @@
   padding: 10px 25px;
   border: 1px solid #e34340;
   border-radius: 30px;
-  cursor: pointer;
+  cursor: context-menu;
 }
 
 .vct-wrapper .vct-content #fullpage .section .box .work__content .content--inner .content .scrolldown-btn span {
@@ -1214,6 +1214,9 @@
   }
   .vct-wrapper .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text h3 {
     font-size: 40px;
+  }
+  .vct-wrapper .vct-content #fullpage .section .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper img {
+    width: 100% !important;
   }
   .vct-wrapper .vct-content #fullpage .section#section5 .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text .image--text__biglogo, .vct-wrapper .vct-content #fullpage .section#section6 .box .swiper-container .swiper-wrapper .swiper-slide .work__image .imagewrapper .image--text .image--text__biglogo {
     width: 40px;
