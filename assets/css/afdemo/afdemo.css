@@ -1,0 +1,486 @@
+.vct-wrapper, .vct-wrapper .vct-header, .vct-wrapper .vct-header .afw-toolbar, .vct-wrapper .vct-header .afw-logo-menu, .vct-wrapper .vct-body, .vct-wrapper .vct-body .w85 .vct-body-content .afc-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85, .vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85, .vct-wrapper .vct-header .afw-logo-menu .afw-menu-wrapper .w85, .vct-wrapper .vct-body .w85 {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .afwt-ul-wrapper .afwt-ul .afwtu-li a .bg-star, .vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .bg-logo, .vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .afwl-trending .afwlt-ul .afwlt-icon, .vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author .afcba-time .bg-detailm_clock, .vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social .bg-detailm_linkhay, .vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social .fb-btn .bg-detailm_whitefbiconpng {
+  background-image: url("../../img/afdemo/css_spritesv1.png");
+  background-repeat: no-repeat;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.vct-wrapper .vct-header .afw-toolbar {
+  background: #f7f8f9;
+  height: 24px;
+  z-index: 1;
+  border-bottom: 1px solid #edeef2;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .afwt-ul-wrapper .afwt-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .afwt-ul-wrapper .afwt-ul .afwtu-li a {
+  font-size: 12px;
+  line-height: 25px;
+  color: #444;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding-left: 12px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .afwt-ul-wrapper .afwt-ul .afwtu-li a .bg-star {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  background-position: -291px -146px;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .toolbar-search-wrapper {
+  height: 25px;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .toolbar-search-wrapper #txt-search-on-header {
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 6px;
+  font-size: 10px;
+  color: #8a8a8a;
+  width: 154px;
+  outline: none;
+  float: left;
+  line-height: 25px;
+}
+
+.vct-wrapper .vct-header .afw-toolbar .w85 .afw-toolbar__inner .toolbar-search-wrapper .t-search-submit-btn {
+  display: block;
+  height: 25px;
+  float: right;
+  padding: 4px 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo {
+  background: #fff;
+  height: 68px;
+  position: relative;
+  z-index: 1;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .bg-logo {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  text-decoration: none;
+  width: 130px;
+  height: 48px;
+  background-position: -2px -94px;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .afwl-trending {
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  left: 200px;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .afwl-trending .afwlt-ul {
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .afwl-trending .afwlt-ul .afwlt-icon {
+  float: left;
+  margin-right: 10px;
+  width: 28px;
+  height: 29px;
+  background-position: -136px -94px;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .afwl-trending .afwlt-ul .afwltu-li {
+  float: left;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-logo .w85 .afwl-trending .afwlt-ul .afwltu-li a {
+  display: block;
+  height: 28px;
+  padding: 0 15px;
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 28px;
+  color: #334a61;
+  text-decoration: none;
+  border: 1px solid #d6dce2;
+  border-radius: 100px;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-menu-wrapper {
+  background: #f2586e;
+  height: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-menu-wrapper .w85 .menu-wrap .afwmwhu-li {
+  float: left;
+  position: relative;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-menu-wrapper .w85 .menu-wrap .afwmwhu-li a {
+  font-size: 13px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 0 4px;
+  position: relative;
+  float: left;
+}
+
+.vct-wrapper .vct-header .afw-logo-menu .afw-menu-wrapper .w85 .menu-wrap .afwmwhu-li a:hover {
+  background-color: #cd4a5d;
+}
+
+.vct-wrapper .vct-body {
+  background-color: #f4f4f4;
+}
+
+.vct-wrapper .vct-body .w85 .top-banner {
+  background-color: #fff;
+  position: relative;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content {
+  background-color: #fff;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .kbws-list {
+  margin: 0 40px 40px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .kbws-list .kbwsli {
+  margin-right: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .kbws-list .kbwsli a {
+  display: block;
+  font-size: 15px;
+  line-height: 40px;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 4px solid #fff;
+  padding-top: 8px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .kbws-list .kbwsli.active a {
+  border-bottom: 4px solid #f2586e;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body {
+  margin: 0 40px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-title {
+  font-size: 32px;
+  color: #222;
+  line-height: 38px;
+  margin-bottom: 15px;
+  padding-left: 80px;
+  width: 710px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author {
+  margin-left: 80px;
+  width: 710px;
+  color: #777;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 1px #d9d9d9 dotted;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author .afcba-name {
+  color: #f2586e;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author .afcba-source {
+  color: #41455e;
+  text-decoration: none;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author .afcba-time {
+  position: relative;
+  margin-left: 20px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author .afcba-time .bg-detailm_clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-position: -136px -126px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-author .afcba-time .afcbat-data {
+  margin-left: 20px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content {
+  padding-left: 80px;
+  width: 710px;
+  position: relative;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content .afcbc-sapo {
+  font-size: 17px;
+  color: #111;
+  line-height: 22px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content .afcb-content-des h3 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #333;
+  margin: 0;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content .afcb-content-des p {
+  font-size: 17px;
+  line-height: 25px;
+  color: #222;
+  font-family: "Times New Roman", Georgia, Serif;
+  margin-bottom: 25px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content .afcb-content-des .af-link {
+  position: relative;
+  width: 100%;
+  margin: 5px 0 10px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content .afcb-content-des .af-link a {
+  display: block;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcb-content .afcb-content-des .af-link a img {
+  width: 100%;
+  display: block;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .bottom-info {
+  padding-left: 80px;
+  width: 710px;
+  color: inherit;
+  text-align: left;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1000;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .bottom-info .link-source-wrapper {
+  width: auto;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: right;
+  position: relative;
+  padding-top: 15px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .bottom-info .link-source-wrapper .link-source-name {
+  font: normal 14px/14px "Times New Roman";
+  color: #888888;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f2f2f2;
+  border-radius: 100px;
+  padding: 9px 11px;
+  display: block;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .bottom-info .link-source-wrapper .link-source-name .link-source-text-name {
+  color: #444;
+  font-weight: bold;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-relate-link {
+  padding-left: 80px;
+  width: 710px;
+  clear: both;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-relate-link a {
+  background: transparent url(https://afamilycdn.com/web_images/bg_linkfooter.jpg) no-repeat scroll 0 0;
+  color: #004370;
+  font-size: 23px;
+  font-weight: bold;
+  padding-left: 25px;
+  font-family: "Times New Roman";
+  text-decoration: none;
+  line-height: 29px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social {
+  margin-left: 80px;
+  width: 710px;
+  padding: 12px 0 10px;
+  display: block;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 20px;
+  float: left;
+  clear: both;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social {
+  clear: both;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social .bg-detailm_linkhay {
+  margin-right: 10px;
+  width: 65px;
+  height: 20px;
+  background-position: -178px -115px;
+  float: left;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social .fb-btn {
+  height: 20px;
+  display: block;
+  line-height: 20px;
+  text-decoration: none;
+  color: #fff;
+  float: left;
+  margin-right: 6px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #4167b2;
+  padding-left: 20px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social .fb-btn .bg-detailm_whitefbiconpng {
+  width: 8px;
+  height: 14px;
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  background-position: -296px -115px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-left .afcbc-bot-social .afcbcbs-wrapper .afcbcbsw-social .fb-btn .kbwcs-number {
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 6px;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-right .admzone {
+  margin: 20px auto auto auto;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-right .admzone .banner {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: auto;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-right .admzone .banner img {
+  width: 100%;
+  display: block;
+}
+
+.vct-wrapper .vct-body .w85 .vct-body-content .afc-body .content-right .admzone.adm-sticky {
+  z-index: 10;
+  display: block;
+  left: 1098px;
+  top: 10px;
+  bottom: auto;
+}
+/*# sourceMappingURL=afdemo.css.map */

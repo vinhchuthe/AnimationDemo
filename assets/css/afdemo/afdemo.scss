@@ -1,0 +1,494 @@
+%relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+%w85 {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+%sprite-af {
+    background-image: url("../../img/afdemo/css_spritesv1.png");
+    background-repeat: no-repeat;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+.vct-wrapper {
+    @extend %relative;
+
+    // Web header
+    .vct-header {
+        @extend %relative;
+        .afw-toolbar {
+            @extend %relative;
+            background: #f7f8f9;
+            height: 24px;
+            z-index: 1;
+            border-bottom: 1px solid #edeef2;
+
+            .w85 {
+                @extend %w85;
+
+                .afw-toolbar__inner {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .afwt-ul-wrapper {
+                        .afwt-ul {
+                            display: flex;
+                            .afwtu-li {
+                                a {
+                                    font-size: 12px;
+                                    line-height: 25px;
+                                    color: #444;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    display: block;
+                                    padding-left: 12px;
+                                    position: relative;
+                                    margin-right: 20px;
+
+                                    .bg-star {
+                                        @extend %sprite-af;
+                                        position: absolute;
+                                        top: 7px;
+                                        left: 0;
+                                        width: 9px;
+                                        height: 9px;
+                                        background-position: -291px -146px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .toolbar-search-wrapper {
+                        height: 25px;
+                        border-left: 1px solid #efefef;
+                        border-right: 1px solid #efefef;
+
+                        #txt-search-on-header {
+                            height: 25px;
+                            border: none;
+                            background-color: transparent;
+                            box-sizing: border-box;
+                            padding: 0 6px;
+                            font-size: 10px;
+                            color: #8a8a8a;
+                            width: 154px;
+                            outline: none;
+                            float: left;
+                            line-height: 25px;
+                        }
+                        .t-search-submit-btn {
+                            display: block;
+                            height: 25px;
+                            float: right;
+                            padding: 4px 6px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+        .afw-logo-menu {
+            @extend %relative;
+
+            .afw-logo {
+                background: #fff;
+                height: 68px;
+                position: relative;
+                z-index: 1;
+
+                .w85 {
+                    @extend %w85;
+
+                    .bg-logo {
+                        @extend %sprite-af;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        text-decoration: none;
+                        width: 130px;
+                        height: 48px;
+                        background-position: -2px -94px;
+                    }
+                    .afwl-trending {
+                        height: 30px;
+                        position: absolute;
+                        top: 20px;
+                        left: 200px;
+
+                        .afwlt-ul {
+                            float: left;
+                            display: flex;
+                            .afwlt-icon {
+                                @extend %sprite-af;
+                                float: left;
+                                margin-right: 10px;
+                                width: 28px;
+                                height: 29px;
+                                background-position: -136px -94px;
+                            }
+                            .afwltu-li {
+                                float: left;
+                                margin-right: 10px;
+                                white-space: nowrap;
+
+                                a {
+                                    display: block;
+                                    height: 28px;
+                                    padding: 0 15px;
+                                    font-family: Arial;
+                                    font-size: 13px;
+                                    line-height: 28px;
+                                    color: #334a61;
+                                    text-decoration: none;
+                                    border: 1px solid #d6dce2;
+                                    border-radius: 100px;
+                                    transition: border 0.3s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .afw-menu-wrapper {
+                background: #f2586e;
+                height: 30px;
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+
+                .w85 {
+                    @extend %w85;
+                    .menu-wrap {
+                        .afwmwhu-li {
+                            float: left;
+                            position: relative;
+
+                            a {
+                                font-size: 13px;
+                                line-height: 30px;
+                                color: #fff;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                display: block;
+                                padding: 0 4px;
+                                position: relative;
+                                float: left;
+
+                                &:hover {
+                                    background-color: #cd4a5d;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Web content
+    .vct-body {
+        @extend %relative;
+        background-color: #f4f4f4;
+        .w85 {
+            @extend %w85;
+
+            // top-banner
+            .top-banner {
+                background-color: #fff;
+                position: relative;
+                padding: 30px 0;
+                text-align: center;
+            }
+
+            .vct-body-content {
+                background-color: #fff;
+
+                .kbws-list {
+                    // width: 100%;
+                    margin: 0 40px 40px;
+                    border-bottom: 1px solid #e7e7e7;
+
+                    .kbwsli {
+                        margin-right: 20px;
+                        text-align: center;
+                        display: inline-block;
+
+                        a {
+                            display: block;
+                            // font-family: SFD-SemiBold;
+                            font-size: 15px;
+                            line-height: 40px;
+                            color: #333;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            border-bottom: 4px solid #fff;
+                            padding-top: 8px;
+                        }
+
+                        &.active {
+                            a {
+                                border-bottom: 4px solid #f2586e;
+                            }
+                        }
+                    }
+                }
+
+                // main-content
+                .afc-body {
+                    @extend %relative;
+                    margin: 0 40px;
+                    width: auto;
+                    display: flex;
+                    background-color: #fff;
+
+                    .content-left {
+                        flex: 0 0 70%;
+
+                        .afcb-title {
+                            font-size: 32px;
+                            color: #222;
+                            line-height: 38px;
+                            margin-bottom: 15px;
+                            padding-left: 80px;
+                            width: 710px;
+                        }
+                        .afcb-author {
+                            margin-left: 80px;
+                            width: 710px;
+                            color: #777;
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            border-bottom: 1px #d9d9d9 dotted;
+                            padding-bottom: 20px;
+                            margin-bottom: 25px;
+
+                            .afcba-name {
+                                color: #f2586e;
+                            }
+                            .afcba-source {
+                                color: #41455e;
+                                text-decoration: none;
+                            }
+                            .afcba-time {
+                                position: relative;
+                                margin-left: 20px;
+
+                                .bg-detailm_clock {
+                                    @extend %sprite-af;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 15px;
+                                    height: 15px;
+                                    background-position: -136px -126px;
+                                }
+                                .afcbat-data {
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+                        .afcb-content {
+                            padding-left: 80px;
+                            width: 710px;
+                            position: relative;
+
+                            .afcbc-sapo {
+                                font-size: 17px;
+                                color: #111;
+                                line-height: 22px;
+                                display: block;
+                                margin-bottom: 15px;
+                            }
+                            .afcb-content-des {
+                                h3 {
+                                    font-size: 20px;
+                                    line-height: 26px;
+                                    color: #333;
+                                    margin: 0;
+                                    margin-bottom: 22px;
+                                    font-weight: 700;
+                                }
+                                p {
+                                    font-size: 17px;
+                                    line-height: 25px;
+                                    color: #222;
+                                    font-family: "Times New Roman", Georgia, Serif;
+                                    margin-bottom: 25px;
+                                }
+                                .af-link {
+                                    position: relative;
+                                    width: 100%;
+                                    margin: 5px 0 10px;
+
+                                    a {
+                                        display: block;
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .bottom-info {
+                            padding-left: 80px;
+                            width: 710px;
+                            color: inherit;
+                            text-align: left;
+                            margin-bottom: 15px;
+                            position: relative;
+                            z-index: 1000;
+                            font-family: "Times New Roman", Georgia, Serif;
+
+                            .link-source-wrapper {
+                                width: auto;
+                                display: block;
+                                box-sizing: border-box;
+                                float: right;
+                                position: relative;
+                                padding-top: 15px;
+
+                                .link-source-name {
+                                    font: normal 14px/14px "Times New Roman";
+                                    color: #888888;
+                                    box-sizing: border-box;
+                                    background: #f2f2f2;
+                                    border-radius: 100px;
+                                    padding: 9px 11px;
+                                    display: block;
+
+                                    .link-source-text-name {
+                                        color: #444;
+                                        font-weight: bold;
+                                    }
+                                }
+                                .link-source-detail {
+                                }
+                            }
+                        }
+                        .afcbc-relate-link {
+                            padding-left: 80px;
+                            width: 710px;
+                            clear: both;
+                            padding-top: 10px;
+                            margin-bottom: 30px;
+
+                            a {
+                                background: transparent url(https://afamilycdn.com/web_images/bg_linkfooter.jpg)
+                                    no-repeat scroll 0 0;
+                                color: #004370;
+                                font-size: 23px;
+                                font-weight: bold;
+                                padding-left: 25px;
+                                font-family: "Times New Roman";
+                                text-decoration: none;
+                                line-height: 29px;
+                            }
+                        }
+                        .afcbc-bot-social {
+                            margin-left: 80px;
+                            width: 710px;
+                            padding: 12px 0 10px;
+                            display: block;
+                            border-top: 1px solid #e4e4e4;
+                            border-bottom: 1px solid #e4e4e4;
+                            margin-bottom: 20px;
+                            float: left;
+                            clear: both;
+
+                            .afcbcbs-wrapper {
+                                .afcbcbsw-social {
+                                    clear: both;
+
+                                    .bg-detailm_linkhay {
+                                        @extend %sprite-af;
+                                        margin-right: 10px;
+                                        width: 65px;
+                                        height: 20px;
+                                        background-position: -178px -115px;
+                                        float: left;
+                                    }
+                                    .fb-btn {
+                                        height: 20px;
+                                        display: block;
+                                        line-height: 20px;
+                                        text-decoration: none;
+                                        color: #fff;
+                                        float: left;
+                                        margin-right: 6px;
+                                        border-radius: 2px;
+                                        // font-family: SFD-Bold;
+                                        font-weight: 700;
+                                        font-size: 12px;
+                                        overflow: hidden;
+                                        position: relative;
+                                        background: #4167b2;
+                                        padding-left: 20px;
+
+                                        .bg-detailm_whitefbiconpng {
+                                            width: 8px;
+                                            height: 14px;
+                                            position: absolute;
+                                            top: 3px;
+                                            left: 7px;
+                                            background-position: -296px -115px;
+                                            @extend %sprite-af;
+                                        }
+                                        .kbwcs-number {
+                                            text-align: center;
+                                            // font-family: SFD-Bold;
+                                            font-weight: 700;
+                                            font-size: 12px;
+                                            padding: 0 6px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .content-right {
+                        flex: 0 0 30%;
+
+                        .admzone {
+                            // position: relative;
+                            margin: 20px auto auto auto;
+
+                            .banner {
+                                position: relative;
+                                margin: 0 auto;
+                                width: 300px;
+                                height: auto;
+
+                                img {
+                                    width: 100%;
+                                    display: block;
+                                }
+                            }
+
+                            &.adm-sticky {
+                                z-index: 10;
+                                display: block;
+                                left: 1098px;
+                                top: 10px;
+                                bottom: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
