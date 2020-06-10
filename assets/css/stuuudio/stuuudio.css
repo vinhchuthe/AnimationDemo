@@ -1,0 +1,130 @@
+.vct-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5ebe7;
+}
+
+.vct-wrapper .vct-wrapper-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top {
+  position: absolute;
+  top: 5.875vw;
+  right: 13.125vw;
+  text-align: right;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--title h1 {
+  margin: 0 0 0 auto;
+  width: 10vw;
+  font-size: 1.875vw;
+  line-height: 1.875vw;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--line {
+  position: relative;
+  margin: 3.375vw 0 0 auto;
+  width: 1.25vw;
+  height: 2px;
+  overflow: hidden;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--line .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #000;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--featured {
+  position: relative;
+  margin: 33.4375vw 0 0;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--featured li {
+  font-size: 0.75vw;
+  line-height: 0.625vw;
+  width: 4.375vw;
+  margin: 0 0 0 auto;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--featured li:nth-child(2) {
+  position: relative;
+  padding: 0.8125vw 0 0;
+  font-size: 1.875vw;
+  line-height: 1.875vw;
+  width: 7.5vw;
+  margin: 0 0 0 auto;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-top .vct-header-top--featured li:nth-child(3) {
+  padding: 1.0625vw 0 0;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-img {
+  height: auto;
+  position: absolute;
+  top: 8.125vw;
+  left: 31.875vw;
+  width: 40vw;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-img .img-wrapper img {
+  width: 100%;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-overlay {
+  position: absolute;
+  top: 12.5vw;
+  left: 12.9375vw;
+  width: 55.375vw;
+  height: 46.58532vw;
+  will-change: transform;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-overlay svg {
+  fill: #e3c7c2;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-header .vct-header-inner .vct-header-text {
+  padding: 79.25vw 0 9.5625vw;
+  margin: auto;
+  width: 73.75vw;
+  font-size: 3.75vw;
+  line-height: 3.75vw;
+}
+
+.vct-wrapper .vct-wrapper-scroll .vct-content-wrapper .vct-content-inner {
+  background-color: red;
+  height: 500px;
+  padding-top: 10vh;
+}
+/*# sourceMappingURL=stuuudio.css.map */

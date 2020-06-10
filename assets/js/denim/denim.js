@@ -18,8 +18,8 @@ $(document).ready(function () {
         delay: 3
     });
     tl.to($("#video-thumb"), 1, {
-            opacity: 0
-        })
+        opacity: 0
+    })
         .to($("#video_bg"), 0.5, {
             opacity: 1
         }, "-=0.5");
@@ -78,10 +78,10 @@ $(document).ready(function () {
 
     var tl1 = new TimelineMax();
     tl1.to($("#overlay-text1 .text-fill"), 1, {
-            y: 0,
-            x: 0,
-            rotation: 0
-        })
+        y: 0,
+        x: 0,
+        rotation: 0
+    })
         .to($("#overlay-text1 .text-stroke"), 1, {
             y: 0,
             x: 0,
@@ -141,8 +141,8 @@ $(document).ready(function () {
 
 
     new ScrollMagic.Scene({
-            duration: 420
-        })
+        duration: 420
+    })
         .setTween(tl1)
         // .addIndicators()
         .addTo(controller);
@@ -150,9 +150,9 @@ $(document).ready(function () {
 
     //------------------- hidden logo
     new ScrollMagic.Scene({
-            triggerElement: '.section2',
-            offset: -300
-        })
+        triggerElement: '.section2',
+        offset: -300
+    })
         .setClassToggle(".header-logo", "hidden")
         // .addIndicators()
         .addTo(controller);
@@ -169,19 +169,19 @@ $(document).ready(function () {
     });
 
     tl2.to($(".content-slide img"), 1, {
-            y: 0,
-            ease: Linear.easeNone
-        }, "-=0.5")
+        y: 0,
+        ease: Linear.easeNone
+    }, "-=0.5")
         .to($(".content-slide .content-slide__text"), 1, {
             y: 0,
             ease: Linear.easeNone
         }, "-=0.5");
 
     new ScrollMagic.Scene({
-            triggerElement: '.section2',
-            offset: 100,
-            duration: 280
-        })
+        triggerElement: '.section2',
+        offset: 100,
+        duration: 280
+    })
         .setTween(TweenMax.to($("#mask text"), 1, {
             x: "-50%",
             ease: Linear.easeNone
@@ -190,10 +190,10 @@ $(document).ready(function () {
         .addTo(controller);
 
     new ScrollMagic.Scene({
-            triggerElement: '.section2',
-            offset: 100,
-            duration: 280
-        })
+        triggerElement: '.section2',
+        offset: 100,
+        duration: 280
+    })
         .setTween(tl2)
         // .addIndicators()
         .addTo(controller);
@@ -226,10 +226,10 @@ $(document).ready(function () {
         })
 
     new ScrollMagic.Scene({
-            triggerElement: '.section5',
-            triggerHook: "onLeave",
-            duration: "200%"
-        })
+        triggerElement: '.section5',
+        triggerHook: "onLeave",
+        duration: "200%"
+    })
         .setPin(".section5")
         .setTween(wipeAnimation)
         // .addIndicators()
@@ -246,10 +246,10 @@ $(document).ready(function () {
         })
 
     new ScrollMagic.Scene({
-            triggerElement: '.section7',
-            triggerHook: "onLeave",
-            duration: "200%"
-        })
+        triggerElement: '.section7',
+        triggerHook: "onLeave",
+        duration: "200%"
+    })
         .setPin(".section7")
         .setTween(wipeAnimation2)
         // .addIndicators()
@@ -283,10 +283,10 @@ $(document).ready(function () {
 
 
     new ScrollMagic.Scene({
-            triggerElement: '.section8',
-            triggerHook: "onLeave",
-            duration: "200%"
-        })
+        triggerElement: '.section8',
+        triggerHook: "onLeave",
+        duration: "200%"
+    })
         .setPin(".section8")
         .setTween(wipeAnimation3)
         // .addIndicators()
@@ -343,10 +343,10 @@ $(document).ready(function () {
         }, "-=1")
 
     new ScrollMagic.Scene({
-            triggerElement: '.section9',
-            triggerHook: "onLeave",
-            duration: "200%"
-        })
+        triggerElement: '.section9',
+        triggerHook: "onLeave",
+        duration: "200%"
+    })
         .setPin(".section9")
         .setTween(wipeAnimation4)
         // .addIndicators()
@@ -362,10 +362,10 @@ $(document).ready(function () {
         })
 
     new ScrollMagic.Scene({
-            triggerElement: '.s10-trend-list',
-            triggerHook: "onLeave",
-            duration: "200%"
-        })
+        triggerElement: '.s10-trend-list',
+        triggerHook: "onLeave",
+        duration: "200%"
+    })
         .setPin(".s10-trend-list")
         .setTween(wipeAnimation5)
         // .addIndicators()
@@ -373,10 +373,10 @@ $(document).ready(function () {
 
     // Section12
     var wipeAnimation6 = new TimelineMax({
-            repeat: -1,
-            yoyo: true,
-            repeatDelay: 1
-        })
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 1
+    })
         .fromTo($("#view1"), 1.5, {
             y: 0
         }, {
@@ -402,8 +402,8 @@ $(document).ready(function () {
         opacity: 0
     })
     var wipeAnimation7 = new TimelineMax({
-            repeat: -1,
-        })
+        repeat: -1,
+    })
         .staggerTo($(".insight-list a"), 1.5, {
             opacity: 1,
             scaleX: 0.5,
@@ -479,3 +479,18 @@ $(document).ready(function () {
 
 // nicescroll
 $("body").niceScroll();
+
+// label
+CSSPlugin.defaultTransformPerspective = 1500;
+
+
+var flip = new TimelineMax({ paused: true });
+flip.to($(".vct-info-content"), 0.85, { rotationY: -150, x: "100%", transformOrigin: "right", ease: Linear.easeNone });
+
+$(".modal-close").click(function () {
+    flip.play();
+});
+
+$(".vct-info-tag-logo").click(function () {
+    flip.reverse();
+});

@@ -1,0 +1,386 @@
+@font-face {
+    font-family: SanomatSansVN-Light;
+    src: url("../../css/vietjet/font/SanomatSansVN-Light.otf");
+}
+
+@font-face {
+    font-family: SanomatSansVN-Medium;
+    src: url("../../css/vietjet/font/SanomatSansVN-Medium.otf");
+}
+
+%relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+%img {
+    width: 100%;
+    display: block;
+}
+
+.vct-wrapper {
+    @extend %relative;
+    .swiper-container {
+        @extend %relative;
+
+        .swiper-wrapper {
+            @extend %relative;
+            height: 100vh;
+
+            .swiper-slide {
+                @extend %relative;
+
+                .slide-wrapper {
+                    .slide-bg {
+                        @extend %relative;
+
+                        img {
+                            @extend %img;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                &#slide1 {
+                    .slide-wrapper {
+                        @extend %relative;
+
+                        .slide-content {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 90%;
+                            height: 90vh;
+                            box-sizing: border-box;
+                            // padding: 30px;
+                            z-index: 1;
+                            background-color: rgba(3, 5, 4, 0.24);
+                            // border: 1px solid #fff;
+
+                            .slide-content-inner {
+                                display: block;
+                                padding: 30px;
+                                margin: 30px;
+                                border: 1px solid #fff;
+                                position: absolute;
+                                height: auto;
+                                bottom: 0;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+
+                                .group-deco {
+                                    background-image: url("../../img/vietjet/slide1-deco-mid.png");
+                                    background-repeat: no-repeat;
+                                    height: 90%;
+                                    position: absolute;
+                                    width: 30%;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background-size: 100% 100%;
+                                }
+                                .group-title {
+                                    p {
+                                        color: #fff;
+                                        font-family: SanomatSansVN-Light;
+
+                                        &.label-year {
+                                            font-size: 16px;
+                                            line-height: 1;
+                                            margin-bottom: 25px;
+                                        }
+                                        &.sapo {
+                                            font-size: 20px;
+                                            line-height: 1.4;
+                                            max-width: 20vw;
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+                                    h1 {
+                                        color: #fff;
+                                        font-family: SanomatSansVN-Light;
+                                        font-size: 50px;
+                                        line-height: 1.2;
+                                        max-width: 40vw;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                .group-credit-bot {
+                                    position: absolute;
+                                    bottom: 30px;
+                                    left: 30px;
+                                    width: calc(100% - 60px);
+
+                                    .credit {
+                                        float: left;
+                                        ul {
+                                            display: flex;
+
+                                            li {
+                                                font-family: SanomatSansVN-Light;
+                                                border-right: 1px solid #fff;
+                                                color: #fff;
+                                                padding: 0 20px;
+                                                font-size: 16px;
+
+                                                &:first-child {
+                                                    padding: 0 20px 0 0;
+                                                }
+                                                &:last-child {
+                                                    border-right: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .deco-bot {
+                                        float: right;
+                                        max-width: 150px;
+
+                                        img {
+                                            @extend %img;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#slide2 {
+                    .slide-wrapper {
+                        @extend %relative;
+
+                        .slide-content {
+                            .group-title {
+                                position: absolute;
+                                top: 10%;
+                                left: 30%;
+                                z-index: 1;
+
+                                h3 {
+                                    font-family: SanomatSansVN-Light;
+                                    font-size: 60px;
+                                    text-align: right;
+                                    line-height: 1.2;
+                                    color: #0c0e0f;
+                                }
+                            }
+                            .group-text {
+                                position: absolute;
+                                top: 25%;
+                                right: 5%;
+                                z-index: 1;
+                                max-width: 40vw;
+
+                                img {
+                                    @extend %img;
+                                }
+                            }
+                        }
+                    }
+                }
+                &#slide3 {
+                    .slide-wrapper {
+                        @extend %relative;
+                        .group-content {
+                            @extend %relative;
+                            display: flex;
+                            width: 100%;
+
+                            .group-left {
+                                @extend %relative;
+                                flex: 0 0 25%;
+
+                                .gr-img {
+                                    @extend %relative;
+
+                                    img {
+                                        @extend %img;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                            .group-right {
+                                @extend %relative;
+                                flex: 0 0 75%;
+                                display: inline-flex;
+                                flex-direction: column;
+
+                                .gr-right-top {
+                                    height: 40vh;
+                                    .gr-img {
+                                        @extend %relative;
+                                        img {
+                                            @extend %img;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                                .gr-right-bot {
+                                    height: 60vh;
+                                    display: inline-flex;
+                                    width: 100%;
+
+                                    .gr-bot-left {
+                                        flex: 0 0 65%;
+                                        position: relative;
+
+                                        .gr-bot-text {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            padding: 30px;
+
+                                            .gr-bot-title {
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+
+                                                p {
+                                                    color: #030504;
+                                                    font-family: SanomatSansVN-Light;
+                                                    font-size: 60px;
+                                                    line-height: 1.1;
+                                                    padding-right: 100px;
+
+                                                    &:last-child {
+                                                        padding-left: 150px;
+                                                        padding-right: 0;
+                                                    }
+
+                                                    &.big-text {
+                                                        // font-size: 50px;
+                                                        // line-height: 1.1;
+                                                        position: relative;
+                                                        padding-left: 30px;
+                                                    }
+                                                    .index {
+                                                        color: #dd001b;
+                                                        font-size: 20px;
+                                                        position: absolute;
+                                                        top: -5px;
+                                                        left: 0;
+                                                    }
+                                                }
+                                            }
+                                            .line {
+                                                padding: 30px 0;
+                                                img {
+                                                    @extend %img;
+                                                }
+                                            }
+                                            p {
+                                                color: #030504;
+                                                font-family: SanomatSansVN-Light;
+                                                font-size: 20px;
+                                                line-height: 1.3;
+                                                text-align: justify;
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                    }
+                                    .gr-bot-right {
+                                        flex: 0 0 35%;
+                                        .gr-img {
+                                            @extend %relative;
+
+                                            img {
+                                                @extend %img;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#slide4 {
+                    .slide-wrapper {
+                        @extend %relative;
+                        display: flex;
+                        width: 100%;
+                        .group-left {
+                            position: relative;
+                            flex: 0 0 70%;
+                            display: inline-flex;
+
+                            .gr-map {
+                                @extend %relative;
+                                flex: 0 0 55%;
+
+                                .gr-img {
+                                    position: absolute;
+                                    height: 90%;
+                                    width: 40vw;
+                                    top: 50%;
+                                    right: -15%;
+                                    transform: translate(0, -50%);
+
+                                    img {
+                                        @extend %img;
+                                        height: 100%;
+                                    }
+                                }
+                                .map-des {
+                                    position: absolute;
+                                    max-width: 65%;
+                                    top: 10%;
+                                    left: 5%;
+
+                                    h3 {
+                                        display: inline-block;
+                                        float: right;
+                                        font-family: SanomatSansVN-Medium;
+                                        padding-bottom: 20px;
+                                        font-size: 24px;
+                                        line-height: 1.1;
+                                        margin-bottom: 0;
+                                    }
+                                    p {
+                                        clear: both;
+                                        text-align: right;
+                                        padding-top: 20px;
+                                        border-top: 1px dashed #000000;
+                                        line-height: 1.2;
+                                        margin-bottom: 0;
+
+                                        .underline {
+                                            font-family: SanomatSansVN-Medium;
+                                        }
+                                    }
+                                }
+                            }
+                            .gr-cta {
+                                @extend %relative;
+                                flex: 0 0 45%;
+
+                                ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    height: 100%;
+
+                                    li {
+                                        flex: 0 0 20%;
+                                        margin: 0 auto;
+                                        max-width: 25vw;
+
+                                        img {
+                                            display: block;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .group-right {
+                            flex: 0 0 30%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

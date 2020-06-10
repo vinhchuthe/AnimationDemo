@@ -1,0 +1,209 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.vct-wrapper .vct-slider-container {
+  position: relative;
+  height: 100vh;
+}
+
+.vct-wrapper .vct-slider-container .swiper-container .swiper-wrapper .swiper-slide .img-container {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.vct-wrapper .vct-slider-container .swiper-container .swiper-wrapper .swiper-slide .img-container.slide1 {
+  background-image: url("../../img/k24moscow/slide-img1.jpg");
+}
+
+.vct-wrapper .vct-slider-container .swiper-container .swiper-wrapper .swiper-slide .img-container.slide2 {
+  background-image: url("../../img/k24moscow/slide-img2.jpg");
+}
+
+.vct-wrapper .vct-slider-container .swiper-container .swiper-wrapper .swiper-slide .img-container.slide3 {
+  background-image: url("../../img/k24moscow/slide-img3.jpg");
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list {
+  counter-reset: slider;
+  position: absolute;
+  z-index: 10;
+  margin: 0;
+  width: 21.05263vw;
+  height: 21.05263vw;
+  right: 5.26316vw;
+  bottom: 5.26316vw;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item {
+  counter-increment: slider;
+  position: absolute;
+  cursor: pointer;
+  width: 31.57895vw;
+  height: 31.57895vw;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transform: scale(0.33333);
+          transform: scale(0.33333);
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item::before {
+  content: "0" counter(slider);
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(3);
+          transform: translate(-50%, -50%) scale(3);
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.clr-dark .pagination__item--wrapper::before {
+  background: #000;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.clr-dark:before {
+  color: #fff;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.clr-primary .pagination__item--wrapper::before {
+  background: #f50000;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.clr-light .pagination__item--wrapper::before {
+  background: #fff;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.pagiantion-item1 {
+  right: 10.52632vw;
+  bottom: 10.52632vw;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  z-index: 1;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.pagiantion-item2 {
+  right: 10.52632vw;
+  top: 10.52632vw;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item.pagiantion-item3 {
+  left: 10.52632vw;
+  top: 10.52632vw;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 31.57895vw;
+  height: 31.57895vw;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper .pagination__item--text {
+  position: relative;
+  width: 31.57895vw;
+  height: 31.57895vw;
+  padding: 5.26316vw;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-delay: 0ms, 0.15s;
+          transition-delay: 0ms, 0.15s;
+  opacity: 0;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper .pagination__item--text h3 {
+  font-family: Euclid Flex, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  color: #a0937c;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper .pagination__item--text p {
+  font-size: 1.5rem;
+  line-height: 1.26667em;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper .pagination__item--text .btn {
+  position: absolute;
+  right: 5.26316vw;
+  bottom: 5.26316vw;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vct-wrapper .vct-slider-container .vct-pagination .vct-pagination-list .vct-pagination__item .pagination__item--wrapper .pagination__item--text .btn.btn-slide {
+  width: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+/*# sourceMappingURL=k24moscow.css.map */

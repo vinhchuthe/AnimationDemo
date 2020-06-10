@@ -53,22 +53,50 @@
   width: 50px;
   height: 50px;
   background-color: #ffe527;
-  background-image: url(../../../src/img/modal-icon.svg);
-  background-size: 25px 25px;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 1.15s;
+          animation-duration: 1.15s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
-.vct-wrapper .vct-info-tag .vct-info-tag-logo:hover {
-  background-color: #D1A300;
+.vct-wrapper .vct-info-tag .vct-info-tag-logo .img-wrapper {
+  width: 25px;
+  height: 25px;
+}
+
+.vct-wrapper .vct-info-tag .vct-info-tag-logo .img-wrapper svg {
+  -webkit-animation-name: flash-text;
+          animation-name: flash-text;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 1.15s;
+          animation-duration: 1.15s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 3;
-  visibility: hidden;
+  z-index: 4;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal {
@@ -80,11 +108,9 @@
   background-color: black;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 3;
-  opacity: 0;
+  z-index: 5;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  visibility: hidden;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top {
@@ -113,7 +139,7 @@
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-top .modal-title h3 {
   text-align: center;
-  color: #FED440;
+  color: #fed440;
   font-size: 28px;
   font-family: SFProDisplay-Bold;
   line-height: 1;
@@ -138,7 +164,7 @@
           transform: translateX(-50%);
   height: 1px;
   width: 70%;
-  background-color: #FED440;
+  background-color: #fed440;
 }
 
 .vct-wrapper .vct-info-tag .vct-info-content .info-content-modal .modal-bot {
@@ -1856,8 +1882,8 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-family: 'Brown-Regular', Arial;
-  font-size: 1.1250rem;
+  font-family: "Brown-Regular", Arial;
+  font-size: 1.125rem;
   margin-left: 12px;
   margin-right: 12px;
   outline: none;
@@ -1868,7 +1894,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FF553D;
+  background-color: #ff553d;
   border: 0;
   cursor: pointer;
   display: -webkit-box;
@@ -1888,6 +1914,54 @@
 .vct-wrapper.modal-open .vct-info-tag .vct-info-content .info-content-modal {
   opacity: 1;
   visibility: visible;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    background-color: #fee715ff;
+  }
+  50% {
+    background-color: #101820ff;
+  }
+  100% {
+    background-color: #fee715ff;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: #fee715ff;
+  }
+  50% {
+    background-color: #101820ff;
+  }
+  100% {
+    background-color: #fee715ff;
+  }
+}
+
+@-webkit-keyframes flash-text {
+  0% {
+    fill: #101820ff;
+  }
+  50% {
+    fill: #fee715ff;
+  }
+  100% {
+    fill: #101820ff;
+  }
+}
+
+@keyframes flash-text {
+  0% {
+    fill: #101820ff;
+  }
+  50% {
+    fill: #fee715ff;
+  }
+  100% {
+    fill: #101820ff;
+  }
 }
 
 @-webkit-keyframes animation_1 {

@@ -1,0 +1,229 @@
+@font-face {
+    font-family: SFProDisplay-Bold;
+    src: url(".../../../../../src/css/font/SFProDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: SFProDisplay-Regular;
+    src: url(".../../../../../src/css/font/SFProDisplay-Regular.ttf");
+}
+
+// info tag
+.vct-info-tag {
+    position: relative;
+
+    .vct-info-tag-logo {
+        position: fixed;
+        top: 30%;
+        right: 0;
+        color: #fff;
+        z-index: 3;
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #ffe527;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        animation-name: flash;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-duration: 1.15s;
+        animation-timing-function: ease;
+
+        .img-wrapper {
+            width: 25px;
+            height: 25px;
+            position: relative;
+
+            svg {
+                animation-name: flash-text;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                animation-duration: 1.15s;
+                animation-timing-function: ease;
+            }
+        }
+    }
+
+    .vct-info-content {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 4;
+        top: 0;
+
+        .info-content-modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 700px;
+            height: auto;
+            background-color: rgba(0, 0, 0, 1);
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            transition: all 0.5s;
+
+            .modal-top {
+                position: relative;
+                width: 100%;
+                height: auto;
+
+                .modal-close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                    cursor: pointer;
+
+                    svg {
+                        fill: #fff;
+                        position: relative;
+                        width: initial;
+                        height: initial;
+                        transform: none;
+                        top: unset;
+                        left: unset;
+                        margin: unset;
+                        padding: unset;
+                    }
+                }
+
+                .modal-title {
+                    padding: 40px 20px 30px;
+
+                    h3 {
+                        text-align: center;
+                        color: #fed440;
+                        font-size: 28px;
+                        font-family: SFProDisplay-Bold;
+                        line-height: 1;
+                        margin-bottom: 0;
+                        position: relative;
+
+                        span {
+                            display: block;
+                            font-size: 18px;
+                            margin-top: 15px;
+                            line-height: 1;
+                            font-family: SFProDisplay-Regular;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 1px;
+                            width: 70%;
+                            background-color: #fed440;
+                        }
+                    }
+                }
+            }
+
+            .modal-bot {
+                position: relative;
+
+                .modal-text {
+                    text-align: center;
+                    margin-top: 30px;
+
+                    p {
+                        font-size: 20px;
+                        color: #fff;
+                        font-family: SFProDisplay-Regular;
+                        font-weight: 300;
+                        margin-bottom: 20px;
+                        display: flex;
+                        justify-content: center;
+
+                        &:last-child {
+                            margin-bottom: 30px;
+                        }
+
+                        span {
+                            font-size: 20px;
+                            color: #fff;
+                            font-family: SFProDisplay-Regular;
+                            font-weight: 300;
+                            margin-left: 5px;
+                            text-align: left;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+            }
+        }
+
+        // modal-close
+        &.modal-close {
+            perspective: 1500px;
+            animation-name: modal-close;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        &.modal-open {
+            perspective: 1500px;
+            animation-name: modal-open;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+@keyframes flash {
+    0% {
+        background-color: #fee715ff;
+    }
+
+    50% {
+        background-color: #101820ff;
+    }
+
+    100% {
+        background-color: #fee715ff;
+    }
+}
+
+@keyframes flash-text {
+    0% {
+        fill: #101820ff;
+    }
+
+    50% {
+        fill: #fee715ff;
+    }
+
+    100% {
+        fill: #101820ff;
+    }
+}
+
+@keyframes modal-close {
+    0% {
+        transform: rotateY(0);
+        transform-origin: right;
+    }
+    100% {
+        transform: rotateY(-150deg);
+        transform-origin: right;
+    }
+}
+@keyframes modal-open {
+    0% {
+        transform: rotateY(-150deg);
+        transform-origin: right;
+    }
+    100% {
+        transform: rotateY(0);
+        transform-origin: right;
+    }
+}

@@ -65,5 +65,20 @@ $(document).ready(function () {
     });
 });
 
+// label
+CSSPlugin.defaultTransformPerspective = 1500;
+
+
+var flip = new TimelineMax({ paused: true });
+flip.to($(".vct-info-content"), 0.85, { rotationY: -150, x: "100%", transformOrigin: "right", ease: Linear.easeNone });
+
+$(".modal-close").click(function () {
+    flip.play();
+});
+
+$(".vct-info-tag-logo").click(function () {
+    flip.reverse();
+});
+
 
 

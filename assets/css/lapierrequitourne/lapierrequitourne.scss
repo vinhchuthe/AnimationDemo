@@ -84,13 +84,27 @@ body {
       width: 50px;
       height: 50px;
       background-color: #ffe527;
-      background-image: url(../../../src/img/modal-icon.svg);
-      background-size: 25px 25px;
-      background-position: center;
-      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      &:hover {
-        background-color: #D1A300;
+      animation-name: flash;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-duration: 1.15s;
+      animation-timing-function: ease;
+
+      .img-wrapper {
+        width: 25px;
+        height: 25px;
+
+        svg {
+          animation-name: flash-text;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          animation-duration: 1.15s;
+          animation-timing-function: ease;
+        }
       }
     }
 
@@ -98,8 +112,7 @@ body {
       position: fixed;
       width: 100vw;
       height: 100vh;
-      z-index: 3;
-      visibility: hidden;
+      z-index: 4;
 
       .info-content-modal {
         position: absolute;
@@ -109,10 +122,8 @@ body {
         height: auto;
         background-color: rgba(0, 0, 0, 1);
         transform: translate(-50%, -50%);
-        z-index: 3;
-        opacity: 0;
+        z-index: 5;
         transition: all 0.5s;
-        visibility: hidden;
 
         .modal-top {
           position: relative;
@@ -138,7 +149,7 @@ body {
 
             h3 {
               text-align: center;
-              color: #FED440;
+              color: #fed440;
               font-size: 28px;
               font-family: SFProDisplay-Bold;
               line-height: 1;
@@ -161,7 +172,7 @@ body {
                 transform: translateX(-50%);
                 height: 1px;
                 width: 70%;
-                background-color: #FED440;
+                background-color: #fed440;
               }
             }
           }
@@ -1247,5 +1258,33 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: #fee715ff;
+  }
+
+  50% {
+    background-color: #101820ff;
+  }
+
+  100% {
+    background-color: #fee715ff;
+  }
+}
+
+@keyframes flash-text {
+  0% {
+    fill: #101820ff;
+  }
+
+  50% {
+    fill: #fee715ff;
+  }
+
+  100% {
+    fill: #101820ff;
   }
 }

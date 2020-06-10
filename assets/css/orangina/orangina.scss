@@ -8,17 +8,61 @@
     src: url(".../../../../../src/css/font/SFProDisplay-Regular.ttf");
 }
 
-html,
-body {
+@font-face {
+    font-family: BlockBerthold-Regular;
+    src: url("../../css/orangina/font/BlockBerthold-Regular.ttf");
+}
+
+@font-face {
+    font-family: BlockBerthold-Condensed;
+    src: url("../../css/orangina/font/BlockBerthold-Condensed.ttf");
+}
+
+@font-face {
+    font-family: Interstate-Bold;
+    src: url("../../css/orangina/font/Interstate-Bold.otf");
+}
+
+@font-face {
+    font-family: Interstate-Regular;
+    src: url("../../css/orangina/font/Interstate-Regular.ttf");
+}
+
+%relative {
     position: relative;
+    width: 100%;
     height: 100%;
+}
+
+%img {
+    width: 100%;
+    display: block;
+}
+
+%layout-wrap {
+    width: 100%;
+    max-width: 1280px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    // top: 50%;
+    // left: 48%;
+    // transform: translate(-50%, -50%);
+}
+%layout-clear {
+    float: left;
+    width: 100%;
+    clear: both;
 }
 
 body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -42,13 +86,27 @@ body {
             width: 50px;
             height: 50px;
             background-color: #ffe527;
-            background-image: url(../../../src/img/modal-icon.svg);
-            background-size: 25px 25px;
-            background-position: center;
-            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            &:hover {
-                background-color: #D1A300;
+            animation-name: flash;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-duration: 1.15s;
+            animation-timing-function: ease;
+
+            .img-wrapper {
+                width: 25px;
+                height: 25px;
+
+                svg {
+                    animation-name: flash-text;
+                    animation-iteration-count: infinite;
+                    animation-direction: normal;
+                    animation-duration: 1.15s;
+                    animation-timing-function: ease;
+                }
             }
         }
 
@@ -57,20 +115,20 @@ body {
             width: 100vw;
             height: 100vh;
             z-index: 3;
-            visibility: hidden;
+            // visibility: hidden;
 
             .info-content-modal {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 width: 700px;
-                height: 330px;
+                height: auto;
                 background-color: rgba(0, 0, 0, 1);
                 transform: translate(-50%, -50%);
                 z-index: 3;
-                opacity: 0;
+                // opacity: 0;
                 transition: all 0.5s;
-                visibility: hidden;
+                // visibility: hidden;
 
                 .modal-top {
                     position: relative;
@@ -96,12 +154,11 @@ body {
 
                         h3 {
                             text-align: center;
-                            color: #FED440;
+                            color: #fed440;
                             font-size: 28px;
                             font-family: SFProDisplay-Bold;
                             line-height: 1;
                             margin-bottom: 0;
-                            margin-top: 0;
                             position: relative;
 
                             span {
@@ -120,7 +177,7 @@ body {
                                 transform: translateX(-50%);
                                 height: 1px;
                                 width: 70%;
-                                background-color: #FED440;
+                                background-color: #fed440;
                             }
                         }
                     }
@@ -143,7 +200,7 @@ body {
                             justify-content: center;
 
                             &:last-child {
-                                margin-bottom: 0;
+                                margin-bottom: 30px;
                             }
 
                             span {
@@ -162,36 +219,370 @@ body {
         }
     }
 
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
+    // Website
+    .website {
+        @extend %relative;
 
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        height: 100vh !important;
-        background: #fff;
+        #fullpage {
+            .section {
+                z-index: 2;
+                float: left;
+                clear: both;
+                position: relative;
+                min-height: 600px;
+                display: table;
+                height: 100%;
+                width: 100%;
+                padding-right: 60px;
 
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
+                &#section1 {
+                    .background {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                        background-image: url("../../img/orangina/bg-heritage-top.jpg");
+                        background-size: cover;
+                    }
+                    .section-content {
+                        // header
+                        .s1-header {
+                            position: absolute;
+                            z-index: 22;
+                            padding-top: 0;
+                            top: 0;
+                            width: 100%;
 
-    img {
-        width: 100%;
-        height: 100vh;
-        display: block;
+                            .header-layout {
+                                transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                                padding: 20px;
+                                position: relative;
+                                float: left;
+                                width: 100%;
+                                clear: both;
+
+                                .logo {
+                                    position: relative;
+                                    width: 160px;
+                                    height: 74px;
+                                    z-index: 3;
+                                    transition: all 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                                    left: 0;
+                                    margin-left: 0;
+                                    transition-timing-function: cubic-bezier(0, 0.88, 0, 1.1);
+
+                                    &.state-btn {
+                                        cursor: pointer;
+                                    }
+
+                                    &::after {
+                                        width: 100%;
+                                        height: 100%;
+                                        float: left;
+                                        content: "";
+                                        background-image: url("../../img/orangina/sprite.png");
+                                    }
+                                }
+                                #nav-wrap {
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 30px;
+                                    left: 0;
+                                    padding-left: 15px;
+                                    text-align: center;
+
+                                    nav {
+                                        font-size: 16px;
+                                        text-transform: uppercase;
+                                        display: inline-block;
+                                        float: none;
+                                        line-height: 30px;
+                                        // font-family: "block_bertholdregular";
+                                        letter-spacing: 1px;
+                                        text-align: left;
+
+                                        .nav-item {
+                                            float: left;
+                                            width: 150px;
+                                            position: relative;
+                                            border-right: 2px solid #2c477c;
+                                            border-right: 2px solid rgba(255, 255, 255, 0.1);
+                                            cursor: pointer;
+                                            padding-left: 80px;
+
+                                            &:first-child {
+                                                border-left: 2px solid rgba(255, 255, 255, 0.1);
+                                            }
+
+                                            .icon-sequence {
+                                                position: absolute;
+                                                background-size: 100% auto;
+                                                background-position: center top;
+                                                background-repeat: no-repeat;
+                                                top: 50%;
+                                                left: 0;
+                                                width: 80px;
+                                                height: 80px;
+                                                margin-top: -40px;
+                                            }
+                                            span {
+                                                position: relative;
+                                                color: #fff;
+                                                font-family: BlockBerthold-Regular;
+
+                                                &:after {
+                                                    content: "";
+                                                    width: 0;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    bottom: -5px;
+                                                    background: #fff;
+                                                    height: 2px;
+                                                    transition: width 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                                                }
+                                            }
+
+                                            &.menu-home {
+                                                .icon-sequence {
+                                                    background-image: url("../../img/orangina/icon-home-sequence.png");
+                                                }
+                                            }
+                                            &.menu-heritage {
+                                                .icon-sequence {
+                                                    background-image: url("../../img/orangina/icon-heritage-sequence.png");
+                                                }
+                                            }
+                                            &.menu-products {
+                                                padding-left: 70px;
+                                                .icon-sequence {
+                                                    background-image: url("../../img/orangina/icon-products-sequence.png");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // layout
+                        .layout-wrap {
+                            @extend %layout-wrap;
+
+                            &.layout-wrap-xsmall {
+                                max-width: 770px;
+                            }
+
+                            .font-bigger {
+                                font-size: 80px;
+                                color: #fff;
+                                font-family: BlockBerthold-Condensed;
+                                line-height: 1;
+                                text-transform: uppercase;
+                                margin-bottom: 13px;
+
+                                .font-orange {
+                                    color: #ffa300;
+                                }
+                            }
+                            .font-bold {
+                                float: left;
+                                width: 100%;
+                                clear: both;
+                                margin-bottom: 26px;
+                                font-family: Interstate-Bold;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #fff;
+                            }
+                            h2 {
+                                font-size: 30px;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                                font-family: BlockBerthold-Condensed;
+                                float: left;
+                                width: 100%;
+                                clear: both;
+                                font-style: normal;
+                                // margin-bottom: 13px;
+                                line-height: 1em;
+                                color: #fff;
+                            }
+                            .layout-clear {
+                                float: left;
+                                width: 100%;
+                                clear: both;
+
+                                .icon {
+                                    position: relative;
+
+                                    &.state-btn {
+                                        cursor: pointer;
+                                    }
+                                    &.layout-center {
+                                        display: inline-block;
+                                        float: none;
+                                    }
+                                    &.layout-margintop {
+                                        margin-top: 26px;
+                                    }
+                                    &.circle-arrowdown {
+                                        animation-name: levitate;
+                                        animation-duration: 1.5s;
+                                        animation-iteration-count: infinite;
+                                        animation-direction: alternate;
+                                        animation-fill-mode: none;
+                                    }
+                                    &.btn-circle {
+                                        width: 93px;
+                                        height: 93px;
+                                        border: 2px solid #fff;
+                                        background: rgba(0, 0, 0, 0.12);
+                                        border-radius: 50%;
+                                        z-index: 8;
+                                    }
+
+                                    &::after {
+                                        width: 23px;
+                                        height: 30px;
+                                        background-position: -213px 0;
+                                        left: 50%;
+                                        top: 50%;
+                                        margin: -15px 0 0 -12px;
+                                        position: absolute;
+                                        float: left;
+                                        content: "";
+                                        background-image: url("../../img/orangina/sprite.png");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &#section2 {
+                    background-color: #1B549F;
+
+                    .section-content {
+                        @extend %relative;
+                        height: auto;
+
+                        .layout-wrap {
+                            @extend %layout-wrap;
+
+                            &.layout-wrap-small {
+                                max-width: 1040px;
+                            }
+
+                            .section-wrap {
+                                @extend %layout-clear;
+
+                                .layout-col {
+                                    width: 50%;
+                                    float: left;
+
+                                    &.section-left {
+                                        text-align: right;
+                                    }
+                                    &.section-right {
+                                        float: right;
+                                        width: 40%;
+                                        text-align: left;
+                                    }
+
+                                    .heritage-visual {
+                                        width: 183px;
+                                        height: 330px;
+                                        position: relative;
+
+                                        .bottle {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background-image: url("../../img/orangina/visual-heritage-birth.png");
+                                            background-size: auto 100%;
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                            z-index: 2;
+
+                                            &::after {
+                                                content: "";
+                                                position: absolute;
+                                                bottom: -42px;
+                                                left: -58px;
+                                                background-repeat: no-repeat;
+                                                width: 343px;
+                                                height: 89px;
+                                                z-index: 1;
+                                                background-image: url("../../img/orangina/visual-heritage-birth-shadow.png");
+                                            }
+                                        }
+                                    }
+                                    .label-year {
+                                        font-size: 24px;
+                                        line-height: 30px;
+                                        font-family: BlockBerthold-Regular;
+                                        letter-spacing: 1px;
+                                        padding: 5px 15px;
+                                        margin-bottom: 10px;
+                                        position: relative;
+                                        // float: left;
+
+                                        &::after {
+                                            width: 85px;
+                                            height: 40px;
+                                            background-position: -300px 0;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            float: left;
+                                            content: "";
+                                            background-image: url("../../img/orangina/sprite.png");
+                                        }
+                                    }
+                                    h1 {
+                                        font-family: BlockBerthold-Condensed;
+                                        margin-bottom: 13px;
+                                        font-size: 50px;
+                                        letter-spacing: 2px;
+                                    }
+                                    p {
+                                        float: left;
+                                        width: 100%;
+                                        clear: both;
+                                        margin-bottom: 26px;
+                                        color: #fff;
+                                        font-size: 18px;
+                                        line-height: 1.5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+
+                #heritage-line {
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -300px;
+                    z-index: 3;
+                    top: 87%;
+                    background: url("../../img/orangina/timeline.png") center top no-repeat;
+                    height: 950%;
+                    background-size: auto 100%;
+                    width: 500px;
+                }
+            }
+        }
     }
 
     // modal-open
@@ -206,5 +597,42 @@ body {
                 }
             }
         }
+    }
+}
+
+@keyframes flash {
+    0% {
+        background-color: #fee715ff;
+    }
+
+    50% {
+        background-color: #101820ff;
+    }
+
+    100% {
+        background-color: #fee715ff;
+    }
+}
+
+@keyframes flash-text {
+    0% {
+        fill: #101820ff;
+    }
+
+    50% {
+        fill: #fee715ff;
+    }
+
+    100% {
+        fill: #101820ff;
+    }
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
     }
 }
