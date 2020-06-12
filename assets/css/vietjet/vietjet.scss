@@ -20,270 +20,260 @@
 
 .vct-wrapper {
     @extend %relative;
-    .swiper-container {
-        @extend %relative;
+    overflow: hidden;
 
-        .swiper-wrapper {
+    .vct-flexbox {
+        @extend %relative;
+        display: flex;
+        width: 700%;
+
+        .section {
             @extend %relative;
             height: 100vh;
 
-            .swiper-slide {
+            .section-inner {
                 @extend %relative;
+            }
 
-                .slide-wrapper {
-                    .slide-bg {
+            &.section1 {
+                .section-inner {
+                    .section-bg {
                         @extend %relative;
-
-                        img {
-                            @extend %img;
-                            height: 100%;
-                        }
+                        background-image: url("../../img/vietjet/slide1-bg.png");
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
                     }
-                }
+                    .section-content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 90%;
+                        height: 90vh;
+                        box-sizing: border-box;
+                        z-index: 1;
+                        background-color: rgba(3, 5, 4, 0.24);
 
-                &#slide1 {
-                    .slide-wrapper {
-                        @extend %relative;
-
-                        .slide-content {
+                        .section-content-inner {
+                            display: block;
+                            padding: 30px;
+                            margin: 30px;
+                            border: 1px solid #fff;
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: 90%;
-                            height: 90vh;
-                            box-sizing: border-box;
-                            // padding: 30px;
-                            z-index: 1;
-                            background-color: rgba(3, 5, 4, 0.24);
-                            // border: 1px solid #fff;
+                            height: auto;
+                            bottom: 0;
+                            top: 0;
+                            left: 0;
+                            right: 0;
 
-                            .slide-content-inner {
-                                display: block;
-                                padding: 30px;
-                                margin: 30px;
-                                border: 1px solid #fff;
-                                position: absolute;
-                                height: auto;
-                                bottom: 0;
-                                top: 0;
-                                left: 0;
-                                right: 0;
+                            .s1-content-title {
+                                p {
+                                    color: #fff;
+                                    font-family: SanomatSansVN-Light;
 
-                                .group-deco {
-                                    background-image: url("../../img/vietjet/slide1-deco-mid.png");
-                                    background-repeat: no-repeat;
-                                    height: 90%;
-                                    position: absolute;
-                                    width: 30%;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    background-size: 100% 100%;
-                                }
-                                .group-title {
-                                    p {
-                                        color: #fff;
-                                        font-family: SanomatSansVN-Light;
-
-                                        &.label-year {
-                                            font-size: 16px;
-                                            line-height: 1;
-                                            margin-bottom: 25px;
-                                        }
-                                        &.sapo {
-                                            font-size: 20px;
-                                            line-height: 1.4;
-                                            max-width: 20vw;
-                                            margin-bottom: 20px;
-                                        }
+                                    &.label-year {
+                                        font-size: 16px;
+                                        line-height: 1;
+                                        margin-bottom: 25px;
                                     }
-                                    h1 {
-                                        color: #fff;
-                                        font-family: SanomatSansVN-Light;
-                                        font-size: 50px;
-                                        line-height: 1.2;
-                                        max-width: 40vw;
+                                    &.sapo {
+                                        font-size: 20px;
+                                        line-height: 1.4;
+                                        max-width: 20vw;
                                         margin-bottom: 20px;
                                     }
                                 }
-                                .group-credit-bot {
-                                    position: absolute;
-                                    bottom: 30px;
-                                    left: 30px;
-                                    width: calc(100% - 60px);
+                                h1 {
+                                    color: #fff;
+                                    font-family: SanomatSansVN-Light;
+                                    font-size: 50px;
+                                    line-height: 1.2;
+                                    max-width: 40vw;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .s1-content-credit {
+                                position: absolute;
+                                bottom: 20px;
+                                left: 30px;
+                                width: calc(100% - 60px);
 
-                                    .credit {
-                                        float: left;
-                                        ul {
-                                            display: flex;
+                                .credit {
+                                    float: left;
+                                    ul {
+                                        display: flex;
+                                        li {
+                                            font-family: SanomatSansVN-Light;
+                                            border-right: 1px solid #fff;
+                                            color: #fff;
+                                            padding: 0 20px;
+                                            font-size: 16px;
 
-                                            li {
-                                                font-family: SanomatSansVN-Light;
-                                                border-right: 1px solid #fff;
-                                                color: #fff;
-                                                padding: 0 20px;
-                                                font-size: 16px;
-
-                                                &:first-child {
-                                                    padding: 0 20px 0 0;
-                                                }
-                                                &:last-child {
-                                                    border-right: none;
-                                                }
+                                            &:first-child {
+                                                padding: 0 20px 0 0;
+                                            }
+                                            &:last-child {
+                                                border-right: none;
                                             }
                                         }
                                     }
-                                    .deco-bot {
-                                        float: right;
-                                        max-width: 150px;
+                                }
+                                .deco-bot {
+                                    float: right;
+                                    max-width: 150px;
 
-                                        img {
-                                            @extend %img;
-                                        }
+                                    img {
+                                        @extend %img;
                                     }
                                 }
                             }
-                        }
-                    }
-                }
-                &#slide2 {
-                    .slide-wrapper {
-                        @extend %relative;
-
-                        .slide-content {
-                            .group-title {
+                            .s1-content-deco {
+                                background-image: url("../../img/vietjet/slide1-deco-mid.png");
+                                background-repeat: no-repeat;
+                                height: 90%;
                                 position: absolute;
-                                top: 10%;
-                                left: 30%;
-                                z-index: 1;
-
-                                h3 {
-                                    font-family: SanomatSansVN-Light;
-                                    font-size: 60px;
-                                    text-align: right;
-                                    line-height: 1.2;
-                                    color: #0c0e0f;
-                                }
-                            }
-                            .group-text {
-                                position: absolute;
-                                top: 25%;
-                                right: 5%;
-                                z-index: 1;
-                                max-width: 40vw;
-
-                                img {
-                                    @extend %img;
-                                }
+                                width: 30%;
+                                top: 50%;
+                                left: 50%;
+                                -webkit-transform: translate(-50%, -50%);
+                                transform: translate(-50%, -50%);
+                                background-size: 100% 100%;
                             }
                         }
                     }
                 }
-                &#slide3 {
-                    .slide-wrapper {
+            }
+            &.section2 {
+                .section-inner {
+                    .section-bg {
                         @extend %relative;
-                        .group-content {
-                            @extend %relative;
-                            display: flex;
-                            width: 100%;
+                        background-image: url("../../img/vietjet/slide2-bg.png");
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .section-content {
+                        .s2-content-title {
+                            position: absolute;
+                            top: 10%;
+                            left: 30%;
+                            z-index: 1;
 
-                            .group-left {
+                            h3 {
+                                font-family: SanomatSansVN-Light;
+                                font-size: 60px;
+                                text-align: right;
+                                line-height: 1.2;
+                                color: #0c0e0f;
+                            }
+                        }
+                        .s2-content-text {
+                            position: absolute;
+                            top: 25%;
+                            right: 5%;
+                            z-index: 1;
+                            max-width: 40vw;
+
+                            img {
+                                @extend %img;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section3 {
+                .section-inner {
+                    .s3-gr1 {
+                        @extend %relative;
+                        display: flex;
+                        .gr1-left {
+                            flex: 0 0 25%;
+                            img {
+                                @extend %img;
+                                height: 100%;
+                            }
+                        }
+                        .gr1-right {
+                            flex: 0 0 75%;
+                            .s3-gr2 {
                                 @extend %relative;
-                                flex: 0 0 25%;
+                                display: inline-flex;
+                                flex-direction: column;
 
-                                .gr-img {
-                                    @extend %relative;
+                                .gr2-top {
+                                    flex: 0 0 46%;
+                                    overflow: hidden;
 
                                     img {
                                         @extend %img;
                                         height: 100%;
                                     }
                                 }
-                            }
-                            .group-right {
-                                @extend %relative;
-                                flex: 0 0 75%;
-                                display: inline-flex;
-                                flex-direction: column;
+                                .gr2-bot {
+                                    flex: 0 0 54%;
+                                    overflow: hidden;
 
-                                .gr-right-top {
-                                    height: 40vh;
-                                    .gr-img {
+                                    .s3-gr3 {
                                         @extend %relative;
-                                        img {
-                                            @extend %img;
-                                            height: 100%;
-                                        }
-                                    }
-                                }
-                                .gr-right-bot {
-                                    height: 60vh;
-                                    display: inline-flex;
-                                    width: 100%;
+                                        display: inline-flex;
+                                        .gr3-left {
+                                            flex: 0 0 65%;
+                                            position: relative;
 
-                                    .gr-bot-left {
-                                        flex: 0 0 65%;
-                                        position: relative;
+                                            .gr3-left-text {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                padding: 30px;
 
-                                        .gr-bot-text {
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            padding: 30px;
+                                                .gr3-title {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
 
-                                            .gr-bot-title {
-                                                display: flex;
-                                                flex-direction: column;
-                                                align-items: center;
+                                                    p {
+                                                        color: #030504;
+                                                        font-family: SanomatSansVN-Light;
+                                                        font-size: 60px;
+                                                        line-height: 1.1;
+                                                        padding-right: 100px;
+                                                        position: relative;
+                                                        margin-bottom: 0;
 
+                                                        &:first-child {
+                                                            padding-left: 30px;
+                                                        }
+                                                        &:last-child {
+                                                            padding-left: 150px;
+                                                            padding-right: 0;
+                                                        }
+                                                        .index {
+                                                            color: #dd001b;
+                                                            font-size: 20px;
+                                                            position: absolute;
+                                                            top: -5px;
+                                                            left: 0;
+                                                        }
+                                                    }
+                                                }
+                                                .line {
+                                                    padding: 25px 0;
+
+                                                    img {
+                                                        @extend %img;
+                                                    }
+                                                }
                                                 p {
                                                     color: #030504;
                                                     font-family: SanomatSansVN-Light;
-                                                    font-size: 60px;
-                                                    line-height: 1.1;
-                                                    padding-right: 100px;
-
-                                                    &:last-child {
-                                                        padding-left: 150px;
-                                                        padding-right: 0;
-                                                    }
-
-                                                    &.big-text {
-                                                        // font-size: 50px;
-                                                        // line-height: 1.1;
-                                                        position: relative;
-                                                        padding-left: 30px;
-                                                    }
-                                                    .index {
-                                                        color: #dd001b;
-                                                        font-size: 20px;
-                                                        position: absolute;
-                                                        top: -5px;
-                                                        left: 0;
-                                                    }
+                                                    font-size: 20px;
+                                                    line-height: 1.3;
+                                                    text-align: justify;
+                                                    margin-bottom: 0;
                                                 }
-                                            }
-                                            .line {
-                                                padding: 30px 0;
-                                                img {
-                                                    @extend %img;
-                                                }
-                                            }
-                                            p {
-                                                color: #030504;
-                                                font-family: SanomatSansVN-Light;
-                                                font-size: 20px;
-                                                line-height: 1.3;
-                                                text-align: justify;
-                                                margin-bottom: 0;
                                             }
                                         }
-                                    }
-                                    .gr-bot-right {
-                                        flex: 0 0 35%;
-                                        .gr-img {
-                                            @extend %relative;
+                                        .gr3-right {
+                                            flex: 0 0 35%;
 
                                             img {
                                                 @extend %img;
@@ -296,21 +286,24 @@
                         }
                     }
                 }
-                &#slide4 {
-                    .slide-wrapper {
+            }
+            &.section4 {
+                .section-inner {
+                    .s4-gr1 {
                         @extend %relative;
                         display: flex;
-                        width: 100%;
-                        .group-left {
+
+                        .s4-gr1-left {
                             position: relative;
-                            flex: 0 0 70%;
+                            flex: 0 0 75%;
                             display: inline-flex;
+                            z-index: 1;
 
-                            .gr-map {
-                                @extend %relative;
+                            .s4-gr1-map {
                                 flex: 0 0 55%;
+                                position: relative;
 
-                                .gr-img {
+                                .map-img {
                                     position: absolute;
                                     height: 90%;
                                     width: 40vw;
@@ -352,34 +345,215 @@
                                     }
                                 }
                             }
-                            .gr-cta {
-                                @extend %relative;
+                            .s4-gr1-list {
                                 flex: 0 0 45%;
+                                background-image: url("../../img/vietjet/gr-cta.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                background-position: top right;
 
                                 ul {
                                     display: flex;
                                     flex-direction: column;
                                     width: 100%;
                                     height: 100%;
+                                    justify-content: center;
 
                                     li {
                                         flex: 0 0 20%;
-                                        margin: 0 auto;
-                                        max-width: 25vw;
+                                        margin: 0 auto 20px;
+                                        max-width: 20vw;
 
-                                        img {
-                                            display: block;
-                                            height: 100%;
+                                        &:nth-child(3) {
+                                            margin-bottom: 0;
+                                        }
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+
+                                        .cta-item {
+                                            .cta-img {
+                                                margin-bottom: 20px;
+                                                img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    display: block;
+                                                }
+                                            }
+                                            .cta-text {
+                                                p {
+                                                    text-align: justify;
+                                                    font-family: SanomatSansVN-Light;
+                                                    font-size: 16px;
+                                                    line-height: 1.2;
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                        .group-right {
+                        .s4-gr1-right {
                             flex: 0 0 30%;
+                            @extend %relative;
+                            margin-left: -5%;
+
+                            img {
+                                @extend %img;
+                                height: 100%;
+                            }
                         }
                     }
                 }
+            }
+            &.section5 {
+                .section-inner {
+                    .s5-gr {
+                        @extend %relative;
+                        display: flex;
+
+                        .s5-item {
+                            flex: 0 0 30%;
+                            padding-left: 3%;
+
+                            img {
+                                @extend %img;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &.section6 {
+                .section-inner {
+                    .s6-gr1 {
+                        @extend %relative;
+                        max-width: 90%;
+                        margin-left: auto;
+
+                        .s6-deco-bg1 {
+                            position: absolute;
+                            height: 500px;
+                            width: 500px;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-image: url("../../img/vietjet/s6-bg.png");
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            z-index: 0;
+                        }
+
+                        .s6-gr1-top {
+                            position: relative;
+                            z-index: 1;
+                            display: inline-flex;
+                            max-height: 45vh;
+                            height: 500px;
+                            width: 100%;
+                            align-items: center;
+                            padding-bottom: 30px;
+
+                            .s6-deco-bg2 {
+                                position: absolute;
+                                height: 300px;
+                                width: 500px;
+                                top: 0;
+                                right: 0;
+                                background-image: url("../../img/vietjet/s6-bg2.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                z-index: 0;
+                            }
+                            .s6-gr1-title {
+                                h3 {
+                                    display: inline-block;
+                                    float: right;
+                                    font-family: SanomatSansVN-Medium;
+                                    padding-bottom: 20px;
+                                    font-size: 24px;
+                                    line-height: 1.1;
+                                    margin-bottom: 0;
+                                }
+
+                                p {
+                                    clear: both;
+                                    text-align: right;
+                                    padding-top: 20px;
+                                    border-top: 1px dashed #000000;
+                                    line-height: 1.2;
+                                    margin-bottom: 0;
+                                    max-width: 30vw;
+                                    padding-right: 100px;
+                                }
+                                .s6-tags {
+                                    max-width: 20vw;
+                                    margin: 0 auto;
+                                    margin-top: 30px;
+
+                                    img {
+                                        @extend %img;
+                                    }
+                                }
+                            }
+                            .s6-deco-bg3 {
+                                position: absolute;
+                                height: 300px;
+                                width: 500px;
+                                max-width: 20vw;
+                                max-height: 6vw;
+                                top: 200px;
+                                right: 200px;
+                                background-image: url("../../img/vietjet/s6-tag2.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                z-index: 0;
+                            }
+                        }
+                        .s6-gr1-bot {
+                            position: relative;
+                            z-index: 1;
+                            display: inline-flex;
+                            max-height: 45vh;
+                            justify-content: flex-end;
+
+                            .s6-bot-item {
+                                padding: 0 20px;
+
+                                &.s6-item1 {
+                                    flex: 0 0 40%;
+                                    max-width: 35vw;
+                                }
+                                &.s6-item2 {
+                                    flex: 0 0 10%;
+
+                                    img {
+                                        height: auto;
+                                    }
+                                    p {
+                                        font-size: 14px;
+                                        font-family: SanomatSansVN-Light;
+                                        text-align: justify;
+                                        padding-top: 20px;
+                                        line-height: 1.2;
+                                    }
+                                }
+                                &.s6-item3 {
+                                    flex: 0 0 30%;
+                                    max-width: 30vw;
+                                }
+
+                                img {
+                                    @extend %img;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section7 {
+
             }
         }
     }
