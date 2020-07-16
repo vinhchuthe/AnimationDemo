@@ -1,638 +1,1608 @@
 @font-face {
-    font-family: SFProDisplay-Bold;
-    src: url(".../../../../../src/css/font/SFProDisplay-Bold.ttf");
+  font-family: SFProDisplay-Bold;
+  src: url(".../../../../../src/css/font/SFProDisplay-Bold.ttf");
 }
 
 @font-face {
-    font-family: SFProDisplay-Regular;
-    src: url(".../../../../../src/css/font/SFProDisplay-Regular.ttf");
+  font-family: SFProDisplay-Regular;
+  src: url(".../../../../../src/css/font/SFProDisplay-Regular.ttf");
 }
 
 @font-face {
-    font-family: BlockBerthold-Regular;
-    src: url("../../css/orangina/font/BlockBerthold-Regular.ttf");
+  font-family: BlockBerthold-Regular;
+  src: url("../../css/orangina/font/Block-Berthold-Regular.woff");
 }
 
 @font-face {
-    font-family: BlockBerthold-Condensed;
-    src: url("../../css/orangina/font/BlockBerthold-Condensed.ttf");
+  font-family: BlockBerthold-Condensed;
+  src: url("../../css/orangina/font/block_berthold_condensed.woff");
 }
 
 @font-face {
-    font-family: Interstate-Bold;
-    src: url("../../css/orangina/font/Interstate-Bold.otf");
+  font-family: Interstate-Bold;
+  src: url("../../css/orangina/font/interstate-bold.woff");
 }
 
 @font-face {
-    font-family: Interstate-Regular;
-    src: url("../../css/orangina/font/Interstate-Regular.ttf");
+  font-family: Interstate-Regular;
+  src: url("../../css/orangina/font/interstate-regular.woff");
 }
 
 %relative {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 %img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
 %layout-wrap {
-    width: 100%;
-    max-width: 1280px;
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    text-align: center;
-    // top: 50%;
-    // left: 48%;
-    // transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
 }
 %layout-clear {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+%btn-play {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  float: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: BlockBerthold-Regular;
+  letter-spacing: 1px;
+  line-height: 1.6;
+
+  &::after {
     float: left;
-    width: 100%;
-    clear: both;
+    content: "";
+    background-image: url("../../img/orangina/sprite.png");
+    background-position: -706px 0;
+    width: 51px;
+    height: 51px;
+    margin: -11px 11px 0 0;
+    transform: scale(0.88);
+    transition: all 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+  }
+  &:hover {
+    &::after {
+      transform: scale(1);
+      transition: all 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+    }
+  }
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.6em;
-    color: #fff;
-    margin: 0;
-    padding: 0;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .vct-wrapper {
+  position: relative;
+  height: 100%;
+
+  // info tag
+  .vct-info-tag {
     position: relative;
-    height: 100%;
 
-    // info tag
-    .vct-info-tag {
-        position: relative;
+    .vct-info-tag-logo {
+      position: fixed;
+      top: 30%;
+      right: 0;
+      color: #fff;
+      z-index: 3;
+      transition: all 0.5s;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      background-color: #ffe527;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        .vct-info-tag-logo {
-            position: fixed;
-            top: 30%;
+      animation-name: flash;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-duration: 1.15s;
+      animation-timing-function: ease;
+
+      .img-wrapper {
+        width: 25px;
+        height: 25px;
+
+        svg {
+          animation-name: flash-text;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          animation-duration: 1.15s;
+          animation-timing-function: ease;
+        }
+      }
+    }
+
+    .vct-info-content {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 3;
+      // visibility: hidden;
+
+      .info-content-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 700px;
+        height: auto;
+        background-color: rgba(0, 0, 0, 1);
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        // opacity: 0;
+        transition: all 0.5s;
+        // visibility: hidden;
+
+        .modal-top {
+          position: relative;
+          width: 100%;
+          height: auto;
+
+          .modal-close {
+            position: absolute;
+            top: 0;
             right: 0;
-            color: #fff;
-            z-index: 3;
-            transition: all 0.5s;
-            cursor: pointer;
             width: 50px;
             height: 50px;
-            background-color: #ffe527;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 10px;
+            cursor: pointer;
 
-            animation-name: flash;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
-            animation-duration: 1.15s;
-            animation-timing-function: ease;
-
-            .img-wrapper {
-                width: 25px;
-                height: 25px;
-
-                svg {
-                    animation-name: flash-text;
-                    animation-iteration-count: infinite;
-                    animation-direction: normal;
-                    animation-duration: 1.15s;
-                    animation-timing-function: ease;
-                }
+            svg {
+              fill: #fff;
             }
-        }
+          }
 
-        .vct-info-content {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            z-index: 3;
-            // visibility: hidden;
+          .modal-title {
+            padding: 40px 20px 30px;
 
-            .info-content-modal {
+            h3 {
+              text-align: center;
+              color: #fed440;
+              font-size: 28px;
+              font-family: SFProDisplay-Bold;
+              line-height: 1;
+              margin-bottom: 0;
+              position: relative;
+
+              span {
+                display: block;
+                font-size: 18px;
+                margin-top: 15px;
+                line-height: 1;
+                font-family: SFProDisplay-Regular;
+              }
+
+              &::after {
+                content: "";
                 position: absolute;
-                top: 50%;
+                bottom: -20px;
                 left: 50%;
-                width: 700px;
-                height: auto;
-                background-color: rgba(0, 0, 0, 1);
-                transform: translate(-50%, -50%);
-                z-index: 3;
-                // opacity: 0;
-                transition: all 0.5s;
-                // visibility: hidden;
-
-                .modal-top {
-                    position: relative;
-                    width: 100%;
-                    height: auto;
-
-                    .modal-close {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        width: 30px;
-                        height: 30px;
-                        padding: 10px;
-                        cursor: pointer;
-
-                        svg {
-                            fill: #fff;
-                        }
-                    }
-
-                    .modal-title {
-                        padding: 40px 20px 30px;
-
-                        h3 {
-                            text-align: center;
-                            color: #fed440;
-                            font-size: 28px;
-                            font-family: SFProDisplay-Bold;
-                            line-height: 1;
-                            margin-bottom: 0;
-                            position: relative;
-
-                            span {
-                                display: block;
-                                font-size: 18px;
-                                margin-top: 15px;
-                                line-height: 1;
-                                font-family: SFProDisplay-Regular;
-                            }
-
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                bottom: -20px;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                height: 1px;
-                                width: 70%;
-                                background-color: #fed440;
-                            }
-                        }
-                    }
-                }
-
-                .modal-bot {
-                    position: relative;
-
-                    .modal-text {
-                        text-align: center;
-                        margin-top: 30px;
-
-                        p {
-                            font-size: 20px;
-                            color: #fff;
-                            font-family: SFProDisplay-Regular;
-                            font-weight: 300;
-                            margin-bottom: 20px;
-                            display: flex;
-                            justify-content: center;
-
-                            &:last-child {
-                                margin-bottom: 30px;
-                            }
-
-                            span {
-                                font-size: 20px;
-                                color: #fff;
-                                font-family: SFProDisplay-Regular;
-                                font-weight: 300;
-                                margin-left: 5px;
-                                text-align: left;
-                                line-height: 1.1;
-                            }
-                        }
-                    }
-                }
+                transform: translateX(-50%);
+                height: 1px;
+                width: 70%;
+                background-color: #fed440;
+              }
             }
+          }
         }
+
+        .modal-bot {
+          position: relative;
+
+          .modal-text {
+            text-align: center;
+            margin-top: 30px;
+
+            p {
+              font-size: 20px;
+              color: #fff;
+              font-family: SFProDisplay-Regular;
+              font-weight: 300;
+              margin-bottom: 20px;
+              display: flex;
+              justify-content: center;
+
+              &:last-child {
+                margin-bottom: 30px;
+              }
+
+              span {
+                font-size: 20px;
+                color: #fff;
+                font-family: SFProDisplay-Regular;
+                font-weight: 300;
+                margin-left: 5px;
+                text-align: left;
+                line-height: 1.1;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 
-    // Website
-    .website {
-        @extend %relative;
+  // Website
+  .website {
+    @extend %relative;
 
-        #fullpage {
-            .section {
-                z-index: 2;
+    #fullpage {
+      .section {
+        z-index: 2;
+        float: left;
+        clear: both;
+        position: relative;
+        min-height: 600px;
+        display: table;
+        height: 100%;
+        width: 100%;
+        padding-right: 60px;
+
+        .section-content {
+          .layout-wrap {
+            @extend %layout-wrap;
+            &.layout-wrap-small {
+              max-width: 1040px;
+            }
+
+            .section-wrap {
+              @extend %layout-clear;
+
+              .layout-col {
+                width: 50%;
                 float: left;
+
+                &.section-text {
+                  & > * {
+                    opacity: 0;
+                    transform: translateY(30px);
+                  }
+                  .label-year {
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-family: BlockBerthold-Regular;
+                    letter-spacing: 1px;
+                    padding: 5px 15px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    &::after {
+                      width: 85px;
+                      height: 40px;
+                      background-position: -300px 0;
+                      position: absolute;
+                      top: 0;
+                      float: left;
+                      content: "";
+                      background-image: url("../../img/orangina/sprite.png");
+                    }
+                  }
+                  h1 {
+                    font-family: BlockBerthold-Condensed;
+                    margin-bottom: 13px;
+                    font-size: 50px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                  }
+                  p {
+                    float: left;
+                    width: 100%;
+                    clear: both;
+                    margin-bottom: 26px;
+                    color: #fff;
+                    font-size: 18px;
+                    line-height: 1.5;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.state-animated {
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-text {
+                    & > * {
+                      opacity: 1 !important;
+                      transform: none !important;
+                      transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+
+                      &:first-child {
+                        transition-delay: 0.6s;
+                        & + * {
+                          transition-delay: 0.5s;
+                        }
+                        & + * + * {
+                          transition-delay: 0.8s;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.bg-orange {
+          background-color: #ffa300;
+          z-index: 0;
+        }
+
+        &#section1 {
+          .background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: url("../../img/orangina/bg-heritage-top.jpg");
+            background-size: cover;
+          }
+          .section-content {
+            // header
+            .s1-header {
+              position: absolute;
+              z-index: 22;
+              padding-top: 0;
+              top: 0;
+              width: 100%;
+
+              .header-layout {
+                transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                padding: 20px;
+                position: relative;
+                float: left;
+                width: 100%;
+                clear: both;
+
+                .logo {
+                  position: relative;
+                  width: 160px;
+                  height: 74px;
+                  z-index: 3;
+                  transition: all 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                  left: 0;
+                  margin-left: 0;
+                  transition-timing-function: cubic-bezier(0, 0.88, 0, 1.1);
+
+                  &.state-btn {
+                    cursor: pointer;
+                  }
+
+                  &::after {
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    content: "";
+                    background-image: url("../../img/orangina/sprite.png");
+                  }
+                }
+                #nav-wrap {
+                  width: 100%;
+                  position: absolute;
+                  top: 30px;
+                  left: 0;
+                  padding-left: 15px;
+                  text-align: center;
+
+                  nav {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    float: none;
+                    line-height: 30px;
+                    // font-family: "block_bertholdregular";
+                    letter-spacing: 1px;
+                    text-align: left;
+
+                    .nav-item {
+                      float: left;
+                      width: 180px;
+                      position: relative;
+                      border-right: 2px solid #2c477c;
+                      border-right: 2px solid rgba(255, 255, 255, 0.1);
+                      cursor: pointer;
+                      padding-left: 80px;
+
+                      &:first-child {
+                        border-left: 2px solid rgba(255, 255, 255, 0.1);
+                      }
+                      &:last-child {
+                        padding-left: 70px;
+                      }
+
+                      .icon-sequence {
+                        position: absolute;
+                        background-size: 100% auto;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        top: 50%;
+                        left: 0;
+                        width: 80px;
+                        height: 80px;
+                        margin-top: -40px;
+                        transition: background 0.5s steps(9, end);
+                        background-position: 0 0;
+                      }
+                      span {
+                        position: relative;
+                        color: #fff;
+                        font-family: BlockBerthold-Regular;
+                        display: inline-block;
+                        line-height: 1;
+
+                        &::after {
+                          content: "";
+                          width: 0;
+                          position: absolute;
+                          left: 0;
+                          bottom: -5px;
+                          background: #fff;
+                          height: 2px;
+                          transition: width 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                        }
+                      }
+
+                      &.menu-home {
+                        .icon-sequence {
+                          background-image: url("../../img/orangina/icon-home-sequence.png");
+                        }
+                      }
+                      &.menu-heritage {
+                        .icon-sequence {
+                          background-image: url("../../img/orangina/icon-heritage-sequence.png");
+                        }
+                      }
+                      &.menu-products {
+                        padding-left: 70px;
+                        .icon-sequence {
+                          background-image: url("../../img/orangina/icon-products-sequence.png");
+                        }
+                      }
+                      &:hover {
+                        .icon-sequence {
+                          background-position: 0 -720px;
+                          animation: bkg 0.5s steps(9);
+                          transition: none;
+                        }
+                        span {
+                          &::after {
+                            width: 100%;
+                            transition: width 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            // layout
+            .layout-wrap {
+              @extend %layout-wrap;
+
+              & > * {
+                opacity: 0;
+                transform: translateY(100px);
+                transition: opacity 0.4s 0.2s, transform 0.4s 0.6s;
+                transition-timing-function: cubic-bezier(0.16, 0.53, 0.15, 0.99);
+              }
+
+              &.layout-wrap-xsmall {
+                max-width: 770px;
+              }
+
+              .font-bigger {
+                font-size: 80px;
+                color: #fff;
+                font-family: BlockBerthold-Condensed;
+                line-height: 1;
+                text-transform: uppercase;
+                margin-bottom: 13px;
+
+                .font-orange {
+                  color: #ffa300;
+                }
+              }
+              .font-bold {
+                float: left;
+                width: 100%;
+                clear: both;
+                margin-bottom: 26px;
+                font-family: Interstate-Bold;
+                font-size: 16px;
+                line-height: 24px;
+                color: #fff;
+              }
+              h2 {
+                font-size: 30px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-family: BlockBerthold-Condensed;
+                float: left;
+                width: 100%;
+                clear: both;
+                font-style: normal;
+                // margin-bottom: 13px;
+                line-height: 1em;
+                color: #fff;
+              }
+              .layout-clear {
+                float: left;
+                width: 100%;
+                clear: both;
+
+                .icon {
+                  position: relative;
+
+                  &.state-btn {
+                    cursor: pointer;
+                  }
+                  &.layout-center {
+                    display: inline-block;
+                    float: none;
+                  }
+                  &.layout-margintop {
+                    margin-top: 26px;
+                  }
+                  &.circle-arrowdown {
+                    animation-name: levitate;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    animation-fill-mode: none;
+                  }
+                  &.btn-circle {
+                    width: 93px;
+                    height: 93px;
+                    border: 2px solid #fff;
+                    background: rgba(0, 0, 0, 0.12);
+                    border-radius: 50%;
+                    z-index: 8;
+                  }
+
+                  &::after {
+                    width: 23px;
+                    height: 30px;
+                    background-position: -213px 0;
+                    left: 50%;
+                    top: 50%;
+                    margin: -15px 0 0 -12px;
+                    position: absolute;
+                    float: left;
+                    content: "";
+                    background-image: url("../../img/orangina/sprite.png");
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                & > * {
+                  opacity: 1;
+                  transform: none;
+                  transition: all 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                }
+              }
+            }
+          }
+        }
+        &#section2 {
+          background-color: #1b549f;
+
+          .section-content {
+            @extend %relative;
+            height: auto;
+
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    text-align: right;
+                    opacity: 0;
+                    transition: none 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                    transform: translateX(-100px);
+                  }
+                  &.section-right {
+                    float: right;
+                    width: 40%;
+                    text-align: left;
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+
+                  .heritage-visual {
+                    width: 183px;
+                    height: 330px;
+                    position: relative;
+
+                    .bottle {
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-image: url("../../img/orangina/visual-heritage-birth.png");
+                      background-size: auto 100%;
+                      background-position: center center;
+                      background-repeat: no-repeat;
+                      z-index: 2;
+                      transform: rotate(-20deg);
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -42px;
+                        left: -58px;
+                        background-repeat: no-repeat;
+                        width: 343px;
+                        height: 89px;
+                        z-index: 1;
+                        background-image: url("../../img/orangina/visual-heritage-birth-shadow.png");
+                      }
+                    }
+                  }
+                  .label-year {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-left {
+                      opacity: 1;
+                      transform: none;
+                      transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    }
+                    &.section-right {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                    }
+
+                    .heritage-visual {
+                      .bottle {
+                        transform: none !important;
+                        transition: all 0.7s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                        transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section3 {
+          background-color: #ffa300;
+          .section-content {
+            @extend %relative;
+            height: auto;
+
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    width: 40%;
+                    padding: 65px 100px 65px 20px;
+                    text-align: right;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  &.section-right {
+                    float: right;
+                    transform: translateX(100px);
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                  }
+                  &.section-text {
+                    & > * {
+                      opacity: 0;
+                      transform: translateY(30px);
+                    }
+                  }
+
+                  .label-year {
+                    &::after {
+                      right: 0;
+                    }
+                  }
+
+                  .heritage-visual {
+                    width: 443px;
+                    height: 588px;
+                    display: inline-block;
+                    background-image: url("../../img/orangina/visual-poster-firstbottle.png");
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-left {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    &.section-right {
+                      transition-delay: 0.6s;
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section4 {
+          background-color: #1b549f;
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    text-align: right;
+                  }
+                  &.section-right {
+                    float: right;
+                    width: 42%;
+                    text-align: left;
+                  }
+                  #visual-advertisement {
+                    position: relative;
+                    left: -30px;
+
+                    & > div {
+                      width: 380px;
+                      height: 420px;
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 1s;
+
+                      &.visual-1 {
+                        z-index: 5;
+                        background-image: url("../../img/orangina/visual-advertisement-1.png");
+                        transform: translateY(10px) rotate(-5deg);
+                      }
+                      &.visual-2 {
+                        z-index: 4;
+                        background-image: url("../../img/orangina/visual-advertisement-2.png");
+                        transform: rotate(-15deg);
+                      }
+                      &.visual-3 {
+                        z-index: 3;
+                        background-image: url("../../img/orangina/visual-advertisement-3.png");
+                        transform: rotate(15deg);
+                      }
+                      &.visual-4 {
+                        z-index: 2;
+                        background-image: url("../../img/orangina/visual-advertisement-4.png");
+                        transform: rotate(-15deg);
+                      }
+                      &.visual-5 {
+                        z-index: 1;
+                        background-image: url("../../img/orangina/visual-advertisement-5.png");
+                        transform: rotate(15deg);
+                      }
+                    }
+                  }
+                  .label-year {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    #visual-advertisement {
+                      & > div {
+                        &.visual-1 {
+                          transform: none;
+                        }
+                        &.visual-2 {
+                          transform: translateY(60px) translateX(-130px);
+                        }
+                        &.visual-3 {
+                          transform: translateY(100px) translateX(60px);
+                        }
+                        &.visual-4 {
+                          transform: translateY(-100px) translateX(100px);
+                        }
+                        &.visual-5 {
+                          transform: translateY(-140px) translateX(-90px);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section5 {
+          background-color: #1b549f;
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    width: 32%;
+                    position: relative;
+                    z-index: 2;
+                    text-align: right;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  &.section-right {
+                    float: right;
+                    transform: translateX(100px);
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                  }
+                  .heritage-visual {
+                    z-index: 9;
+                    background: url("../../img/orangina/visual-heritage-shakingmotion.png") center center no-repeat;
+                    width: 1101px;
+                    height: 435px;
+                    margin-left: -300px;
+                    padding: 166px 120px 0 81px;
+
+                    &.font-center {
+                      text-align: center;
+                    }
+                    .btn-play {
+                      @extend %btn-play;
+                    }
+                  }
+                  .label-year {
+                    &::after {
+                      right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-right {
+                      transition-delay: 0.6s;
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    &.section-left {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section6 {
+          background-color: #1b549f;
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-right {
+                    width: 38%;
+                    float: right;
+                    text-align: left;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  .label-year {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-right {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section7 {
+          background-color: #1b549f;
+
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    width: 40%;
+                    padding: 70px;
+                    text-align: right;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  &.section-right {
+                    float: right;
+                    transform: translateX(100px);
+                    transition: none 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                  }
+                  .heritage-visual {
+                    position: relative;
+                    height: 561px;
+                    width: 330px;
+                    top: -50px;
+                    float: right;
+
+                    .bottle {
+                      content: "";
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      width: 100%;
+                      height: 100%;
+                      z-index: 2;
+                      background: url("../../img/orangina/visual-heritage-bottle.png") left bottom no-repeat;
+                      transform-origin: 100px bottom;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                      transform: rotate(30deg);
+                    }
+
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: -77px;
+                      left: -250px;
+                      z-index: 1;
+                      background: url("../../img/orangina/visual-heritage-birth-shadow.png") center center no-repeat;
+                      width: 597px;
+                      height: 181px;
+                    }
+                  }
+                  .label-year {
+                    &::after {
+                      right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-right {
+                      transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                      opacity: 1;
+                      transform: none !important;
+                    }
+                    &.section-left {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    .heritage-visual {
+                      .bottle {
+                        transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                        transform: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section8 {
+          background-color: #1b549f;
+
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    text-align: right;
+                    padding: 100px 0;
+                    margin-left: -90px;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateX(-100px);
+                  }
+                  &.section-right {
+                    padding: 100px;
+                    float: right;
+                    text-align: left;
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+
+                  .heritage-visual {
+                    text-align: center;
+                    background: url("../../img/orangina/visual-heritage-firstadd.png") center center no-repeat;
+                    width: 548px;
+                    height: 297px;
+                    padding: 115px 0;
+
+                    .btn-play {
+                      @extend %btn-play;
+                    }
+                  }
+                  .label-year {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-left {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    &.section-right {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section9 {
+          background-color: #1b549f;
+
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-left {
+                    text-align: right;
+                    padding: 90px;
+                    padding-right: 130px;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  &.section-right {
+                    float: right;
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+
+                  .heritage-visual {
+                    max-width: 100%;
+                    background: url("../../img/orangina/visual-heritage-anniversary.png") center center no-repeat;
+                    width: 597px;
+                    position: relative;
+                    height: 442px;
+                    background-size: 100% auto;
+                    opacity: 0;
+                    transform: translateY(100px);
+
+                    div {
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-size: 100% auto;
+                      opacity: 0;
+                      transform: scale(0.2) translate3d(0, 0, 0);
+
+                      &:first-child {
+                        background-image: url("../../img/orangina/visual-heritage-confetti1.png");
+                        z-index: 1;
+
+                        & + div {
+                          background-image: url("../../img/orangina/visual-heritage-confetti2.png");
+                          z-index: 2;
+                        }
+                        & + div + div {
+                          background-image: url("../../img/orangina/visual-heritage-confetti3.png");
+                          z-index: 3;
+                        }
+                      }
+                    }
+                  }
+                  .label-year {
+                    &::after {
+                      right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-left {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    &.section-right {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    .heritage-visual {
+                      opacity: 1;
+                      transform: none;
+                      transition: all 0.8s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.6s;
+
+                      div {
+                        opacity: 1;
+                        transform: translate3d(0, 0, 0);
+                        &:first-child {
+                          transition: all 0.8s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.6s;
+                          & + div {
+                            transition: all 0.8s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.7s;
+                          }
+                          & + div + div {
+                            transition: all 0.8s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section10 {
+          background-image: url("../../img/orangina/visual-originalbynature.jpg");
+          background-repeat: no-repeat;
+          background-position: left top;
+          background-size: auto 100%;
+
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                .layout-col {
+                  &.section-right {
+                    width: 38%;
+                    float: right;
+                    text-align: left;
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  .label-year {
+                    &::after {
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-right {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &#section11 {
+          background-color: #1b549f;
+
+          .section-content {
+            .layout-wrap {
+              .section-wrap {
+                float: left;
+                width: 100%;
                 clear: both;
                 position: relative;
-                min-height: 600px;
-                display: table;
-                height: 100%;
-                width: 100%;
-                padding-right: 60px;
+                z-index: 1;
 
-                &#section1 {
-                    .background {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 0;
-                        background-image: url("../../img/orangina/bg-heritage-top.jpg");
-                        background-size: cover;
-                    }
-                    .section-content {
-                        // header
-                        .s1-header {
-                            position: absolute;
-                            z-index: 22;
-                            padding-top: 0;
-                            top: 0;
-                            width: 100%;
-
-                            .header-layout {
-                                transition: all 0.6s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
-                                padding: 20px;
-                                position: relative;
-                                float: left;
-                                width: 100%;
-                                clear: both;
-
-                                .logo {
-                                    position: relative;
-                                    width: 160px;
-                                    height: 74px;
-                                    z-index: 3;
-                                    transition: all 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
-                                    left: 0;
-                                    margin-left: 0;
-                                    transition-timing-function: cubic-bezier(0, 0.88, 0, 1.1);
-
-                                    &.state-btn {
-                                        cursor: pointer;
-                                    }
-
-                                    &::after {
-                                        width: 100%;
-                                        height: 100%;
-                                        float: left;
-                                        content: "";
-                                        background-image: url("../../img/orangina/sprite.png");
-                                    }
-                                }
-                                #nav-wrap {
-                                    width: 100%;
-                                    position: absolute;
-                                    top: 30px;
-                                    left: 0;
-                                    padding-left: 15px;
-                                    text-align: center;
-
-                                    nav {
-                                        font-size: 16px;
-                                        text-transform: uppercase;
-                                        display: inline-block;
-                                        float: none;
-                                        line-height: 30px;
-                                        // font-family: "block_bertholdregular";
-                                        letter-spacing: 1px;
-                                        text-align: left;
-
-                                        .nav-item {
-                                            float: left;
-                                            width: 150px;
-                                            position: relative;
-                                            border-right: 2px solid #2c477c;
-                                            border-right: 2px solid rgba(255, 255, 255, 0.1);
-                                            cursor: pointer;
-                                            padding-left: 80px;
-
-                                            &:first-child {
-                                                border-left: 2px solid rgba(255, 255, 255, 0.1);
-                                            }
-
-                                            .icon-sequence {
-                                                position: absolute;
-                                                background-size: 100% auto;
-                                                background-position: center top;
-                                                background-repeat: no-repeat;
-                                                top: 50%;
-                                                left: 0;
-                                                width: 80px;
-                                                height: 80px;
-                                                margin-top: -40px;
-                                            }
-                                            span {
-                                                position: relative;
-                                                color: #fff;
-                                                font-family: BlockBerthold-Regular;
-
-                                                &:after {
-                                                    content: "";
-                                                    width: 0;
-                                                    position: absolute;
-                                                    left: 0;
-                                                    bottom: -5px;
-                                                    background: #fff;
-                                                    height: 2px;
-                                                    transition: width 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
-                                                }
-                                            }
-
-                                            &.menu-home {
-                                                .icon-sequence {
-                                                    background-image: url("../../img/orangina/icon-home-sequence.png");
-                                                }
-                                            }
-                                            &.menu-heritage {
-                                                .icon-sequence {
-                                                    background-image: url("../../img/orangina/icon-heritage-sequence.png");
-                                                }
-                                            }
-                                            &.menu-products {
-                                                padding-left: 70px;
-                                                .icon-sequence {
-                                                    background-image: url("../../img/orangina/icon-products-sequence.png");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        // layout
-                        .layout-wrap {
-                            @extend %layout-wrap;
-
-                            &.layout-wrap-xsmall {
-                                max-width: 770px;
-                            }
-
-                            .font-bigger {
-                                font-size: 80px;
-                                color: #fff;
-                                font-family: BlockBerthold-Condensed;
-                                line-height: 1;
-                                text-transform: uppercase;
-                                margin-bottom: 13px;
-
-                                .font-orange {
-                                    color: #ffa300;
-                                }
-                            }
-                            .font-bold {
-                                float: left;
-                                width: 100%;
-                                clear: both;
-                                margin-bottom: 26px;
-                                font-family: Interstate-Bold;
-                                font-size: 16px;
-                                line-height: 24px;
-                                color: #fff;
-                            }
-                            h2 {
-                                font-size: 30px;
-                                letter-spacing: 1px;
-                                text-transform: uppercase;
-                                font-family: BlockBerthold-Condensed;
-                                float: left;
-                                width: 100%;
-                                clear: both;
-                                font-style: normal;
-                                // margin-bottom: 13px;
-                                line-height: 1em;
-                                color: #fff;
-                            }
-                            .layout-clear {
-                                float: left;
-                                width: 100%;
-                                clear: both;
-
-                                .icon {
-                                    position: relative;
-
-                                    &.state-btn {
-                                        cursor: pointer;
-                                    }
-                                    &.layout-center {
-                                        display: inline-block;
-                                        float: none;
-                                    }
-                                    &.layout-margintop {
-                                        margin-top: 26px;
-                                    }
-                                    &.circle-arrowdown {
-                                        animation-name: levitate;
-                                        animation-duration: 1.5s;
-                                        animation-iteration-count: infinite;
-                                        animation-direction: alternate;
-                                        animation-fill-mode: none;
-                                    }
-                                    &.btn-circle {
-                                        width: 93px;
-                                        height: 93px;
-                                        border: 2px solid #fff;
-                                        background: rgba(0, 0, 0, 0.12);
-                                        border-radius: 50%;
-                                        z-index: 8;
-                                    }
-
-                                    &::after {
-                                        width: 23px;
-                                        height: 30px;
-                                        background-position: -213px 0;
-                                        left: 50%;
-                                        top: 50%;
-                                        margin: -15px 0 0 -12px;
-                                        position: absolute;
-                                        float: left;
-                                        content: "";
-                                        background-image: url("../../img/orangina/sprite.png");
-                                    }
-                                }
-                            }
-                        }
-                    }
+                &.layout-marginbottom {
+                  margin-bottom: 26px;
                 }
-                &#section2 {
-                    background-color: #1B549F;
-
-                    .section-content {
-                        @extend %relative;
-                        height: auto;
-
-                        .layout-wrap {
-                            @extend %layout-wrap;
-
-                            &.layout-wrap-small {
-                                max-width: 1040px;
-                            }
-
-                            .section-wrap {
-                                @extend %layout-clear;
-
-                                .layout-col {
-                                    width: 50%;
-                                    float: left;
-
-                                    &.section-left {
-                                        text-align: right;
-                                    }
-                                    &.section-right {
-                                        float: right;
-                                        width: 40%;
-                                        text-align: left;
-                                    }
-
-                                    .heritage-visual {
-                                        width: 183px;
-                                        height: 330px;
-                                        position: relative;
-
-                                        .bottle {
-                                            position: absolute;
-                                            left: 0;
-                                            top: 0;
-                                            width: 100%;
-                                            height: 100%;
-                                            background-image: url("../../img/orangina/visual-heritage-birth.png");
-                                            background-size: auto 100%;
-                                            background-position: center center;
-                                            background-repeat: no-repeat;
-                                            z-index: 2;
-
-                                            &::after {
-                                                content: "";
-                                                position: absolute;
-                                                bottom: -42px;
-                                                left: -58px;
-                                                background-repeat: no-repeat;
-                                                width: 343px;
-                                                height: 89px;
-                                                z-index: 1;
-                                                background-image: url("../../img/orangina/visual-heritage-birth-shadow.png");
-                                            }
-                                        }
-                                    }
-                                    .label-year {
-                                        font-size: 24px;
-                                        line-height: 30px;
-                                        font-family: BlockBerthold-Regular;
-                                        letter-spacing: 1px;
-                                        padding: 5px 15px;
-                                        margin-bottom: 10px;
-                                        position: relative;
-                                        // float: left;
-
-                                        &::after {
-                                            width: 85px;
-                                            height: 40px;
-                                            background-position: -300px 0;
-                                            position: absolute;
-                                            left: 0;
-                                            top: 0;
-                                            float: left;
-                                            content: "";
-                                            background-image: url("../../img/orangina/sprite.png");
-                                        }
-                                    }
-                                    h1 {
-                                        font-family: BlockBerthold-Condensed;
-                                        margin-bottom: 13px;
-                                        font-size: 50px;
-                                        letter-spacing: 2px;
-                                    }
-                                    p {
-                                        float: left;
-                                        width: 100%;
-                                        clear: both;
-                                        margin-bottom: 26px;
-                                        color: #fff;
-                                        font-size: 18px;
-                                        line-height: 1.5;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                &.layout-margintop {
+                  margin-top: 26px;
                 }
-            }
-            .overlay {
-                position: absolute;
-                width: 100%;
-                height: 100vh;
-                top: 0;
-                left: 0;
-
-                #heritage-line {
-                    position: absolute;
-                    left: 50%;
-                    margin-left: -300px;
-                    z-index: 3;
-                    top: 87%;
-                    background: url("../../img/orangina/timeline.png") center top no-repeat;
-                    height: 950%;
-                    background-size: auto 100%;
-                    width: 500px;
+                &.font-center {
+                  text-align: center;
                 }
-            }
-        }
-    }
 
-    // modal-open
-    &.modal-open {
-        .vct-info-tag {
-            .vct-info-content {
-                visibility: visible;
+                .layout-col {
+                  &.section-left {
+                    text-align: right;
+                    padding: 110px 110px 0;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
+                  &.section-right {
+                    padding: 60px;
+                    float: right;
+                    transition-delay: 0.9s;
+                    opacity: 0;
+                    transition: all 0.2s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.8s;
+                    transform: translateY(100px);
+                  }
 
-                .info-content-modal {
+                  .heritage-visual {
+                    background: url("../../img/orangina/visual-heritage-shakethingsup.png") center center no-repeat;
+                    width: 440px;
+                    height: 247px;
                     opacity: 1;
-                    visibility: visible;
+                    transition: none 0.4s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0s;
+                    transform: none;
+                  }
+                  .label-year {
+                    &::after {
+                      right: 0;
+                    }
+                  }
                 }
+                .layout-center {
+                  display: inline-block;
+                  float: none;
+                  cursor: pointer;
+
+                  &.icon {
+                    position: relative;
+
+                    &::after {
+                      float: left;
+                      content: "";
+                      background-image: url("../../img/orangina/sprite.png");
+                    }
+                  }
+
+                  &.circle-arrowup {
+                    text-transform: uppercase;
+                    font-family: BlockBerthold-Regular;
+                    letter-spacing: 1px;
+                    font-size: 10px;
+                    line-height: 12px;
+                    text-align: center;
+                    padding: 48px 24px 0;
+                    animation-name: levitateUp;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    animation-fill-mode: none;
+
+                    &::after {
+                      width: 22px;
+                      height: 24px;
+                      background-position: -683px 0;
+                      left: 50%;
+                      top: 50%;
+                      margin: -27px 0 0 -11px;
+                      position: absolute;
+                    }
+                  }
+                  &.btn-circle {
+                    width: 93px;
+                    height: 93px;
+                    border: 2px solid #fff;
+                    background: rgba(0, 0, 0, 0.12);
+                    border-radius: 50%;
+                    z-index: 8;
+                  }
+                }
+                .footer {
+                  position: relative;
+                  z-index: 9;
+                  line-height: 1.6;
+                  margin-top: 26px;
+
+                  .link-group {
+                    margin-bottom: 26px;
+
+                    .state-link {
+                      cursor: pointer;
+                      margin-right: 20px;
+                      text-transform: uppercase;
+                      font-family: Interstate-Bold;
+                      text-align: center;
+                      font-size: 12px;
+
+                      &:last-child {
+                        margin-right: 0;
+                      }
+
+                      &:hover {
+                        color: #ffc519;
+                      }
+                    }
+                  }
+                  .credit {
+                    font-size: 12px;
+                    font-family: Interstate-Bold;
+                  }
+                  .credit-small {
+                    font-size: 10px;
+                  }
+                }
+              }
             }
+          }
+
+          &.state-animated {
+            .section-content {
+              .layout-wrap {
+                .section-wrap {
+                  .layout-col {
+                    &.section-right {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    &.section-left {
+                      opacity: 1;
+                      transform: none !important;
+                      transition: all 0.5s cubic-bezier(0.16, 0.53, 0.15, 0.99) 0.4s;
+                      transition-timing-function: cubic-bezier(0, 0.88, 0, 1.14);
+                    }
+                    .heritage-visual {
+                      animation-name: shake-slow;
+                      animation-duration: 1.6s;
+                      animation-iteration-count: 1;
+                      animation-timing-function: ease-in-out;
+                      animation-delay: 0.5s;
+                      animation-play-state: running;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
+      }
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+
+        #heritage-line {
+          position: absolute;
+          left: 50%;
+          margin-left: -300px;
+          z-index: 3;
+          top: 87%;
+          background: url("../../img/orangina/timeline.png") center top no-repeat;
+          height: 950%;
+          background-size: auto 100%;
+          width: 500px;
+        }
+      }
     }
+  }
+
+  // modal-open
+  &.modal-open {
+    .vct-info-tag {
+      .vct-info-content {
+        visibility: visible;
+
+        .info-content-modal {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@keyframes shake-slow {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, 10px) rotate(1.5deg);
+  }
+  20% {
+    transform: translate(8px, 1px) rotate(-0.5deg);
+  }
+  30% {
+    transform: translate(10px, 8px) rotate(-3.5deg);
+  }
+  40% {
+    transform: translate(-4px, -6px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate(5px, 0) rotate(-2.5deg);
+  }
+  60% {
+    transform: translate(-10px, -3px) rotate(-3.5deg);
+  }
+  70% {
+    transform: translate(11px, 7px) rotate(2.5deg);
+  }
+  80% {
+    transform: translate(8px, -10px) rotate(-1.5deg);
+  }
+  90% {
+    transform: translate(9px, -6px) rotate(-3.5deg);
+  }
+  100% {
+    transform: translate(1px, 0) rotate(-0.5deg);
+  }
+}
+
+@keyframes levitateUp {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes bkg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -720px;
+  }
 }
 
 @keyframes flash {
-    0% {
-        background-color: #fee715ff;
-    }
+  0% {
+    background-color: #fee715ff;
+  }
 
-    50% {
-        background-color: #101820ff;
-    }
+  50% {
+    background-color: #101820ff;
+  }
 
-    100% {
-        background-color: #fee715ff;
-    }
+  100% {
+    background-color: #fee715ff;
+  }
 }
 
 @keyframes flash-text {
-    0% {
-        fill: #101820ff;
-    }
+  0% {
+    fill: #101820ff;
+  }
 
-    50% {
-        fill: #fee715ff;
-    }
+  50% {
+    fill: #fee715ff;
+  }
 
-    100% {
-        fill: #101820ff;
-    }
+  100% {
+    fill: #101820ff;
+  }
 }
 
 @keyframes levitate {
-    0% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

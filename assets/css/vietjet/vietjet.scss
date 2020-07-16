@@ -2042,7 +2042,661 @@
                 .swiper-slide {
                     &#slide1 {
                         .section-inner {
-                            
+                            .section-content {
+                                .section-content-inner {
+                                    .s1-content-title {
+                                        h1 {
+                                            font-size: 40px;
+                                        }
+                                        .sapo {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide2 {
+                        .section-inner {
+                            .section-content {
+                                .s2-content-title {
+                                    h3 {
+                                        font-size: 55px;
+                                    }
+                                }
+                                .s2-content-text {
+                                    max-width: 35vw;
+                                }
+                            }
+                        }
+                    }
+                    &#slide3 {
+                        .section-inner {
+                            .s3-gr1 {
+                                .gr1-right {
+                                    .s3-gr2 {
+                                        .gr2-bot {
+                                            .s3-gr3 {
+                                                .gr3-left {
+                                                    .gr3-left-text {
+                                                        .gr3-title {
+                                                            p {
+                                                                font-size: 45px;
+                                                            }
+                                                        }
+                                                        .line {
+                                                            padding: 20px 0;
+                                                        }
+                                                        p {
+                                                            font-size: 17px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide4 {
+                        .section-inner {
+                            .s4-gr1 {
+                                .s4-gr1-left {
+                                    .s4-gr1-list {
+                                        ul li {
+                                            margin: 0 auto 15px;
+
+                                            .cta-item {
+                                                .cta-img {
+                                                    margin-bottom: 10px;
+                                                }
+                                                .cta-text {
+                                                    p {
+                                                        font-size: 14px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide6 {
+                        .section-inner {
+                            .s6-gr1 {
+                                .s6-gr1-top {
+                                    .s6-gr1-title {
+                                        p {
+                                            max-width: 35vw;
+                                            padding-right: 90px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide7 {
+                        .section-inner {
+                            .s7-gr1 {
+                                .s7-gr1-right {
+                                    .s7-gr-img {
+                                        left: -15vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide8 {
+                        .section-inner {
+                            .s8-gr1 {
+                                .s8-gr1-right {
+                                    .s8-text-content {
+                                        .s8-text {
+                                            .s8-text-title {
+                                                p {
+                                                    font-size: 50px;
+
+                                                    &:last-child {
+                                                        padding-left: 100px;
+                                                    }
+                                                }
+                                            }
+                                            .des {
+                                                font-size: 18px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide12 {
+                        .section-inner {
+                            .s12-gr {
+                                .s12-gr1 {
+                                    .s12-gr1-inner {
+                                        .s12-title {
+                                            font-size: 35px;
+                                        }
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide13 {
+                        .section-inner {
+                            .s13-gr {
+                                .s13-gr-title {
+                                    .s13-gr-titlel {
+                                        p {
+                                            font-size: 45px;
+                                        }
+                                    }
+                                    .s13-gr-titler {
+                                        p {
+                                            font-size: 50px;
+                                        }
+                                    }
+                                }
+                                .s13-gr-text {
+                                    p {
+                                        font-size: 16px;
+                                    }
+                                    .s13-gr-content {
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide15 {
+                        .section-inner {
+                            .s15-gr {
+                                .s15-content {
+                                    .s15-col-text {
+                                        p {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide17 {
+                        .section-inner {
+                            .s17-gr {
+                                table {
+                                    tr td {
+                                        .s17-tag-item {
+                                            p {
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide19 {
+                        .section-inner {
+                            .s19-overlay {
+                                .s19-gr-title {
+                                    p {
+                                        font-size: 45px;
+                                    }
+                                }
+                                .s19-gr-content {
+                                    .s19-content-text {
+                                        p {
+                                            font-size: 18px;
+                                            margin-bottom: 40px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide20 {
+                        .section-inner {
+                            .s20-gr {
+                                .s20-gr-item {
+                                    .s20-item-img {
+                                        width: 90%;
+                                    }
+                                    .s20-item-content {
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide21 {
+                        .section-inner {
+                            .s21-gr {
+                                .s21-gr-item {
+                                    .s21-item-img {
+                                        width: 90%;
+                                    }
+                                    .s21-item-content {
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide22 {
+                        .section-inner {
+                            .s22-content {
+                                .s22-content-text {
+                                    p {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide25 {
+                        .section-inner {
+                            .s25-gr {
+                                .s25-gr-inner {
+                                    .s25-gr-item {
+                                        max-width: unset;
+                                        width: 50vw;
+                                        margin-right: 4%;
+
+                                        .s25-gr-content {
+                                            ul {
+                                                li {
+                                                    margin-bottom: 15px;
+
+                                                    .text-bold {
+                                                        font-size: 16px;
+                                                    }
+                                                    .text-light {
+                                                        font-size: 14px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .s25-gr-img {
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide26 {
+                        .section-inner {
+                            .s26-gr {
+                                .s26-gr-inner {
+                                    .s26-gr-content {
+                                        .s26-content-text {
+                                            .underline {
+                                                font-size: 16px;
+                                            }
+                                            .hand-write {
+                                                margin: 25px 0;
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1601px) and (max-width: 1950px) {
+    .vct-wrapper {
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &#slide1 {
+                        .section-inner {
+                            .section-content {
+                                .section-content-inner {
+                                    .s1-content-title {
+                                        h1 {
+                                            font-size: 60px;
+                                        }
+                                        .sapo {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide2 {
+                        .section-inner {
+                            .section-content {
+                                .s2-content-title {
+                                    h3 {
+                                        font-size: 70px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide3 {
+                        .section-inner {
+                            .s3-gr1 {
+                                .gr1-right {
+                                    .s3-gr2 {
+                                        .gr2-bot {
+                                            .s3-gr3 {
+                                                .gr3-left {
+                                                    .gr3-left-text {
+                                                        .gr3-title {
+                                                            p {
+                                                                font-size: 70px;
+                                                            }
+                                                        }
+                                                        p {
+                                                            font-size: 24px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide4 {
+                        .section-inner {
+                            .s4-gr1 {
+                                .s4-gr1-left {
+                                    .s4-gr1-map {
+                                        .map-des {
+                                            h3 {
+                                                font-size: 28px;
+                                            }
+                                            p {
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                    .s4-gr1-list {
+                                        ul li {
+                                            .cta-item {
+                                                .cta-text {
+                                                    p {
+                                                        font-size: 18px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide6 {
+                        .section-inner {
+                            .s6-gr1 {
+                                .s6-gr1-top {
+                                    .s6-gr1-title {
+                                        h3 {
+                                            font-size: 28px;
+                                        }
+                                        p {
+                                            max-width: 31vw;
+                                            padding-right: 90px;
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                                .s6-gr1-bot {
+                                    .s6-bot-item {
+                                        &.s6-item2 {
+                                            flex: 0 0 12%;
+                                            p {
+                                                font-size: 18px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide11 {
+                        .section-inner {
+                            .s11-flex-group {
+                                .flex-group-item {
+                                    .s11-gr-text {
+                                        p {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide12 {
+                        .section-inner {
+                            .s12-gr {
+                                .s12-gr1 {
+                                    padding: 0 40px;
+
+                                    .s12-gr1-inner {
+                                        .s12-title {
+                                            font-size: 50px;
+                                        }
+                                        p {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide13 {
+                        .section-inner {
+                            .s13-gr {
+                                .s13-gr-text {
+                                    p {
+                                        font-size: 24px;
+                                    }
+                                    .s13-gr-content {
+                                        img {
+                                            width: 100%;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide15 {
+                        .section-inner {
+                            .s15-gr {
+                                .s15-content {
+                                    .s15-title {
+                                        p {
+                                            font-size: 60px;
+                                        }
+                                    }
+                                    .s15-col-text {
+                                        p {
+                                            font-size: 24px;
+                                            line-height: 1.3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide17 {
+                        .section-inner {
+                            .s17-gr {
+                                table {
+                                    tr td {
+                                        .s17-tag-item {
+                                            p {
+                                                font-size: 20px;
+                                                line-height: 1.3;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide19 {
+                        .section-inner {
+                            .s19-overlay {
+                                .s19-gr-title {
+                                    p {
+                                        font-size: 60px;
+                                    }
+                                }
+                                .s19-gr-content {
+                                    max-width: 70%;
+                                    .s19-content-text {
+                                        p {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                    .line {
+                                        p {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide20 {
+                        .section-inner {
+                            .s20-gr {
+                                .s20-gr-item {
+                                    .s20-item-content {
+                                        p {
+                                            font-size: 22px;
+                                            min-height: 78px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide21 {
+                        .section-inner {
+                            .s21-gr {
+                                .s21-gr-item {
+                                    .s21-item-content {
+                                        p {
+                                            font-size: 22px;
+                                            min-height: 78px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide22 {
+                        .section-inner {
+                            .s22-content {
+                                .s22-content-title {
+                                    p {
+                                        font-size: 60px;
+                                    }
+                                }
+                                .s22-content-text {
+                                    p {
+                                        font-size: 20px;
+                                        line-height: 1.3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide23 {
+                        .section-inner {
+                            .s23-content {
+                                .s23-content-text {
+                                    .s23-content-title {
+                                        p {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                    .s23-content-list {
+                                        ul {
+                                            max-width: 70%;
+
+                                            li {
+                                                .text-bold {
+                                                    font-size: 24px;
+                                                }
+                                                .text-light {
+                                                    font-size: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide24 {
+                        .section-inner {
+                            .s24-bg {
+                                .s24-bg-overlay {
+                                    &.s24-title {
+                                        p {
+                                            font-size: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                            .s24-content {
+                                .s24-content-inner {
+                                    .s24-content-text {
+                                        font-size: 20px;
+                                    }
+                                    .line {
+                                        p {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide25 {
+                        .section-inner {
+                            .s25-gr {
+                                .s25-gr-inner {
+                                    .s25-gr-content {
+                                        ul li {
+                                            .text-bold {
+                                                font-size: 20px;
+                                            }
+                                            .text-light {
+                                                font-size: 18px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
