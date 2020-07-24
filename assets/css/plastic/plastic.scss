@@ -1,5 +1,922 @@
+@import "./font/font";
+
+$main-color: #172345;
+
+%relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+%img {
+    width: 100%;
+    display: block;
+}
+%section-gr {
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+.vct-wrapper {
+    @extend %relative;
+    overflow: hidden;
+
+    #header {
+        .nav {
+            z-index: 4;
+            position: fixed;
+            width: 100%;
+            padding: 1em;
+            background: rgb(255, 255, 255);
+            opacity: 1;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 1px 0px, rgba(0, 0, 0, 0.04) 0px 2px 2px 0px,
+                rgba(0, 0, 0, 0.04) 0px 4px 4px 0px, rgba(0, 0, 0, 0.04) 0px 8px 8px 0px,
+                rgba(0, 0, 0, 0.04) 0px 16px 16px 0px;
+
+            .nav-inner {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .nav-item {
+                    width: 33%;
+                    line-height: 1;
+
+                    &.text-left {
+                        text-align: left;
+                    }
+                    &.text-right {
+                        text-align: right;
+                    }
+                    .navtext {
+                        font-size: 15px;
+                        color: #000000;
+                        margin: 0 1rem;
+                        text-decoration: none;
+                        position: relative;
+                        letter-spacing: 2px;
+                        font-weight: 600;
+                        display: inline-block;
+                        line-height: 1;
+                    }
+                    &.logo-cont {
+                        color: $main-color;
+                        text-decoration: none;
+                        position: relative;
+                        text-align: center;
+                        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1);
+                    }
+                }
+            }
+
+            &.active {
+                padding: 1.1em 1em 1em 1em;
+                background: rgb(255, 255, 255);
+                opacity: 1;
+                box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 1px 0px, rgba(0, 0, 0, 0.04) 0px 2px 2px 0px,
+                    rgba(0, 0, 0, 0.04) 0px 4px 4px 0px, rgba(0, 0, 0, 0.04) 0px 8px 8px 0px,
+                    rgba(0, 0, 0, 0.04) 0px 16px 16px 0px;
+            }
+        }
+    }
+    .section-container {
+        .section {
+            &#section1 {
+                padding-top: 5rem;
+                height: 80vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                background: #fdf8f5;
+                background-image: linear-gradient(rgb(250, 238, 231), rgb(255, 255, 255));
+
+                .s1-text {
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 80%;
+                    max-width: 1140px;
+
+                    h1 {
+                        font-size: 75px;
+                        letter-spacing: -0.03em;
+                        line-height: 0.9em;
+                        text-align: center;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+                    h3 {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: center;
+                        font-size: 1.9vw;
+                        max-width: 600px;
+                        line-height: 1.2;
+                    }
+                    .cta-group {
+                        margin: 1rem auto 0;
+                        text-align: center;
+                        display: flex;
+                        width: 40%;
+
+                        .button-cta {
+                            background: rgba(0, 202, 255, 0.13);
+                            border: 0px;
+                            border-radius: 50px;
+                            font-size: 19px;
+                            padding: 12px 24px;
+                            text-decoration: none;
+                            margin: 0.5rem;
+                            flex: 0 0 50%;
+
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+                .scrollIndicator {
+                    display: none;
+                    position: fixed;
+                    bottom: 70px;
+                    right: 0px;
+                    left: 0px;
+                    opacity: 1;
+                    transform: matrix(1, 0, 0, 1, 0, 0);
+                    text-align: center;
+                    z-index: 3;
+
+                    .text-duo {
+                        color: #324477;
+                    }
+                    span {
+                        opacity: 0.2;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                    p {
+                        opacity: 0.5;
+                    }
+                }
+            }
+            &#section2 {
+                #oceanscroll {
+                    position: relative;
+                    #oceangif {
+                        @extend %img;
+                        height: 20vh;
+                    }
+
+                    .sectionBg {
+                        position: relative;
+                        background-size: cover;
+                        overflow: hidden;
+
+                        &.gradient-ocean {
+                            background: linear-gradient(#95d6ec, #6f927c, #0f5f7b);
+                        }
+                        .turtle {
+                            position: absolute;
+                            vertical-align: middle;
+                            border-style: none;
+                            border: 0 none;
+                        }
+                        .z-2 {
+                            .p-absolute {
+                                position: absolute;
+                            }
+                            .tablet {
+                                animation: floating 7s infinite alternate-reverse;
+                            }
+                            .tablet-alt {
+                                animation: floating 7s ease-in-out infinite alternate;
+                            }
+                            .seahorse {
+                                animation: ffff 1s ease-in-out infinite alternate;
+                            }
+                        }
+                        .group-animated-text {
+                            .group-animated-inner {
+                                padding: 3rem;
+
+                                .scroll-block {
+                                    height: 30vh;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    display: flex;
+
+                                    h3 {
+                                        max-width: 600px;
+                                        margin: 0 auto;
+                                        letter-spacing: 0px;
+                                        font-size: 40px;
+                                        line-height: 1;
+                                        color: #fff;
+                                        position: relative;
+                                        font-family: Calibre-Regular;
+                                    }
+                                    .counter-content {
+                                        margin: 0 auto;
+                                        text-align: center;
+
+                                        .counter-num {
+                                            color: rgb(230, 209, 186);
+                                            font-size: 100px;
+                                            letter-spacing: -0.05em;
+                                            line-height: 1;
+                                            margin-bottom: 1rem;
+                                            padding: 0;
+                                            font-family: Calibre-Regular;
+                                        }
+                                        .counter-des {
+                                            letter-spacing: 0;
+                                            font-size: 40px;
+                                            line-height: 1;
+                                            margin-bottom: 1rem;
+                                            padding: 0;
+                                            font-family: Calibre-Regular;
+                                            max-width: 700px;
+                                        }
+                                        p {
+                                            opacity: 0.7;
+                                            font-size: 16px;
+                                            letter-spacing: 0;
+                                            margin-bottom: 3rem;
+                                            color: #fff;
+                                            font-family: Calibre-Regular;
+                                        }
+                                    }
+                                    p {
+                                        max-width: 600px;
+                                        letter-spacing: 0;
+                                        font-size: 40px;
+                                        line-height: 1;
+                                        text-align: center;
+                                        margin: 0 auto;
+                                        color: #fff;
+                                        font-family: Calibre-Regular;
+
+                                        .underline-off {
+                                            color: #324477;
+                                            text-decoration: none;
+                                            font-size: 17px;
+                                            font-family: Calibre-Regular;
+                                        }
+                                    }
+                                    &#text1 {
+                                        h3 {
+                                            padding: 5rem 0;
+                                        }
+                                    }
+                                    &#text2 {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#section3 {
+                #heresthething {
+                    background: linear-gradient(#faeee7, #ffffff);
+                    text-align: center;
+                    margin-bottom: 0;
+                    padding: 5rem 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .section-title {
+                        .section-header {
+                            font-size: 100px;
+                            letter-spacing: -0.05em;
+                            line-height: 0.9;
+                            font-family: Domaine-Bold;
+                            color: $main-color;
+                            margin-bottom: 1rem;
+                        }
+                        .question-header {
+                            font-family: Calibre-Regular;
+                            font-size: 1.75rem;
+                            color: $main-color;
+                            line-height: 1.2;
+
+                            .d-inline-flex {
+                                display: inline-flex;
+                                margin: 0px -5px;
+                                align-items: flex-start;
+
+                                img {
+                                    position: relative;
+                                    opacity: 0.2;
+                                    max-width: 20px;
+                                    // top: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#section4 {
+                .section-content {
+                    width: 80vw;
+                    max-width: 1140px;
+                    margin: 0 auto;
+                    padding: 0 15px;
+
+                    .section-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -15px;
+                        margin-left: -15px;
+                        align-items: center;
+
+                        &#trigger3 {
+                            .group-left {
+                                @extend %section-gr;
+                                flex: 0 0 41.6666666667%;
+                                max-width: 41.6666666667%;
+                                margin-left: 8.3333333333%;
+
+                                #pin3 {
+                                    .text-lg-left {
+                                        text-align: left;
+
+                                        h3 {
+                                            font-size: 100px;
+                                            letter-spacing: -0.05em;
+                                            line-height: 0.9em;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                        }
+                                        p {
+                                            margin-top: 0;
+                                            margin-bottom: 1rem;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            letter-spacing: 0;
+                                            line-height: 1.5;
+                                        }
+                                    }
+                                    .no-gutters {
+                                        max-width: 90%;
+                                        padding: 0;
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        .row-section {
+                                            padding: 15px 15px !important;
+                                            font-size: 17px !important;
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                            display: flex;
+                                            align-items: center;
+                                            font-family: Calibre-Regular;
+                                            line-height: 1;
+                                            border-bottom: 1px solid #eeeeee;
+                                            width: 50%;
+
+                                            &:nth-child(odd) {
+                                                border-right: 1px solid #eeeeee;
+                                            }
+
+                                            .letters {
+                                                opacity: 0.2;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                width: 25px;
+                                                height: 25px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin-right: 10px;
+
+                                                img {
+                                                    width: 80%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .group-right {
+                                @extend %section-gr;
+                                flex: 0 0 50%;
+
+                                .sprite-bottle {
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 0px;
+                                    padding-bottom: 60%;
+                                    background: url(https://cdn.shopify.com/s/files/1/1864/2187/files/bottle-sprite1.jpg?15851)
+                                        no-repeat 0 0%;
+                                    background-size: 100%;
+                                }
+                            }
+                        }
+                        &#trigger1 {
+                            padding-top: 1rem;
+                            padding-bottom: 1rem;
+
+                            .group-left {
+                                @extend %section-gr;
+                                flex: 0 0 50%;
+                                max-width: 50%;
+
+                                .sprite-envelope {
+                                    text-align: center;
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 0px;
+                                    padding-bottom: 80%;
+                                    background: url(https://i.ibb.co/dJNjV1w/ezgif-com-gif-maker-3.jpg) no-repeat 0 0%;
+                                    background-size: 100%;
+                                }
+                            }
+                            .group-right {
+                                @extend %section-gr;
+                                flex: 0 0 41.6666666667%;
+                                max-width: 41.6666666667%;
+                                margin-left: 8.3333333333%;
+
+                                #pin1 {
+                                    .text-lg-left {
+                                        text-align: left;
+
+                                        h3 {
+                                            font-size: 100px;
+                                            letter-spacing: -0.05em;
+                                            line-height: 0.9em;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                        }
+                                        p {
+                                            margin-top: 0;
+                                            margin-bottom: 1rem;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            letter-spacing: 0;
+                                            line-height: 1.5;
+                                        }
+                                        a {
+                                            color: #3a5ec1;
+                                            text-decoration: none;
+                                            margin-bottom: 1rem;
+                                            margin-top: 0.5rem;
+                                            display: block;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            line-height: 1.5;
+
+                                            .small {
+                                                font-size: 19px;
+                                            }
+
+                                            &:hover {
+                                                color: #141b2f;
+                                            }
+                                        }
+                                    }
+                                    .no-gutters {
+                                        max-width: 90%;
+                                        padding: 0;
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        .row-section {
+                                            padding: 15px 15px !important;
+                                            font-size: 17px !important;
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                            display: flex;
+                                            align-items: center;
+                                            font-family: Calibre-Regular;
+                                            line-height: 1;
+                                            border-bottom: 1px solid #eeeeee;
+                                            width: 50%;
+
+                                            &:nth-child(odd) {
+                                                border-right: 1px solid #eeeeee;
+                                            }
+
+                                            .letters {
+                                                opacity: 0.2;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                width: 25px;
+                                                height: 25px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin-right: 10px;
+
+                                                img {
+                                                    width: 80%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &#trigger2 {
+                            padding-top: 1rem;
+                            padding-bottom: 1rem;
+                            .group-left {
+                                @extend %section-gr;
+                                flex: 0 0 41.6666666667%;
+                                max-width: 41.6666666667%;
+                                margin-left: 8.3333333333%;
+
+                                #pin2 {
+                                    .text-lg-left {
+                                        text-align: left;
+
+                                        h3 {
+                                            font-size: 100px;
+                                            letter-spacing: -0.05em;
+                                            line-height: 0.9em;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                        }
+                                        p {
+                                            margin-top: 0;
+                                            margin-bottom: 1rem;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            letter-spacing: 0;
+                                            line-height: 1.5;
+                                        }
+                                        a {
+                                            color: #3a5ec1;
+                                            text-decoration: none;
+                                            margin-bottom: 1rem;
+                                            margin-top: 0.5rem;
+                                            display: block;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            line-height: 1.5;
+
+                                            .small {
+                                                font-size: 19px;
+                                            }
+
+                                            &:hover {
+                                                color: #141b2f;
+                                            }
+                                        }
+                                    }
+                                    .no-gutters {
+                                        max-width: 90%;
+                                        padding: 0;
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        .row-section {
+                                            padding: 15px 15px !important;
+                                            font-size: 17px !important;
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                            display: flex;
+                                            align-items: center;
+                                            font-family: Calibre-Regular;
+                                            line-height: 1;
+                                            border-bottom: 1px solid #eeeeee;
+                                            width: 50%;
+
+                                            &:nth-child(odd) {
+                                                border-right: 1px solid #eeeeee;
+                                            }
+
+                                            .letters {
+                                                opacity: 0.2;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                width: 25px;
+                                                height: 25px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin-right: 10px;
+
+                                                img {
+                                                    width: 80%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .group-right {
+                                @extend %section-gr;
+                                flex: 0 0 50%;
+                                max-width: 50%;
+
+                                .sprite-box {
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 0px;
+                                    padding-bottom: 100%;
+                                    background: url(https://cdn.shopify.com/s/files/1/1864/2187/files/box-square.jpg?15806)
+                                        no-repeat 0 0%;
+                                    background-size: 100%;
+                                }
+                            }
+                        }
+                        &#trigger4 {
+                            .group-left {
+                                @extend %section-gr;
+                                flex: 0 0 50%;
+                                max-width: 50%;
+
+                                .sprite-pouch {
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 0px;
+                                    padding-bottom: 100%;
+                                    background: url(https://i.imgur.com/LItCohL.jpg) no-repeat 0 0%;
+                                    background-size: 100%;
+                                }
+                            }
+                            .group-right {
+                                @extend %section-gr;
+                                flex: 0 0 41.6666666667%;
+                                max-width: 41.6666666667%;
+                                margin-left: 8.3333333333%;
+
+                                #pin6 {
+                                    .text-lg-text {
+                                        text-align: left;
+
+                                        h3 {
+                                            font-size: 100px;
+                                            letter-spacing: -0.05em;
+                                            line-height: 0.9em;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                        }
+                                        p {
+                                            margin-top: 0;
+                                            margin-bottom: 1rem;
+                                            color: $main-color;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            letter-spacing: 0;
+                                            line-height: 1.5;
+                                        }
+                                        a {
+                                            color: #3a5ec1;
+                                            text-decoration: none;
+                                            margin-bottom: 1rem;
+                                            margin-top: 0.5rem;
+                                            display: block;
+                                            font-family: Calibre-Regular;
+                                            font-size: 24px;
+                                            line-height: 1.5;
+
+                                            .small {
+                                                font-size: 19px;
+                                            }
+
+                                            &:hover {
+                                                color: #141b2f;
+                                            }
+                                        }
+                                    }
+                                    .no-gutters {
+                                        max-width: 90%;
+                                        padding: 0;
+                                        display: flex;
+                                        flex-wrap: wrap;
+
+                                        .row-section {
+                                            padding: 15px 15px !important;
+                                            font-size: 17px !important;
+                                            font-weight: 400;
+                                            letter-spacing: 0px;
+                                            display: flex;
+                                            align-items: center;
+                                            font-family: Calibre-Regular;
+                                            line-height: 1;
+                                            border-bottom: 1px solid #eeeeee;
+                                            width: 50%;
+
+                                            &:nth-child(odd) {
+                                                border-right: 1px solid #eeeeee;
+                                            }
+
+                                            .letters {
+                                                opacity: 0.2;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                width: 25px;
+                                                height: 25px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin-right: 10px;
+
+                                                img {
+                                                    width: 80%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#section5 {
+                #sharesection {
+                    @extend %relative;
+                    background: #d3e1e6;
+                    text-align: center;
+
+                    .gradient-white-mint {
+                        background: linear-gradient(#ffffff, #d3e1e6);
+                        padding-top: 3rem;
+                        width: 100%;
+
+                        .section-inner {
+                            position: relative;
+                            margin: 0 auto;
+                            padding: 0 1rem;
+                            text-align: center;
+
+                            h3 {
+                                color: $main-color;
+
+                                &.font-weight-bold {
+                                    font-size: 75px;
+                                    letter-spacing: -0.03em;
+                                    line-height: 0.9em;
+                                    font-family: Calibre-Semibold;
+                                    margin-bottom: 0.5rem;
+                                }
+                                &.font-weight-normal {
+                                    font-family: Calibre-Regular;
+                                    margin-bottom: 1.5rem;
+                                    font-size: 1.75rem;
+                                }
+                            }
+                            .share-btn {
+                                // display: flex;
+                                width: 100%;
+                                max-width: 600px;
+                                margin: 0 auto;
+
+                                .btn-link {
+                                    padding-right: 1.5rem;
+                                    padding-left: 1.5rem;
+                                    margin: 0.5rem;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    // flex: 0 0 50%;
+                                    border-radius: 50px;
+                                    font-size: 16px;
+                                    padding: 12px 24px;
+                                    background-color: #fff;
+                                    font-weight: 500;
+                                    border: 1px solid rgba(0, 0, 0, 0.2);
+                                    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+                                    color: #3a5ec1;
+
+                                    &:hover {
+                                        color: #333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .share-img {
+                        z-index: 1;
+                        // height: 80%;
+                        display: block;
+                        margin: 0 auto;
+                        object-fit: contain;
+                        max-width: 600px;
+                        object-position: center bottom;
+                    }
+                }
+            }
+            &#section6 {
+                background: #fdf8f5;
+                .cream {
+                    width: 80vw;
+                    max-width: 1140px;
+                    margin: 0 auto;
+                    padding: 0 15px;
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+
+                    .cream-inner {
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -15px;
+                        margin-left: -15px;
+                        align-items: center;
+
+                        .s6-left {
+                            margin-left: 8.3333333333%;
+                            flex: 0 0 41.6666666667%;
+                            max-width: 41.6666666667%;
+                            padding: 0 15px;
+
+                            .text-lg-left {
+                                text-align: left;
+
+                                h3 {
+                                    font-size: 100px;
+                                    letter-spacing: -0.05em;
+                                    line-height: 1;
+                                    color: $main-color;
+                                    margin-bottom: 0.5rem;
+                                    font-family: Calibre-Semibold;
+                                }
+                                p {
+                                    margin-top: 0;
+                                    margin-bottom: 1rem;
+                                    font-family: Calibre-Regular;
+                                    line-height: 1.5;
+                                    color: $main-color;
+                                    font-size: 24px;
+                                }
+                                a {
+                                    color: #3a5ec1;
+                                    text-decoration: none;
+                                    margin-bottom: 1rem;
+                                    margin-top: 0.5rem;
+                                    display: block;
+                                    font-family: Calibre-Regular;
+                                    font-size: 24px;
+                                    line-height: 1.5;
+
+                                    .small {
+                                        font-size: 19px;
+                                    }
+
+                                    &:hover {
+                                        color: #141b2f;
+                                    }
+                                }
+                            }
+                        }
+                        .s6-right {
+                            padding: 0 15px;
+                            flex: 0 0 50%;
+                            max-width: 50%;
+
+                            .s6-img {
+                                img {
+                                    width: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes floating {
+    0% {
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    100% {
+        margin-top: 0px;
+        margin-left: -50px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@keyframes ffff {
+    0% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: 50px;
+    }
 }

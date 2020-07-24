@@ -16,7 +16,7 @@
         <div id="header">
             <div class="nav">
                 <div class="nav-inner">
-                    <div class="text-left">
+                    <div class="nav-item text-left">
                         <a href="#" class="navtext">
                             Shop
                         </a>
@@ -24,7 +24,7 @@
                             About us
                         </a>
                     </div>
-                    <a class="logo-cont" href="#">
+                    <a class="nav-item logo-cont" href="#">
                         <div class="logo-container">
                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="336.000000pt"
                                 viewBox="0 0 336.000000 145.000000" preserveAspectRatio="xMidYMid meet"
@@ -60,6 +60,11 @@
                             </svg>
                         </div>
                     </a>
+                    <div class="nav-item text-right">
+                        <a href="#" class="navtext">
+                            Account
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,7 +73,7 @@
         <!-- Section -->
         <div class="section-container">
             <div class="section" id="section1">
-                <div class="section-inner">
+                <div class="s1-text">
                     <h1>
                         Sustainability
                     </h1>
@@ -84,141 +89,149 @@
                             Share
                         </a>
                     </div>
-                    <div class="scrollIndicator">
-                        <span>
-                            <i class="fa fa-arrow-up"></i>
-                        </span>
-                        <div id="oceanscroll">
-                            <img src="../assets/img/plastic/water.gif" alt="">
-                        </div>
-                    </div>
+                </div>
+
+                <div class="scrollIndicator">
+                    <span>
+                        <i class="fa fa-arrow-up text-duo"></i>
+                    </span>
+                    <p class="text-duo">Scroll for more</p>
                 </div>
             </div>
             <div class="section" id="section2">
-                <div class="sectionBg gradient-ocean">
-                    <div id="parallaxText">
-                        <img src="../assets/img/plastic/turtle.gif" alt="">
-                        <div class="z-2">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet" style="top:10%;left:10%;width:200px;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/plastic-bag.png?16211">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet" style="top:10%;right:10%;width:110px;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet" style="top:20%;left:0%;width:60px;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/toothpastetube-1.png?16769">
+                <div id="oceanscroll">
+                    <img id="oceangif" src="../assets/img/plastic/water.gif" alt="">
 
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet" style="top:20%;right:0%;width:200px;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/thank-you-bag.png?16842">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet  " style="top:30%;left:10%;width:150px;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/plastic-bag-1.png?16220">
-                            <!---------------------------------Even-------------------------------------->
+                    <div class="sectionBg gradient-ocean">
+                        <div id="parallaxText">
+                            <img class="turtle" src="../assets/img/plastic/turtle.gif" alt="">
+                            <div class="z-2">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet" style="top:10%;left:10%;width:200px;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/plastic-bag.png?16211">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet" style="top:10%;right:10%;width:110px;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet" style="top:20%;left:0%;width:60px;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/toothpastetube-1.png?16769">
 
-                            <img class="p-absolute tablet " style="top:30%;right:10%;width:110px;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet " style="top:40%;left:0%;width:100px;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet" style="top:40%;right:0%;width:100px;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/thank-you-bag.png?16842">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet " style="top:50%;left:10%;width:120px;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-brush.png?17442">
-                            <!---------------------------------Even-------------------------------------->
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet" style="top:20%;right:0%;width:200px;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/thank-you-bag.png?16842">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet  " style="top:30%;left:10%;width:150px;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/plastic-bag-1.png?16220">
+                                <!---------------------------------Even-------------------------------------->
 
-                            <img class="p-absolute tablet " style="top:50%;right:10%;width:150px;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/plastic-bag.png?16211">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet" style="top:5%;left:10%;width:150px;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-2.png?17442">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet " style="top:60%;right:0%;width:100px;z-index:2;">
+                                <img class="p-absolute tablet " style="top:30%;right:10%;width:110px;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet " style="top:40%;left:0%;width:100px;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet" style="top:40%;right:0%;width:100px;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/thank-you-bag.png?16842">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet " style="top:50%;left:10%;width:120px;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-brush.png?17442">
+                                <!---------------------------------Even-------------------------------------->
+
+                                <img class="p-absolute tablet " style="top:50%;right:10%;width:150px;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/plastic-bag.png?16211">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet" style="top:5%;left:10%;width:150px;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-2.png?17442">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet " style="top:60%;right:0%;width:100px;z-index:2;">
 
 
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet-alt"
-                                style="top:5%;left:30%;width:150px;opacity:1!important;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/soda-can.png?16662">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet-alt "
-                                style="top:60%;right:15%;width:90px!important;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet-alt " style="top:60%;left:10%;width:80px!important;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-1.png?17442">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet-alt"
-                                style="top:50%;right:30%;width:150px!important;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-2.png?17442">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet-alt " style="top:50%;left:0%;width:150px!important;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/thank-you-bag.png?16842">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet-alt "
-                                style="top:40%;right:20%;width:100px!important;z-index:2;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube.png?17442">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet-alt" style="top:40%;left:30%;width:80px!important;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube.png?17442">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet-alt "
-                                style="top:20%;right:10%;width:120px!important;z-index:2;">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet-alt"
+                                    style="top:5%;left:30%;width:150px;opacity:1!important;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/soda-can.png?16662">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet-alt "
+                                    style="top:60%;right:15%;width:90px!important;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/water-bottle.png?16220">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet-alt "
+                                    style="top:60%;left:10%;width:80px!important;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-1.png?17442">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet-alt"
+                                    style="top:50%;right:30%;width:150px!important;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-2.png?17442">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet-alt "
+                                    style="top:50%;left:0%;width:150px!important;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/thank-you-bag.png?16842">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet-alt "
+                                    style="top:40%;right:20%;width:100px!important;z-index:2;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube.png?17442">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet-alt"
+                                    style="top:40%;left:30%;width:80px!important;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube.png?17442">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet-alt "
+                                    style="top:20%;right:10%;width:120px!important;z-index:2;">
 
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet tablet-alt"
-                                style="top:20%;left:10%;width:120px!important;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-2.png?17442">
-                            <!---------------------------------Even-------------------------------------->
-                            <img class="p-absolute tablet-alt" style="top:10%;right:0%;width:120px!important;z-index:1;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-brush.png?17442">
-                            <!---------------------------------Odd-------------------------------------->
-                            <img class="p-absolute tablet-alt" style="top:70%;right:0%;width:100px!important;"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-brush-1.png?17442">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet tablet-alt"
+                                    style="top:20%;left:10%;width:120px!important;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-tube-2.png?17442">
+                                <!---------------------------------Even-------------------------------------->
+                                <img class="p-absolute tablet-alt"
+                                    style="top:10%;right:0%;width:120px!important;z-index:1;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-brush.png?17442">
+                                <!---------------------------------Odd-------------------------------------->
+                                <img class="p-absolute tablet-alt" style="top:70%;right:0%;width:100px!important;"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/trash-brush-1.png?17442">
 
-                            <img class="seahorse p-absolute" id="seahorse"
-                                src="https://cdn.shopify.com/s/files/1/1864/2187/files/seahorse.png?16214"
-                                style="right:0px;z-index:3;">
-                        </div>
-                        <div class="group-animated-text">
-                            <div class="group-animated-inner">
-                                <div id="text1">
-                                    <h3>In case you missed it ...</h3>
-                                </div>
-                                <div id="text5">
-                                    <h3>We're swimming in plastic.</h3>
-                                </div>
-                                <div id="text2">
-                                    <p>By 2050, there’ll be more plastic in the ocean than fish.</p>
-                                    <p>
-                                        <a href="#" class="underline-off">
-                                            <i>fa fa-info-circle</i>
-                                            Source
-                                        </a>
-                                    </p>
-                                </div>
-                                <div id="text3">
-                                    <div class="counter-content">
-                                        <h3 class="counter-num">
-                                            <label id="seconds">00</label>
-                                        </h3>
-                                        <h3 class="counter-des">
-                                            Plastic toothpaste tubes have been thrown away since you started reading
-                                            this.
-                                        </h3>
-                                        <p>(over one billion a year)</p>
+                                <img class="seahorse p-absolute" id="seahorse"
+                                    src="https://cdn.shopify.com/s/files/1/1864/2187/files/seahorse.png?16214"
+                                    style="right:0px;z-index:3;">
+                            </div>
+                            <div class="group-animated-text">
+                                <div class="group-animated-inner">
+                                    <div id="text1" class="scroll-block">
+                                        <h3>In case you missed it ...</h3>
+                                    </div>
+                                    <div id="text5" class="scroll-block">
+                                        <h3>We're swimming in plastic.</h3>
+                                    </div>
+                                    <div id="text2" class="scroll-block">
+                                        <p>By 2050, there’ll be more plastic in the ocean than fish.</p>
+                                        <p>
+                                            <a href="#" class="underline-off">
+                                                <i class="fa fa-info-circle"></i>
+                                                Source
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div id="text3" class="scroll-block">
+                                        <div class="counter-content">
+                                            <h3 class="counter-num">
+                                                <label id="seconds">00</label>
+                                            </h3>
+                                            <h3 class="counter-des">
+                                                Plastic toothpaste tubes have been thrown away since you started reading
+                                                this.
+                                            </h3>
+                                            <p>(over one billion a year)</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="section" id="section3">
-                <div class="sectionBg gradient-tan-white">
+                <div id="heresthething">
                     <div class="section-title">
                         <h1 class="section-header">
                             We’re different and
@@ -235,91 +248,245 @@
                             avoid plastic
                         </h2>
                     </div>
-                    <div class="section-content">
-                        <div id="trigger3">
-                            <div class="group-left group-text">
-                                <div id="pin3">
-                                    <div class="text-lg-left">
-                                        <h3 class="section-header">Bottles</h3>
-                                        <p>
-                                            We only ever use glass bottles. Why? Unlike plastic, glass is infinitely
-                                            recyclable, looks great, and
-                                            breaks down into sand at the end of its life.
-                                        </p>
+                </div>
+            </div>
+            <div class="section" id="section4">
+                <div class="section-content">
+                    <div class="section-row" id="trigger3">
+                        <div class="group-left group-text">
+                            <div id="pin3">
+                                <div class="text-lg-left">
+                                    <h3 class="section-header">Bottles</h3>
+                                    <p>
+                                        We only ever use glass bottles. Why? Unlike plastic, glass is infinitely
+                                        recyclable, looks great, and
+                                        breaks down into sand at the end of its life.
+                                    </p>
+                                </div>
+                                <div class="no-gutters">
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-refresh"></i>
+                                        </span>
+                                        <span>Infinitely refillable</span>
                                     </div>
-                                    <div class="no-gutters">
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <i class="far fa-sync"></i>
-                                            </span>
-                                            <span>Infinitely refillable</span>
-                                        </div>
-                                        <div class="row-section">
+                                    <div class="row-section">
+                                        <span class="letters">
                                             <img src="../assets/img/plastic/plastic-free.png">
-                                            <span>Plastic-free</span>
-                                        </div>
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <i class="fa fa-recycle"></i>
-                                            </span>
-                                            <span>Recyclable glass</span>
-                                        </div>
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <i class="fa fa-recycle"></i>
-                                            </span>
-                                            <span>Aluminum lids</span>
-                                        </div>
+                                        </span>
+                                        <span>Plastic-free</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-recycle"></i>
+                                        </span>
+                                        <span>Recyclable glass</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-recycle"></i>
+                                        </span>
+                                        <span>Aluminum lids</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="group-right group-img">
-                                <div id="animation-bottle" class="sprite-bottle"></div>
                             </div>
                         </div>
-                        <div id="trigger1">
-                            <div class="group-left group-img"></div>
-                            <div class="group-right group-text">
-                                <div id="pin1">
-                                    <div class="text-lg-left">
-                                        <h3 class="section-header">Envelopes</h3>
-                                        <p>
-                                            Instead of plastic poly-mailers, we ship with kraft envelopes padded with
-                                            post-consumer recycled
-                                            newspapers.
-                                        </p>
-                                        <a href="#">
-                                            See more
-                                            <i class="fa fa-arrow-right"></i>
-                                        </a>
+                        <div class="group-right group-img">
+                            <div id="animation-bottle" class="sprite-bottle"></div>
+                        </div>
+                    </div>
+                    <div class="section-row" id="trigger1">
+                        <div class="group-left group-img">
+                            <div id="js-animation" class="sprite-envelope"></div>
+                        </div>
+                        <div class="group-right group-text">
+                            <div id="pin1">
+                                <div class="text-lg-left">
+                                    <h3 class="section-header">Envelopes</h3>
+                                    <p>
+                                        Instead of plastic poly-mailers, we ship with kraft envelopes padded with
+                                        post-consumer recycled
+                                        newspapers.
+                                    </p>
+                                    <a href="#">
+                                        See more
+                                        <i class="fa fa-arrow-right small"></i>
+                                    </a>
+                                </div>
+                                <div class="no-gutters">
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <img src="../assets/img/plastic/plastic-free.png" alt="">
+                                        </span>
+                                        <span>Plastic-free</span>
                                     </div>
-                                    <div class="no-gutters">
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <img src="../assets/img/plastic/plastic-free.png" alt="">
-                                            </span>
-                                            <span>Plastic-free</span>
-                                        </div>
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <i class="fa fa-recycle"></i>
-                                            </span>
-                                            <span>Recyclable</span>
-                                        </div>
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <i class="fa fa-leaf"></i>
-                                            </span>
-                                            <span>Compostable</span>
-                                        </div>
-                                        <div class="row-section">
-                                            <span class="letters">
-                                                <i class="fa fa-newspaper"></i>
-                                            </span>
-                                            <span>Post-consumer newspaper</span>
-                                        </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-recycle"></i>
+                                        </span>
+                                        <span>Recyclable</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-leaf"></i>
+                                        </span>
+                                        <span>Compostable</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-newspaper-o"></i>
+                                        </span>
+                                        <span>Post-consumer newspaper</span>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-row" id="trigger2">
+                        <div class="group-left group-text">
+                            <div id="pin2">
+                                <div class="text-lg-left">
+                                    <h3 class="section-header">Boxes</h3>
+                                    <p>
+                                        Our boxes are made of fully recyclable corrugated cardboard and sealed with a
+                                        kiss
+                                        <br class="hidden-md-down">
+                                        —or as others call it, paper tape.
+                                    </p>
+                                    <a href="#">
+                                        See more
+                                        <i class="fa fa-arrow-right small"></i>
+                                    </a>
+                                </div>
+                                <div class="no-gutters">
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <img src="../assets/img/plastic/plastic-free.png" alt="">
+                                        </span>
+                                        <span>Plastic-free</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-recycle"></i>
+                                        </span>
+                                        <span>Recyclable</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-archive"></i>
+                                        </span>
+                                        <span>Corrugated cardboard</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-paperclip"></i>
+                                        </span>
+                                        <span>Paper tape</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group-right group-img">
+                            <div id="animation-box" class="sprite-box"></div>
+                        </div>
+                    </div>
+                    <div class="section-row" id="trigger4">
+                        <div class="group-left group-img">
+                            <div id="animation-pouch" class="sprite-pouch"></div>
+                        </div>
+                        <div class="group-right group-text">
+                            <div id="pin6">
+                                <div class="text-lg-text">
+                                    <h3 class="section-header">Refills</h3>
+                                    <p>
+                                        We’ll send your refill Bites in 100% home compostable pouches every four months
+                                        with our subscription.
+                                        Yep, still no plastic.
+                                    </p>
+                                    <a href="#">
+                                        See more
+                                        <i class="fa fa-arrow-right small"></i>
+                                    </a>
+                                </div>
+                                <div class="no-gutters">
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <img src="../assets/img/plastic/plastic-free.png" alt="">
+                                        </span>
+                                        <span>Plastic-free</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-recycle"></i>
+                                        </span>
+                                        <span>Recyclable</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-archive"></i>
+                                        </span>
+                                        <span>Corrugated cardboard</span>
+                                    </div>
+                                    <div class="row-section">
+                                        <span class="letters">
+                                            <i class="fa fa-paperclip"></i>
+                                        </span>
+                                        <span>Paper tape</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="section5">
+                <div id="sharesection">
+                    <div class="gradient-white-mint">
+                        <div class="section-inner">
+                            <h3 class="font-weight-bold">
+                                We're done with plastic.
+                            </h3>
+                            <h3 class="font-weight-normal">
+                                Want to support the plastic-free journey?
+                            </h3>
+                            <div class="share-btn">
+                                <a class="btn-link" href="#">
+                                    Shop now
+                                </a>
+                                <a class="btn-link" href="#">
+                                    Share to Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="share-img" src="../assets/img/plastic/color-8ba.gif" alt="">
+                </div>
+            </div>
+            <div class="section" id="section6">
+                <div class="cream">
+                    <div class="cream-inner">
+                        <div class="s6-left">
+                            <div class="text-lg-left">
+                                <h3>shipping</h3>
+                                <p>
+                                    For a reduced carbon footprint, Bite products are shipped using existing postal
+                                    routes.
+                                    It may take a
+                                    little
+                                    longer, but on average this will have a smaller carbon footprint than driving to the
+                                    store to pick up a
+                                    plastic tube.
+                                </p>
+                                <a href="#">
+                                    Read more
+                                    <i class="fa fa-arrow-right small"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="s6-right">
+                            <div class="s6-img">
+                                <img src="https://d3k81ch9hvuctc.cloudfront.net/company/H3hY3s/images/186676ff-7d4e-4f18-b1fc-2e48d1afbd53.gif"
+                                    alt="">
                             </div>
                         </div>
                     </div>
@@ -328,6 +495,12 @@
         </div>
         <!-- End Section -->
     </div>
+
+    <script src="../src/js/Jquery/jquery.min.js"></script>
+    <script src="../src/js/Gsap/Tweenmax.js"></script>
+    <script src="../src/js/Scrollmagic/ScrollMagic.js"></script>
+    <script src="../src/js/Scrollmagic/animation.gsap.js"></script>
+    <script src="../assets/js/plastic/plastic.js"></script>
 </body>
 
 </html>
