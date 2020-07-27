@@ -1961,7 +1961,150 @@
 }
 
 // Responsive
+@media (min-width: 1200px) and (max-width: 1250px) and (max-height: 1024px) {
+    .vct-wrapper {
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &#slide4,
+                    &#slide5,
+                    &#slide8 {
+                        width: 115vw;
+                    }
+                    &#slide10,
+                    &#slide12,
+                    &#slide13,
+                    &#slide14,
+                    &#slide15,
+                    &#slide16,
+                    &#slide11,
+                    &#slide17,
+                    &#slide18,
+                    &#slide19,
+                    &#slide20,
+                    &#slide21 {
+                        width: 110vw;
+                    }
 
+                    &#slide2 {
+                        .section-inner {
+                            .section-content {
+                                .s2-content-text {
+                                    max-width: 35vw;
+                                }
+                            }
+                        }
+                    }
+
+                    &#slide8 {
+                        .section-inner {
+                            .s8-gr1 {
+                                .s8-gr1-right {
+                                    .s8-text-content {
+                                        .s8-text {
+                                            .s8-text-title {
+                                                p {
+                                                    font-size: 55px;
+
+                                                    &:last-child {
+                                                        padding-left: 80px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#slide11 {
+                        .section-inner {
+                            .flex-group-item {
+                                .s11-gr-text {
+                                    margin-top: -4vh !important;
+                                }
+                            }
+                        }
+                    }
+                    &#slide12 {
+                        .section-inner {
+                            .s12-gr {
+                                .s12-gr1 {
+                                    max-width: 26vw;
+                                }
+                                .s12-gr2 {
+                                    max-width: 61vw;
+                                }
+                                .s12-gr3 {
+                                    width: 40vw;
+                                }
+                            }
+                        }
+                    }
+                    &#slide13 {
+                        .section-inner {
+                            .s13-gr {
+                                max-width: 60vw;
+                            }
+                        }
+                    }
+                    &#slide19 {
+                        .section-inner {
+                            .s19-bg {
+                                max-width: 70vw !important;
+                            }
+                            .s19-overlay {
+                                max-width: 45vw !important;
+                            }
+                        }
+                    }
+                    &#slide20 {
+                        .section-inner {
+                            .s20-gr {
+                                .s20-gr-item {
+                                    .s20-item-img {
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide21 {
+                        .section-inner {
+                            .s21-gr {
+                                .s21-gr-item {
+                                    .s21-item-img {
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#slide26 {
+                        .section-inner {
+                            .s26-gr {
+                                .s26-gr-inner {
+                                    .s26-gr-content {
+                                        .s26-content-text {
+                                            .s26-underline {
+                                                font-size: 16px !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1200px) and (max-width: 1300px) {
     .vct-wrapper {
         .swiper-container {

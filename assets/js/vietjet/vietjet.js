@@ -1,7 +1,7 @@
 // Swiper
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
-    centeredSlides: true,
+    // centeredSlides: true,
     freeMode: true,
     mousewheel: true,
     scrollbar: {
