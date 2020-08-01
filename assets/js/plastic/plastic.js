@@ -14,23 +14,6 @@ $(function progressBar() {
         .addTo(controller);
 });
 
-// $(function shareButtons() {
-//     var sharebuttons1 = TweenMax.fromTo('#sharebuttons', 1,
-//         { bottom: -50, ease: Back.easeOut, scale: 0, opacity: 0 },
-//         { bottom: 0, scale: 1, opacity: 1 }
-//     );
-//     var sceneshare = new ScrollMagic.Scene({
-//         triggerElement: '#oceanscroll',
-//         triggerHook: 'onLeave',
-//         offset: 0,
-//         duration: 400,
-//         reverse: false
-//     })
-//         .setTween(sharebuttons1)
-//         .addTo(controller);
-
-// });
-
 // ----------- scrollPlastic ---------------
 
 let scrollPlastic = new TimelineMax().add([
@@ -416,3 +399,24 @@ function pad(val) {
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 };
+
+// Header
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 10) {
+        $("#header").addClass("animated");
+    } else {
+        $("#header").removeClass("animated");
+    }
+});
+
+// info tag
+$(".vct-info-tag-logo").click(function () {
+    if ($(".vct-wrapper").hasClass("modal-animated")) {
+        $(".vct-wrapper").removeClass("modal-animated");
+    } else {
+        $(".vct-wrapper").addClass("modal-animated");
+    }
+});
+$(".modal-close").click(function () {
+    $(".vct-wrapper").addClass("modal-animated");
+});
